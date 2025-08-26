@@ -1,0 +1,29 @@
+{
+  "name": "adoptima-monorepo",
+  "version": "1.0.0",
+  "description": "AdOptima SaaS MVP - Full-stack application with Next.js frontend and Node.js backend",
+  "private": true,
+  "workspaces": [
+    "adoptima",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd adoptima && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd adoptima && npm run build",
+    "build:backend": "cd backend && npm run build", 
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:frontend": "cd adoptima && npm run start",
+    "start:backend": "cd backend && npm run start",
+    "install:all": "npm install && cd adoptima && npm install && cd ../backend && npm install",
+    "setup:db": "cd backend && npm run setup:db"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": ["saas", "advertising", "campaign-optimization", "ai", "nextjs", "nodejs", "postgresql"],
+  "author": "AdOptima Team",
+  "license": "MIT"
+}
