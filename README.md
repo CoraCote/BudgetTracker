@@ -1,194 +1,174 @@
-# AdOptima - OAuth Ad Account Management Platform
+# AdOptima - AI-Powered Advertising Campaign Optimization
 
-A comprehensive platform for connecting and managing advertising accounts (Google Ads, Microsoft Ads) with secure OAuth authentication and automated token management.
+A modern SaaS application built with Next.js that helps optimize advertising campaigns using AI-powered insights.
 
 ## Features
 
-- **OAuth Integration**: Secure connection to Google Ads and Microsoft Ads accounts
-- **Token Management**: Automatic refresh of expired OAuth tokens
-- **Account Management**: View, connect, and disconnect ad accounts
-- **Security**: Encrypted token storage and CSRF protection
-- **Modern UI**: Responsive design matching the provided design specifications
+- 🔐 **Authentication System**: Secure user registration and login with PostgreSQL
+- 🎯 **Dashboard**: User profile management and campaign overview
+- 🚀 **Modern UI**: Built with Tailwind CSS and responsive design
+- 🔒 **JWT Security**: Secure token-based authentication
+- 🗄️ **PostgreSQL**: Robust database backend for user management
 
-## Architecture
+## Tech Stack
 
-- **Backend**: Node.js + Express + PostgreSQL
-- **Frontend**: Next.js + React + Tailwind CSS
-- **OAuth**: Google Ads API + Microsoft Advertising API
-- **Security**: JWT authentication + encrypted token storage
+- **Frontend**: Next.js 14, React 18, Tailwind CSS
+- **Backend**: Next.js API Routes
+- **Database**: PostgreSQL
+- **Authentication**: JWT with bcrypt password hashing
+- **Styling**: Tailwind CSS with custom components
 
 ## Prerequisites
 
-- Node.js 18+ and npm
-- PostgreSQL database
-- Google Ads API credentials
-- Microsoft Advertising API credentials
+- Node.js 18+ 
+- PostgreSQL 12+
+- npm or yarn
 
 ## Setup Instructions
 
-### 1. Backend Setup
+### 1. Clone the Repository
 
 ```bash
-cd backend
-npm install
+git clone <repository-url>
+cd BudgetTracker
 ```
 
-Create a `.env` file based on `env.example`:
+### 2. Install Dependencies
 
 ```bash
-# Database Configuration
-DATABASE_URL=postgresql://username:password@localhost:5432/adoptima_db
-
-# Server Configuration
-PORT=5000
-NODE_ENV=development
-CORS_ORIGIN=http://localhost:3000
-
-# Security
-JWT_SECRET=your-super-secret-jwt-key-here
-APP_ENCRYPTION_KEY=your-32-character-encryption-key-here
-
-# Google OAuth Configuration
-GOOGLE_CLIENT_ID=your-google-client-id.apps.googleusercontent.com
-GOOGLE_CLIENT_SECRET=your-google-client-secret
-GOOGLE_REDIRECT_URI=http://localhost:5000/api/oauth/google/callback
-GOOGLE_DEVELOPER_TOKEN=your-google-ads-developer-token
-
-# Microsoft OAuth Configuration
-MICROSOFT_CLIENT_ID=your-microsoft-client-id
-MICROSOFT_CLIENT_SECRET=your-microsoft-client-secret
-MICROSOFT_REDIRECT_URI=http://localhost:5000/api/oauth/microsoft/callback
-
-# Frontend URL
-FRONTEND_URL=http://localhost:3000
-```
-
-### 2. Frontend Setup
-
-```bash
-cd adoptima
-npm install
+npm run install:all
 ```
 
 ### 3. Database Setup
 
-Create a PostgreSQL database and run the application - it will automatically create the required tables.
+1. **Install PostgreSQL** and create a database:
+   ```sql
+   CREATE DATABASE adoptima;
+   ```
 
-### 4. OAuth App Registration
+2. **Configure Environment Variables**:
+   Copy `.env.local.example` to `.env.local` and update:
+   ```env
+   DATABASE_URL=postgresql://postgres:123@localhost:5432/adoptima
+   JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+   ```
 
-#### Google Ads API
-1. Go to [Google Cloud Console](https://console.cloud.google.com/)
-2. Create a new project or select existing
-3. Enable Google Ads API
-4. Create OAuth 2.0 credentials
-5. Add authorized redirect URIs
-6. Get developer token from Google Ads
+3. **Run Database Setup**:
+   ```bash
+   cd adoptima
+   npm run setup:db
+   ```
 
-#### Microsoft Advertising API
-1. Go to [Microsoft Advertising Developer Center](https://developers.ads.microsoft.com/)
-2. Register your application
-3. Get client ID and secret
-4. Configure redirect URIs
+### 4. Start Development Server
 
-### 5. Start the Application
-
-#### Backend
 ```bash
-cd backend
 npm run dev
 ```
 
-#### Frontend
-```bash
-cd adoptima
-npm run dev
+The application will be available at `http://localhost:3000`
+
+## Project Structure
+
+```
+adoptima/
+├── src/
+│   ├── app/                 # Next.js app directory
+│   │   ├── api/            # API routes
+│   │   │   ├── signin/     # Authentication endpoints
+│   │   │   ├── signup/
+│   │   │   ├── signout/
+│   │   │   └── user/       # User profile API
+│   │   ├── dashboard/      # Protected dashboard page
+│   │   ├── signin/         # Sign in page
+│   │   └── signup/         # Sign up page
+│   ├── components/         # Reusable components
+│   ├── lib/               # Utility libraries
+│   │   ├── db.js         # Database connection
+│   │   ├── auth.js       # Authentication utilities
+│   │   └── init-db.js    # Database initialization
+│   └── middleware.js      # Next.js middleware for auth
+├── scripts/               # Database setup scripts
+└── public/               # Static assets
 ```
 
 ## API Endpoints
 
-### OAuth Routes
-- `GET /api/oauth/google/authorize` - Start Google OAuth flow
-- `GET /api/oauth/google/callback` - Google OAuth callback
-- `GET /api/oauth/microsoft/authorize` - Start Microsoft OAuth flow
-- `GET /api/oauth/microsoft/callback` - Microsoft OAuth callback
-- `GET /api/oauth/accounts` - Get connected accounts
-- `DELETE /api/oauth/accounts/:id` - Disconnect account
+### Authentication
+- `POST /api/signup` - User registration
+- `POST /api/signin` - User login
+- `POST /api/signout` - User logout
+- `GET /api/user` - Get user profile (protected)
 
-### Authentication Routes
-- `POST /api/auth/register` - User registration
-- `POST /api/auth/login` - User login
-- `POST /api/auth/logout` - User logout
+### Request/Response Examples
 
-## Database Schema
+#### Sign Up
+```json
+POST /api/signup
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john@example.com",
+  "password": "securePass123"
+}
+```
 
-The application automatically creates the following tables:
-- `organizations` - Company/organization information
-- `users` - User accounts with organization references
-- `ad_connections` - OAuth connections and encrypted tokens
-- `campaigns` - Advertising campaigns
-- `analytics` - Performance metrics
-- `oauth_states` - CSRF protection for OAuth flows
+#### Sign In
+```json
+POST /api/signin
+{
+  "email": "john@example.com",
+  "password": "securePass123"
+}
+```
 
-## Security Features
+## Environment Variables
 
-- **Token Encryption**: All OAuth tokens are encrypted before storage
-- **CSRF Protection**: State parameter validation for OAuth flows
-- **JWT Authentication**: Secure session management
-- **Rate Limiting**: API request throttling
-- **CORS Configuration**: Controlled cross-origin access
-
-## Token Management
-
-The platform includes an automated token refresh service that:
-- Runs every 6 hours to check for expired tokens
-- Automatically refreshes tokens using refresh tokens
-- Marks connections as inactive if refresh fails
-- Handles token revocation gracefully
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `DATABASE_URL` | PostgreSQL connection string | Required |
+| `JWT_SECRET` | Secret key for JWT tokens | Required |
+| `NODE_ENV` | Environment mode | `development` |
 
 ## Development
 
-### Backend Development
-- Use `npm run dev` for development with auto-reload
-- Check logs for OAuth flow debugging
-- Monitor token refresh service status
+### Running the Application
+```bash
+# Development mode
+npm run dev
 
-### Frontend Development
-- Use `npm run dev` for development server
-- API calls are proxied to backend via Next.js rewrites
-- OAuth callbacks redirect to the Connect Accounts page
+# Build for production
+npm run build
 
-## Troubleshooting
+# Start production server
+npm run start
+```
 
-### Common Issues
+### Database Operations
+```bash
+# Setup database tables
+npm run setup:db
+```
 
-1. **Database Connection Failed**
-   - Check PostgreSQL service is running
-   - Verify DATABASE_URL in .env file
-   - Ensure database exists
+## Security Features
 
-2. **OAuth Authorization Failed**
-   - Verify client ID and secret in .env
-   - Check redirect URI configuration
-   - Ensure proper scopes are configured
+- **Password Hashing**: bcrypt with salt rounds
+- **JWT Tokens**: Secure authentication tokens
+- **HTTP-Only Cookies**: Secure cookie storage
+- **Input Validation**: Server-side validation
+- **SQL Injection Protection**: Parameterized queries
 
-3. **Token Refresh Issues**
-   - Check APP_ENCRYPTION_KEY is 32 characters
-   - Verify refresh tokens are valid
-   - Monitor token refresh service logs
+## Contributing
 
-### Debug Mode
-
-Set `NODE_ENV=development` to see detailed error messages and stack traces.
-
-## Production Deployment
-
-1. Set `NODE_ENV=production`
-2. Use strong, unique secrets for JWT and encryption
-3. Configure proper CORS origins
-4. Set up SSL/TLS certificates
-5. Use environment-specific database URLs
-6. Configure proper logging and monitoring
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
 ## License
 
-MIT License - see LICENSE file for details.
+MIT License - see LICENSE file for details
+
+## Support
+
+For support and questions, please open an issue in the repository.

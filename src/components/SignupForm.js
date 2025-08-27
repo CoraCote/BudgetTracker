@@ -1,9 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function SignupForm() {
   const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
     email: '',
     password: ''
   });
@@ -12,9 +15,13 @@ export default function SignupForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const router = useRouter();
 
   const validateForm = () => {
     const newErrors = {};
+
+    // firstName and lastName are optional, so no validation needed
+    // They will be stored as empty strings in the database
 
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
@@ -26,6 +33,8 @@ export default function SignupForm() {
       newErrors.password = 'Password is required';
     } else if (formData.password.length < 8) {
       newErrors.password = 'Password must be at least 8 characters long';
+    } else if (!/[a-zA-Z]/.test(formData.password) || !/\d/.test(formData.password)) {
+      newErrors.password = 'Password must contain at least one letter and one number';
     }
 
     setErrors(newErrors);
@@ -64,6 +73,8 @@ export default function SignupForm() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          firstName: formData.firstName.trim() || '', // Send empty string if not provided
+          lastName: formData.lastName.trim() || '',   // Send empty string if not provided
           email: formData.email.trim(),
           password: formData.password
         }),
@@ -77,9 +88,16 @@ export default function SignupForm() {
           message: data.message
         });
         setFormData({
+          firstName: '',
+          lastName: '',
           email: '',
           password: ''
         });
+        
+        // Automatically redirect to the original signin page after successful signup
+        setTimeout(() => {
+          router.push('/signin');
+        }, 2000);
       } else {
         setSubmitStatus({
           type: 'error',
@@ -104,6 +122,11 @@ export default function SignupForm() {
             : 'bg-red-50 border border-red-200 text-red-800'
           }`}>
           <p className="text-sm font-medium">{submitStatus.message}</p>
+          {submitStatus.type === 'success' && (
+            <p className="text-xs mt-2 text-green-600">
+              Redirecting to sign in page in 2 seconds...
+            </p>
+          )}
         </div>
       )}
 
