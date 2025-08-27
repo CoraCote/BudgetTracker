@@ -258,6 +258,25 @@ a:focus {
   background-clip: text;
 }
 
+.gradient-text-purple-pink {
+  background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-bg-purple-pink {
+  background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+}
+
+.gradient-bg-purple-pink-hover:hover {
+  background: linear-gradient(135deg, #7C3AED 0%, #DB2777 100%);
+}
+
+.gradient-border-purple-pink {
+  border-image: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%) 1;
+}
+
 .glass {
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
@@ -274,4 +293,9 @@ a:focus {
 
 .shadow-large {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+span:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }

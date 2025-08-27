@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 /**
  * Client Logos component with enhanced bubble effects and animations
  * Features client logos with subtle floating elements
@@ -13,23 +15,59 @@ export default function ClientLogos() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-16 opacity-60">
-          <div className="text-gray-700 font-semibold hover:opacity-100 transition-opacity duration-300 group">
-            <span className="group-hover:scale-110 transition-transform duration-300 inline-block">PEAK ACE</span>
+          <div className="hover:opacity-100 transition-opacity duration-300 group">
+            <Image
+              src="/industry/peakace.svg"
+              alt="PEAK ACE"
+              width={120}
+              height={40}
+              className="group-hover:scale-110 transition-transform duration-300"
+            />
           </div>
-          <div className="text-gray-700 font-semibold hover:opacity-100 transition-opacity duration-300 group">
-            <span className="group-hover:scale-110 transition-transform duration-300 inline-block">madwire</span>
+          <div className="hover:opacity-100 transition-opacity duration-300 group">
+            <Image
+              src="/industry/madwire.png"
+              alt="madwire"
+              width={120}
+              height={40}
+              className="group-hover:scale-110 transition-transform duration-300"
+            />
           </div>
-          <div className="text-gray-700 font-semibold hover:opacity-100 transition-opacity duration-300 group">
-            <span className="group-hover:scale-110 transition-transform duration-300 inline-block">BBQGUYS</span>
+          <div className="hover:opacity-100 transition-opacity duration-300 group">
+            <Image
+              src="/industry/bbqguys.svg"
+              alt="BBQGUYS"
+              width={120}
+              height={40}
+              className="group-hover:scale-110 transition-transform duration-300"
+            />
           </div>
-          <div className="text-gray-700 font-semibold hover:opacity-100 transition-opacity duration-300 group">
-            <span className="group-hover:scale-110 transition-transform duration-300 inline-block">Emma.</span>
+          <div className="hover:opacity-100 transition-opacity duration-300 group">
+            <Image
+              src="/industry/emma-sleep.svg"
+              alt="Emma."
+              width={120}
+              height={40}
+              className="group-hover:scale-110 transition-transform duration-300"
+            />
           </div>
-          <div className="text-gray-700 font-semibold hover:opacity-100 transition-opacity duration-300 group">
-            <span className="group-hover:scale-110 transition-transform duration-300 inline-block">MedStar Health</span>
+          <div className="hover:opacity-100 transition-opacity duration-300 group">
+            <Image
+              src="/industry/medstar-health.svg"
+              alt="MedStar Health"
+              width={120}
+              height={40}
+              className="group-hover:scale-110 transition-transform duration-300"
+            />
           </div>
-          <div className="text-gray-700 font-semibold hover:opacity-100 transition-opacity duration-300 group">
-            <span className="group-hover:scale-110 transition-transform duration-300 inline-block">SECURE TICKET PURCHASE</span>
+          <div className="hover:opacity-100 transition-opacity duration-300 group">
+            <Image
+              src="/industry/secureticketpurchase.png"
+              alt="SECURE TICKET PURCHASE"
+              width={120}
+              height={40}
+              className="group-hover:scale-110 transition-transform duration-300"
+            />
           </div>
         </div>
       </div>
