@@ -1,8 +1,11 @@
+'use client';
 import Link from 'next/link';
 import SignupForm from '../../components/SignupForm';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function SignupPage() {
+  const router = useRouter();
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -20,9 +23,11 @@ export default function SignupPage() {
       </div>
 
       <div className="fixed top-6 left-6 z-50">
-        <Link 
-          href="/" 
+        <button
+          type="button"
+          onClick={() => router.back()}
           className="flex items-center justify-center w-12 h-12 bg-white/90 backdrop-blur-md border border-white/30 rounded-2xl shadow-xl hover:bg-white hover:shadow-2xl transition-all duration-300 group hover:scale-110 hover:rotate-12"
+          aria-label="Go back"
         >
           <svg 
             className="w-5 h-5 text-slate-600 group-hover:text-slate-800 transition-colors" 
@@ -32,7 +37,7 @@ export default function SignupPage() {
           >                                                                                                                                                                                                                                                                                                                               
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
-        </Link>
+        </button>
       </div>
 
       <div className="flex min-h-screen relative z-10">
