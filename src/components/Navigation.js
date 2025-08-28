@@ -90,7 +90,7 @@ export default function Navigation() {
                           </div>
                         </Link>
                         
-                        <Link href="/solutions/analytics" className="flex items-start space-x-3 hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                        <Link href="/solutions/data-insights" className="flex items-start space-x-3 hover:bg-gray-50 p-2 rounded-lg transition-colors">
                           <div className="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <svg className="w-5 h-5 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
                               <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
@@ -276,8 +276,8 @@ export default function Navigation() {
                         </svg>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 text-sm">Learn With Optmyzr</h4>
-                        <p className="text-xs text-gray-600">Get the best out of Optmyzr with our expert tips</p>
+                        <h4 className="font-semibold text-gray-900 text-sm">Learn With Adoptima</h4>
+                        <p className="text-xs text-gray-600">Get the best out of Adoptima with our expert tips</p>
                       </div>
                     </div>
                     
@@ -300,7 +300,7 @@ export default function Navigation() {
                         </svg>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 text-sm">Optmyzr Blog</h4>
+                        <h4 className="font-semibold text-gray-900 text-sm">Adoptima Blog</h4>
                         <p className="text-xs text-gray-600">Industry analysis, data studies, and more</p>
                       </div>
                     </div>
@@ -325,8 +325,8 @@ export default function Navigation() {
                         </svg>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 text-sm">Optmyzr Comparison</h4>
-                        <p className="text-xs text-gray-600">Optmyzr versus other ad tools</p>
+                        <h4 className="font-semibold text-gray-900 text-sm">Adoptima Comparison</h4>
+                        <p className="text-xs text-gray-600">Adoptima versus other ad tools</p>
                       </div>
                     </div>
                     
@@ -349,7 +349,7 @@ export default function Navigation() {
                         </svg>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 text-sm">Optmyzr Labs</h4>
+                        <h4 className="font-semibold text-gray-900 text-sm">Adoptima Labs</h4>
                         <p className="text-xs text-gray-600">Exciting new projects we're working on</p>
                       </div>
                     </div>
