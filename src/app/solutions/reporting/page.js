@@ -10,7 +10,7 @@ import {
   CurrencyDollarIcon,
   MagnifyingGlassIcon,
   CursorArrowRaysIcon,
-} from '@heroicons/react/24/outline';
+} from '../../../components/ui/icons';
 
 import Navigation from '../../../components/Navigation';
 import Footer from '../../../components/Footer';
@@ -328,7 +328,7 @@ export default function ReportingPage() {
                   <div className="text-right mb-6">
                     <div className="flex items-center justify-end space-x-2 text-gray-600">
                       <CheckCircleIcon className="w-5 h-5 text-teal-500" />
-                      <span className="font-semibold">ADOPTIMA</span>
+                      <span className="font-semibold">OPTMYZR</span>
                     </div>
                   </div>
 
