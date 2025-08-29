@@ -109,7 +109,7 @@ export default function Navigation() {
                     <div>
                       <h3 className="text-lg font-bold text-gray-900 mb-6">Capabilities</h3>
                       <div className="space-y-4">
-                        <div className="flex items-start space-x-3">
+                        <Link href="/solutions/paid-search-optimization" className="flex items-start space-x-3 hover:bg-gray-50 p-2 rounded-lg transition-colors">
                           <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <svg className="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
                               <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
@@ -119,7 +119,7 @@ export default function Navigation() {
                             <h4 className="font-semibold text-gray-900">Paid Search Optimization</h4>
                             <p className="text-sm text-gray-600">Manage and optimize all aspects of PPC campaigns.</p>
                           </div>
-                        </div>
+                        </Link>
                         
                         <div className="flex items-start space-x-3">
                           <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
