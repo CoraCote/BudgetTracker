@@ -133,7 +133,7 @@ export default function Navigation() {
                           </div>
                         </Link>
                         
-                        <div className="flex items-start space-x-3">
+                        <Link href="/solutions/ppc-audits" className="flex items-start space-x-3 hover:bg-gray-50 p-2 rounded-lg transition-colors">
                           <div className="w-8 h-8 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <svg className="w-5 h-5 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
                               <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -143,7 +143,7 @@ export default function Navigation() {
                             <h4 className="font-semibold text-gray-900">PPC Audits</h4>
                             <p className="text-sm text-gray-600">Account structure audits, feed audits, and quick fixes for issues.</p>
                           </div>
-                        </div>
+                        </Link>
                         
                         <div className="flex items-start space-x-3">
                           <div className="w-8 h-8 bg-pink-100 rounded-lg flex items-center justify-center flex-shrink-0">

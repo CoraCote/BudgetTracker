@@ -6,7 +6,6 @@ export default function OptimizationPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50">
       <Navigation />
-      {/* Hero Section */}
       <section className="relative pt-16 pb-16 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-1/4 w-32 h-32 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
@@ -49,7 +48,6 @@ export default function OptimizationPage() {
         </div>
       </section>
 
-      {/* Optimization Interface Showcase */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -160,7 +158,6 @@ export default function OptimizationPage() {
         </div>
       </section>
 
-             {/* Advanced Bid Management Section */}
        <section className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="text-center mb-16">
@@ -177,7 +174,6 @@ export default function OptimizationPage() {
            </div>
 
            <div className="grid lg:grid-cols-2 gap-16 items-center">
-             {/* Left - Bid Management Interface */}
              <div className="relative">
                <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 transform rotate-2 hover:rotate-0 transition-transform duration-500">
                  <div className="flex items-center justify-between mb-6">
@@ -247,7 +243,6 @@ export default function OptimizationPage() {
                </div>
              </div>
 
-             {/* Right - Benefits */}
              <div>
                <div className="space-y-8">
                  <div className="flex items-start space-x-4">
@@ -291,7 +286,6 @@ export default function OptimizationPage() {
          </div>
        </section>
 
-             {/* Campaign Performance Insights Section */}
        <section className="py-20 bg-white">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="text-center mb-16">
@@ -308,7 +302,6 @@ export default function OptimizationPage() {
            </div>
 
            <div className="grid lg:grid-cols-3 gap-8 mb-12">
-             {/* Performance Metrics Cards */}
              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-100">
                <div className="flex items-center justify-between mb-4">
                  <h3 className="text-lg font-semibold text-gray-900">ROAS Improvement</h3>
@@ -372,7 +365,6 @@ export default function OptimizationPage() {
              </div>
            </div>
 
-           {/* Performance Chart */}
            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
              <div className="flex items-center justify-between mb-6">
                <h3 className="text-xl font-bold text-gray-900">Campaign Performance Trends</h3>
@@ -406,7 +398,7 @@ export default function OptimizationPage() {
                </div>
              </div>
 
-             {/* Mock Chart */}
+            
              <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-6 h-32 flex items-end justify-center space-x-2">
                {[20, 35, 28, 45, 38, 52, 48, 65, 58, 72, 68, 85].map((height, index) => (
                  <div key={index} className="w-6 bg-gradient-to-t from-purple-500 to-pink-500 rounded-t" style={{ height: `${height}%` }}></div>
@@ -417,7 +409,7 @@ export default function OptimizationPage() {
          </div>
        </section>
 
-       {/* Rule-Based Automation Section */}
+      
        <section className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -434,13 +426,13 @@ export default function OptimizationPage() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left - Rule Interface */}
+           
             <div className="relative">
               <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-6">Ad Copies with Decline in CTR (30 Days)</h3>
                 
                 <div className="space-y-6">
-                  {/* IF Section */}
+                 
                   <div className="bg-red-50 border border-red-200 rounded-lg p-4">
                     <h4 className="font-semibold text-red-800 mb-3 flex items-center">
                       <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -472,7 +464,6 @@ export default function OptimizationPage() {
                     </button>
                   </div>
 
-                  {/* THEN Section */}
                   <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                     <h4 className="font-semibold text-green-800 mb-3 flex items-center">
                       <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -509,7 +500,6 @@ export default function OptimizationPage() {
                      </select>
                    </div>
 
-                   {/* Rule Statistics */}
                    <div className="bg-gray-50 rounded-lg p-4 mt-4">
                      <div className="grid grid-cols-3 gap-4 text-center">
                        <div>
@@ -530,7 +520,6 @@ export default function OptimizationPage() {
               </div>
             </div>
 
-            {/* Right - Benefits */}
             <div>
               <div className="space-y-8">
                 <div className="flex items-start space-x-4">
@@ -574,7 +563,6 @@ export default function OptimizationPage() {
         </div>
       </section>
 
-             {/* AI-Powered Insights Section */}
        <section className="py-20 bg-white">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="text-center mb-16">
@@ -591,7 +579,6 @@ export default function OptimizationPage() {
            </div>
 
            <div className="grid lg:grid-cols-2 gap-16 items-center">
-             {/* Left - AI Insights Interface */}
              <div className="relative">
                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-2xl border border-gray-100 p-6 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
                  <div className="flex items-center justify-between mb-6">
@@ -670,7 +657,6 @@ export default function OptimizationPage() {
                </div>
              </div>
 
-             {/* Right - Benefits */}
              <div>
                <div className="space-y-8">
                  <div className="flex items-start space-x-4">
@@ -714,7 +700,6 @@ export default function OptimizationPage() {
          </div>
        </section>
 
-       {/* Trust & Security Section */}
        <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-12">
@@ -755,7 +740,6 @@ export default function OptimizationPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">

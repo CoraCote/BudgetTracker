@@ -3,10 +3,6 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { useRouter } from 'next/navigation';
 
-/**
- * Data Insights Solution Page
- * Features advanced analytics capabilities with modern UI design
- */
 export default function DataInsightsPage() {
   const router = useRouter();
 
@@ -18,9 +14,7 @@ export default function DataInsightsPage() {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-32 h-32 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
           <div className="absolute top-40 right-20 w-24 h-24 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -49,11 +43,9 @@ export default function DataInsightsPage() {
         </div>
       </section>
 
-      {/* Main Dashboard Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Content */}
             <div className="lg:col-span-1">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Analyze account trends and forecast monthly spend more accurately.
@@ -63,9 +55,7 @@ export default function DataInsightsPage() {
               </p>
             </div>
 
-            {/* Right Charts */}
             <div className="lg:col-span-2 space-y-6">
-              {/* Daily Spend Chart */}
               <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Spend Projection (Daily)</h3>
                 <div className="flex items-center gap-4 mb-6">
@@ -79,7 +69,6 @@ export default function DataInsightsPage() {
                   </div>
                 </div>
                 <div className="h-64 bg-gray-50 rounded-lg relative px-4 py-2">
-                  {/* Chart bars */}
                   <div className="flex items-end justify-between h-full">
                     {[120, 180, 150, 220, 160, 190, 140, 170, 200, 180, 160, 190, 210, 180, 170, 190, 200, 180, 160, 190, 210, 180, 170, 190, 200, 180, 160, 190, 210, 180, 170].map((value, index) => (
                       <div key={index} className="flex flex-col items-center">
@@ -96,9 +85,7 @@ export default function DataInsightsPage() {
                       </div>
                     ))}
                   </div>
-                  {/* Target line */}
                   <div className="absolute inset-x-4 top-32 border-t-2 border-orange-400 border-dashed"></div>
-                  {/* Y-axis labels */}
                   <div className="absolute left-0 top-0 h-full flex flex-col justify-between text-xs text-gray-500">
                     <span>$200</span>
                     <span>$150</span>
@@ -109,7 +96,6 @@ export default function DataInsightsPage() {
                 </div>
               </div>
 
-              {/* Cumulative Spend Chart */}
               <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Spend Projection (Cumulative)</h3>
                 <div className="flex items-center gap-4 mb-6">
@@ -124,7 +110,6 @@ export default function DataInsightsPage() {
                 </div>
                 <div className="h-64 bg-gray-50 rounded-lg relative px-4 py-2">
                   <svg className="w-full h-full" viewBox="0 0 400 200">
-                    {/* Projected spend line */}
                     <path
                       d="M 0 180 Q 50 160 100 140 T 200 120 T 300 100 T 400 80"
                       fill="none"
@@ -132,13 +117,11 @@ export default function DataInsightsPage() {
                       strokeWidth="3"
                       className="hover:stroke-blue-600 transition-colors"
                     />
-                    {/* Shaded area */}
                     <path
                       d="M 0 180 Q 50 160 100 140 T 200 120 T 300 100 T 400 80 L 400 200 L 0 200 Z"
                       fill="url(#blueGradient)"
                       opacity="0.2"
                     />
-                    {/* Confidence interval lines */}
                     <path
                       d="M 0 190 Q 50 170 100 150 T 200 130 T 300 110 T 400 90"
                       fill="none"
@@ -162,12 +145,9 @@ export default function DataInsightsPage() {
                       </linearGradient>
                     </defs>
                   </svg>
-                  {/* Target line */}
                   <div className="absolute inset-x-4 top-20 border-t-2 border-orange-500 border-dashed"></div>
-                  {/* Labels */}
                   <div className="absolute left-4 top-16 text-xs text-gray-500">Today</div>
                   <div className="absolute right-4 top-16 text-xs text-gray-500">End of month</div>
-                  {/* Y-axis labels */}
                   <div className="absolute left-0 top-0 h-full flex flex-col justify-between text-xs text-gray-500">
                     <span>$5,000</span>
                     <span>$4,000</span>
@@ -183,11 +163,9 @@ export default function DataInsightsPage() {
         </div>
       </section>
 
-      {/* Root Cause Analysis Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
-            {/* Tabs */}
             <div className="flex space-x-8 mb-8 border-b border-gray-200">
               <button className="pb-4 px-2 border-b-2 border-blue-500 text-blue-600 font-semibold">
                 Cause Chart
@@ -202,12 +180,9 @@ export default function DataInsightsPage() {
             </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-              {/* Main Chart Area */}
               <div className="lg:col-span-3">
                 <div className="bg-gray-50 rounded-xl p-6 h-96">
-                  {/* Root Cause Tree Diagram */}
                   <div className="h-full relative">
-                    {/* Main Conversion Node */}
                     <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-green-100 border-2 border-green-300 rounded-lg px-4 py-2 text-center shadow-lg">
                         <div className="font-bold text-green-800">Conversions</div>
@@ -215,14 +190,11 @@ export default function DataInsightsPage() {
                       </div>
                     </div>
 
-                    {/* Connection Lines */}
                     <svg className="absolute inset-0 w-full h-full" viewBox="0 0 600 400">
-                      {/* Main connections */}
                       <path d="M 300 60 L 300 100" stroke="#9CA3AF" strokeWidth="2" fill="none"/>
                       <path d="M 300 100 L 150 140" stroke="#EF4444" strokeWidth="2" fill="none"/>
                       <path d="M 300 100 L 450 140" stroke="#10B981" strokeWidth="2" fill="none"/>
                       
-                      {/* Secondary connections */}
                       <path d="M 150 140 L 150 180" stroke="#9CA3AF" strokeWidth="1" fill="none"/>
                       <path d="M 150 180 L 100 220" stroke="#EF4444" strokeWidth="1" fill="none"/>
                       <path d="M 150 180 L 200 220" stroke="#EF4444" strokeWidth="1" fill="none"/>
@@ -234,7 +206,6 @@ export default function DataInsightsPage() {
                       <path d="M 450 180 L 450 220" stroke="#10B981" strokeWidth="1" fill="none"/>
                     </svg>
 
-                    {/* Left Branch - Negative Impact */}
                     <div className="absolute top-32 left-16">
                       <div className="bg-red-100 border-2 border-red-300 rounded-lg px-3 py-2 text-center shadow-lg">
                         <div className="font-bold text-red-800">Conv. Rate</div>
@@ -242,7 +213,6 @@ export default function DataInsightsPage() {
                       </div>
                     </div>
 
-                    {/* Right Branch - Positive Impact */}
                     <div className="absolute top-32 right-16">
                       <div className="bg-green-100 border-2 border-green-300 rounded-lg px-3 py-2 text-center shadow-lg">
                         <div className="font-bold text-green-800">Clicks</div>
@@ -250,7 +220,6 @@ export default function DataInsightsPage() {
                       </div>
                     </div>
 
-                    {/* Third Level Nodes - Left Side */}
                     <div className="absolute top-56 left-8">
                       <div className="bg-red-50 border border-red-200 rounded px-2 py-1 text-center text-xs shadow">
                         <div className="font-medium text-red-700">CTR</div>
@@ -270,7 +239,6 @@ export default function DataInsightsPage() {
                       </div>
                     </div>
 
-                    {/* Third Level Nodes - Right Side */}
                     <div className="absolute top-56 right-8">
                       <div className="bg-green-50 border border-green-200 rounded px-2 py-1 text-center text-xs shadow">
                         <div className="font-medium text-green-700">Est. Avg Pos</div>
@@ -290,7 +258,6 @@ export default function DataInsightsPage() {
                       </div>
                     </div>
 
-                    {/* Fourth Level - More detailed metrics */}
                     <div className="absolute bottom-4 left-4">
                       <div className="bg-gray-50 border border-gray-200 rounded px-2 py-1 text-center text-xs">
                         <div className="font-medium text-gray-700">Search Query Volume</div>
@@ -316,7 +283,6 @@ export default function DataInsightsPage() {
                       </div>
                     </div>
 
-                    {/* Legend */}
                     <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex items-center gap-4 text-xs">
                       <div className="flex items-center gap-1">
                         <div className="w-3 h-0.5 bg-green-500"></div>
@@ -335,9 +301,7 @@ export default function DataInsightsPage() {
                 </div>
               </div>
 
-              {/* Right Sidebar */}
               <div className="lg:col-span-1 space-y-6">
-                {/* Change History */}
                 <div className="bg-blue-50 rounded-xl p-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">Change History</h4>
                   <div className="text-center mb-4">
@@ -371,7 +335,6 @@ export default function DataInsightsPage() {
                   </div>
                 </div>
 
-                {/* Express Optimizations */}
                 <div className="bg-green-50 rounded-xl p-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">Express Optimizations</h4>
                   <ul className="space-y-3">
@@ -399,7 +362,6 @@ export default function DataInsightsPage() {
         </div>
       </section>
 
-      {/* Case Study Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
@@ -421,7 +383,6 @@ export default function DataInsightsPage() {
             
             <div className="relative">
               <div className="bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl p-12 text-center shadow-2xl relative overflow-hidden">
-                {/* Background pattern */}
                 <div className="absolute inset-0 opacity-20">
                   <div className="absolute top-4 left-4 w-8 h-8 border-2 border-white/30 rounded"></div>
                   <div className="absolute top-12 left-12 w-4 h-4 border-2 border-white/30 rounded"></div>
@@ -431,7 +392,6 @@ export default function DataInsightsPage() {
                   <div className="absolute top-24 right-12 w-8 h-8 border-2 border-white/30 rounded"></div>
                 </div>
                 
-                {/* Growth arrows */}
                 <div className="absolute inset-0">
                   <svg className="w-full h-full" viewBox="0 0 200 200">
                     <path d="M 20 160 L 30 140 L 40 160 L 30 140 L 30 120" stroke="white" strokeWidth="2" fill="none" opacity="0.6"/>
@@ -456,7 +416,6 @@ export default function DataInsightsPage() {
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

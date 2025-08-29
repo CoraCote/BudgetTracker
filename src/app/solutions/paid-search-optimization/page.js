@@ -7,7 +7,6 @@ export default function PaidSearchOptimizationPage() {
     <>
       <Navigation />
       
-      {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-white via-purple-50/30 to-pink-50/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -173,7 +172,6 @@ export default function PaidSearchOptimizationPage() {
         </div>
       </section>
 
-      {/* Campaign Optimization Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -201,7 +199,6 @@ export default function PaidSearchOptimizationPage() {
             </div>
 
             <div className="space-y-6">
-              {/* ADOPTIMA Smart Campaigns */}
               <div className="bg-white rounded-xl p-6 border border-gray-200">
                 <div className="flex items-start space-x-4">
                   <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -218,7 +215,6 @@ export default function PaidSearchOptimizationPage() {
                 </div>
               </div>
 
-              {/* Standard Shopping Campaigns */}
               <div className="bg-white rounded-xl p-6 border border-gray-200">
                 <div className="flex items-start space-x-4">
                   <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -235,7 +231,6 @@ export default function PaidSearchOptimizationPage() {
                 </div>
               </div>
 
-              {/* PMax Retail Campaigns */}
               <div className="bg-white rounded-xl p-6 border border-gray-200">
                 <div className="flex items-start space-x-4">
                   <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -276,7 +271,6 @@ export default function PaidSearchOptimizationPage() {
         </div>
       </section>
 
-      {/* Case Studies Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -286,7 +280,6 @@ export default function PaidSearchOptimizationPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Driva Case Study */}
             <div className="space-y-6">
               <div className="inline-flex items-center px-4 py-2 bg-green-100 text-gray-800 rounded-full text-sm font-medium">
                 Case study

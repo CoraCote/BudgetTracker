@@ -15,17 +15,11 @@ import {
 import Navigation from '../../../components/Navigation';
 import Footer from '../../../components/Footer';
 
-/**
- * Reporting Solution Page - Showcases powerful PPC reporting capabilities
- * Features modern analytics dashboard, conversion funnels, and geographic insights
- */
 export default function ReportingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50">
       <Navigation />
-      {/* Hero Section */}
       <section className="relative pt-24 pb-16 overflow-hidden">
-        {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
           <div className="absolute top-40 right-20 w-96 h-96 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }}></div>
@@ -68,11 +62,9 @@ export default function ReportingPage() {
         </div>
       </section>
 
-      {/* Analytics Dashboard Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Content */}
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Paint a complete picture of PPC's impact on marketing and growth
@@ -82,10 +74,8 @@ export default function ReportingPage() {
               </p>
             </div>
 
-            {/* Right Dashboard */}
             <div className="relative group">
               <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100 transition-all duration-500 hover:shadow-3xl hover:scale-105 hover:border-purple-200">
-                {/* Funnel Chart */}
                 <div className="mb-8">
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Funnel Chart</h3>
                   <div className="space-y-2">
@@ -104,7 +94,6 @@ export default function ReportingPage() {
                   </div>
                 </div>
 
-                {/* Map Chart */}
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Geographic Performance</h3>
                   <div className="relative bg-gray-100 rounded-lg p-4 h-48">
@@ -123,11 +112,9 @@ export default function ReportingPage() {
         </div>
       </section>
 
-      {/* Key Performance Indicators Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Dashboard */}
             <div className="relative group">
               <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100 transition-all duration-500 hover:shadow-3xl hover:scale-105 hover:border-green-200">
                 <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
@@ -135,12 +122,7 @@ export default function ReportingPage() {
                   Key Performance Indicators
                 </h3>
 
-                {/* 
-                  Key Performance Indicators Grid
-                  This section displays a 3x3 grid of KPI cards with icons, values, and change indicators.
-                */}
                 <div className="grid grid-cols-3 gap-4">
-                  {/* Row 1 */}
                   <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-blue-100 hover:scale-105 transition-all duration-300 cursor-pointer group">
                     <MagnifyingGlassIcon className="w-8 h-8 text-blue-600 mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
                     <div className="text-sm text-gray-700">Impressions</div>
@@ -168,7 +150,6 @@ export default function ReportingPage() {
                     </div>
                   </div>
 
-                  {/* Row 2 */}
                   <div className="text-center p-4 bg-gray-50 rounded-lg hover:bg-blue-100 hover:scale-105 transition-all duration-300 cursor-pointer group">
                     <div className="w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform duration-300">
                       <CurrencyDollarIcon className="w-5 h-5 text-blue-700" />
@@ -211,7 +192,6 @@ export default function ReportingPage() {
                   </div>
                 </div>
 
-                {/* Conversion Charts */}
                 <div className="grid grid-cols-2 gap-6 mt-8">
                   <div className="group cursor-pointer">
                     <h4 className="font-semibold text-gray-900 mb-3">Conversions</h4>
@@ -244,7 +224,6 @@ export default function ReportingPage() {
               </div>
             </div>
 
-            {/* Right Content */}
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Advanced Analytics Dashboard
@@ -288,7 +267,6 @@ export default function ReportingPage() {
           </div>
         </div>
       </section>
-      {/* Case Study Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -298,7 +276,6 @@ export default function ReportingPage() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Content */}
             <div>
               <div className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
                 Case study
@@ -313,17 +290,14 @@ export default function ReportingPage() {
               </button>
             </div>
 
-            {/* Right Graphic */}
             <div className="relative group">
               <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100 relative overflow-hidden transition-all duration-500 hover:shadow-3xl hover:scale-105 hover:border-blue-200">
-                {/* Blue Banner */}
                 <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-b from-blue-500 to-blue-600 rounded-l-2xl flex items-center justify-center">
                   <div className="text-white font-bold text-sm writing-mode-vertical">
                     CASE STUDY
                   </div>
                 </div>
 
-                {/* Content */}
                 <div className="ml-20">
                   <div className="text-right mb-6">
                     <div className="flex items-center justify-end space-x-2 text-gray-600">
@@ -360,7 +334,6 @@ export default function ReportingPage() {
         </div>
       </section>
 
-      {/* Footer Section */}
       <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 text-center">

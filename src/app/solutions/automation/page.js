@@ -3,17 +3,9 @@ import { useRouter } from 'next/navigation';
 import Navigation from '../../../components/Navigation';
 import Footer from '../../../components/Footer';
 
-/**
- * Automation Solutions Page
- * Features multiple UI sections showcasing automation capabilities
- * Inspired by modern PPC automation platforms with purple/pink color scheme
- */
 export default function AutomationPage() {
   const router = useRouter();
 
-  /**
-   * Handles navigation to signup page when Start Trial button is clicked
-   */
   const handleStartTrial = () => {
     router.push('/signup');
   };
@@ -22,11 +14,9 @@ export default function AutomationPage() {
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
       <Navigation />
       
-      {/* Hero Section - Inspired by 1st image */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-8xl m-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
             <div className="space-y-8">
               <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-800">
                 <div className="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
@@ -65,7 +55,6 @@ export default function AutomationPage() {
               </div>
             </div>
             
-            {/* Right Content - Automation Schedules UI */}
             <div className="relative">
               <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
                 <div className="flex items-center justify-between mb-6">
@@ -80,7 +69,6 @@ export default function AutomationPage() {
                   </div>
                 </div>
                 
-                {/* Filter Bar */}
                 <div className="flex flex-wrap gap-3 mb-6">
                   {['All Platforms', 'All Accounts', 'All Automation Types', 'All Users', 'All Frequencies', 'Enabled'].map((filter, index) => (
                     <button key={index} className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors flex items-center">
@@ -92,7 +80,6 @@ export default function AutomationPage() {
                   ))}
                 </div>
                 
-                {/* Table */}
                 <div className="space-y-3">
                   {[
                     { account: 'Account Name (123-456-7890)', type: 'Shopping Campaign Refresher', schedule: 'Weekly Tue Between 9:00-12:00 GMT', status: 'Complete', owner: 'example@website.net' },
@@ -139,7 +126,6 @@ export default function AutomationPage() {
         </div>
       </section>
 
-      {/* PPC Automation Capabilities Section - Inspired by 2nd image */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
@@ -148,7 +134,6 @@ export default function AutomationPage() {
           
           <div className="bg-gray-100 rounded-3xl p-12">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-              {/* Left Content */}
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold text-gray-900">
                   Sustain a high level of delivery even in lean times.
@@ -160,9 +145,7 @@ export default function AutomationPage() {
                 </p>
               </div>
               
-              {/* Right Content */}
               <div className="lg:col-span-2 space-y-8">
-                {/* Create Dynamic Campaigns */}
                 <div>
                   <h4 className="text-xl font-bold text-gray-900 mb-6">Create dynamic campaigns</h4>
                   <div className="flex items-center space-x-8 mb-6">
@@ -223,7 +206,6 @@ export default function AutomationPage() {
                   </div>
                 </div>
                 
-                {/* Statistics Cards */}
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                   {[
                     { title: 'Campaign', total: 15, stats: { create: 0, enable: 0, pause: 3, noChanges: 12, update: 0, warnings: 0 } },
@@ -269,7 +251,6 @@ export default function AutomationPage() {
         </div>
       </section>
 
-      {/* Case Study Section - Inspired by 3rd image */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
@@ -277,7 +258,6 @@ export default function AutomationPage() {
           </h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
             <div className="space-y-6">
               <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
                 Case study
@@ -291,7 +271,6 @@ export default function AutomationPage() {
               </button>
             </div>
             
-            {/* Right Content - Case Study Card */}
             <div className="relative">
               <div className="bg-gray-100 rounded-2xl p-8 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 opacity-50"></div>
@@ -301,7 +280,6 @@ export default function AutomationPage() {
                     <div className="text-purple-600 font-bold text-lg">ADOPTIMA</div>
                   </div>
                   
-                  {/* 3D Cube Graphic */}
                   <div className="flex justify-center mb-8">
                     <div className="relative w-32 h-32">
                       <div className="absolute inset-0 transform rotate-45">
@@ -326,7 +304,6 @@ export default function AutomationPage() {
         </div>
       </section>
 
-      {/* Additional Automation Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
@@ -403,7 +380,6 @@ export default function AutomationPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
