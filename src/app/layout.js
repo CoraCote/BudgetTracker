@@ -1,4 +1,6 @@
 import './globals.css';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'AdOptima - Smarter PPC Management, Simplified',
@@ -22,9 +24,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-gray-50">
-        <main>
+        <Navigation />
+        <main className="pt-16">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
