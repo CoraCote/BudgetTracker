@@ -157,7 +157,7 @@ export default function Navigation() {
                           </div>
                         </Link>
                         
-                        <div className="flex items-start space-x-3">
+                        <Link href="/solutions/performance-max" className="flex items-start space-x-3 hover:bg-gray-50 p-2 rounded-lg transition-colors">
                           <div className="w-8 h-8 bg-cyan-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <svg className="w-5 h-5 text-cyan-600" fill="currentColor" viewBox="0 0 20 20">
                               <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
@@ -167,7 +167,7 @@ export default function Navigation() {
                             <h4 className="font-semibold text-gray-900">Performance Max</h4>
                             <p className="text-sm text-gray-600">Simplify management and gain control over targeting.</p>
                           </div>
-                        </div>
+                        </Link>
                         
                         <div className="flex items-start space-x-3">
                           <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
