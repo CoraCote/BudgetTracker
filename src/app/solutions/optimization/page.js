@@ -1,11 +1,8 @@
 import Link from 'next/link';
-import Navigation from '../../../components/Navigation';
-import Footer from '../../../components/Footer';
 
 export default function OptimizationPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50">
-      <Navigation />
       <section className="relative pt-16 pb-16 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-1/4 w-32 h-32 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
@@ -769,7 +766,6 @@ export default function OptimizationPage() {
         </div>
       </section>
       
-      <Footer />
     </div>
   );
 }

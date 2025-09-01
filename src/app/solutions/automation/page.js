@@ -1,7 +1,5 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import Navigation from '../../../components/Navigation';
-import Footer from '../../../components/Footer';
 
 export default function AutomationPage() {
   const router = useRouter();
@@ -12,7 +10,6 @@ export default function AutomationPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
-      <Navigation />
       
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-8xl m-12">
@@ -406,7 +403,6 @@ export default function AutomationPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }
