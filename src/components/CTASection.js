@@ -1,10 +1,6 @@
 import Link from 'next/link';
 import Logo from './Logo';
 
-/**
- * CTA Section component with enhanced bubble effects and animations
- * Features a gradient background with interactive elements
- */
 export default function CTASection() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 relative overflow-hidden">

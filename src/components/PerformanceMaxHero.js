@@ -15,17 +15,16 @@ export default function PerformanceMaxHero() {
           <span className="text-purple-700 font-medium text-sm">PPC Optimization Engine</span>
         </div>
 
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          Make changes that{' '}
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-20 leading-tight animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          Meet your co-pilot for{' '}
           <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-purple-600 bg-clip-text text-transparent">
-            maximize the impact
-          </span>{' '}                                                                                                                                              of your ad spend
+            Performance Max
+          </span>{' '}
+          success.
         </h1>
 
-        <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          Our optimization engine makes it easier to take actions that move performance forward, 
-          while stripping away recurring and repetitive work. Optimize one account or apply changes 
-          across many, all in a few clicks.
+        <p className="text-xl md:text-2xl text-gray-600 mb-30 max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          AdOptima simplifies PMax campaign management and ensures your money goes where you want it to go by giving you more visibility and control over performance.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>

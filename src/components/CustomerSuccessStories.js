@@ -1,7 +1,3 @@
-/**
- * Customer Success Stories component with enhanced bubble effects and animations
- * Features customer testimonials with interactive hover effects
- */
 export default function CustomerSuccessStories() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50/50 via-pink-50/50 to-blue-50/50 relative overflow-hidden">
