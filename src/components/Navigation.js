@@ -187,7 +187,7 @@ export default function Navigation() {
                     <div>
                       <h3 className="text-lg font-bold text-gray-900 mb-6">Roles</h3>
                       <div className="space-y-4">
-                        <div className="flex items-start space-x-3">
+                        <Link href="/solutions/digital-marketing-agencies" className="flex items-start space-x-3 hover:bg-gray-50 p-2 rounded-lg transition-colors">
                           <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                               <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
@@ -197,7 +197,7 @@ export default function Navigation() {
                             <h4 className="font-semibold text-gray-900">Agency</h4>
                             <p className="text-sm text-gray-600">Scale efficiently across any number of accounts.</p>
                           </div>
-                        </div>
+                        </Link>
                         
                         <div className="flex items-start space-x-3">
                           <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
