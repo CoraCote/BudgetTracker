@@ -59,13 +59,13 @@ export default function DigitalMarketingAgenciesPage() {
             </div>
 
             <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100 flex flex-col items-center">
+              <div className="rounded-2xl p-8 flex flex-col items-center">
                 <div className="w-full flex justify-center mb-6">
                   <img 
                     src="/industry/agency-growth-illustration.webp" 
                     alt="Team collaborating on digital marketing analytics dashboards with Google integration" 
-                    className="w-[340px] h-auto object-contain"
-                    style={{ maxWidth: 360 }}
+                    className="w-[540px] h-auto object-contain"
+                    style={{ maxWidth : 540 }}
                   />
                 </div>
                 <div className="text-center">
