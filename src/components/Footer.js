@@ -1,14 +1,9 @@
 import Logo from './Logo';
 import ScrollToTop from './ScrollToTop';
 
-/**
- * Enhanced Footer component with creative UI elements and comprehensive information
- * Features animated elements, interactive sections, and organized content
- */
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Enhanced Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-10 left-10 w-24 h-24 bg-gradient-to-br from-purple-600/30 to-pink-600/30 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-10 right-10 w-20 h-20 bg-gradient-to-br from-blue-600/30 to-purple-600/30 rounded-full blur-lg animate-pulse" style={{ animationDelay: '2s' }}></div>
@@ -18,9 +13,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Company & Logo Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6 group">
               <Logo size="default" variant="white" />
@@ -31,7 +24,6 @@ export default function Footer() {
               Real-time insights, proven ROI, and results that speak for themselves.
             </p>
             
-            {/* Enhanced Social Media Links */}
             <div className="flex space-x-4 mb-6">
               <a href="#" className="group relative">
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center hover:scale-110 transform duration-300 shadow-lg hover:shadow-blue-500/25">
@@ -61,7 +53,6 @@ export default function Footer() {
               </a>
             </div>
 
-            {/* Newsletter Signup */}
             <div className="bg-gray-800/50 rounded-xl p-4 border border-gray-700/50">
               <h4 className="text-sm font-semibold mb-2 text-gray-200">Stay Updated</h4>
               <div className="flex">
@@ -77,7 +68,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Company Section */}
           <div>
             <h3 className="text-lg font-semibold mb-6 flex items-center">
               <span className="w-1 h-6 bg-gradient-to-b from-purple-400 to-pink-400 rounded-full mr-3"></span>
@@ -111,7 +101,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Product Section */}
           <div>
             <h3 className="text-lg font-semibold mb-6 flex items-center">
               <span className="w-1 h-6 bg-gradient-to-b from-blue-400 to-cyan-400 rounded-full mr-3"></span>
@@ -151,14 +140,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact & Resources Section */}
           <div>
             <h3 className="text-lg font-semibold mb-6 flex items-center">
               <span className="w-1 h-6 bg-gradient-to-b from-green-400 to-emerald-400 rounded-full mr-3"></span>
               Contact & Support
             </h3>
             
-            {/* Contact Information */}
             <div className="space-y-4 mb-6">
               <div className="flex items-start space-x-3 group">
                 <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
@@ -198,7 +185,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Support Links */}
             <div className="space-y-2">
               <a href="#" className="text-gray-300 hover:text-white transition-colors group flex items-center">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></span>
@@ -212,7 +198,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Enhanced Bottom Section */}
         <div className="border-t border-gray-700/50 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             <div className="flex items-center space-x-4">
@@ -239,7 +224,6 @@ export default function Footer() {
             </div>
           </div>
           
-          {/* Trust Indicators */}
           <div className="mt-6 pt-6 border-t border-gray-700/30">
             <div className="flex flex-wrap items-center justify-center space-x-8 text-gray-500">
               <div className="flex items-center space-x-2">

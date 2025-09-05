@@ -34,11 +34,9 @@ export default function Navigation() {
                 </svg>
               </div>
               
-              {/* Solutions Dropdown */}
-              <div className="absolute top-full left-0 mt-2 w-[1000px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100">
+              <div className="absolute top-full -left-4 sm:-left-6 lg:-left-8 mt-2 w-[1200px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100">
                 <div className="p-8">
-                  <div className="grid grid-cols-3 gap-8">
-                    {/* Use Cases Column */}
+                  <div className="grid grid-cols-4 gap-6">
                     <div>
                       <h3 className="text-lg font-bold text-gray-900 mb-6">Use Cases</h3>
                       <div className="space-y-4">
@@ -105,7 +103,6 @@ export default function Navigation() {
                       </div>
                     </div>
 
-                    {/* Capabilities Column */}
                     <div>
                       <h3 className="text-lg font-bold text-gray-900 mb-6">Capabilities</h3>
                       <div className="space-y-4">
@@ -183,7 +180,6 @@ export default function Navigation() {
                       </div>
                     </div>
 
-                    {/* Roles Column */}
                     <div>
                       <h3 className="text-lg font-bold text-gray-900 mb-6">Roles</h3>
                       <div className="space-y-4">
@@ -236,6 +232,83 @@ export default function Navigation() {
                         </Link>
                       </div>
                     </div>
+
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-6">Features</h3>
+                      <div className="space-y-4">
+                        <Link href="/solutions/ppc-competitor-insights" className="flex items-start space-x-3 hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                          <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                            </svg>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-900">Competitive Intel & Insights</h4>
+                            <p className="text-sm text-gray-600">Know where your account stands amongst the competition</p>
+                          </div>
+                        </Link>
+                        
+                        <Link href="/solutions/cross-platform-ppc-tools" className="flex items-start space-x-3 hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                          <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978a1.532 1.532 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.532 1.532 0 012.287.947c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-900">Cross-Platform Tools</h4>
+                            <p className="text-sm text-gray-600">Budget optimization, reports, and dashboards across platforms</p>
+                          </div>
+                        </Link>
+                        
+                        <Link href="/solutions/budget-bid-management" className="flex items-start space-x-3 hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                          <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978a1.532 1.532 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.532 1.532 0 012.287.947c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-900">Budget & Bid Management</h4>
+                            <p className="text-sm text-gray-600">Automated PPC budget tracking and target CPA/ROAS optimization</p>
+                          </div>
+                        </Link>
+                        
+                        <Link href="/solutions/shopping-ads" className="flex items-start space-x-3 hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                          <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                            </svg>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-900">Shopping Ads</h4>
+                            <p className="text-sm text-gray-600">Maximize profit for e-commerce brands and clients</p>
+                          </div>
+                        </Link>
+                        
+                        <Link href="/solutions/feed-management" className="flex items-start space-x-3 hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                          <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-900">Feed Management</h4>
+                            <p className="text-sm text-gray-600">Instant feed audits, optimizations, and product segmentation</p>
+                          </div>
+                        </Link>
+                        
+                        <Link href="/solutions/campaign-automator" className="flex items-start space-x-3 hover:bg-gray-50 p-2 rounded-lg transition-colors">
+                          <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978a1.532 1.532 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.532 1.532 0 012.287.947c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-900">Campaign Automator</h4>
+                            <p className="text-sm text-gray-600">Automate search and display campaign creation from a feed</p>
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -252,11 +325,9 @@ export default function Navigation() {
                 </svg>
               </div>
               
-              {/* Resources Dropdown */}
-              <div className="absolute top-full left-0 mt-2 w-[900px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100">
+              <div className="absolute top-full -left-4 sm:-left-6 lg:-left-8 mt-2 w-[900px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100">
                 <div className="p-6">
                   <div className="grid grid-cols-4 gap-4">
-                    {/* Row 1 */}
                     <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                       <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center flex-shrink-0">
                         <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
@@ -305,7 +376,6 @@ export default function Navigation() {
                       </div>
                     </div>
                     
-                    {/* Row 2 */}
                     <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                       <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center flex-shrink-0">
                         <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
@@ -354,7 +424,6 @@ export default function Navigation() {
                       </div>
                     </div>
                     
-                    {/* Row 3 - Single item */}
                     <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors col-span-4">
                       <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center flex-shrink-0">
                         <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
@@ -383,7 +452,7 @@ export default function Navigation() {
               </div>
               
               {/* Company Dropdown */}
-              <div className="absolute top-full left-0 mt-2 w-[700px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100">
+              <div className="absolute top-full -left-4 sm:-left-6 lg:-left-8 mt-2 w-[700px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100">
                 <div className="p-6">
                   <div className="grid grid-cols-3 gap-4">
                     {/* Top Row */}
