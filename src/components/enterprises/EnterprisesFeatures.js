@@ -7,7 +7,7 @@ export default function EnterprisesFeatures() {
         </svg>
       ),
       title: "Maximize ROI with intelligent automation",
-      description: "Connect your first-party business data (CSV, XML, and more) to help ad platform automation make better decisions. Get exclusive access to AdOptima's API to integrate data with other tools in your marketing stack.",
+      description: "Connect your first-party business data (CSV, XML, and more) to help ad platform automation make better decisions. Get exclusive access to AdsOptima's API to integrate data with other tools in your marketing stack.",
       gradient: "from-blue-500 to-cyan-500"
     },
     {

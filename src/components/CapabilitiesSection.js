@@ -15,7 +15,7 @@ export default function CapabilitiesSection() {
                 success.
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                AdOptima simplifies PMax campaign management and ensures your money goes where you want it to go 
+                AdsOptima simplifies PMax campaign management and ensures your money goes where you want it to go 
                 by giving you more visibility and control over performance.
               </p>
             </div>

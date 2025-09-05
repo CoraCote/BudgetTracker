@@ -409,7 +409,7 @@ export default function DataInsightsPage() {
                 </div>
               </div>
               <div className="absolute top-4 right-4 bg-white rounded-lg px-3 py-2 shadow-lg">
-                <span className="text-sm font-bold text-gray-800">ADOPTIMA ✓</span>
+                <span className="text-sm font-bold text-gray-800">ADSOPTIMA ✓</span>
               </div>
             </div>
           </div>

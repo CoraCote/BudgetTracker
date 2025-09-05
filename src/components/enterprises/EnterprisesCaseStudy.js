@@ -11,7 +11,7 @@ export default function EnterprisesCaseStudy() {
     },
     {
       badge: "Case study", 
-      title: "Mabo increases account manager productivity by 56% with AdOptima",
+      title: "Mabo increases account manager productivity by 56% with AdsOptima",
       company: "MABO",
       gradient: "from-teal-600 to-cyan-600",
       description: "Enterprise team scales operations efficiently while maintaining quality and client satisfaction."
@@ -27,7 +27,7 @@ export default function EnterprisesCaseStudy() {
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               record time
             </span>
-            {' '}with AdOptima, following best practices
+            {' '}with AdsOptima, following best practices
           </h2>
         </div>
 
@@ -67,7 +67,7 @@ export default function EnterprisesCaseStudy() {
                   </div>
                 </div>
                 
-                <div className="absolute top-4 left-4 text-white/80 font-bold text-sm">ADOPTIMA</div>
+                <div className="absolute top-4 left-4 text-white/80 font-bold text-sm">ADSOPTIMA</div>
                 <div className="absolute bottom-4 right-4">
                   <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
                     <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -104,7 +104,7 @@ export default function EnterprisesCaseStudy() {
           <div className="text-center max-w-4xl mx-auto">
             <div className="text-6xl text-purple-200 mb-6">"</div>
             <blockquote className="text-2xl lg:text-3xl font-medium text-gray-900 mb-8 leading-relaxed">
-              "AdOptima has transformed how our enterprise team manages PPC campaigns. The automation capabilities 
+              "AdsOptima has transformed how our enterprise team manages PPC campaigns. The automation capabilities 
               and enterprise-grade security give us confidence to scale our operations while maintaining the highest 
               standards for our clients."
             </blockquote>

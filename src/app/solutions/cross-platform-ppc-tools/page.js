@@ -247,7 +247,7 @@ function CaseStudiesSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             When it comes to cross-platform campaigns,<br />
-            paid media teams rely on AdOptima
+            paid media teams rely on AdsOptima
           </h2>
         </div>
 
@@ -259,7 +259,7 @@ function CaseStudiesSection() {
               </div>
               
               <h3 className="text-2xl font-bold text-gray-900">
-                See how Metrik Marketing easily manages ads and budgets across multiple platforms using AdOptima.
+                See how Metrik Marketing easily manages ads and budgets across multiple platforms using AdsOptima.
               </h3>
               
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
@@ -272,7 +272,7 @@ function CaseStudiesSection() {
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-white font-bold text-xl">CASE STUDY</div>
                   <div className="flex items-center space-x-2">
-                    <div className="text-white font-bold">ADOPTIMA</div>
+                    <div className="text-white font-bold">ADSOPTIMA</div>
                   </div>
                 </div>
                 
@@ -315,7 +315,7 @@ function CaseStudiesSection() {
               </div>
               
               <h3 className="text-2xl font-bold text-gray-900">
-                See how BBQGuys takes advantage of AdOptima's unmatched support for Microsoft Ads in addition to Google.
+                See how BBQGuys takes advantage of AdsOptima's unmatched support for Microsoft Ads in addition to Google.
               </h3>
               
               <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
@@ -328,7 +328,7 @@ function CaseStudiesSection() {
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-white font-bold text-xl">CASE STUDY</div>
                   <div className="flex items-center space-x-2">
-                    <div className="text-white font-bold">ADOPTIMA</div>
+                    <div className="text-white font-bold">ADSOPTIMA</div>
                   </div>
                 </div>
                 

@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { ArrowRight, Calendar, Brain, Sparkles } from 'lucide-react';
 
 export const metadata = {
-  title: 'AI For Paid Media - ADOPTIMA Sidekick | AdOptima',
-  description: 'Amplify and complement your human marketing team with AI. Get AI-generated insights, ad copy, and performance narratives with ADOPTIMA Sidekick.',
+  title: 'AI For Paid Media - ADSOPTIMA Sidekick | AdsOptima',
+  description: 'Amplify and complement your human marketing team with AI. Get AI-generated insights, ad copy, and performance narratives with ADSOPTIMA Sidekick.',
 };
 
-export default function ADOPTIMAAIPage() {
+export default function ADSOPTIMAAIPage() {
   return (
     <div className="min-h-screen bg-white">
       <section className="relative overflow-hidden bg-gradient-to-br from-white via-purple-50/30 to-pink-50/30 py-20 lg:py-32">
@@ -28,7 +28,7 @@ export default function ADOPTIMAAIPage() {
               
               <p className="text-xl text-gray-600 leading-relaxed">
                 AI is most valuable when it's built right into the tools and workflows you already use. 
-                In ADOPTIMA, it's there to surface account insights, craft RSA suggestions, build 
+                In ADSOPTIMA, it's there to surface account insights, craft RSA suggestions, build 
                 machine-learning budget forecasts, and more — right where you work.
               </p>
               
@@ -54,13 +54,13 @@ export default function ADOPTIMAAIPage() {
               <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 max-w-md mx-auto">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2">
-                    <h3 className="text-lg font-semibold text-gray-900">Ask ADOPTIMA Sidekick</h3>
+                    <h3 className="text-lg font-semibold text-gray-900">Ask ADSOPTIMA Sidekick</h3>
                     <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">Beta</span>
                   </div>
                 </div>
                 
                 <p className="text-sm text-gray-600 mb-6">
-                  Get help from ADOPTIMA sidekick to know more about PPC account performance, 
+                  Get help from ADSOPTIMA sidekick to know more about PPC account performance, 
                   optimization suggestions and more.
                 </p>
                 
@@ -71,9 +71,9 @@ export default function ADOPTIMAAIPage() {
                         <Brain className="w-4 h-4 text-purple-600" />
                       </div>
                       <div className="flex-1">
-                        <p className="text-sm text-gray-900 font-medium">ADOPTIMA Sidekick</p>
+                        <p className="text-sm text-gray-900 font-medium">ADSOPTIMA Sidekick</p>
                         <p className="text-sm text-gray-600 mt-1">
-                          Hi Development! 👋 I am ADOPTIMA Sidekick - your AI based PPC Assistant. 
+                          Hi Development! 👋 I am ADSOPTIMA Sidekick - your AI based PPC Assistant. 
                           I can help you find some interesting insights about your account. 
                           I am still learning about PPC and this world and my creators have put me in Beta. 
                           What can I help you with?
@@ -138,7 +138,7 @@ export default function ADOPTIMAAIPage() {
                 Escape account management fatigue with AI-backed insights
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Sidekick, the AI assistant built into ADOPTIMA, makes sense of countless insights 
+                Sidekick, the AI assistant built into ADSOPTIMA, makes sense of countless insights 
                 and opportunities so you don't have to dig through endless screens. Just ask what 
                 you need, from recent wins to performance trends, and get actionable answers you 
                 can use to impress your clients.
@@ -149,13 +149,13 @@ export default function ADOPTIMAAIPage() {
               <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2">
-                    <h3 className="text-lg font-semibold text-gray-900">Ask ADOPTIMA Sidekick</h3>
+                    <h3 className="text-lg font-semibold text-gray-900">Ask ADSOPTIMA Sidekick</h3>
                     <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">Beta</span>
                   </div>
                 </div>
                 
                 <p className="text-sm text-gray-600 mb-6">
-                  Get help from ADOPTIMA sidekick to know more about PPC account performance, 
+                  Get help from ADSOPTIMA sidekick to know more about PPC account performance, 
                   optimization suggestions and more.
                 </p>
 
@@ -173,7 +173,7 @@ export default function ADOPTIMAAIPage() {
                         <Brain className="w-4 h-4 text-purple-600" />
                       </div>
                       <div className="flex-1">
-                        <p className="text-sm text-gray-900 font-medium mb-2">ADOPTIMA Sidekick</p>
+                        <p className="text-sm text-gray-900 font-medium mb-2">ADSOPTIMA Sidekick</p>
                         <div className="text-sm text-gray-700 space-y-3">
                           <p className="font-medium">Performance Improvement Opportunities:</p>
                           <ol className="list-decimal list-inside space-y-2 ml-4">
@@ -183,13 +183,13 @@ export default function ADOPTIMAAIPage() {
                               <a href="#" className="text-blue-600 hover:underline ml-1">PPC Investigator Tool</a>
                             </li>
                             <li>
-                              <strong>Negative Keyword Management:</strong> Use ADOPTIMA tool for "Non Converting 
+                              <strong>Negative Keyword Management:</strong> Use ADSOPTIMA tool for "Non Converting 
                               Queries (Shopping)" to add negative keywords for queries with high cost, low CTR, 
                               and zero conversions. <a href="#" className="text-blue-600 hover:underline ml-1">Negative Keyword Tool</a>
                             </li>
                             <li>
                               <strong>Monitor Keywords With Cost Increase:</strong> Monitor keywords with 
-                              significant cost increases using ADOPTIMA's tool to manage bids and budgets. 
+                              significant cost increases using ADSOPTIMA's tool to manage bids and budgets. 
                               <a href="#" className="text-blue-600 hover:underline ml-1">Cost Increase Keyword Monitoring Tool</a>
                             </li>
                           </ol>
@@ -260,7 +260,7 @@ export default function ADOPTIMAAIPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Paid media teams love ADOPTIMA's AI support, which makes PPC management even faster
+              Paid media teams love ADSOPTIMA's AI support, which makes PPC management even faster
             </h2>
           </div>
 
@@ -270,7 +270,7 @@ export default function ADOPTIMAAIPage() {
                 Case study
               </div>
               <p className="text-xl text-gray-700">
-                BBQGuys uses ADOPTIMA's AI-powered capabilities to grow performance and stay ahead of the curve.
+                BBQGuys uses ADSOPTIMA's AI-powered capabilities to grow performance and stay ahead of the curve.
               </p>
               <Link 
                 href="/case-studies/bbqguys" 
@@ -281,7 +281,7 @@ export default function ADOPTIMAAIPage() {
             </div>
 
             <div className="bg-teal-600 rounded-2xl p-8 relative overflow-hidden">
-              <div className="absolute top-4 right-4 text-white text-sm opacity-80">ADOPTIMA®</div>
+              <div className="absolute top-4 right-4 text-white text-sm opacity-80">ADSOPTIMA®</div>
               <div className="flex items-center justify-center h-full">
                 <div className="text-center text-white">
                   <div className="flex items-center justify-center mb-4">
@@ -341,7 +341,7 @@ export default function ADOPTIMAAIPage() {
             Ready to Transform Your PPC Management with AI?
           </h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join thousands of marketers who are already using ADOPTIMA Sidekick to 
+            Join thousands of marketers who are already using ADSOPTIMA Sidekick to 
             amplify their results and save hours every week.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

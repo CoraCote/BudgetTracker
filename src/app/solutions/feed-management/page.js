@@ -36,7 +36,7 @@ export default function FeedManagementPage() {
 
                 <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
                   Managing multiple product feeds across several accounts is too time-consuming and carries a high risk of error. 
-                  AdOptima simplifies the process for eCommerce brands and agencies, giving you greater control over Shopping and Performance Max.
+                  AdsOptima simplifies the process for eCommerce brands and agencies, giving you greater control over Shopping and Performance Max.
                 </p>
               </div>
 
@@ -254,7 +254,7 @@ export default function FeedManagementPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Retail PPC teams worldwide use AdOptima to audit and optimize merchant feeds
+              Retail PPC teams worldwide use AdsOptima to audit and optimize merchant feeds
             </h2>
           </div>
 
@@ -318,7 +318,7 @@ export default function FeedManagementPage() {
             </h2>
             
             <p className="text-xl text-purple-100 leading-relaxed max-w-3xl mx-auto">
-              Join thousands of PPC professionals who trust AdOptima to optimize their product feeds and drive better campaign performance.
+              Join thousands of PPC professionals who trust AdsOptima to optimize their product feeds and drive better campaign performance.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

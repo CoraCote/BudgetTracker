@@ -21,7 +21,7 @@ export default function EnterprisesCTA() {
             </h2>
             
             <p className="text-xl lg:text-2xl text-purple-100 mb-12 leading-relaxed">
-              Join hundreds of enterprise teams already using AdOptima to scale their PPC campaigns 
+              Join hundreds of enterprise teams already using AdsOptima to scale their PPC campaigns 
               with confidence, security, and unmatched automation.
             </p>
 

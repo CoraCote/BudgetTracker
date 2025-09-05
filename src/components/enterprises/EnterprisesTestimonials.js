@@ -1,7 +1,7 @@
 export default function EnterprisesTestimonials() {
   const testimonials = [
     {
-      quote: "AdOptima's enterprise features have revolutionized our PPC management. The automation capabilities and advanced analytics help us deliver exceptional results for our Fortune 500 clients.",
+      quote: "AdsOptima's enterprise features have revolutionized our PPC management. The automation capabilities and advanced analytics help us deliver exceptional results for our Fortune 500 clients.",
       author: "Michael Chen",
       role: "Director of Digital Marketing",
       company: "GlobalTech Solutions",
@@ -17,7 +17,7 @@ export default function EnterprisesTestimonials() {
       rating: 5
     },
     {
-      quote: "We've seen a 45% increase in campaign efficiency since implementing AdOptima. The custom integrations and API access have streamlined our entire marketing workflow.",
+      quote: "We've seen a 45% increase in campaign efficiency since implementing AdsOptima. The custom integrations and API access have streamlined our entire marketing workflow.",
       author: "David Thompson",
       role: "Head of Performance Marketing",
       company: "ScaleUp Inc",
@@ -38,7 +38,7 @@ export default function EnterprisesTestimonials() {
             {' '}worldwide
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See how enterprise organizations are transforming their PPC operations with AdOptima's 
+            See how enterprise organizations are transforming their PPC operations with AdsOptima's 
             advanced automation and analytics capabilities.
           </p>
         </div>
@@ -85,7 +85,7 @@ export default function EnterprisesTestimonials() {
               Trusted by Fortune 500 companies
             </h3>
             <p className="text-gray-600">
-              Leading enterprises choose AdOptima for their PPC management needs
+              Leading enterprises choose AdsOptima for their PPC management needs
             </p>
           </div>
 

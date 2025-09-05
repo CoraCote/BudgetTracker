@@ -26,7 +26,7 @@ export default function DigitalMarketingAgenciesPage() {
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Digital marketing agencies around the world get better operational ROI with AdOptima. 
+                Digital marketing agencies around the world get better operational ROI with AdsOptima. 
                 Our customers reduce account management time, manage more ad spend, and look great in front of clients.
               </p>
               
@@ -171,7 +171,7 @@ export default function DigitalMarketingAgenciesPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              PPC agencies worldwide use AdOptima to cut client account management time and retain client trust
+              PPC agencies worldwide use AdsOptima to cut client account management time and retain client trust
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
           </div>
@@ -179,7 +179,7 @@ export default function DigitalMarketingAgenciesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <div className="bg-gradient-to-br from-purple-600 to-blue-700 p-8 text-white relative overflow-hidden">
-                <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADOPTIMA</div>
+                <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADSOPTIMA</div>
                 <div className="absolute inset-0 opacity-20">
                   <svg className="w-full h-full" viewBox="0 0 100 100" fill="none">
                     <path d="M20 20L80 20L80 80L20 80Z" stroke="currentColor" strokeWidth="0.5" opacity="0.3"/>
@@ -213,7 +213,7 @@ export default function DigitalMarketingAgenciesPage() {
             
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <div className="bg-gradient-to-br from-blue-500 to-cyan-600 p-8 text-white relative overflow-hidden">
-                <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADOPTIMA</div>
+                <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADSOPTIMA</div>
                 <div className="absolute inset-0 opacity-20">
                   <svg className="w-full h-full" viewBox="0 0 100 100" fill="none">
                     <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="0.5" opacity="0.3"/>
@@ -252,7 +252,7 @@ export default function DigitalMarketingAgenciesPage() {
               Everything agencies need to scale efficiently
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From automated reporting to advanced optimization, AdOptima provides the tools 
+              From automated reporting to advanced optimization, AdsOptima provides the tools 
               digital marketing agencies need to manage more accounts with better results.
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mt-6"></div>
@@ -346,7 +346,7 @@ export default function DigitalMarketingAgenciesPage() {
             Ready to transform your agency's PPC management?
           </h2>
           <p className="text-xl mb-12 opacity-90 leading-relaxed">
-            Join thousands of digital marketing agencies who trust AdOptima to deliver better results for their clients.
+            Join thousands of digital marketing agencies who trust AdsOptima to deliver better results for their clients.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">

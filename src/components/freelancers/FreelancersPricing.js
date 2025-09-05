@@ -50,7 +50,7 @@ export default function FreelancersPricing() {
                 No penalties for keeping clients happy and successful.
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Grow your client base without worrying about rising costs or limitations. AdOptima's flexible pricing means you won't be charged more until you hit the next tier of spend. In fact, you'll pay a lower percentage of ad spend as you move up.
+                Grow your client base without worrying about rising costs or limitations. AdsOptima's flexible pricing means you won't be charged more until you hit the next tier of spend. In fact, you'll pay a lower percentage of ad spend as you move up.
               </p>
               
               <div className="space-y-4">

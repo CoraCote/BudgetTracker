@@ -341,7 +341,7 @@ export default function PPCAuditsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              AdOptima customers run faster audits to deliver better results for clients and in-house accounts
+              AdsOptima customers run faster audits to deliver better results for clients and in-house accounts
             </h2>
           </div>
           
@@ -387,7 +387,7 @@ export default function PPCAuditsPage() {
                 </div>
                 
                 <div className="absolute top-4 right-4 text-white/60 text-xs font-medium">
-                  ADOPTIMA
+                  ADSOPTIMA
                 </div>
                 
                 <div className="relative z-10 flex items-center space-x-4">

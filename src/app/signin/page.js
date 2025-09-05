@@ -165,10 +165,10 @@ export default function SigninPage() {
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-2">
-                    Why do I have to connect my ad accounts to AdOptima?
+                    Why do I have to connect my ad accounts to AdsOptima?
                   </h4>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    AdOptima needs account access for insights and suggestions based on performance data.
+                    AdsOptima needs account access for insights and suggestions based on performance data.
                     We'll only make changes that you authorize. You can revoke permission anytime.
                     Connecting an account is completely confidential and won't be visible on ad interfaces.
                   </p>

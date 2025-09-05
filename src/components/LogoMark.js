@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * AdOptima Logo Mark Component
+ * AdsOptima Logo Mark Component
  * Displays only the icon part of the logo without text
  */
 const LogoMark = ({ 

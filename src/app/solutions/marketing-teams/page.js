@@ -28,7 +28,7 @@ export default function MarketingTeamsPage() {
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Integrate your performance marketing operations more closely with your broader strategy. 
-                Brands accelerate growth with AdOptima's optimization suggestions, data insight tools, 
+                Brands accelerate growth with AdsOptima's optimization suggestions, data insight tools, 
                 best-in-class reporting, and time-saving automation.
               </p>
               
@@ -57,7 +57,7 @@ export default function MarketingTeamsPage() {
             
             <div className="relative">
               <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 text-white relative overflow-hidden">
-                <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADOPTIMA</div>
+                <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADSOPTIMA</div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -215,7 +215,7 @@ export default function MarketingTeamsPage() {
                         </div>
                       </td>
                       <td className="px-4 py-3 text-sm text-gray-900">Accounts</td>
-                      <td className="px-4 py-3 text-sm text-gray-900">£0.47</td>
+                      <td className="px-4 py-3 text-sm text-gray-900">$0.47</td>
                       <td className="px-4 py-3 text-sm text-gray-900">10%</td>
                       <td className="px-4 py-3 text-sm text-gray-900">User Name</td>
                       <td className="px-4 py-3">
@@ -245,7 +245,7 @@ export default function MarketingTeamsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              PPC marketing teams use AdOptima to mine powerful insights and deliver growth for their brand
+              PPC marketing teams use AdsOptima to mine powerful insights and deliver growth for their brand
             </h2>
           </div>
           
@@ -271,7 +271,7 @@ export default function MarketingTeamsPage() {
             </div>
             
             <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 text-white relative overflow-hidden">
-              <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADOPTIMA</div>
+              <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADSOPTIMA</div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">BBQGUYS</div>
                 <div className="text-white/80 mb-4">CASE STUDY</div>
@@ -306,7 +306,7 @@ export default function MarketingTeamsPage() {
             </div>
             
             <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 text-white relative overflow-hidden">
-              <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADOPTIMA</div>
+              <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADSOPTIMA</div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">bruce</div>
                 <div className="text-white/80 mb-4">auto glass</div>
@@ -324,7 +324,7 @@ export default function MarketingTeamsPage() {
             Ready to transform your PPC strategy?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Join thousands of marketing teams who trust AdOptima to deliver better results.
+            Join thousands of marketing teams who trust AdsOptima to deliver better results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

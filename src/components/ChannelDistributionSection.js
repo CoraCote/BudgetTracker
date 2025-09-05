@@ -202,31 +202,31 @@ export default function ChannelDistributionSection() {
                   <tbody className="divide-y divide-gray-200">
                     <tr>
                       <td className="py-3 px-4 font-medium text-gray-900">PPC workflows</td>
-                      <td className="py-3 px-4 text-gray-700">£1,744.54</td>
-                      <td className="py-3 px-4 text-gray-700">£0.21</td>
-                      <td className="py-3 px-4 text-gray-700">£6.10</td>
-                      <td className="py-3 px-4 text-gray-700">£110.01</td>
+                      <td className="py-3 px-4 text-gray-700">$1,744.54</td>
+                      <td className="py-3 px-4 text-gray-700">$0.21</td>
+                      <td className="py-3 px-4 text-gray-700">$6.10</td>
+                      <td className="py-3 px-4 text-gray-700">$110.01</td>
                     </tr>
                     <tr>
                       <td className="py-3 px-4 font-medium text-gray-900">Spend Projection</td>
-                      <td className="py-3 px-4 text-gray-700">£1,841.44</td>
-                      <td className="py-3 px-4 text-gray-700">£0.28</td>
-                      <td className="py-3 px-4 text-gray-700">£0.10</td>
-                      <td className="py-3 px-4 text-gray-700">£0.67</td>
+                      <td className="py-3 px-4 text-gray-700">$1,841.44</td>
+                      <td className="py-3 px-4 text-gray-700">$0.28</td>
+                      <td className="py-3 px-4 text-gray-700">$0.10</td>
+                      <td className="py-3 px-4 text-gray-700">$0.67</td>
                     </tr>
                     <tr>
                       <td className="py-3 px-4 font-medium text-gray-900">Geo Heatmap</td>
-                      <td className="py-3 px-4 text-gray-700">£228.76</td>
-                      <td className="py-3 px-4 text-gray-700">£4.28</td>
-                      <td className="py-3 px-4 text-gray-700">£0.40</td>
-                      <td className="py-3 px-4 text-gray-700">£0.35</td>
+                      <td className="py-3 px-4 text-gray-700">$228.76</td>
+                      <td className="py-3 px-4 text-gray-700">$4.28</td>
+                      <td className="py-3 px-4 text-gray-700">$0.40</td>
+                      <td className="py-3 px-4 text-gray-700">$0.35</td>
                     </tr>
                     <tr>
                       <td className="py-3 px-4 font-medium text-gray-900">Campaign Automator</td>
-                      <td className="py-3 px-4 text-gray-700">£192.01</td>
-                      <td className="py-3 px-4 text-gray-700">£0.21</td>
-                      <td className="py-3 px-4 text-gray-700">£0.00</td>
-                      <td className="py-3 px-4 text-gray-700">£0.01</td>
+                      <td className="py-3 px-4 text-gray-700">$192.01</td>
+                      <td className="py-3 px-4 text-gray-700">$0.21</td>
+                      <td className="py-3 px-4 text-gray-700">$0.00</td>
+                      <td className="py-3 px-4 text-gray-700">$0.01</td>
                     </tr>
                   </tbody>
                 </table>

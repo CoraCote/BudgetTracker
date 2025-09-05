@@ -7,8 +7,8 @@ export default function PricingFAQs({ billingCycle = 'monthly', adSpend = '25K' 
   const faqs = [
     {
       id: 1,
-      question: 'Which ad platforms does AdOptima support?',
-      answer: 'AdOptima supports all major advertising platforms including Google Ads, Microsoft Advertising, Facebook Ads, Instagram Ads, LinkedIn Ads, and TikTok Ads. We provide comprehensive integration and optimization tools for each platform.'
+      question: 'Which ad platforms does AdsOptima support?',
+      answer: 'AdsOptima supports all major advertising platforms including Google Ads, Microsoft Advertising, Facebook Ads, Instagram Ads, LinkedIn Ads, and TikTok Ads. We provide comprehensive integration and optimization tools for each platform.'
     },
     {
       id: 2,

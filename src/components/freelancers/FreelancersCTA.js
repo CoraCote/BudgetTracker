@@ -19,7 +19,7 @@ export default function FreelancersCTA() {
           </h2>
 
           <p className="text-xl lg:text-2xl text-purple-100 max-w-3xl mx-auto leading-relaxed">
-            Join thousands of successful PPC freelancers who have transformed their business with AdOptima's powerful automation platform.
+            Join thousands of successful PPC freelancers who have transformed their business with AdsOptima's powerful automation platform.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">

@@ -95,7 +95,7 @@ export default function DashboardShowcase() {
               <div className="flex justify-center mb-3">
                 <Logo size="small" variant="minimal" />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">AdOptima Command Center</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-2">AdsOptima Command Center</h3>
               <div className="text-xs text-gray-500">Last updated: 2 minutes ago</div>
             </div>
 
@@ -104,7 +104,7 @@ export default function DashboardShowcase() {
                 <div className="flex items-center space-x-3">
                   <LogoMark size="small" variant="minimal" animated={false} />
                   <div>
-                    <span className="text-sm font-semibold text-gray-800">AdOptima v2.1</span>
+                    <span className="text-sm font-semibold text-gray-800">AdsOptima v2.1</span>
                     <div className="text-xs text-gray-500">Premium Plan</div>
                   </div>
                 </div>
@@ -151,7 +151,7 @@ export default function DashboardShowcase() {
               <div className="bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 text-white p-4 rounded-lg relative overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="absolute top-0 right-0 w-16 h-16 bg-white/10 rounded-full -mr-8 -mt-8 animate-pulse"></div>
                 <div className="relative z-10">
-                  <div className="text-sm font-semibold mb-2">🤖 AdOptima Sidekick AI</div>
+                  <div className="text-sm font-semibold mb-2">🤖 AdsOptima Sidekick AI</div>
                   <div className="text-xs mb-3 opacity-90">
                     <span className="bg-red-400 px-2 py-1 rounded-full mr-2 animate-pulse">64 Tasks Overdue</span>
                     <span className="bg-yellow-400 px-2 py-1 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}>19 Alerts</span>
@@ -221,7 +221,7 @@ export default function DashboardShowcase() {
               <div className="bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 rounded-xl p-5 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-pink-200/40 to-purple-200/40 rounded-full -mr-12 -mt-12 animate-pulse"></div>
                 <div className="relative z-10 text-center">
-                  <div className="text-3xl font-bold text-gray-800 mb-2">£ 836.18</div>
+                  <div className="text-3xl font-bold text-gray-800 mb-2">$ 836.18</div>
                   <div className="text-sm text-gray-700 mb-3">185.82% of target budget</div>
 
                   <div className="relative w-20 h-20 mx-auto mb-3">
@@ -245,7 +245,7 @@ export default function DashboardShowcase() {
                 <div className="space-y-2">
                   <div className="flex justify-between items-center text-xs">
                     <span>Google Ads</span>
-                    <span className="font-medium">£ 456.23</span>
+                    <span className="font-medium">$ 456.23</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-1.5">
                     <div className="bg-blue-500 h-1.5 rounded-full animate-pulse" style={{ width: '55%' }}></div>
@@ -253,7 +253,7 @@ export default function DashboardShowcase() {
 
                   <div className="flex justify-between items-center text-xs">
                     <span>Facebook Ads</span>
-                    <span className="font-medium">£ 234.67</span>
+                    <span className="font-medium">$ 234.67</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-1.5">
                     <div className="bg-pink-500 h-1.5 rounded-full animate-pulse" style={{ width: '28%' }}></div>
@@ -261,7 +261,7 @@ export default function DashboardShowcase() {
 
                   <div className="flex justify-between items-center text-xs">
                     <span>LinkedIn Ads</span>
-                    <span className="font-medium">£ 145.28</span>
+                    <span className="font-medium">$ 145.28</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-1.5">
                     <div className="bg-purple-500 h-1.5 rounded-full animate-pulse" style={{ width: '17%' }}></div>
@@ -289,7 +289,7 @@ export default function DashboardShowcase() {
           </div>
 
           <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-purple-100 text-center hover:shadow-xl transition-shadow group">
-            <div className="text-2xl font-bold text-pink-600 mb-1 group-hover:scale-110 transition-transform">£ 12.45</div>
+            <div className="text-2xl font-bold text-pink-600 mb-1 group-hover:scale-110 transition-transform">$ 12.45</div>
             <div className="text-sm text-gray-600">Cost per Conversion</div>
             <div className="text-xs text-red-600 mt-1">↓ -8% from last month</div>
           </div>

@@ -96,7 +96,7 @@ export default function PricingPlans({ billingCycle = 'monthly', adSpend = '25K'
       features: [
         'All features in Premium Plan, plus:',
         'Custom Data Integrations and Solutions',
-        'Access to AdOptima API on request',
+        'Access to AdsOptima API on request',
         'Okta SSO',
         'Dedicated account manager',
         'Monthly training sessions and check-ins',

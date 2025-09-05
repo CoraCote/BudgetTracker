@@ -38,7 +38,7 @@ export default function IntegrationsPage() {
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
-                Good teams become great with the right tech. AdOptima helps you build SOPs and checklists, 
+                Good teams become great with the right tech. AdsOptima helps you build SOPs and checklists, 
                 sync with project management and workplace communication tools, and integrate any type of 
                 data to build the team and systems you want.
               </p>
@@ -129,7 +129,7 @@ export default function IntegrationsPage() {
                   Fully customize your PPC experience with custom data sources
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  AdOptima lets you connect first-party and business data using any format or source—customer 
+                  AdsOptima lets you connect first-party and business data using any format or source—customer 
                   lists exported from your CRM, margin data to optimize product grouping, offline conversions 
                   for value-based bidding, and more.
                 </p>
@@ -230,7 +230,7 @@ export default function IntegrationsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-gray-900 mb-6">
-              Paid media teams run more efficient processes and operations using AdOptima
+              Paid media teams run more efficient processes and operations using AdsOptima
             </h2>
           </div>
           
@@ -269,7 +269,7 @@ export default function IntegrationsPage() {
                   <div className="flex justify-end mb-4">
                     <div className="flex items-center space-x-1 text-black font-bold">
                       <CheckCircle className="w-5 h-5" />
-                      <span>ADOPTIMA</span>
+                      <span>ADSOPTIMA</span>
                     </div>
                   </div>
                   <h3 className="text-4xl font-bold text-black mb-2">EDRIVA</h3>

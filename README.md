@@ -1,4 +1,4 @@
-# AdOptima - AI-Powered Advertising Campaign Optimization
+# AdsOptima - AI-Powered Advertising Campaign Optimization
 
 A modern SaaS application built with Next.js that helps optimize advertising campaigns using AI-powered insights.
 

@@ -24,7 +24,7 @@ export default function CTASection() {
         </h2>
         
         <p className="text-xl text-purple-100 mb-8">
-          Join thousands of marketers who've already optimized their campaigns with AdOptima.
+          Join thousands of marketers who've already optimized their campaigns with AdsOptima.
         </p>
         
         <Link 

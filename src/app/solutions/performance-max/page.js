@@ -4,7 +4,7 @@ import CaseStudySection from '@/components/CaseStudySection';
 import CapabilitiesSection from '@/components/CapabilitiesSection';
 
 export const metadata = {
-  title: 'Performance Max Campaign Management - AdOptima',
+  title: 'Performance Max Campaign Management - AdsOptima',
   description: 'Meet your co-pilot for Performance Max success. Simplify PMax campaign management and ensure your money goes where you want it to go with more visibility and control over performance.',
   keywords: ['Performance Max', 'PMax', 'Google Ads', 'Campaign Management', 'PPC Optimization'],
 };

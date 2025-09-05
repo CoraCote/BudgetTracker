@@ -305,7 +305,7 @@ export default function PricingComparison({ billingCycle = 'monthly', adSpend = 
             *Hourly and annual automation available on demand.
           </p>
           <p className="text-sm text-gray-600">
-            **Facebook, Instagram, and Linkedin data are available through the AdOptima for Social add-on subscription.
+            **Facebook, Instagram, and Linkedin data are available through the AdsOptima for Social add-on subscription.
           </p>
         </div>
       </div>

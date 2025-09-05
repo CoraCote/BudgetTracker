@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * AdOptima Logo Component
+ * AdsOptima Logo Component
  * Displays the company logo with customizable size and variant options
  */
 const Logo = ({ 
@@ -87,7 +87,7 @@ const Logo = ({
 
       {showText && (
         <span className={`${config.text} ${config.spacing} font-bold ${variantStyle.text} tracking-wide`}>
-          ADOPTIMA
+          ADSOPTIMA
         </span>
       )}
     </div>

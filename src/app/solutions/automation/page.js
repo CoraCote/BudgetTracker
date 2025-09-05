@@ -28,7 +28,7 @@ export default function AutomationPage() {
               </h1>
               
               <p className="text-xl text-gray-700 leading-relaxed">
-                PPC still has its share of necessary but tedious tasks. AdOptima automates them with built-in guardrails, 
+                PPC still has its share of necessary but tedious tasks. AdsOptima automates them with built-in guardrails, 
                 freeing your team to focus on creative ideas, testing, and high-impact strategy.
               </p>
               
@@ -137,7 +137,7 @@ export default function AutomationPage() {
                 </h3>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   It's a challenging time for PPC teams — tighter budgets, smaller staff, and rising demands. 
-                  Automation can help you do more with less, delivering results efficiently. Meanwhile, AdOptima's 
+                  Automation can help you do more with less, delivering results efficiently. Meanwhile, AdsOptima's 
                   automation layering ensures your goals stay front and center, helping you improve profitability across the board.
                 </p>
               </div>
@@ -251,7 +251,7 @@ export default function AutomationPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
-            Paid media experts get better results in less time using AdOptima's automation
+            Paid media experts get better results in less time using AdsOptima's automation
           </h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -274,7 +274,7 @@ export default function AutomationPage() {
                 <div className="relative z-10">
                   <div className="flex justify-between items-start mb-8">
                     <div className="text-6xl font-bold text-blue-600 leading-none">CASE<br />STUDY</div>
-                    <div className="text-purple-600 font-bold text-lg">ADOPTIMA</div>
+                    <div className="text-purple-600 font-bold text-lg">ADSOPTIMA</div>
                   </div>
                   
                   <div className="flex justify-center mb-8">
@@ -383,7 +383,7 @@ export default function AutomationPage() {
             Ready to Automate Your PPC Success?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Join thousands of PPC professionals who trust AdOptima to automate their campaigns 
+            Join thousands of PPC professionals who trust AdsOptima to automate their campaigns 
             while maintaining full control and maximizing results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

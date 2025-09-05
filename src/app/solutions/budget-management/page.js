@@ -296,7 +296,7 @@ function CaseStudySection() {
           <div className="relative">
             <div className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-3xl p-8 text-white shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
               <div className="flex items-center justify-between mb-6">
-                <div className="text-white font-bold text-xl">ADOPTIMA</div>
+                <div className="text-white font-bold text-xl">ADSOPTIMA</div>
                 <div className="flex items-center space-x-2">
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />

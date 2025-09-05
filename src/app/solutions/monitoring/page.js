@@ -30,7 +30,7 @@ export default function MonitoringSolutions() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Ad platform automation can be volatile and unpredictable. AdOptima makes it easy to monitor campaign performance across all your accounts without actually having to be in the ad interface.
+                Ad platform automation can be volatile and unpredictable. AdsOptima makes it easy to monitor campaign performance across all your accounts without actually having to be in the ad interface.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
@@ -230,7 +230,7 @@ export default function MonitoringSolutions() {
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">Accounts</label>
                       <select className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-gray-50 hover:bg-white transition-colors duration-300">
-                        <option>AdOptima</option>
+                        <option>AdsOptima</option>
                       </select>
                     </div>
                     <div>
@@ -256,7 +256,7 @@ export default function MonitoringSolutions() {
                   
                   <div className="bg-gradient-to-br from-red-50 to-pink-50 border border-red-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300">
                     <div className="flex items-center justify-between mb-3">
-                      <span className="text-sm font-semibold text-gray-900">AdOptima (123-456-7890)</span>
+                      <span className="text-sm font-semibold text-gray-900">AdsOptima (123-456-7890)</span>
                       <span className="text-xs text-red-600 bg-red-100 px-3 py-1 rounded-full font-medium animate-pulse">+ 148% Off Target</span>
                     </div>
                     <p className="text-xs text-gray-600 mb-4">KPI: Avg CPC • Single account alert • Level Account</p>
@@ -264,8 +264,8 @@ export default function MonitoringSolutions() {
                     
                     <div className="space-y-3">
                       <div className="flex justify-between text-xs">
-                        <span className="font-medium">Target: £0.28 ± 25%</span>
-                        <span className="text-red-600 font-bold">Current: £0.69</span>
+                        <span className="font-medium">Target: $0.28 ± 25%</span>
+                        <span className="text-red-600 font-bold">Current: $0.69</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
                         <div className="bg-gradient-to-r from-red-500 to-pink-500 h-3 rounded-full transition-all duration-1000" style={{ width: '70%' }}></div>
@@ -289,7 +289,7 @@ export default function MonitoringSolutions() {
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-bold text-gray-900 mb-6">
-              Paid media teams use AdOptima to put{' '}
+              Paid media teams use AdsOptima to put{' '}
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 PPC monitoring on autopilot
               </span>
@@ -308,7 +308,7 @@ export default function MonitoringSolutions() {
                 See how Morefire took advantage of Alerts and scheduled PPC audit reports to catch issues early
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Discover how Morefire transformed their PPC monitoring with AdOptima's intelligent alerts and comprehensive dashboard solutions, achieving faster issue resolution and improved client onboarding.
+                Discover how Morefire transformed their PPC monitoring with AdsOptima's intelligent alerts and comprehensive dashboard solutions, achieving faster issue resolution and improved client onboarding.
               </p>
               
               <div className="space-y-4">
@@ -479,7 +479,7 @@ export default function MonitoringSolutions() {
             </span>
           </h2>
           <p className="text-xl text-purple-100 mb-10 max-w-2xl mx-auto">
-            Join thousands of paid media teams who trust AdOptima to keep their campaigns running smoothly and efficiently
+            Join thousands of paid media teams who trust AdsOptima to keep their campaigns running smoothly and efficiently
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">

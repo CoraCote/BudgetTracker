@@ -32,7 +32,7 @@ export default function HeroSection() {
 
         <div className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed relative">
           <p className="mb-0">
-            Get better results with paid media while staying in charge of your account. Review insights, monitor campaigns, optimize performance, and build safeguards with AdOptima's round-the-clock PPC automation.
+            Get better results with paid media while staying in charge of your account. Review insights, monitor campaigns, optimize performance, and build safeguards with AdsOptima's round-the-clock PPC automation.
           </p>
           <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-60"></div>
         </div>

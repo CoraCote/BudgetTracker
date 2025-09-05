@@ -65,7 +65,7 @@ export default function OptimizationPage() {
             <div className="relative">
               <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 transform rotate-1 hover:rotate-0 transition-transform duration-500">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-xl font-bold text-gray-900">AdOptima Express</h3>
+                  <h3 className="text-xl font-bold text-gray-900">AdsOptima Express</h3>
                   <div className="flex space-x-2">
                     <div className="w-3 h-3 bg-red-400 rounded-full"></div>
                     <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>

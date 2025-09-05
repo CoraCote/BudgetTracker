@@ -167,7 +167,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-400">Call us at</p>
-                  <a href="tel:+1-800-ADOPTIMA" className="text-blue-400 hover:text-blue-300 transition-colors font-medium">+1 (903) 780-2323 </a>
+                  <a href="tel:+1-800-ADSOPTIMA" className="text-blue-400 hover:text-blue-300 transition-colors font-medium">+1 (903) 780-2323 </a>
                 </div>
               </div>
               
@@ -201,7 +201,7 @@ export default function Footer() {
         <div className="border-t border-gray-700/50 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             <div className="flex items-center space-x-4">
-              <p className="text-gray-400 text-sm">&copy; 2025 AdOptima. All rights reserved.</p>
+              <p className="text-gray-400 text-sm">&copy; 2025 AdsOptima. All rights reserved.</p>
               <div className="hidden sm:flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-green-400 text-xs font-medium">Live Status: Operational</span>

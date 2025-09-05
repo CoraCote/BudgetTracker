@@ -224,7 +224,7 @@ export default function ShoppingSolutions() {
               <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 text-white relative overflow-hidden">
                 <div className="relative z-10">
                   <div className="flex items-center space-x-4 mb-6">
-                    <div className="text-2xl font-bold">ADOPTIMA</div>
+                    <div className="text-2xl font-bold">ADSOPTIMA</div>
                   </div>
                   
                   <div className="space-y-6">

@@ -24,7 +24,7 @@ export default function PerformanceMaxHero() {
         </h1>
 
         <p className="text-xl md:text-2xl text-gray-600 mb-30 max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          AdOptima simplifies PMax campaign management and ensures your money goes where you want it to go by giving you more visibility and control over performance.
+          AdsOptima simplifies PMax campaign management and ensures your money goes where you want it to go by giving you more visibility and control over performance.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>

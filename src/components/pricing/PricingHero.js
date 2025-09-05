@@ -66,7 +66,7 @@ export default function PricingHero({ onBillingChange, onAdSpendChange }) {
             The complete PPC toolkit, starting at ${getStartingPrice()} a month
           </h1>
           <p className="text-xl text-purple-100 mb-12 max-w-3xl mx-auto">
-            AdOptima for search is simple. Pick a plan, connect your ad accounts, and unlock dozens of insight, optimization, and automation tools.
+            AdsOptima for search is simple. Pick a plan, connect your ad accounts, and unlock dozens of insight, optimization, and automation tools.
           </p>
 
           {/* Billing Cycle Selection */}

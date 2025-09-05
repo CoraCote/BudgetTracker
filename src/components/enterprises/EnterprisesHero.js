@@ -31,7 +31,7 @@ export default function EnterprisesHero() {
             </div>
 
             <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-              Enterprise and fast-growth brands create substantial growth with AdOptima's critical data insights, 
+              Enterprise and fast-growth brands create substantial growth with AdsOptima's critical data insights, 
               high-value automation, competitive benchmarking, and best-in-class reporting.
             </p>
 

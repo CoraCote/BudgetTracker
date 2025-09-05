@@ -74,7 +74,7 @@ export default function FreelancersFeatures() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From automation to analytics, AdOptima provides the tools you need to deliver exceptional results for your clients while growing your business.
+            From automation to analytics, AdsOptima provides the tools you need to deliver exceptional results for your clients while growing your business.
           </p>
         </div>
 

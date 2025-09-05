@@ -26,7 +26,7 @@ export default function PaidSearchOptimizationPage() {
               
               <p className="text-xl text-gray-600 leading-relaxed">
                 Manual campaign management (especially at scale) is fraught with the risk of fatigue, burnout and error. 
-                AdOptima provides the tools you need to speed up account management, make fewer mistakes, and still 
+                AdsOptima provides the tools you need to speed up account management, make fewer mistakes, and still 
                 have time and energy to impact growth.
               </p>
               
@@ -181,7 +181,7 @@ export default function PaidSearchOptimizationPage() {
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
               Create advanced campaign structures based on weather conditions, product inventory, and more. 
               Split shopping and PMax campaigns by product performance metrics like ROAS. Campaigns are kept 
-              up-to-date automatically by ADOPTIMA.
+              up-to-date automatically by ADSOPTIMA.
             </p>
           </div>
 
@@ -205,7 +205,7 @@ export default function PaidSearchOptimizationPage() {
                     <Check className="w-4 h-4 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-blue-600 mb-2">ADOPTIMA Smart Campaigns</h4>
+                    <h4 className="text-lg font-semibold text-blue-600 mb-2">ADSOPTIMA Smart Campaigns</h4>
                     <p className="text-gray-700 leading-relaxed">
                       Create Standard Shopping campaigns with automated Target ROAS bidding. See query data and add 
                       negative keywords while leveraging Googles smart bidding. Do advanced product grouping based on 
@@ -275,7 +275,7 @@ export default function PaidSearchOptimizationPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900">
-              Paid media teams use ADOPTIMA to manage PPC accounts their way
+              Paid media teams use ADSOPTIMA to manage PPC accounts their way
             </h2>
           </div>
 
@@ -303,7 +303,7 @@ export default function PaidSearchOptimizationPage() {
                 <div className="absolute top-4 right-4">
                   <div className="flex items-center space-x-1 text-gray-800 font-semibold">
                     <Check className="w-4 h-4" />
-                    <span>ADOPTIMA</span>
+                    <span>ADSOPTIMA</span>
                   </div>
                 </div>
                 <div className="absolute bottom-8 left-8 right-8">
@@ -344,7 +344,7 @@ export default function PaidSearchOptimizationPage() {
                 <div className="absolute top-4 right-4">
                   <div className="flex items-center space-x-1 text-gray-800 font-semibold">
                     <Check className="w-4 h-4" />
-                    <span>ADOPTIMA</span>
+                    <span>ADSOPTIMA</span>
                   </div>
                 </div>
                 <div className="absolute bottom-8 left-8 right-8">

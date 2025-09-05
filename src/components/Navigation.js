@@ -343,8 +343,8 @@ export default function Navigation() {
                         </svg>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 text-sm">Learn With Adoptima</h4>
-                        <p className="text-xs text-gray-600">Get the best out of Adoptima with our expert tips</p>
+                        <h4 className="font-semibold text-gray-900 text-sm">Learn With AdsOptima</h4>
+                        <p className="text-xs text-gray-600">Get the best out of AdsOptima with our expert tips</p>
                       </div>
                     </div>
                     
@@ -367,7 +367,7 @@ export default function Navigation() {
                         </svg>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 text-sm">Adoptima Blog</h4>
+                        <h4 className="font-semibold text-gray-900 text-sm">AdsOptima Blog</h4>
                         <p className="text-xs text-gray-600">Industry analysis, data studies, and more</p>
                       </div>
                     </div>
@@ -391,8 +391,8 @@ export default function Navigation() {
                         </svg>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 text-sm">Adoptima Comparison</h4>
-                        <p className="text-xs text-gray-600">Adoptima versus other ad tools</p>
+                        <h4 className="font-semibold text-gray-900 text-sm">AdsOptima Comparison</h4>
+                        <p className="text-xs text-gray-600">AdsOptima versus other ad tools</p>
                       </div>
                     </div>
                     
@@ -415,7 +415,7 @@ export default function Navigation() {
                         </svg>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 text-sm">Adoptima Labs</h4>
+                        <h4 className="font-semibold text-gray-900 text-sm">AdsOptima Labs</h4>
                         <p className="text-xs text-gray-600">Exciting new projects we're working on</p>
                       </div>
                     </div>

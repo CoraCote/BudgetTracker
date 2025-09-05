@@ -48,7 +48,7 @@ export default function SignupPage() {
                 <div className="w-16 h-16 rounded-2xl shadow-2xl transform hover:scale-110 transition-transform duration-300 hover:rotate-3 overflow-hidden">
                   <Image 
                     src="/favicon.svg" 
-                    alt="AdOptima Logo" 
+                    alt="AdsOptima Logo" 
                     width={64} 
                     height={64} 
                     className="w-full h-full"
@@ -56,7 +56,7 @@ export default function SignupPage() {
                 </div>
               </div>
               <h1 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-2 animate-pulse">
-                Welcome to AdOptima! 🚀
+                Welcome to AdsOptima! 🚀
               </h1>
               <p className="text-slate-600 text-lg leading-relaxed">
                 Start your 14-day free trial today. <br /> No credit card needed, just pure awesomeness! ✨
@@ -143,7 +143,7 @@ export default function SignupPage() {
             <div className="mb-6 bg-white/20 backdrop-blur-md rounded-3xl p-8 border border-white/30 transform hover:scale-105 transition-all duration-500 hover:shadow-2xl">
               <div className="text-8xl text-white/30 animate-bounce">"</div>
               <blockquote className="text-3xl font-bold text-slate-800 mb-4 leading-relaxed">
-                AdOptima is like having a team of AI geniuses watching our campaigns 24/7!
+                AdsOptima is like having a team of AI geniuses watching our campaigns 24/7!
               </blockquote>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full flex items-center justify-center mr-4 transform hover:scale-110 transition-transform duration-300">

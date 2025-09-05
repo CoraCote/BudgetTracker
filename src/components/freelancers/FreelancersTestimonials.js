@@ -5,7 +5,7 @@ export default function FreelancersTestimonials() {
       role: "PPC Consultant",
       company: "Chen Digital Marketing",
       avatar: "SC",
-      quote: "AdOptima has transformed how I manage my client accounts. The automation features save me hours every week, and my clients love the detailed reports.",
+      quote: "AdsOptima has transformed how I manage my client accounts. The automation features save me hours every week, and my clients love the detailed reports.",
       stats: "40% time savings, 25% better ROI"
     },
     {
@@ -29,7 +29,7 @@ export default function FreelancersTestimonials() {
       role: "PPC Freelancer",
       company: "Kim Digital Solutions",
       avatar: "DK",
-      quote: "AdOptima's analytics help me make data-driven decisions that consistently improve my clients' performance. It's like having a team of experts.",
+      quote: "AdsOptima's analytics help me make data-driven decisions that consistently improve my clients' performance. It's like having a team of experts.",
       stats: "35% average improvement in conversion rates"
     },
     {
@@ -62,7 +62,7 @@ export default function FreelancersTestimonials() {
             worldwide
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Join thousands of freelancers who have transformed their PPC business with AdOptima's powerful automation and analytics platform.
+            Join thousands of freelancers who have transformed their PPC business with AdsOptima's powerful automation and analytics platform.
           </p>
         </div>
 

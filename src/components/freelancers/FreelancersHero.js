@@ -35,7 +35,7 @@ export default function FreelancersHero() {
             </div>
 
             <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-              Grow revenue, keep expenses in check, and delight PPC clients. AdOptima has everything you need to deliver high-quality account management for Google and Microsoft Ads.
+              Grow revenue, keep expenses in check, and delight PPC clients. AdsOptima has everything you need to deliver high-quality account management for Google and Microsoft Ads.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">

@@ -24,7 +24,7 @@ export default function StatsSection() {
             <Logo size="default" variant="default" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
-            AdOptima By The Numbers
+            AdsOptima By The Numbers
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Transforming digital advertising through intelligent automation and data-driven insights
@@ -38,7 +38,7 @@ export default function StatsSection() {
             <div className="text-center">
               <div className="text-5xl lg:text-6xl font-bold mb-4">$5.27B</div>
               <div className="text-xl mb-2">Ad Spend Managed</div>
-              <div className="text-purple-100 text-sm">Using AdOptima Platform</div>
+              <div className="text-purple-100 text-sm">Using AdsOptima Platform</div>
 
               <div className="relative w-24 h-24 mx-auto mt-6">
                 <svg className="w-24 h-24 transform -rotate-90" viewBox="0 0 100 100">

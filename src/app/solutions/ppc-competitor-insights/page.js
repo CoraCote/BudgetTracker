@@ -35,7 +35,7 @@ export default function PPCCompetitorInsights() {
             </h1>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-              Ad platform automation can be volatile and unpredictable. AdOptima makes it easy to monitor campaign performance across all your accounts without actually having to be in the ad interface.
+              Ad platform automation can be volatile and unpredictable. AdsOptima makes it easy to monitor campaign performance across all your accounts without actually having to be in the ad interface.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -401,7 +401,7 @@ export default function PPCCompetitorInsights() {
                   <div className="flex items-center justify-between mb-6">
                     <span className="inline-block px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">Case study</span>
                     <div className="text-right">
-                      <div className="text-2xl font-bold">ADOPTIMA</div>
+                      <div className="text-2xl font-bold">ADSOPTIMA</div>
                       <div className="flex items-center mt-2">
                         <div className="w-8 h-8 bg-red-500 rounded mr-2"></div>
                         <span className="font-bold text-xl">morefire</span>
@@ -431,7 +431,7 @@ export default function PPCCompetitorInsights() {
                   <div className="flex items-center justify-between mb-6">
                     <span className="inline-block px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">Case study</span>
                     <div className="text-right">
-                      <div className="text-2xl font-bold">ADOPTIMA</div>
+                      <div className="text-2xl font-bold">ADSOPTIMA</div>
                       <div className="flex items-center mt-2">
                         <div className="text-2xl font-bold text-white">B&S Media</div>
                       </div>
@@ -466,7 +466,7 @@ export default function PPCCompetitorInsights() {
             Ready to Transform Your PPC Performance?
           </h2>
           <p className="text-xl mb-12 text-purple-100">
-            Join thousands of marketers who trust AdOptima to monitor, optimize, and scale their campaigns with confidence.
+            Join thousands of marketers who trust AdsOptima to monitor, optimize, and scale their campaigns with confidence.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
