@@ -1,12 +1,10 @@
 import Navigation from '../../../components/Navigation';
-import Footer from '../../../components/Footer';
 
 export default function PPCCompetitorInsights() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-indigo-50">
       <Navigation />
       
-      {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse"></div>
@@ -60,7 +58,6 @@ export default function PPCCompetitorInsights() {
             </div>
           </div>
           
-          {/* Stats */}
           <div className="grid grid-cols-3 gap-8 text-center">
             <div className="group">
               <div className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
@@ -84,7 +81,6 @@ export default function PPCCompetitorInsights() {
         </div>
       </section>
 
-      {/* Dashboard Preview */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -207,7 +203,6 @@ export default function PPCCompetitorInsights() {
         </div>
       </section>
 
-      {/* Competitive Intelligence Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900 via-indigo-900 to-purple-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-10 left-10 w-40 h-40 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -285,7 +280,6 @@ export default function PPCCompetitorInsights() {
         </div>
       </section>
 
-      {/* Audience Segmentation Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-purple-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
