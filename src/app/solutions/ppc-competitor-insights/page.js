@@ -385,7 +385,7 @@ export default function PPCCompetitorInsights() {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-gray-900 to-purple-900 bg-clip-text text-transparent">
-                Paid media teams use Optmyzr for real-time insights and to stay ahead of the curve
+                Paid media teams use Adoptima for real-time insights and to stay ahead of the curve
               </span>
             </h2>
           </div>
@@ -401,7 +401,7 @@ export default function PPCCompetitorInsights() {
                   <div className="flex items-center justify-between mb-6">
                     <span className="inline-block px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">Case study</span>
                     <div className="text-right">
-                      <div className="text-2xl font-bold">OPTMYZR</div>
+                      <div className="text-2xl font-bold">ADOPTIMA</div>
                       <div className="flex items-center mt-2">
                         <div className="w-8 h-8 bg-red-500 rounded mr-2"></div>
                         <span className="font-bold text-xl">morefire</span>
@@ -431,7 +431,7 @@ export default function PPCCompetitorInsights() {
                   <div className="flex items-center justify-between mb-6">
                     <span className="inline-block px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">Case study</span>
                     <div className="text-right">
-                      <div className="text-2xl font-bold">OPTMYZR</div>
+                      <div className="text-2xl font-bold">ADOPTIMA</div>
                       <div className="flex items-center mt-2">
                         <div className="text-2xl font-bold text-white">B&S Media</div>
                       </div>

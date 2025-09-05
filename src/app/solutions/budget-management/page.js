@@ -27,7 +27,7 @@ function HeroSection() {
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                Shift your focus to high-level strategy while Optmyzr's budget 
+                Shift your focus to high-level strategy while Adoptima's budget 
                 and bid tools safeguard your money. Easily optimize smart 
                 bidding campaigns, maintaining full control of your spending 
                 decisions.
@@ -37,7 +37,7 @@ function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 href="/signup"
-                className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 relative overflow-hidden group inline-flex items-center justify-center"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 relative overflow-hidden group inline-flex items-center justify-center"
               >
                 <span className="relative z-10">Start Trial</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -269,7 +269,7 @@ function CaseStudySection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            PPC teams use Optmyzr to manage bidding<br />
+            PPC teams use Adoptima to manage bidding<br />
             and budget tracking
           </h2>
         </div>
@@ -287,7 +287,7 @@ function CaseStudySection() {
             
             <Link 
               href="/case-studies/levitate-foundry"
-              className="bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center"
             >
               Learn More
             </Link>
@@ -296,7 +296,7 @@ function CaseStudySection() {
           <div className="relative">
             <div className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-3xl p-8 text-white shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
               <div className="flex items-center justify-between mb-6">
-                <div className="text-white font-bold text-xl">OPTMYZR</div>
+                <div className="text-white font-bold text-xl">ADOPTIMA</div>
                 <div className="flex items-center space-x-2">
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />

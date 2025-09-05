@@ -52,7 +52,7 @@ export default function CaseStudySection() {
 
               <div className="relative z-10 text-center">
                 <div className="mb-6">
-                  <div className="text-green-600 font-bold text-lg">OPTMYZR</div>
+                  <div className="text-green-600 font-bold text-lg">ADOPTIMA</div>
                 </div>
 
                 <div className="mb-6">
