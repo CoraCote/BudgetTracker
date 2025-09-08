@@ -385,7 +385,7 @@ export default function PPCCompetitorInsights() {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-gray-900 to-purple-900 bg-clip-text text-transparent">
-                Paid media teams use Adoptima for real-time insights and to stay ahead of the curve
+                Paid media teams use Adsoptima for real-time insights and to stay ahead of the curve
               </span>
             </h2>
           </div>

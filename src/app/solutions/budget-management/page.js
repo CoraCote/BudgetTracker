@@ -27,7 +27,7 @@ function HeroSection() {
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                Shift your focus to high-level strategy while Adoptima's budget 
+                Shift your focus to high-level strategy while Adsoptima's budget 
                 and bid tools safeguard your money. Easily optimize smart 
                 bidding campaigns, maintaining full control of your spending 
                 decisions.
@@ -269,7 +269,7 @@ function CaseStudySection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            PPC teams use Adoptima to manage bidding<br />
+            PPC teams use Adsoptima to manage bidding<br />
             and budget tracking
           </h2>
         </div>

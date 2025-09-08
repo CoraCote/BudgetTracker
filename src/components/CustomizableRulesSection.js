@@ -96,7 +96,7 @@ export default function CustomizableRulesSection() {
 
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-3 mb-3">
                 <div className="grid grid-cols-8 gap-4 text-sm">
-                  <div className="text-blue-600 font-medium">Adoptima Express</div>
+                  <div className="text-blue-600 font-medium">Adsoptima Express</div>
                   <div className="text-gray-700">Audits</div>
                   <div className="text-gray-700">Performance Max</div>
                   <div className="text-gray-700">Expanded Dynamic</div>

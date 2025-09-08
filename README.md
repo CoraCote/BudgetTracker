@@ -43,19 +43,19 @@ npm run install:all
 
 1. **Install PostgreSQL** and create a database:
    ```sql
-   CREATE DATABASE adoptima;
+   CREATE DATABASE adsoptima;
    ```
 
 2. **Configure Environment Variables**:
    Copy `.env.local.example` to `.env.local` and update:
    ```env
-   DATABASE_URL=postgresql://postgres:123@localhost:5432/adoptima
+   DATABASE_URL=postgresql://postgres:123@localhost:5432/adsoptima
    JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
    ```
 
 3. **Run Database Setup**:
    ```bash
-   cd adoptima
+   cd adsoptima
    npm run setup:db
    ```
 
@@ -70,7 +70,7 @@ The application will be available at `http://localhost:3000`
 ## Project Structure
 
 ```
-adoptima/
+adsoptima/
 ├── src/
 │   ├── app/                 # Next.js app directory
 │   │   ├── api/            # API routes

@@ -30,7 +30,7 @@ export default function DataInsightsPage() {
             <span className="text-gray-800">Faster Insights</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Adoptima finds the signal in your data. Cause charts, change logs, and personalized recommendations help you understand results and act on them in record time.
+            Adsoptima finds the signal in your data. Cause charts, change logs, and personalized recommendations help you understand results and act on them in record time.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg" onClick={handleStartTrial}>
@@ -365,7 +365,7 @@ export default function DataInsightsPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
-            Paid media teams trust Adoptima to speed up PPC analysis
+            Paid media teams trust Adsoptima to speed up PPC analysis
           </h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

@@ -24,8 +24,8 @@ export default function ShoppingSolutions() {
                   not just sales.
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                  Streamline campaign management and maximize the value of your conversions with Adoptima's shopping capabilities. 
-                  And get the perfect blend of automation and control with Adoptima Smart Campaigns.
+                  Streamline campaign management and maximize the value of your conversions with Adsoptima's shopping capabilities. 
+                  And get the perfect blend of automation and control with Adsoptima Smart Campaigns.
                 </p>
               </div>
               
@@ -208,7 +208,7 @@ export default function ShoppingSolutions() {
               </div>
               <div className="space-y-6">
                 <h2 className="text-4xl font-bold text-gray-900 leading-tight">
-                  Paid media teams run more profitable Shopping campaigns with Adoptima
+                  Paid media teams run more profitable Shopping campaigns with Adsoptima
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   See how Mabo used our Campaign Builder & Product Group Refresher to make 89% faster changes to product groups.
@@ -360,7 +360,7 @@ export default function ShoppingSolutions() {
               Ready to optimize your Shopping campaigns for profit?
             </h2>
             <p className="text-xl text-purple-100 max-w-2xl mx-auto">
-              Join thousands of advertisers who trust Adoptima to maximize their shopping campaign performance and profitability.
+              Join thousands of advertisers who trust Adsoptima to maximize their shopping campaign performance and profitability.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
