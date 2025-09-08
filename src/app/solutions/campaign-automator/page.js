@@ -211,7 +211,7 @@ export default function CampaignAutomatorPage() {
                 
                 <div className="relative z-10">
                   <div className="text-right mb-4">
-                    <div className="text-sm opacity-90">OPTMYZR</div>
+                    <div className="text-sm opacity-90">ADSOPTIMA</div>
                   </div>
                   
                   <div className="flex items-center space-x-4">
@@ -263,7 +263,7 @@ export default function CampaignAutomatorPage() {
                 
                 <div className="relative z-10">
                   <div className="text-right mb-4">
-                    <div className="text-sm opacity-90">OPTMYZR</div>
+                    <div className="text-sm opacity-90">ADSOPTIMA</div>
                   </div>
                   
                   <div className="flex items-center space-x-4">

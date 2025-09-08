@@ -324,7 +324,7 @@ export default function Navigation() {
               <div className="absolute top-full -left-4 sm:-left-6 lg:-left-8 mt-2 w-[900px] bg-white rounded-xl shadow-2xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100">
                 <div className="p-6">
                   <div className="grid grid-cols-4 gap-4">
-                    <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                    <Link href="/ppctownhall" className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                       <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center flex-shrink-0">
                         <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" />
@@ -334,7 +334,7 @@ export default function Navigation() {
                         <h4 className="font-semibold text-gray-900 text-sm">PPC Town Hall</h4>
                         <p className="text-xs text-gray-600">Our monthly PPC webcast</p>
                       </div>
-                    </div>
+                    </Link>
                     
                     <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                       <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center flex-shrink-0">

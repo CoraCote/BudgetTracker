@@ -13,7 +13,6 @@ import {
 } from '../../../components/ui/icons';
 
 import Navigation from '../../../components/Navigation';
-import Footer from '../../../components/Footer';
 
 export default function ReportingPage() {
   return (
@@ -352,8 +351,6 @@ export default function ReportingPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 import Link from 'next/link';
 
 function HeroSection() {
@@ -359,7 +358,6 @@ export default function BudgetManagementPage() {
       <HeroSection />
       <BudgetCapabilitiesSection />
       <CaseStudySection />
-      <Footer />
     </div>
   );
 }

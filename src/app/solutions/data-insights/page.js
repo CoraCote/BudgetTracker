@@ -1,6 +1,5 @@
 'use client';
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 import { useRouter } from 'next/navigation';
 
 export default function DataInsightsPage() {
@@ -415,8 +414,6 @@ export default function DataInsightsPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

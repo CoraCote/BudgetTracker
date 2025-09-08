@@ -1,20 +1,17 @@
 import Link from 'next/link';
 import Navigation from '../../../components/Navigation';
-import Footer from '../../../components/Footer';
 
 export default function MonitoringSolutions() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 overflow-hidden">
       <Navigation />
       
-      {/* Animated Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-pink-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-2xl animate-pulse delay-500"></div>
       </div>
       
-      {/* Hero Section */}
       <section className="pt-40 pb-16 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -53,7 +50,6 @@ export default function MonitoringSolutions() {
                 </Link>
               </div>
               
-              {/* Stats */}
               <div className="grid grid-cols-3 gap-6 pt-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-600 mb-1">24/7</div>
@@ -72,7 +68,6 @@ export default function MonitoringSolutions() {
             
             <div className="relative">
               <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/30 relative overflow-hidden">
-                {/* Floating Elements */}
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full animate-bounce"></div>
                 <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full animate-bounce delay-300"></div>
                 
@@ -126,7 +121,6 @@ export default function MonitoringSolutions() {
                   </div>
                 </div>
                 
-                {/* Live Activity Feed */}
                 <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-4">
                   <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse"></span>
@@ -149,7 +143,6 @@ export default function MonitoringSolutions() {
         </div>
       </section>
 
-      {/* PPC Monitoring Capabilities */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 to-white"></div>
         <div className="max-w-7xl mx-auto relative">
@@ -184,7 +177,6 @@ export default function MonitoringSolutions() {
                 Set up intelligent alerts for KPIs and budgets to get notified instantly when performance deviates, budgets are exhausted, or targets are met. Receive these alerts via email, Slack, Teams, or other workspaces to stay on top of your campaigns.
               </p>
               
-              {/* Feature List */}
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center">
@@ -214,7 +206,6 @@ export default function MonitoringSolutions() {
             </div>
             
             <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 p-8 relative overflow-hidden">
-              {/* Decorative Elements */}
               <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full opacity-50"></div>
               <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-tr from-purple-100 to-pink-100 rounded-full opacity-50"></div>
               
@@ -283,7 +274,6 @@ export default function MonitoringSolutions() {
         </div>
       </section>
 
-      {/* Case Study Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-50/30 to-pink-50/30"></div>
         <div className="max-w-7xl mx-auto relative">
@@ -351,7 +341,6 @@ export default function MonitoringSolutions() {
             
             <div className="relative">
               <div className="bg-gradient-to-br from-purple-400 via-purple-500 to-pink-500 rounded-3xl p-10 shadow-2xl relative overflow-hidden group hover:scale-105 transition-transform duration-500">
-                {/* Animated Elements */}
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-white/20 rounded-full animate-bounce"></div>
                 <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-white/20 rounded-full animate-bounce delay-300"></div>
                 
@@ -378,7 +367,6 @@ export default function MonitoringSolutions() {
         </div>
       </section>
 
-      {/* Interactive Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
@@ -466,7 +454,6 @@ export default function MonitoringSolutions() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 via-purple-600 to-pink-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/90 via-purple-600/90 to-pink-600/90"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
@@ -519,8 +506,6 @@ export default function MonitoringSolutions() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
 import { Search, ArrowRight, Calendar, Play, Building, Megaphone, Copy, FileText, X, Check, TrendingUp } from 'lucide-react';
 
 export default function PaidSearchOptimizationPage() {
@@ -359,8 +358,6 @@ export default function PaidSearchOptimizationPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 }

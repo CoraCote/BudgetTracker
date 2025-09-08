@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Calendar, Brain, Sparkles } from 'lucide-react';
+import { ArrowRight, Calendar, Brain, Sparkles, Zap, Star, TrendingUp, Shield, Users, Rocket, ChevronRight, Play, CheckCircle, ArrowUpRight } from 'lucide-react';
 
 export const metadata = {
   title: 'AI For Paid Media - ADSOPTIMA Sidekick | AdsOptima',
@@ -9,112 +9,197 @@ export const metadata = {
 export default function ADSOPTIMAAIPage() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="relative overflow-hidden bg-gradient-to-br from-white via-purple-50/30 to-pink-50/30 py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 lg:py-32">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse animation-delay-4000"></div>
+        </div>
+
+        <div className="absolute top-20 left-10 w-4 h-4 bg-purple-400 rounded-full animate-bounce"></div>
+        <div className="absolute top-40 right-20 w-3 h-3 bg-pink-400 rounded-full animate-bounce animation-delay-1000"></div>
+        <div className="absolute bottom-40 left-20 w-5 h-5 bg-blue-400 rounded-full animate-bounce animation-delay-2000"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
-                <Sparkles className="w-4 h-4 mr-2" />
-                AI-Powered Marketing Solution
+              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-500/30 text-purple-300 rounded-full text-sm font-medium group hover:scale-105 transition-all duration-300">
+                <Sparkles className="w-4 h-4 mr-2 animate-spin" />
+                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  AI-Powered Marketing Solution
+                </span>
+                <Zap className="w-4 h-4 ml-2 text-yellow-400 animate-pulse" />
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Amplify and complement your{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-                  human marketing team
-                </span>{' '}
-                with AI
+              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                <span className="text-white">Amplify and complement your</span>
+                <br />
+                <span className="relative">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 animate-gradient-x">
+                    human marketing team
+                  </span>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                </span>
+                <br />
+                <span className="text-white">with AI</span>
               </h1>
               
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl text-gray-300 leading-relaxed max-w-2xl">
                 AI is most valuable when it's built right into the tools and workflows you already use. 
                 In ADSOPTIMA, it's there to surface account insights, craft RSA suggestions, build 
                 machine-learning budget forecasts, and more — right where you work.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-6">
                 <Link 
                   href="/signup" 
-                  className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 hover:from-purple-500 hover:via-pink-500 hover:to-purple-500 text-white font-semibold rounded-2xl transition-all duration-500 shadow-2xl hover:shadow-purple-500/25 transform hover:-translate-y-2 hover:scale-105"
                 >
-                  Start Trial
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+                  <span className="relative flex items-center">
+                    <Rocket className="w-5 h-5 mr-2 animate-bounce" />
+                    Start Trial
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </span>
                 </Link>
                 <Link 
                   href="/demo" 
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white border-2 border-purple-200 text-purple-700 hover:bg-purple-50 font-semibold rounded-xl transition-all duration-300"
+                  className="group inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/20 text-white hover:bg-white/20 hover:border-white/40 font-semibold rounded-2xl transition-all duration-300 hover:scale-105"
                 >
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Book A Demo
+                  <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
+                  Watch Demo
+                  <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
+              </div>
+
+              <div className="flex items-center space-x-8 pt-4">
+                <div className="flex items-center space-x-2">
+                  <div className="flex -space-x-2">
+                    {[1,2,3,4].map((i) => (
+                      <div key={i} className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">
+                        {i}
+                      </div>
+                    ))}
+                  </div>
+                  <span className="text-gray-300 text-sm">10,000+ marketers</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                  <span className="text-gray-300 text-sm">4.9/5 rating</span>
+                </div>
               </div>
             </div>
 
             <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 max-w-md mx-auto">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    <h3 className="text-lg font-semibold text-gray-900">Ask ADSOPTIMA Sidekick</h3>
-                    <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">Beta</span>
-                  </div>
-                </div>
+              <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 p-8 max-w-lg mx-auto overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-blue-500/10 rounded-3xl"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-2xl"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-blue-400/20 to-purple-400/20 rounded-full blur-xl"></div>
                 
-                <p className="text-sm text-gray-600 mb-6">
-                  Get help from ADSOPTIMA sidekick to know more about PPC account performance, 
-                  optimization suggestions and more.
-                </p>
-                
-                <div className="space-y-4">
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Brain className="w-4 h-4 text-purple-600" />
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center space-x-3">
+                      <div className="relative">
+                        <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg">
+                          <Brain className="w-6 h-6 text-white animate-pulse" />
+                        </div>
+                        <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white animate-pulse"></div>
                       </div>
-                      <div className="flex-1">
-                        <p className="text-sm text-gray-900 font-medium">ADSOPTIMA Sidekick</p>
-                        <p className="text-sm text-gray-600 mt-1">
-                          Hi Development! 👋 I am ADSOPTIMA Sidekick - your AI based PPC Assistant. 
-                          I can help you find some interesting insights about your account. 
-                          I am still learning about PPC and this world and my creators have put me in Beta. 
-                          What can I help you with?
-                        </p>
+                      <div>
+                        <h3 className="text-xl font-bold text-white">ADSOPTIMA Sidekick</h3>
+                        <div className="flex items-center space-x-2">
+                          <span className="px-3 py-1 bg-gradient-to-r from-purple-500/30 to-pink-500/30 text-purple-200 text-xs font-medium rounded-full border border-purple-400/30">
+                            AI Assistant
+                          </span>
+                          <span className="px-2 py-1 bg-yellow-500/20 text-yellow-300 text-xs font-medium rounded-full border border-yellow-400/30">
+                            Beta
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex space-x-2">
+                      <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                      <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse animation-delay-1000"></div>
+                      <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse animation-delay-2000"></div>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 mb-8 text-sm leading-relaxed">
+                    Get help from ADSOPTIMA sidekick to know more about PPC account performance, 
+                    optimization suggestions and more.
+                  </p>
+                  
+                  <div className="mb-8">
+                    <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-400/30">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                          <Brain className="w-5 h-5 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center space-x-2 mb-2">
+                            <p className="text-white font-semibold">ADSOPTIMA Sidekick</p>
+                            <div className="flex space-x-1">
+                              <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce"></div>
+                              <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce animation-delay-200"></div>
+                              <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce animation-delay-400"></div>
+                            </div>
+                          </div>
+                          <p className="text-gray-200 leading-relaxed">
+                            Hi Development! 👋 I am ADSOPTIMA Sidekick - your AI based PPC Assistant. 
+                            I can help you find some interesting insights about your account. 
+                            I am still learning about PPC and this world and my creators have put me in Beta. 
+                            What can I help you with?
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="space-y-2">
-                    <p className="text-sm font-medium text-gray-900">Suggested questions:</p>
-                    <div className="space-y-2">
+                  <div className="space-y-4 mb-8">
+                    <p className="text-white font-semibold text-sm">Suggested questions:</p>
+                    <div className="grid gap-3">
                       {[
-                        "Quick Performance Summary",
-                        "How did the account performance change in the last 30 days compared to the previous period?",
-                        "What are some of the top optimization opportunities for this account?",
-                        "See the reason for change in a particular account KPI",
-                        "Tell me three good things about my account.",
-                        "Show me some express optimization suggestions.",
-                        "Show me why my conversions reduced last month"
+                        { text: "Quick Performance Summary", icon: TrendingUp, color: "from-blue-500 to-cyan-500" },
+                        { text: "Account performance change analysis", icon: ChartBarIcon, color: "from-green-500 to-emerald-500" },
+                        { text: "Top optimization opportunities", icon: Star, color: "from-yellow-500 to-orange-500" },
+                        { text: "KPI change reasons", icon: ArrowUpRight, color: "from-purple-500 to-pink-500" },
+                        { text: "Account highlights", icon: CheckCircle, color: "from-indigo-500 to-purple-500" },
+                        { text: "Express optimization suggestions", icon: Zap, color: "from-pink-500 to-rose-500" },
+                        { text: "Conversion reduction analysis", icon: TrendingUp, color: "from-red-500 to-pink-500" }
                       ].map((question, index) => (
                         <div 
                           key={index}
-                          className={`text-sm p-3 rounded-lg cursor-pointer transition-colors ${
-                            index === 6 ? 'bg-purple-100 text-purple-700' : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
+                          className={`group relative p-4 rounded-xl cursor-pointer transition-all duration-300 hover:scale-105 ${
+                            index === 6 
+                              ? 'bg-gradient-to-r from-purple-500/30 to-pink-500/30 border border-purple-400/50' 
+                              : 'bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20'
                           }`}
                         >
-                          {question}
+                          <div className="flex items-center space-x-3">
+                            <div className={`w-8 h-8 bg-gradient-to-r ${question.color} rounded-lg flex items-center justify-center shadow-lg`}>
+                              <question.icon className="w-4 h-4 text-white" />
+                            </div>
+                            <span className="text-white text-sm font-medium group-hover:text-purple-200 transition-colors">
+                              {question.text}
+                            </span>
+                            <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 ml-auto" />
+                          </div>
                         </div>
                       ))}
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-2 bg-gray-50 rounded-lg p-3">
-                    <input 
-                      type="text" 
-                      placeholder="Ask custom questions" 
-                      className="flex-1 bg-transparent text-sm outline-none"
-                    />
-                    <button className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center">
-                      <ArrowRight className="w-3 h-3" />
-                    </button>
+                  <div className="relative">
+                    <div className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20 hover:border-white/30 transition-all duration-300">
+                      <input 
+                        type="text" 
+                        placeholder="Ask custom questions..." 
+                        className="flex-1 bg-transparent text-white placeholder-gray-400 text-sm outline-none"
+                      />
+                      <button className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white rounded-xl flex items-center justify-center shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-110">
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -123,89 +208,185 @@ export default function ADSOPTIMAAIPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              AI-Powered Enhancements for PPC Account Management
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-purple-50/30 relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 right-10 w-72 h-72 bg-purple-200/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-10 w-96 h-96 bg-pink-200/20 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 rounded-full text-sm font-medium mb-6">
+              <Zap className="w-4 h-4 mr-2" />
+              AI-Powered Enhancements
+            </div>
+            <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+              Escape account management fatigue with{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                AI-backed insights
+              </span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+            <div className="w-32 h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h3 className="text-2xl lg:text-3xl font-bold text-gray-900">
-                Escape account management fatigue with AI-backed insights
-              </h3>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Sidekick, the AI assistant built into ADSOPTIMA, makes sense of countless insights 
-                and opportunities so you don't have to dig through endless screens. Just ask what 
-                you need, from recent wins to performance trends, and get actionable answers you 
-                can use to impress your clients.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+                  Sidekick makes sense of countless insights and opportunities
+                </h3>
+                <p className="text-xl text-gray-600 leading-relaxed">
+                  The AI assistant built into ADSOPTIMA eliminates the need to dig through endless screens. 
+                  Just ask what you need, from recent wins to performance trends, and get actionable answers 
+                  you can use to impress your clients.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[
+                  { icon: Brain, title: "Smart Insights", desc: "AI-powered account analysis", color: "from-purple-500 to-pink-500" },
+                  { icon: TrendingUp, title: "Performance Trends", desc: "Real-time optimization suggestions", color: "from-blue-500 to-cyan-500" },
+                  { icon: Zap, title: "Instant Reports", desc: "Automated client-ready summaries", color: "from-green-500 to-emerald-500" },
+                  { icon: Star, title: "Proactive Alerts", desc: "Never miss optimization opportunities", color: "from-yellow-500 to-orange-500" }
+                ].map((feature, index) => (
+                  <div key={index} className="group p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-white/50 hover:border-purple-200/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                      <feature.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h4>
+                    <p className="text-gray-600 text-sm">{feature.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="relative">
-              <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center space-x-2">
-                    <h3 className="text-lg font-semibold text-gray-900">Ask ADSOPTIMA Sidekick</h3>
-                    <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">Beta</span>
-                  </div>
-                </div>
+              <div className="relative bg-gradient-to-br from-white to-purple-50/30 rounded-3xl shadow-2xl border border-purple-100/50 p-8 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-pink-500/5 to-blue-500/5 rounded-3xl"></div>
+                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-purple-400/10 to-pink-400/10 rounded-full blur-2xl"></div>
                 
-                <p className="text-sm text-gray-600 mb-6">
-                  Get help from ADSOPTIMA sidekick to know more about PPC account performance, 
-                  optimization suggestions and more.
-                </p>
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between mb-8">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg">
+                        <Brain className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-gray-900">AI Demo Interface</h3>
+                        <div className="flex items-center space-x-2">
+                          <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">
+                            Live Demo
+                          </span>
+                          <span className="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">
+                            Beta
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                      <span className="text-sm text-gray-600">Online</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-600 mb-8 text-sm leading-relaxed">
+                    Experience how ADSOPTIMA Sidekick analyzes your PPC account and provides actionable insights.
+                  </p>
 
-                <div className="space-y-4">
-                  <div className="bg-blue-50 rounded-lg p-4">
-                    <p className="text-sm text-gray-900 font-medium mb-2">Sample Name</p>
-                    <p className="text-sm text-gray-700">
-                      What are some of the top optimization opportunities for this account?
-                    </p>
+                  <div className="mb-6">
+                    <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-100">
+                      <div className="flex items-center space-x-3 mb-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
+                          <Users className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="font-semibold text-gray-900">Sample User</span>
+                        <span className="text-xs text-gray-500">2 minutes ago</span>
+                      </div>
+                      <p className="text-gray-800 font-medium">
+                        What are some of the top optimization opportunities for this account?
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="flex items-start space-x-3">
-                      <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Brain className="w-4 h-4 text-purple-600" />
-                      </div>
-                      <div className="flex-1">
-                        <p className="text-sm text-gray-900 font-medium mb-2">ADSOPTIMA Sidekick</p>
-                        <div className="text-sm text-gray-700 space-y-3">
-                          <p className="font-medium">Performance Improvement Opportunities:</p>
-                          <ol className="list-decimal list-inside space-y-2 ml-4">
-                            <li>
-                              <strong>Optimize High-Cost Campaigns:</strong> Identify and optimize campaigns 
-                              like 'Google Ads Campaign-1' and 'Google Ads Campaign-2' for cost efficiency. 
-                              <a href="#" className="text-blue-600 hover:underline ml-1">PPC Investigator Tool</a>
-                            </li>
-                            <li>
-                              <strong>Negative Keyword Management:</strong> Use ADSOPTIMA tool for "Non Converting 
-                              Queries (Shopping)" to add negative keywords for queries with high cost, low CTR, 
-                              and zero conversions. <a href="#" className="text-blue-600 hover:underline ml-1">Negative Keyword Tool</a>
-                            </li>
-                            <li>
-                              <strong>Monitor Keywords With Cost Increase:</strong> Monitor keywords with 
-                              significant cost increases using ADSOPTIMA's tool to manage bids and budgets. 
-                              <a href="#" className="text-blue-600 hover:underline ml-1">Cost Increase Keyword Monitoring Tool</a>
-                            </li>
-                          </ol>
+                  <div className="mb-8">
+                    <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-100">
+                      <div className="flex items-start space-x-4">
+                        <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                          <Brain className="w-5 h-5 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center space-x-2 mb-4">
+                            <span className="font-semibold text-gray-900">ADSOPTIMA Sidekick</span>
+                            <div className="flex space-x-1">
+                              <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce"></div>
+                              <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce animation-delay-200"></div>
+                              <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce animation-delay-400"></div>
+                            </div>
+                          </div>
+                          
+                          <div className="space-y-4">
+                            <p className="font-semibold text-gray-900 text-lg">Performance Improvement Opportunities:</p>
+                            
+                            <div className="space-y-4">
+                              {[
+                                {
+                                  title: "Optimize High-Cost Campaigns",
+                                  desc: "Identify and optimize campaigns like 'Google Ads Campaign-1' and 'Google Ads Campaign-2' for cost efficiency.",
+                                  tool: "PPC Investigator Tool",
+                                  color: "from-red-500 to-orange-500",
+                                  icon: TrendingUp
+                                },
+                                {
+                                  title: "Negative Keyword Management", 
+                                  desc: "Use ADSOPTIMA tool for 'Non Converting Queries (Shopping)' to add negative keywords for queries with high cost, low CTR, and zero conversions.",
+                                  tool: "Negative Keyword Tool",
+                                  color: "from-blue-500 to-cyan-500",
+                                  icon: Shield
+                                },
+                                {
+                                  title: "Monitor Keywords With Cost Increase",
+                                  desc: "Monitor keywords with significant cost increases using ADSOPTIMA's tool to manage bids and budgets.",
+                                  tool: "Cost Increase Keyword Monitoring Tool",
+                                  color: "from-green-500 to-emerald-500",
+                                  icon: Zap
+                                }
+                              ].map((item, index) => (
+                                <div key={index} className="group p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-white/50 hover:border-purple-200/50 transition-all duration-300">
+                                  <div className="flex items-start space-x-3">
+                                    <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                                      <item.icon className="w-4 h-4 text-white" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <h4 className="font-semibold text-gray-900 mb-2">{item.title}</h4>
+                                      <p className="text-gray-600 text-sm mb-3">{item.desc}</p>
+                                      <a href="#" className="inline-flex items-center text-sm text-blue-600 hover:text-blue-700 font-medium group-hover:translate-x-1 transition-transform duration-300">
+                                        {item.tool}
+                                        <ArrowUpRight className="w-3 h-3 ml-1" />
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex items-center space-x-2">
-                    <input 
-                      type="text" 
-                      placeholder="Ask a question..." 
-                      className="flex-1 bg-gray-50 rounded-lg px-4 py-2 text-sm outline-none"
-                    />
-                    <button className="px-4 py-2 bg-gray-200 text-gray-600 rounded-lg text-sm hover:bg-gray-300 transition-colors">
-                      Clear Chat
+                  <div className="flex items-center space-x-3">
+                    <div className="flex-1 relative">
+                      <input 
+                        type="text" 
+                        placeholder="Ask a question..." 
+                        className="w-full bg-white/80 backdrop-blur-sm rounded-2xl px-6 py-4 text-sm outline-none border border-gray-200 hover:border-purple-300 focus:border-purple-400 transition-colors duration-300"
+                      />
+                    </div>
+                    <button className="px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white rounded-2xl text-sm font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/25">
+                      Send
+                    </button>
+                    <button className="px-4 py-4 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-2xl text-sm font-medium transition-colors duration-300">
+                      Clear
                     </button>
                   </div>
                 </div>
@@ -215,15 +396,29 @@ export default function ADSOPTIMAAIPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-teal-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              Your Data Security is Our Priority
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-80 h-80 bg-green-500/10 rounded-full blur-3xl animate-pulse animation-delay-2000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500/10 rounded-full blur-2xl animate-pulse animation-delay-4000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-sm border border-green-400/30 text-green-300 rounded-full text-sm font-medium mb-6">
+              <Shield className="w-4 h-4 mr-2" />
+              Enterprise-Grade Security
+            </div>
+            <h2 className="text-4xl lg:text-6xl font-bold mb-8 leading-tight">
+              Your Data Security is{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+                Our Priority
+              </span>
             </h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               We understand the importance of protecting your sensitive marketing data. 
-              That's why we've built security into every layer of our platform.
+              That's why we've built security into every layer of our platform with 
+              enterprise-grade encryption and compliance standards.
             </p>
           </div>
 
@@ -231,27 +426,58 @@ export default function ADSOPTIMAAIPage() {
             {[
               {
                 title: "No changes without your approval, ever",
-                description: "Every AI-suggested change requires your explicit approval before implementation."
+                description: "Every AI-suggested change requires your explicit approval before implementation.",
+                icon: CheckCircle,
+                color: "from-green-500 to-emerald-500",
+                bgColor: "from-green-500/20 to-emerald-500/20"
               },
               {
                 title: "Full data encryption and GDPR compliance",
-                description: "Your data is encrypted in transit and at rest, with full GDPR compliance."
+                description: "Your data is encrypted in transit and at rest, with full GDPR compliance.",
+                icon: Shield,
+                color: "from-blue-500 to-cyan-500",
+                bgColor: "from-blue-500/20 to-cyan-500/20"
               },
               {
                 title: "No ad platform access to account data",
-                description: "We never share your account data with advertising platforms without permission."
+                description: "We never share your account data with advertising platforms without permission.",
+                icon: Users,
+                color: "from-purple-500 to-pink-500",
+                bgColor: "from-purple-500/20 to-pink-500/20"
               }
             ].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-teal-700 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
+              <div key={index} className="group relative">
+                <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                  <div className={`absolute inset-0 bg-gradient-to-br ${item.bgColor} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                  
+                  <div className="relative z-10 text-center">
+                    <div className={`w-20 h-20 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <item.icon className="w-10 h-10 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-4 group-hover:text-white transition-colors duration-300">{item.title}</h3>
+                    <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">{item.description}</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
-                <p className="opacity-80 leading-relaxed">{item.description}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <p className="text-gray-400 mb-8">Trusted by leading organizations worldwide</p>
+            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+              <div className="px-6 py-3 bg-white/10 rounded-xl border border-white/20">
+                <span className="text-sm font-medium">SOC 2 Type II</span>
+              </div>
+              <div className="px-6 py-3 bg-white/10 rounded-xl border border-white/20">
+                <span className="text-sm font-medium">GDPR Compliant</span>
+              </div>
+              <div className="px-6 py-3 bg-white/10 rounded-xl border border-white/20">
+                <span className="text-sm font-medium">ISO 27001</span>
+              </div>
+              <div className="px-6 py-3 bg-white/10 rounded-xl border border-white/20">
+                <span className="text-sm font-medium">256-bit SSL</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -335,30 +561,89 @@ export default function ADSOPTIMAAIPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            Ready to Transform Your PPC Management with AI?
-          </h2>
-          <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-            Join thousands of marketers who are already using ADSOPTIMA Sidekick to 
-            amplify their results and save hours every week.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/signup" 
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-purple-600 hover:bg-gray-100 font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              Start Free Trial
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              href="/demo" 
-              className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 font-semibold rounded-xl transition-all duration-300"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Schedule Demo
-            </Link>
+      <section className="py-20 bg-gradient-to-br from-purple-900 via-pink-900 to-purple-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -left-40 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-pink-500/20 rounded-full blur-3xl animate-pulse animation-delay-2000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500/10 rounded-full blur-2xl animate-pulse animation-delay-4000"></div>
+        </div>
+
+        <div className="absolute top-20 left-20 w-6 h-6 bg-purple-400 rounded-full animate-bounce"></div>
+        <div className="absolute top-40 right-32 w-4 h-4 bg-pink-400 rounded-full animate-bounce animation-delay-1000"></div>
+        <div className="absolute bottom-32 left-32 w-5 h-5 bg-blue-400 rounded-full animate-bounce animation-delay-2000"></div>
+        <div className="absolute bottom-20 right-20 w-3 h-3 bg-yellow-400 rounded-full animate-bounce animation-delay-3000"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-sm border border-white/30 text-white rounded-full text-sm font-medium mb-8">
+              <Rocket className="w-4 h-4 mr-2 animate-bounce" />
+              <span className="bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent">
+                Ready to Get Started?
+              </span>
+              <Star className="w-4 h-4 ml-2 text-yellow-400 animate-pulse" />
+            </div>
+
+            <h2 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
+              Ready to Transform Your{' '}
+              <span className="relative">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-200 via-pink-200 to-purple-200 animate-gradient-x">
+                  PPC Management
+                </span>
+                <div className="absolute -inset-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+              </span>
+              <br />
+              <span className="text-white">with AI?</span>
+            </h2>
+
+            <p className="text-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Join thousands of marketers who are already using ADSOPTIMA Sidekick to 
+              amplify their results and save hours every week. Start your free trial today 
+              and experience the future of PPC management.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+              <Link 
+                href="/signup" 
+                className="group relative inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-white via-white to-purple-50 hover:from-purple-50 hover:via-white hover:to-pink-50 text-purple-600 font-bold rounded-2xl transition-all duration-500 shadow-2xl hover:shadow-white/25 transform hover:-translate-y-2 hover:scale-105"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-white to-purple-50 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+                <span className="relative flex items-center text-lg">
+                  <Rocket className="w-6 h-6 mr-3 animate-bounce" />
+                  Start Free Trial
+                  <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
+                </span>
+              </Link>
+              
+              <Link 
+                href="/demo" 
+                className="group inline-flex items-center justify-center px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 font-bold rounded-2xl transition-all duration-300 hover:scale-105 text-lg"
+              >
+                <Play className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform duration-300" />
+                Watch Demo
+                <ChevronRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            </div>
+
+            <div className="flex flex-wrap justify-center items-center gap-8 text-gray-300">
+              <div className="flex items-center space-x-2">
+                <div className="flex -space-x-2">
+                  {[1,2,3,4,5].map((i) => (
+                    <div key={i} className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">
+                      {i}
+                    </div>
+                  ))}
+                </div>
+                <span className="text-sm">10,000+ active users</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                <span className="text-sm">4.9/5 average rating</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-green-400" />
+                <span className="text-sm">99.9% uptime</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
