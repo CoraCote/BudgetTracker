@@ -157,7 +157,7 @@ export default function CampaignAutomatorPage() {
                   <div className="flex">
                     <input
                       type="url"
-                      placeholder="https://www.optmyzr.com"
+                      placeholder="https://www.adsoptima.com"
                       className="flex-1 px-4 py-2 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     />
                     <button className="px-6 py-2 bg-purple-600 text-white rounded-r-lg hover:bg-purple-700 transition-colors">

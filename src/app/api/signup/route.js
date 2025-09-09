@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import pool from '../../../lib/db.js';
 import { hashPassword } from '../../../lib/auth.js';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(request) {
   try {
     const { email, password, firstName, lastName } = await request.json();

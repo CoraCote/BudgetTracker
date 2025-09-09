@@ -1,13 +1,33 @@
 import { Pool } from 'pg';
 
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
-  // Connection pool settings
-  max: 20, // Maximum number of clients in the pool
-  idleTimeoutMillis: 30000, // Close idle clients after 30 seconds
-  connectionTimeoutMillis: 2000, // Return an error after 2 seconds if connection could not be established
-});
+let pool;
+
+try {
+  pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+    // Connection pool settings
+    max: 20, // Maximum number of clients in the pool
+    idleTimeoutMillis: 30000, // Close idle clients after 30 seconds
+    connectionTimeoutMillis: 2000, // Return an error after 2 seconds if connection could not be established
+  });
+} catch (error) {
+  console.warn('Database connection not available:', error.message);
+  // Create a mock pool for when DB is not available
+  pool = {
+    query: async () => {
+      throw new Error('Database not available');
+    },
+    connect: async () => {
+      throw new Error('Database not available');
+    },
+    end: async () => {},
+    totalCount: 0,
+    idleCount: 0,
+    waitingCount: 0,
+    on: () => {}
+  };
+}
 
 // Monitor connection events
 pool.on('connect', (client) => {

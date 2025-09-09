@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Calendar, Brain, Sparkles, Zap, Star, TrendingUp, Shield, Users, Rocket, ChevronRight, Play, CheckCircle, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, Calendar, Brain, Sparkles, Zap, Star, TrendingUp, Shield, Users, Rocket, ChevronRight, Play, CheckCircle, ArrowUpRight, BarChart3 } from '../../../components/ui/icons/IconComponents';
 
 export const metadata = {
   title: 'AI For Paid Media - ADSOPTIMA Sidekick | AdsOptima',
@@ -160,7 +160,7 @@ export default function ADSOPTIMAAIPage() {
                     <div className="grid gap-3">
                       {[
                         { text: "Quick Performance Summary", icon: TrendingUp, color: "from-blue-500 to-cyan-500" },
-                        { text: "Account performance change analysis", icon: ChartBarIcon, color: "from-green-500 to-emerald-500" },
+                        { text: "Account performance change analysis", icon: BarChart3, color: "from-green-500 to-emerald-500" },
                         { text: "Top optimization opportunities", icon: Star, color: "from-yellow-500 to-orange-500" },
                         { text: "KPI change reasons", icon: ArrowUpRight, color: "from-purple-500 to-pink-500" },
                         { text: "Account highlights", icon: CheckCircle, color: "from-indigo-500 to-purple-500" },

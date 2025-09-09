@@ -2,6 +2,9 @@ import { NextResponse } from 'next/server';
 import pool from '../../../lib/db.js';
 import { verifyToken, getTokenFromHeader } from '../../../lib/auth.js';
 
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+
 export async function GET(request) {
   try {
     const authHeader = request.headers.get('authorization');
@@ -19,6 +22,14 @@ export async function GET(request) {
       return NextResponse.json(
         { error: 'Invalid or expired token' },
         { status: 401 }
+      );
+    }
+
+    // Check if database is available
+    if (!process.env.DATABASE_URL) {
+      return NextResponse.json(
+        { error: 'Database not configured' },
+        { status: 503 }
       );
     }
 
@@ -50,6 +61,15 @@ export async function GET(request) {
 
   } catch (error) {
     console.error('Get user error:', error);
+    
+    // Handle database connection errors
+    if (error.message === 'Database not available') {
+      return NextResponse.json(
+        { error: 'Database temporarily unavailable' },
+        { status: 503 }
+      );
+    }
+    
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
