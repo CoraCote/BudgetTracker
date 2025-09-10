@@ -348,7 +348,7 @@ export default function Navigation() {
                       </div>
                     </Link>
                     
-                    <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                    <Link href="/automation-layering-masterclass" className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                       <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center flex-shrink-0">
                         <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M2 6a2 2 0 012-2h6l2 2h6a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" />
@@ -358,7 +358,7 @@ export default function Navigation() {
                         <h4 className="font-semibold text-gray-900 text-sm">Automation Layering Masterclass</h4>
                         <p className="text-xs text-gray-600">Techniques to add automation to your PPC strategies</p>
                       </div>
-                    </div>
+                    </Link>
                     
                     <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                       <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center flex-shrink-0">
