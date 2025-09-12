@@ -414,7 +414,7 @@ export default function PPCCompetitorInsights() {
                     See how Morefire relies on scheduled PPC Account Audit reports to catch issues early and maintain their high account management standards.
                   </p>
                   
-                  <button className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-teal-500/25">
+                  <button className="bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 hover:bg-teal-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-teal-500/25">
                     Learn More
                   </button>
                 </div>
@@ -444,7 +444,7 @@ export default function PPCCompetitorInsights() {
                     B&S Media sets up custom dashboards and alerts to quickly spot discrepancies.
                   </p>
                   
-                  <button className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-teal-400/25">
+                  <button className="bg-teal-500 hover:bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-teal-400/25">
                     Learn More
                   </button>
                 </div>

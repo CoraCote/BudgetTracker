@@ -178,7 +178,7 @@ export default function CampaignAutomatorPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               PPC teams across industry verticals use{' '}
-              <span className="gradient-text-purple-pink">Optmyzr</span>{' '}
+              <span className="gradient-text-purple-pink">Adsoptima</span>{' '}
               to automate campaigns from inventory data
             </h2>
           </div>

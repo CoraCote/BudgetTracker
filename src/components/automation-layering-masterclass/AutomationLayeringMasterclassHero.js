@@ -57,7 +57,7 @@ export default function AutomationLayeringMasterclassHero() {
 
             {/* Description */}
             <p className="text-lg lg:text-xl text-gray-700 leading-relaxed max-w-2xl">
-              Automation Layering Masterclass is a video series from Optmyzr featuring the best PPC practitioners and experts in the industry who'll teach you how to use automation in the right way to safeguard your PPC accounts and grow your business.
+              Automation Layering Masterclass is a video series from Adsoptima featuring the best PPC practitioners and experts in the industry who'll teach you how to use automation in the right way to safeguard your PPC accounts and grow your business.
             </p>
 
             {/* Signup Form */}

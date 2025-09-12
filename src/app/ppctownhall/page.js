@@ -3,7 +3,7 @@ import AvatarImage from '@/components/AvatarImage';
 
 export const metadata = {
   title: 'PPC Town Hall - Video Podcast on All Things Search Marketing | AdsOptima',
-  description: 'Join Optmyzr CEO, Frederick Vallaeys and his rotating panel of PPC expert guests twice a month at 9 am Pacific.',
+  description: 'Join Adsoptima CEO, Frederick Vallaeys and his rotating panel of PPC expert guests twice a month at 9 am Pacific.',
 };
 
 export default function PPCTownHallPage() {
@@ -112,7 +112,7 @@ export default function PPCTownHallPage() {
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
-                Join Optmyzr CEO, Frederick Vallaeys and his rotating panel of PPC expert guests twice a month at 9 am Pacific.
+                Join Adsoptima CEO, Frederick Vallaeys and his rotating panel of PPC expert guests twice a month at 9 am Pacific.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 max-w-md">
@@ -165,7 +165,7 @@ export default function PPCTownHallPage() {
                       </div>
                       <div>
                         <p className="font-semibold">Frederick Vallaeys</p>
-                        <p className="text-sm text-gray-300">Optmyzr CEO</p>
+                        <p className="text-sm text-gray-300">Adsoptima CEO</p>
                       </div>
                     </div>
                   </div>

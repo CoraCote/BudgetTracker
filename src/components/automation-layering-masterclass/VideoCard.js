@@ -231,7 +231,7 @@ export default function VideoCard({
 
             {/* Production credit */}
             <p className="text-white/70 text-sm">
-              An OPTMYZR Production
+              An ADSOPTIMA Production
             </p>
           </div>
         </div>
