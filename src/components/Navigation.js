@@ -372,7 +372,7 @@ export default function Navigation() {
                       </div>
                     </Link>
                     
-                    <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                    <Link href="/case-studies" className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                       <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center flex-shrink-0">
                         <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
@@ -382,7 +382,7 @@ export default function Navigation() {
                         <h4 className="font-semibold text-gray-900 text-sm">Case Studies</h4>
                         <p className="text-xs text-gray-600">Stories of customer success</p>
                       </div>
-                    </div>
+                    </Link>
                     
                     <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                       <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center flex-shrink-0">
