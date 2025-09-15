@@ -396,7 +396,7 @@ export default function Navigation() {
                       </div>
                     </Link>
                     
-                    <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                    <Link href="/update-ads" className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                       <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center flex-shrink-0">
                         <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L13 4.172l2.828 2.828-1.621 1.621a2 2 0 01-2.828 0z" />
@@ -406,7 +406,7 @@ export default function Navigation() {
                         <h4 className="font-semibold text-gray-900 text-sm">Releases And Updates</h4>
                         <p className="text-xs text-gray-600">What's new in the product</p>
                       </div>
-                    </div>
+                    </Link>
                     
                     <Link href="/labs" className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                       <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center flex-shrink-0">
