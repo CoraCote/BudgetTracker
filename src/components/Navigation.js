@@ -408,7 +408,7 @@ export default function Navigation() {
                       </div>
                     </div>
                     
-                    <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                    <Link href="/labs" className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
                       <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center flex-shrink-0">
                         <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
@@ -418,7 +418,7 @@ export default function Navigation() {
                         <h4 className="font-semibold text-gray-900 text-sm">AdsOptima Labs</h4>
                         <p className="text-xs text-gray-600">Exciting new projects we're working on</p>
                       </div>
-                    </div>
+                    </Link>
                     
                     <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors col-span-4">
                       <div className="w-6 h-6 bg-gray-200 rounded flex items-center justify-center flex-shrink-0">
