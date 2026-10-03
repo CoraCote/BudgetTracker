@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Logo from './Logo';
 import LogoMark from './LogoMark';
 
@@ -25,7 +26,7 @@ export default function DashboardShowcase() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-purple-100 hover:shadow-xl transition-all duration-300 group">
+          <div className="relative bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-purple-100 hover:shadow-xl transition-all duration-300 group">
             <div className="absolute top-4 right-4 w-3 h-3 bg-purple-300 rounded-full animate-ping opacity-60"></div>
             
             <div className="flex items-center justify-between mb-6">
@@ -39,13 +40,13 @@ export default function DashboardShowcase() {
             <div className="space-y-6">
               {/* Metric Selector */}
               <div className="space-y-3">
-                <select className="w-full text-sm text-gray-600 border border-purple-200 rounded-lg px-3 py-2 bg-white/50 backdrop-blur-sm hover:border-purple-300 transition-colors">
+                <select aria-label="Metric" className="w-full text-sm text-gray-600 border border-purple-200 rounded-lg px-3 py-2 bg-white/50 backdrop-blur-sm hover:border-purple-300 transition-colors">
                   <option>📊 Clicks Performance</option>
                   <option>🎯 Conversion Rate</option>
                   <option>💰 Cost Analysis</option>
                   <option>📈 ROI Metrics</option>
                 </select>
-                <select className="w-full text-sm text-gray-600 border border-purple-200 rounded-lg px-3 py-2 bg-white/50 backdrop-blur-sm hover:border-purple-300 transition-colors">
+                <select aria-label="Comparison period" className="w-full text-sm text-gray-600 border border-purple-200 rounded-lg px-3 py-2 bg-white/50 backdrop-blur-sm hover:border-purple-300 transition-colors">
                   <option>📅 Last 30 Days vs Previous Period</option>
                   <option>📅 Last 7 Days vs Previous Week</option>
                   <option>📅 Last Quarter vs Previous Quarter</option>
@@ -88,7 +89,7 @@ export default function DashboardShowcase() {
             </div>
           </div>
 
-          <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-purple-100 hover:shadow-xl transition-all duration-300 group">
+          <div className="relative bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-purple-100 hover:shadow-xl transition-all duration-300 group">
             <div className="absolute top-4 right-4 w-3 h-3 bg-pink-300 rounded-full animate-ping opacity-60" style={{ animationDelay: '1s' }}></div>
             
             <div className="text-center mb-6">
@@ -117,30 +118,34 @@ export default function DashboardShowcase() {
 
               <div className="bg-gradient-to-r from-gray-50 to-purple-50 rounded-lg p-4 border border-gray-200 hover:border-purple-200 transition-colors">
                 <div className="text-xs mb-3">
-                  <div className="grid grid-cols-4 gap-3 text-center font-semibold text-gray-600">
+                  <div className="hidden sm:grid grid-cols-4 gap-3 text-center font-semibold text-gray-600">
                     <div>📊 Impressions</div>
                     <div>🎯 Clicks</div>
                     <div>💰 Cost</div>
                     <div>📈 Avg CPC</div>
                   </div>
                 </div>
-                <div className="grid grid-cols-4 gap-3 text-center">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
                   <div className="text-sm">
+                    <div className="sm:hidden text-xs font-semibold text-gray-600 mb-1">📊 Impressions</div>
                     <div className="font-bold text-lg text-gray-800">192,369</div>
                     <div className="text-red-500 font-medium">↓ 12%</div>
                     <div className="text-xs text-gray-500">vs prev period</div>
                   </div>
                   <div className="text-sm">
+                    <div className="sm:hidden text-xs font-semibold text-gray-600 mb-1">🎯 Clicks</div>
                     <div className="font-bold text-lg text-gray-800">6,102</div>
                     <div className="text-red-500 font-medium">↓ 12%</div>
                     <div className="text-xs text-gray-500">vs prev period</div>
                   </div>
                   <div className="text-sm">
+                    <div className="sm:hidden text-xs font-semibold text-gray-600 mb-1">💰 Cost</div>
                     <div className="font-bold text-lg text-gray-800">$2,163</div>
                     <div className="text-red-500 font-medium">↓ 30%</div>
                     <div className="text-xs text-gray-500">vs prev period</div>
                   </div>
                   <div className="text-sm">
+                    <div className="sm:hidden text-xs font-semibold text-gray-600 mb-1">📈 Avg CPC</div>
                     <div className="font-bold text-lg text-gray-800">$0.35</div>
                     <div className="text-red-500 font-medium">↓ 82%</div>
                     <div className="text-xs text-gray-500">vs prev period</div>
@@ -157,12 +162,12 @@ export default function DashboardShowcase() {
                     <span className="bg-yellow-400 px-2 py-1 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}>19 Alerts</span>
                   </div>
                   <div className="flex space-x-2">
-                    <button className="bg-white text-purple-600 px-4 py-2 rounded-lg text-xs font-semibold hover:bg-gray-100 transition-colors">
+                    <Link href="/signup" className="bg-white text-purple-600 px-4 py-2 rounded-lg text-xs font-semibold hover:bg-gray-100 transition-colors">
                       🚀 Try Now
-                    </button>
-                    <button className="bg-white/20 text-white px-4 py-2 rounded-lg text-xs font-semibold hover:bg-white/30 transition-colors">
+                    </Link>
+                    <Link href="/solutions/adsoptima-ai" className="bg-white/20 text-white px-4 py-2 rounded-lg text-xs font-semibold hover:bg-white/30 transition-colors">
                       📊 View AI Report
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -199,12 +204,12 @@ export default function DashboardShowcase() {
                   </div>
                 </div>
 
-                <a href="#" className="text-purple-600 text-sm hover:underline font-medium">🔍 View Detailed Audit</a>
+                <Link href="/solutions/ppc-audits" className="text-purple-600 text-sm hover:underline font-medium">🔍 View Detailed Audit</Link>
               </div>
             </div>
           </div>
 
-          <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-purple-100 hover:shadow-xl transition-all duration-300 group">
+          <div className="relative bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-purple-100 hover:shadow-xl transition-all duration-300 group">
             <div className="absolute top-4 right-4 w-3 h-3 bg-blue-300 rounded-full animate-ping opacity-60" style={{ animationDelay: '2s' }}></div>
             
             <div className="flex items-center justify-between mb-6">
@@ -252,7 +257,7 @@ export default function DashboardShowcase() {
                   </div>
 
                   <div className="flex justify-between items-center text-xs">
-                    <span>Facebook Ads</span>
+                    <span>Meta Ads</span>
                     <span className="font-medium">$ 234.67</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-1.5">
@@ -260,7 +265,7 @@ export default function DashboardShowcase() {
                   </div>
 
                   <div className="flex justify-between items-center text-xs">
-                    <span>LinkedIn Ads</span>
+                    <span>Microsoft Ads</span>
                     <span className="font-medium">$ 145.28</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-1.5">
@@ -281,7 +286,7 @@ export default function DashboardShowcase() {
           </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-purple-100 text-center hover:shadow-xl transition-shadow group">
             <div className="text-2xl font-bold text-purple-600 mb-1 group-hover:scale-110 transition-transform">2.4%</div>
             <div className="text-sm text-gray-600">Conversion Rate</div>

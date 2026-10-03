@@ -6,7 +6,9 @@ export default function ScrollToTop() {
   };
 
   return (
-    <button 
+    <button
+      type="button"
+      aria-label="Scroll to top"
       onClick={scrollToTop}
       className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl z-50"
     >

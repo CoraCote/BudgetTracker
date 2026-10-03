@@ -3,23 +3,27 @@
 import { useState } from 'react';
 import VideoCard from './VideoCard';
 
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
 export default function AutomationLayeringMasterclassHero() {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState('idle'); // idle | invalid | success
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!EMAIL_PATTERN.test(email.trim())) {
+      setStatus('invalid');
+      return;
+    }
     setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Reset form
+
+    // Simulated request; there is no subscription backend yet.
+    await new Promise(resolve => setTimeout(resolve, 600));
+
     setEmail('');
     setIsSubmitting(false);
-    
-    // Show success message (you can implement a toast notification here)
-    alert('Thank you for subscribing! You\'ll be notified of new episodes.');
+    setStatus('success');
   };
 
   return (
@@ -57,24 +61,37 @@ export default function AutomationLayeringMasterclassHero() {
 
             {/* Description */}
             <p className="text-lg lg:text-xl text-gray-700 leading-relaxed max-w-2xl">
-              Automation Layering Masterclass is a video series from Adsoptima featuring the best PPC practitioners and experts in the industry who'll teach you how to use automation in the right way to safeguard your PPC accounts and grow your business.
+              Automation Layering Masterclass is a video series from AdsOptima featuring experienced PPC practitioners who&apos;ll teach you how to use automation in the right way to safeguard your PPC accounts and grow your business.
             </p>
 
             {/* Signup Form */}
-            <div className="space-y-6">
+            <div id="masterclass-signup" className="space-y-6 scroll-mt-24">
               <h3 className="text-xl font-semibold text-gray-900">
                 Sign up now to get notified of new episodes:
               </h3>
-              
-              <form onSubmit={handleSubmit} className="space-y-4">
+
+              {status === 'success' ? (
+                <div className="flex items-center gap-3 rounded-xl border border-green-200 bg-green-50 px-5 py-4 text-green-800 max-w-xl" role="status">
+                  <svg className="w-5 h-5 flex-shrink-0 text-green-600" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="font-medium">Thank you for subscribing! You&apos;ll be notified of new episodes.</span>
+                </div>
+              ) : (
+              <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                 <div className="flex flex-col sm:flex-row gap-4">
+                  <label htmlFor="masterclass-email" className="sr-only">Email address</label>
                   <input
+                    id="masterclass-email"
                     type="email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      if (status === 'invalid') setStatus('idle');
+                    }}
                     placeholder="Enter Your Email Address*"
-                    required
-                    className="flex-1 px-6 py-4 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 focus:outline-none transition-all duration-200 text-gray-900 placeholder-gray-500"
+                    aria-invalid={status === 'invalid'}
+                    className="flex-1 min-w-0 px-6 py-4 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 focus:outline-none transition-all duration-200 text-gray-900 placeholder-gray-500"
                   />
                   <button
                     type="submit"
@@ -93,7 +110,11 @@ export default function AutomationLayeringMasterclassHero() {
                     )}
                   </button>
                 </div>
+                {status === 'invalid' && (
+                  <p className="text-sm text-pink-600">Please enter a valid email address.</p>
+                )}
               </form>
+              )}
             </div>
           </div>
 
@@ -105,8 +126,8 @@ export default function AutomationLayeringMasterclassHero() {
               hasPlayButton={true}
               gradient="purple-pink"
               className="w-full max-w-md"
-              presenter="PPC Experts"
-              company="Industry Leaders"
+              presenter="PPC Practitioners"
+              company="Guest panel"
               duration="Series"
               views="10K+"
               tags={["PPC", "Automation", "Masterclass"]}

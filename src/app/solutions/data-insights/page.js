@@ -1,26 +1,18 @@
-'use client';
-import Navigation from '@/components/Navigation';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+
+const dailySpend = [120, 180, 150, 195, 160, 190, 140, 170, 200, 180, 160, 190, 195, 180, 170, 190, 200, 180, 160, 190, 195, 180, 170, 190, 200, 180, 160, 190, 195, 180, 170];
 
 export default function DataInsightsPage() {
-  const router = useRouter();
-
-  const handleStartTrial = () => {
-    router.push('/signup');
-  };
-
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
-      
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className="pt-16 md:pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-32 h-32 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
           <div className="absolute top-40 right-20 w-24 h-24 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse" style={{ animationDelay: '1s' }}></div>
           <div className="absolute bottom-20 left-1/3 w-28 h-28 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
         
-        <div className="max-w-7xl mx-auto text-center relative z-10 mt-30">
+        <div className="max-w-7xl mx-auto text-center relative z-10">
           <h1 className="text-5xl md:text-6xl font-bold mb-8">
             <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               Smarter Analysis,
@@ -29,15 +21,15 @@ export default function DataInsightsPage() {
             <span className="text-gray-800">Faster Insights</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Adsoptima finds the signal in your data. Cause charts, change logs, and personalized recommendations help you understand results and act on them in record time.
+            AdsOptima finds the signal in your data. Cause charts, change logs, and personalized recommendations help you understand results and act on them in record time.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg" onClick={handleStartTrial}>
+            <Link href="/signup" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center">
               Start Trial
-            </button>
-            <button className="px-8 py-4 bg-white border-2 border-purple-200 text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
+            </Link>
+            <Link href="/contact?topic=demo" className="px-8 py-4 bg-white border-2 border-purple-200 text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center">
               Book A Demo
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -57,7 +49,7 @@ export default function DataInsightsPage() {
             <div className="lg:col-span-2 space-y-6">
               <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Spend Projection (Daily)</h3>
-                <div className="flex items-center gap-4 mb-6">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6">
                   <div className="flex items-center gap-2">
                     <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
                     <span className="text-sm text-gray-600">Daily Spend</span>
@@ -67,25 +59,28 @@ export default function DataInsightsPage() {
                     <span className="text-sm text-gray-600">Daily Target Budget</span>
                   </div>
                 </div>
-                <div className="h-64 bg-gray-50 rounded-lg relative px-4 py-2">
-                  <div className="flex items-end justify-between h-full">
-                    {[120, 180, 150, 220, 160, 190, 140, 170, 200, 180, 160, 190, 210, 180, 170, 190, 200, 180, 160, 190, 210, 180, 170, 190, 200, 180, 160, 190, 210, 180, 170].map((value, index) => (
-                      <div key={index} className="flex flex-col items-center">
-                        <div 
-                          className="w-3 bg-blue-500 rounded-t-sm hover:bg-blue-600 transition-colors cursor-pointer"
+                <div className="h-64 bg-gray-50 rounded-lg relative pl-12 pr-4 pt-4 pb-8">
+                  <div className="flex items-end gap-px sm:gap-0.5 h-full">
+                    {dailySpend.map((value, index) => (
+                      <div key={index} className="relative flex-1 h-full flex items-end justify-center">
+                        <div
+                          className="w-full max-w-[12px] bg-blue-500 rounded-t-sm hover:bg-blue-600 transition-colors"
                           style={{ height: `${(value / 200) * 100}%` }}
                           title={`Day ${index + 1}: $${value}`}
                         ></div>
                         {index % 5 === 0 && (
-                          <span className="text-xs text-gray-500 mt-1">
-                            {index + 1} July
+                          <span className="absolute -bottom-6 text-[10px] sm:text-xs text-gray-500 whitespace-nowrap">
+                            {index + 1} Jul
                           </span>
                         )}
                       </div>
                     ))}
                   </div>
-                  <div className="absolute inset-x-4 top-32 border-t-2 border-orange-400 border-dashed"></div>
-                  <div className="absolute left-0 top-0 h-full flex flex-col justify-between text-xs text-gray-500">
+                  <div
+                    className="absolute left-12 right-4 border-t-2 border-orange-400 border-dashed pointer-events-none"
+                    style={{ top: 'calc(1rem + (100% - 3rem) * 0.125)' }}
+                  ></div>
+                  <div className="absolute left-2 top-4 bottom-8 flex flex-col justify-between text-xs text-gray-500 -translate-y-2">
                     <span>$200</span>
                     <span>$150</span>
                     <span>$100</span>
@@ -97,7 +92,7 @@ export default function DataInsightsPage() {
 
               <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Spend Projection (Cumulative)</h3>
-                <div className="flex items-center gap-4 mb-6">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6">
                   <div className="flex items-center gap-2">
                     <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
                     <span className="text-sm text-gray-600">Projected Spend</span>
@@ -107,8 +102,8 @@ export default function DataInsightsPage() {
                     <span className="text-sm text-gray-600">Target budget for the date range</span>
                   </div>
                 </div>
-                <div className="h-64 bg-gray-50 rounded-lg relative px-4 py-2">
-                  <svg className="w-full h-full" viewBox="0 0 400 200">
+                <div className="h-64 bg-gray-50 rounded-lg relative pl-16 pr-4 py-2">
+                  <svg className="w-full h-full" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
                     <path
                       d="M 0 180 Q 50 160 100 140 T 200 120 T 300 100 T 400 80"
                       fill="none"
@@ -144,10 +139,10 @@ export default function DataInsightsPage() {
                       </linearGradient>
                     </defs>
                   </svg>
-                  <div className="absolute inset-x-4 top-20 border-t-2 border-orange-500 border-dashed"></div>
-                  <div className="absolute left-4 top-16 text-xs text-gray-500">Today</div>
-                  <div className="absolute right-4 top-16 text-xs text-gray-500">End of month</div>
-                  <div className="absolute left-0 top-0 h-full flex flex-col justify-between text-xs text-gray-500">
+                  <div className="absolute left-16 right-4 top-20 border-t-2 border-orange-500 border-dashed"></div>
+                  <div className="absolute left-16 top-14 text-xs text-gray-500">Today</div>
+                  <div className="absolute right-4 top-14 text-xs text-gray-500">End of month</div>
+                  <div className="absolute left-2 top-2 bottom-2 flex flex-col justify-between text-xs text-gray-500">
                     <span>$5,000</span>
                     <span>$4,000</span>
                     <span>$3,000</span>
@@ -164,24 +159,24 @@ export default function DataInsightsPage() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
+          <div className="bg-white rounded-2xl shadow-2xl p-5 sm:p-8 border border-gray-100">
             <div className="flex space-x-8 mb-8 border-b border-gray-200">
-              <button className="pb-4 px-2 border-b-2 border-blue-500 text-blue-600 font-semibold">
+              <span className="pb-4 px-2 border-b-2 border-blue-500 text-blue-600 font-semibold">
                 Cause Chart
-              </button>
-              <button className="pb-4 px-2 text-gray-500 hover:text-gray-700 font-semibold">
+              </span>
+              <span className="pb-4 px-2 text-gray-500 font-semibold">
                 Root Cause Analysis
-              </button>
+              </span>
             </div>
 
             <p className="text-lg text-gray-700 mb-8">
-              Conversions went up by 11 percent. This is because, clicks increased.
+              Conversions went up by 11 percent, driven mainly by an increase in clicks.
             </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
               <div className="lg:col-span-3">
-                <div className="bg-gray-50 rounded-xl p-6 h-96">
-                  <div className="h-full relative">
+                <div className="bg-gray-50 rounded-xl p-6 h-96 overflow-x-auto">
+                  <div className="h-full relative min-w-[640px]">
                     <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-green-100 border-2 border-green-300 rounded-lg px-4 py-2 text-center shadow-lg">
                         <div className="font-bold text-green-800">Conversions</div>
@@ -228,7 +223,7 @@ export default function DataInsightsPage() {
                     <div className="absolute top-56 left-24">
                       <div className="bg-red-50 border border-red-200 rounded px-2 py-1 text-center text-xs shadow">
                         <div className="font-medium text-red-700">Avg CPC</div>
-                        <div className="text-red-600">-1.46% ↗</div>
+                        <div className="text-red-600">-1.46% ↘</div>
                       </div>
                     </div>
                     <div className="absolute top-56 left-40">
@@ -238,19 +233,19 @@ export default function DataInsightsPage() {
                       </div>
                     </div>
 
-                    <div className="absolute top-56 right-8">
+                    <div className="absolute top-56 right-4">
                       <div className="bg-green-50 border border-green-200 rounded px-2 py-1 text-center text-xs shadow">
                         <div className="font-medium text-green-700">Est. Avg Pos</div>
                         <div className="text-green-600">+6.25% ↗</div>
                       </div>
                     </div>
-                    <div className="absolute top-56 right-24">
+                    <div className="absolute top-56 right-28">
                       <div className="bg-green-50 border border-green-200 rounded px-2 py-1 text-center text-xs shadow">
                         <div className="font-medium text-green-700">Cost</div>
-                        <div className="text-green-600">-10.54% ↗</div>
+                        <div className="text-green-600">-10.54% ↘</div>
                       </div>
                     </div>
-                    <div className="absolute top-56 right-40">
+                    <div className="absolute top-56 right-44">
                       <div className="bg-green-50 border border-green-200 rounded px-2 py-1 text-center text-xs shadow">
                         <div className="font-medium text-green-700">Search Impr. Share</div>
                         <div className="text-green-600">-3.15% ↘</div>
@@ -278,11 +273,11 @@ export default function DataInsightsPage() {
                     <div className="absolute bottom-4 right-4">
                       <div className="bg-gray-50 border border-gray-200 rounded px-2 py-1 text-center text-xs">
                         <div className="font-medium text-gray-700">Search Lost IS (Budget)</div>
-                        <div className="text-gray-600">+inf% ↗</div>
+                        <div className="text-gray-600">+4.20% ↗</div>
                       </div>
                     </div>
 
-                    <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex items-center gap-4 text-xs">
+                    <div className="absolute top-0 left-0 flex flex-col gap-1 text-xs">
                       <div className="flex items-center gap-1">
                         <div className="w-3 h-0.5 bg-green-500"></div>
                         <span className="text-gray-600">Positive Impact</span>
@@ -325,31 +320,31 @@ export default function DataInsightsPage() {
                   </ul>
                   <div className="mt-4 pt-4 border-t border-blue-200">
                     <p className="text-sm text-blue-600 font-medium">Changes made in Last 30 Days</p>
-                    <a href="#" className="text-sm text-blue-600 hover:underline flex items-center gap-1 mt-1">
+                    <span className="text-sm text-blue-600 flex items-center gap-1 mt-1">
                       View Details 
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
-                    </a>
+                    </span>
                   </div>
                 </div>
 
                 <div className="bg-green-50 rounded-xl p-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4">Express Optimizations</h4>
                   <ul className="space-y-3">
-                    <li className="flex items-center gap-2 text-sm text-gray-700 hover:text-green-600 cursor-pointer group">
+                    <li className="flex items-center gap-2 text-sm text-gray-700 group">
                       <span className="text-green-500 group-hover:translate-x-1 transition-transform">→</span>
                       Fix Products with empty brand (1)
                     </li>
-                    <li className="flex items-center gap-2 text-sm text-gray-700 hover:text-green-600 cursor-pointer group">
+                    <li className="flex items-center gap-2 text-sm text-gray-700 group">
                       <span className="text-green-500 group-hover:translate-x-1 transition-transform">→</span>
                       Fix Impression share lost due to budget - Campaign Budget (1)
                     </li>
-                    <li className="flex items-center gap-2 text-sm text-gray-700 hover:text-green-600 cursor-pointer group">
+                    <li className="flex items-center gap-2 text-sm text-gray-700 group">
                       <span className="text-green-500 group-hover:translate-x-1 transition-transform">→</span>
                       Fix products with empty description (1)
                     </li>
-                    <li className="flex items-center gap-2 text-sm text-gray-700 hover:text-green-600 cursor-pointer group">
+                    <li className="flex items-center gap-2 text-sm text-gray-700 group">
                       <span className="text-green-500 group-hover:translate-x-1 transition-transform">→</span>
                       Fix Products with empty Price (1)
                     </li>
@@ -364,7 +359,7 @@ export default function DataInsightsPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
-            Paid media teams trust Adsoptima to speed up PPC analysis
+            Paid media teams trust AdsOptima to speed up PPC analysis
           </h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -373,15 +368,15 @@ export default function DataInsightsPage() {
                 Case study
               </span>
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                See how PixelRush used the Quality Score Tracker and Search Terms N-Grams for faster, more efficient monitoring.
+                See how Bluepine Travel used the Quality Score Tracker and Search Terms N-Grams to spot shifts in demand earlier and spend less time on routine monitoring.
               </p>
-              <button className="px-8 py-4 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <Link href="/case-studies" className="px-8 py-4 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center justify-center">
                 Learn More
-              </button>
+              </Link>
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl p-12 text-center shadow-2xl relative overflow-hidden">
+              <div className="bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 rounded-2xl p-8 sm:p-12 text-center shadow-2xl relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20">
                   <div className="absolute top-4 left-4 w-8 h-8 border-2 border-white/30 rounded"></div>
                   <div className="absolute top-12 left-12 w-4 h-4 border-2 border-white/30 rounded"></div>
@@ -402,13 +397,13 @@ export default function DataInsightsPage() {
                 </div>
                 
                 <div className="relative z-10">
-                  <div className="text-8xl mb-6">🚀</div>
-                  <h3 className="text-3xl font-bold text-white mb-2">PixelRush</h3>
+                  <div className="w-20 h-20 mx-auto mb-6 bg-white/20 rounded-2xl flex items-center justify-center text-3xl font-bold text-white" aria-hidden="true">BT</div>
+                  <h3 className="text-3xl font-semibold tracking-tight text-white mb-2">Bluepine Travel</h3>
                   <p className="text-white/90 uppercase tracking-wider font-medium">Case Study</p>
                 </div>
               </div>
               <div className="absolute top-4 right-4 bg-white rounded-lg px-3 py-2 shadow-lg">
-                <span className="text-sm font-bold text-gray-800">ADSOPTIMA ✓</span>
+                <span className="text-sm font-bold text-gray-800">AdsOptima</span>
               </div>
             </div>
           </div>

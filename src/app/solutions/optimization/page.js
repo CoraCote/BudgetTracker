@@ -3,14 +3,14 @@ import Link from 'next/link';
 export default function OptimizationPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50">
-      <section className="relative pt-16 pb-16 overflow-hidden">
+      <section className="relative pt-16 md:pt-20 pb-16 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-1/4 w-32 h-32 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
           <div className="absolute top-40 right-1/4 w-24 h-24 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 mt-30">
+          <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-sm font-medium mb-6">
               <div className="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse"></div>
               PPC Optimization Engine
@@ -28,13 +28,13 @@ export default function OptimizationPage() {
               across many, all in a few clicks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/signup" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+              <Link href="/signup" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                 Start Trial →
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </Link>
-              <Link href="/demo" className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl border-2 border-purple-200 hover:border-purple-300 hover:bg-purple-50 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
+              <Link href="/contact?topic=demo" className="inline-flex items-center justify-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl border-2 border-purple-200 hover:border-purple-300 hover:bg-purple-50 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
@@ -63,7 +63,7 @@ export default function OptimizationPage() {
             </div>
 
             <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 transform rotate-1 hover:rotate-0 transition-transform duration-500">
+              <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 transform lg:rotate-1 lg:hover:rotate-0 transition-transform duration-500">
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-xl font-bold text-gray-900">AdsOptima Express</h3>
                   <div className="flex space-x-2">
@@ -75,13 +75,9 @@ export default function OptimizationPage() {
                 
                 <div className="space-y-6">
                   <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="flex items-center justify-between mb-3">
-                      <select className="text-sm bg-white border border-gray-200 rounded-md px-3 py-1">
-                        <option>All Accounts</option>
-                      </select>
-                      <select className="text-sm bg-white border border-gray-200 rounded-md px-3 py-1">
-                        <option>All Suggestion Types</option>
-                      </select>
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                      <span className="text-sm bg-white border border-gray-200 rounded-md px-3 py-1 text-gray-700">All Accounts ▾</span>
+                      <span className="text-sm bg-white border border-gray-200 rounded-md px-3 py-1 text-gray-700">All Suggestion Types ▾</span>
                     </div>
                     
                     <div className="space-y-2">
@@ -114,8 +110,8 @@ export default function OptimizationPage() {
                        <div className="space-y-3 mb-4">
                          <div className="flex items-center justify-between p-2 bg-white rounded border border-gray-100">
                            <div className="flex items-center space-x-2">
-                             <input type="checkbox" className="rounded border-gray-300" />
-                             <span className="text-sm text-gray-700">http://example.com</span>
+                             <input type="checkbox" className="rounded border-gray-300" aria-label="Select placement" />
+                             <span className="text-sm text-gray-700">example.com/news</span>
                            </div>
                            <div className="text-xs text-gray-500">
                              <div>Cost: $45.67</div>
@@ -124,8 +120,8 @@ export default function OptimizationPage() {
                          </div>
                          <div className="flex items-center justify-between p-2 bg-white rounded border border-gray-100">
                            <div className="flex items-center space-x-2">
-                             <input type="checkbox" className="rounded border-gray-300" />
-                             <span className="text-sm text-gray-700">http://sample.org</span>
+                             <input type="checkbox" className="rounded border-gray-300" aria-label="Select placement" />
+                             <span className="text-sm text-gray-700">example.org/blog</span>
                            </div>
                            <div className="text-xs text-gray-500">
                              <div>Cost: $67.89</div>
@@ -134,8 +130,8 @@ export default function OptimizationPage() {
                          </div>
                          <div className="flex items-center justify-between p-2 bg-white rounded border border-gray-100">
                            <div className="flex items-center space-x-2">
-                             <input type="checkbox" className="rounded border-gray-300" />
-                             <span className="text-sm text-gray-700">http://test.net</span>
+                             <input type="checkbox" className="rounded border-gray-300" aria-label="Select placement" />
+                             <span className="text-sm text-gray-700">example.net/games</span>
                            </div>
                            <div className="text-xs text-gray-500">
                              <div>Cost: $78.33</div>
@@ -144,9 +140,9 @@ export default function OptimizationPage() {
                          </div>
                        </div>
                        
-                       <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
+                       <span className="block w-full text-center bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg font-medium">
                          Apply Suggestions
-                       </button>
+                       </span>
                      </div>
                 </div>
               </div>
@@ -172,7 +168,7 @@ export default function OptimizationPage() {
 
            <div className="grid lg:grid-cols-2 gap-16 items-center">
              <div className="relative">
-               <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 transform rotate-2 hover:rotate-0 transition-transform duration-500">
+               <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 transform lg:rotate-2 lg:hover:rotate-0 transition-transform duration-500">
                  <div className="flex items-center justify-between mb-6">
                    <h3 className="text-xl font-bold text-gray-900">Demographic Bid Adjustments</h3>
                    <div className="flex space-x-2">
@@ -227,13 +223,13 @@ export default function OptimizationPage() {
                        </table>
                      </div>
                      
-                     <div className="flex space-x-3 mt-4">
-                       <button className="flex-1 bg-gray-100 text-gray-700 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors">
+                     <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                       <span className="flex-1 text-center bg-gray-100 text-gray-700 py-2 px-3 rounded-lg font-medium">
                          Snooze
-                       </button>
-                       <button className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
+                       </span>
+                       <span className="flex-1 text-center bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 px-3 rounded-lg font-medium">
                          Apply New Bid Adjustments
-                       </button>
+                       </span>
                      </div>
                    </div>
                  </div>
@@ -308,18 +304,18 @@ export default function OptimizationPage() {
                    </svg>
                  </div>
                </div>
-               <div className="text-3xl font-bold text-purple-600 mb-2">+47%</div>
-               <p className="text-sm text-gray-600">Average improvement across optimized campaigns</p>
+               <div className="text-3xl font-bold text-purple-600 mb-2">+14%</div>
+               <p className="text-sm text-gray-600">Example ROAS change across optimized campaigns</p>
                <div className="mt-4 p-3 bg-white rounded-lg">
                  <div className="text-xs text-gray-500 mb-2">Top Performers</div>
                  <div className="space-y-1">
                    <div className="flex justify-between text-sm">
                      <span>Summer Sale Campaign</span>
-                     <span className="text-green-600">+89%</span>
+                     <span className="text-green-600">+21%</span>
                    </div>
                    <div className="flex justify-between text-sm">
                      <span>Brand Awareness</span>
-                     <span className="text-green-600">+67%</span>
+                     <span className="text-green-600">+15%</span>
                    </div>
                  </div>
                </div>
@@ -334,8 +330,8 @@ export default function OptimizationPage() {
                    </svg>
                  </div>
                </div>
-               <div className="text-3xl font-bold text-pink-600 mb-2">-23%</div>
-               <p className="text-sm text-gray-600">Average cost per conversion reduction</p>
+               <div className="text-3xl font-bold text-pink-600 mb-2">-9%</div>
+               <p className="text-sm text-gray-600">Example cost per conversion change</p>
                <div className="mt-4 p-3 bg-white rounded-lg">
                  <div className="text-xs text-gray-500 mb-2">Savings This Month</div>
                  <div className="text-lg font-bold text-green-600">$12,847</div>
@@ -352,27 +348,27 @@ export default function OptimizationPage() {
                    </svg>
                  </div>
                </div>
-               <div className="text-3xl font-bold text-blue-600 mb-2">+34%</div>
-               <p className="text-sm text-gray-600">Average conversion rate improvement</p>
+               <div className="text-3xl font-bold text-blue-600 mb-2">+11%</div>
+               <p className="text-sm text-gray-600">Example conversion rate change</p>
                <div className="mt-4 p-3 bg-white rounded-lg">
                  <div className="text-xs text-gray-500 mb-2">New Conversions</div>
-                 <div className="text-lg font-bold text-green-600">+1,247</div>
+                 <div className="text-lg font-bold text-green-600">+318</div>
                  <div className="text-xs text-gray-500">vs. last month</div>
                </div>
              </div>
            </div>
 
-           <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
-             <div className="flex items-center justify-between mb-6">
+           <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-5 sm:p-8">
+             <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
                <h3 className="text-xl font-bold text-gray-900">Campaign Performance Trends</h3>
-               <div className="flex space-x-2">
-                 <button className="px-4 py-2 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium">7 Days</button>
-                 <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">30 Days</button>
-                 <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">90 Days</button>
+               <div className="flex space-x-2" aria-hidden="true">
+                 <span className="px-4 py-2 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium">7 Days</span>
+                 <span className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">30 Days</span>
+                 <span className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">90 Days</span>
                </div>
              </div>
              
-             <div className="grid grid-cols-4 gap-6 mb-6">
+             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
                <div className="text-center">
                  <div className="text-2xl font-bold text-gray-900">$45.2K</div>
                  <div className="text-sm text-gray-600">Total Spend</div>
@@ -396,9 +392,9 @@ export default function OptimizationPage() {
              </div>
 
             
-             <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-6 h-32 flex items-end justify-center space-x-2">
+             <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-4 sm:p-6 h-32 flex items-end justify-center gap-1 sm:gap-2" aria-hidden="true">
                {[20, 35, 28, 45, 38, 52, 48, 65, 58, 72, 68, 85].map((height, index) => (
-                 <div key={index} className="w-6 bg-gradient-to-t from-purple-500 to-pink-500 rounded-t" style={{ height: `${height}%` }}></div>
+                 <div key={index} className="flex-1 max-w-[24px] bg-gradient-to-t from-purple-500 to-pink-500 rounded-t" style={{ height: `${height}%` }}></div>
                ))}
              </div>
              <div className="text-center text-sm text-gray-500 mt-2">Performance over time showing steady improvement</div>
@@ -433,7 +429,7 @@ export default function OptimizationPage() {
                   <div className="bg-red-50 border border-red-200 rounded-lg p-4">
                     <h4 className="font-semibold text-red-800 mb-3 flex items-center">
                       <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       IF (Conditions)
                     </h4>
@@ -456,9 +452,9 @@ export default function OptimizationPage() {
                       </div>
                     </div>
                     
-                    <button className="text-red-600 text-sm font-medium hover:text-red-700 mt-3">
+                    <span className="inline-block text-red-600 text-sm font-medium mt-3">
                       + Add Another Condition
-                    </button>
+                    </span>
                   </div>
 
                   <div className="bg-green-50 border border-green-200 rounded-lg p-4">
@@ -482,19 +478,17 @@ export default function OptimizationPage() {
                       </div>
                     </div>
                     
-                    <button className="text-green-600 text-sm font-medium hover:text-green-700 mt-3">
+                    <span className="inline-block text-green-600 text-sm font-medium mt-3">
                       + Add Another Action
-                    </button>
+                    </span>
                   </div>
 
-                                     <div className="flex items-center justify-between">
+                                     <div className="flex flex-wrap items-center justify-between gap-3">
                      <label className="flex items-center space-x-2">
                        <input type="checkbox" className="rounded border-gray-300" />
                        <span className="text-sm text-gray-700">Exclude recent changes applied from Rule Engine</span>
                      </label>
-                     <select className="text-sm bg-white border border-gray-200 rounded-md px-3 py-1">
-                       <option>Last 30 Days</option>
-                     </select>
+                     <span className="text-sm bg-white border border-gray-200 rounded-md px-3 py-1 text-gray-700">Last 30 Days ▾</span>
                    </div>
 
                    <div className="bg-gray-50 rounded-lg p-4 mt-4">
@@ -577,7 +571,7 @@ export default function OptimizationPage() {
 
            <div className="grid lg:grid-cols-2 gap-16 items-center">
              <div className="relative">
-               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-2xl border border-gray-100 p-6 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
+               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-2xl border border-gray-100 p-6 transform lg:-rotate-1 lg:hover:rotate-0 transition-transform duration-500">
                  <div className="flex items-center justify-between mb-6">
                    <h3 className="text-xl font-bold text-gray-900">Predictive Performance Dashboard</h3>
                    <div className="flex space-x-2">
@@ -623,7 +617,7 @@ export default function OptimizationPage() {
                          <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
                          <div>
                            <div className="text-sm font-medium text-green-800">Increase budget for "Summer Sale" campaign</div>
-                           <div className="text-xs text-green-600">95% confidence - Expected +34% ROI</div>
+                           <div className="text-xs text-green-600">High confidence - Expected +8% ROAS</div>
                          </div>
                        </div>
                        
@@ -631,7 +625,7 @@ export default function OptimizationPage() {
                          <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
                          <div>
                            <div className="text-sm font-medium text-blue-800">Pause underperforming keywords</div>
-                           <div className="text-xs text-blue-600">87% confidence - Save $2.1K monthly</div>
+                           <div className="text-xs text-blue-600">Medium confidence - Save ~$400 monthly</div>
                          </div>
                        </div>
                        
@@ -639,16 +633,16 @@ export default function OptimizationPage() {
                          <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
                          <div>
                            <div className="text-sm font-medium text-purple-800">Test new ad copy variations</div>
-                           <div className="text-xs text-purple-600">78% confidence - Expected +12% CTR</div>
+                           <div className="text-xs text-purple-600">Medium confidence - Expected +5% CTR</div>
                          </div>
                        </div>
                      </div>
                    </div>
 
                    <div className="text-center">
-                     <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
+                     <span className="block w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg font-medium">
                        View All AI Insights
-                     </button>
+                     </span>
                    </div>
                  </div>
                </div>
@@ -664,7 +658,7 @@ export default function OptimizationPage() {
                    </div>
                    <div>
                      <h3 className="text-xl font-semibold text-gray-900 mb-2">Predictive Modeling</h3>
-                     <p className="text-gray-600">Our AI analyzes historical data and market trends to predict future performance with up to 95% accuracy.</p>
+                     <p className="text-gray-600">Our AI analyzes historical data and market trends to forecast likely performance and flag emerging trends early.</p>
                    </div>
                  </div>
 
@@ -720,8 +714,8 @@ export default function OptimizationPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Full data encryption and GDPR compliance</h3>
-              <p className="text-white/80">Enterprise-grade security with end-to-end encryption and full regulatory compliance.</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Encrypted data and GDPR-ready processing</h3>
+              <p className="text-white/80">Data is encrypted in transit and at rest and processed in line with GDPR.</p>
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -746,17 +740,17 @@ export default function OptimizationPage() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Join thousands of advertisers who have already optimized their campaigns 
-            and achieved remarkable results with our platform.
+            Join advertisers who use AdsOptima to optimize campaigns
+            with less manual work and more confidence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/signup" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+            <Link href="/signup" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
               Start Your Free Trial
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </Link>
-            <Link href="/demo" className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl border-2 border-purple-200 hover:border-purple-300 hover:bg-purple-50 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
+            <Link href="/contact?topic=demo" className="inline-flex items-center justify-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl border-2 border-purple-200 hover:border-purple-300 hover:bg-purple-50 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
               Schedule a Demo
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />

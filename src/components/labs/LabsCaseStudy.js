@@ -1,4 +1,4 @@
-'use client';
+import Link from 'next/link';
 
 export default function LabsCaseStudy() {
   return (
@@ -21,16 +21,16 @@ export default function LabsCaseStudy() {
             
             {/* Description */}
             <p className="text-lg text-gray-600 leading-relaxed">
-              See how Mabo used our Campaign Builder & Product Group Refresher to make 89% faster changes to product groups.
+              See how Tallgrass Media used our Campaign Builder & Product Group Refresher to cut the time spent updating Shopping product groups.
             </p>
             
             {/* Learn More Button */}
-            <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+            <Link href="/case-studies" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
               Learn More
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </button>
+            </Link>
           </div>
           
           {/* Right Section - AdsOptima Card */}
@@ -46,10 +46,10 @@ export default function LabsCaseStudy() {
                   <h3 className="text-white font-bold text-2xl">ADSOPTIMA</h3>
                 </div>
                 
-                {/* MABO Tag and CASE STUDY */}
-                <div className="flex items-center space-x-4 mb-8">
+                {/* Customer tag and CASE STUDY */}
+                <div className="flex flex-wrap items-center gap-4 mb-8">
                   <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    MABO
+                    TALLGRASS MEDIA
                   </span>
                   <span className="text-white font-semibold text-sm">
                     CASE STUDY
@@ -60,7 +60,7 @@ export default function LabsCaseStudy() {
                 <div className="flex justify-end">
                   <div className="w-24 h-16 relative">
                     {/* Line Graph */}
-                    <svg className="w-full h-full" viewBox="0 0 100 60" fill="none">
+                    <svg className="w-full h-full" viewBox="0 0 100 60" fill="none" aria-hidden="true">
                       {/* Grid Lines */}
                       <line x1="10" y1="50" x2="90" y2="50" stroke="rgba(255,255,255,0.3)" strokeWidth="1"/>
                       <line x1="10" y1="40" x2="90" y2="40" stroke="rgba(255,255,255,0.3)" strokeWidth="1"/>

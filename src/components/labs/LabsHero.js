@@ -1,5 +1,3 @@
-'use client';
-
 export default function LabsHero() {
   return (
     <div className="relative bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600 overflow-hidden">
@@ -29,12 +27,12 @@ export default function LabsHero() {
           </p>
           
           {/* CTA Button */}
-          <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+          <a href="#labs-features" className="inline-flex items-center px-8 py-4 bg-white/10 border border-white/30 hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
             Start Exploring
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
-          </button>
+          </a>
         </div>
       </div>
       

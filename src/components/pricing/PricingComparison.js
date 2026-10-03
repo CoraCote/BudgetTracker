@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function PricingComparison({ billingCycle = 'monthly', adSpend = '25K' }) {
   const [expandedFeatures, setExpandedFeatures] = useState(new Set(['real-time-data']));
@@ -121,6 +122,7 @@ export default function PricingComparison({ billingCycle = 'monthly', adSpend = 
       name: 'ESSENTIALS',
       price: `$${getFinalPrice(basePrice, billingCycle)}${getBillingLabel(billingCycle)}`,
       primaryButton: 'Start Trial',
+      primaryHref: '/signup',
       secondaryButton: 'Request Demo',
       primaryButtonStyle: 'outline'
     },
@@ -128,6 +130,7 @@ export default function PricingComparison({ billingCycle = 'monthly', adSpend = 
       name: 'PREMIUM',
       price: `$${getFinalPrice(basePrice + 90, billingCycle)}${getBillingLabel(billingCycle)}`,
       primaryButton: 'Start Trial',
+      primaryHref: '/signup',
       secondaryButton: 'Request Demo',
       primaryButtonStyle: 'filled'
     },
@@ -135,6 +138,7 @@ export default function PricingComparison({ billingCycle = 'monthly', adSpend = 
       name: 'ENTERPRISE',
       price: 'Get a Custom Plan',
       primaryButton: 'Get In Touch',
+      primaryHref: '/contact?topic=enterprise',
       secondaryButton: 'Request Demo',
       primaryButtonStyle: 'outline'
     }
@@ -210,7 +214,8 @@ export default function PricingComparison({ billingCycle = 'monthly', adSpend = 
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div className="bg-white rounded-2xl shadow-xl overflow-x-auto">
+          <div className="min-w-[720px]">
           {/* Header Row */}
           <div className="grid grid-cols-4 border-b border-gray-200">
             <div className="p-6 bg-gray-50"></div>
@@ -223,18 +228,19 @@ export default function PricingComparison({ billingCycle = 'monthly', adSpend = 
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                 <p className="text-sm text-gray-600 mb-4">{plan.price}</p>
-                <button
-                  className={`w-full py-2 px-4 rounded-lg font-medium transition-all duration-300 mb-2 ${
+                <Link
+                  href={plan.primaryHref}
+                  className={`block w-full py-2 px-4 rounded-lg font-medium transition-all duration-300 mb-2 ${
                     plan.primaryButtonStyle === 'filled'
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white'
                       : 'border border-purple-500 text-purple-600 hover:bg-purple-50 hover:border-purple-600'
                   }`}
                 >
                   {plan.primaryButton}
-                </button>
-                <button className="w-full py-2 px-4 text-purple-600 hover:text-purple-700 font-medium text-sm">
+                </Link>
+                <Link href="/contact?topic=demo" className="block w-full py-2 px-4 text-purple-600 hover:text-purple-700 font-medium text-sm">
                   {plan.secondaryButton}
-                </button>
+                </Link>
               </div>
             ))}
           </div>
@@ -245,6 +251,8 @@ export default function PricingComparison({ billingCycle = 'monthly', adSpend = 
               <div className="grid grid-cols-4 border-b border-gray-100">
                 <div className="p-6 bg-gray-50">
                   <button
+                    type="button"
+                    aria-expanded={feature.expandable ? expandedFeatures.has(feature.id) : undefined}
                     onClick={() => feature.expandable && toggleFeature(feature.id)}
                     className="flex items-center space-x-2 text-left w-full hover:text-purple-600 transition-colors"
                   >
@@ -297,6 +305,7 @@ export default function PricingComparison({ billingCycle = 'monthly', adSpend = 
               )}
             </div>
           ))}
+          </div>
         </div>
 
         {/* Footer Notes */}

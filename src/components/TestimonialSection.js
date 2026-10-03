@@ -9,7 +9,7 @@ export default function TestimonialSection() {
             <div className="absolute -left-4 top-0 w-8 h-8 bg-gradient-to-br from-purple-300 to-pink-300 rounded-full opacity-20"></div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 relative z-10">
-              Here's what performance marketing teams have to say about the{' '}
+              Here&apos;s what performance marketing teams have to say about the{' '}
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Rule Engine
               </span>
@@ -25,16 +25,12 @@ export default function TestimonialSection() {
             <div className="relative z-10">
               <div className="flex items-start justify-between mb-8">
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg flex items-center justify-center">
-                    <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                      </svg>
-                    </div>
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center text-white font-bold" aria-hidden="true">
+                    ND
                   </div>
                   <div>
-                    <div className="font-bold text-gray-900">SPECTACLE</div>
-                    <div className="text-sm text-gray-600">MARKETING</div>
+                    <div className="font-semibold tracking-tight text-gray-900">Northfield Digital</div>
+                    <div className="text-sm text-gray-500">Performance agency</div>
                   </div>
                 </div>
                 
@@ -47,12 +43,12 @@ export default function TestimonialSection() {
               </div>
 
               <blockquote className="text-lg text-gray-700 leading-relaxed mb-8">
-                "Where to begin! The Rule Engine is probably what I like the most. With B2B clients constantly needing to 'pace up' or 'pace down', the Rule Engine is vital for me to scale. The Blueprints help my team keep accounts healthy. The Alerts being synced to my Slack is a recent level-up for my setup as well."
+                "The Rule Engine is what our team relies on most. Our B2B clients constantly need to pace budgets up or down, and rules let us do that across every account without manual checks. Blueprints keep accounts healthy, and having alerts land in Slack means we catch issues the same day."
               </blockquote>
 
               <div className="border-t border-gray-100 pt-6">
-                <div className="font-bold text-gray-900 text-lg">Adam B.</div>
-                <div className="text-gray-600">Founder, Spectacle Marketing, LLC</div>
+                <div className="font-bold text-gray-900 text-lg">Head of Paid Media</div>
+                <div className="text-gray-600">Northfield Digital</div>
               </div>
             </div>
           </div>
@@ -69,9 +65,9 @@ export default function TestimonialSection() {
                 ))}
               </div>
             </div>
-            <p className="text-gray-700 mb-4">"The Rule Engine has transformed how we manage our PPC campaigns. The automation saves us hours every week."</p>
-            <div className="font-semibold text-gray-900">Sarah M.</div>
-            <div className="text-sm text-gray-600">PPC Manager, TechCorp</div>
+            <p className="text-gray-700 mb-4">"Rules now handle our routine bid and budget checks, which gives the team a few hours back every week."</p>
+            <div className="font-semibold text-gray-900">Head of Paid Search</div>
+            <div className="text-sm text-gray-600">Harborline Outfitters</div>
           </div>
 
           <div className="bg-gray-50 rounded-xl p-6 border border-gray-100">
@@ -84,9 +80,9 @@ export default function TestimonialSection() {
                 ))}
               </div>
             </div>
-            <p className="text-gray-700 mb-4">"Incredible ROI improvement since implementing the Rule Engine. Our campaigns are more efficient than ever."</p>
-            <div className="font-semibold text-gray-900">Michael R.</div>
-            <div className="text-sm text-gray-600">Digital Marketing Director, GrowthCo</div>
+            <p className="text-gray-700 mb-4">"Automated pausing of low-stock inventory ads keeps our spend focused on vehicles we can actually sell."</p>
+            <div className="font-semibold text-gray-900">Digital Marketing Manager</div>
+            <div className="text-sm text-gray-600">Summit Ridge Auto</div>
           </div>
 
           <div className="bg-gray-50 rounded-xl p-6 border border-gray-100">
@@ -99,9 +95,9 @@ export default function TestimonialSection() {
                 ))}
               </div>
             </div>
-            <p className="text-gray-700 mb-4">"The custom rules feature is a game-changer. We can now automate complex strategies that were impossible before."</p>
-            <div className="font-semibold text-gray-900">Jennifer L.</div>
-            <div className="text-sm text-gray-600">Agency Owner, PPC Masters</div>
+            <p className="text-gray-700 mb-4">"Custom rules let us turn our own playbooks into automations, so strategies we used to run by hand now run on schedule."</p>
+            <div className="font-semibold text-gray-900">Managing Director</div>
+            <div className="text-sm text-gray-600">Tallgrass Media</div>
           </div>
         </div>
       </div>

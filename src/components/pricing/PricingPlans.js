@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function PricingPlans({ billingCycle = 'monthly', adSpend = '25K' }) {
   // Base monthly prices for different ad spend tiers
   const getBasePrice = (adSpend) => {
@@ -49,6 +51,7 @@ export default function PricingPlans({ billingCycle = 'monthly', adSpend = '25K'
       finalPrice: getFinalPrice(basePrice, billingCycle),
       billingInfo: billingInfo,
       primaryButton: 'Start Trial',
+      primaryHref: '/signup',
       secondaryButton: 'Request Demo',
       primaryButtonStyle: 'outline',
       features: [
@@ -69,6 +72,7 @@ export default function PricingPlans({ billingCycle = 'monthly', adSpend = '25K'
       finalPrice: getFinalPrice(basePrice + 90, billingCycle),
       billingInfo: billingInfo,
       primaryButton: 'Start Trial',
+      primaryHref: '/signup',
       secondaryButton: 'Request Demo',
       primaryButtonStyle: 'filled',
       recommended: true,
@@ -91,13 +95,14 @@ export default function PricingPlans({ billingCycle = 'monthly', adSpend = '25K'
       price: 'Get a Custom Plan',
       priceSubtitle: "Let's Talk",
       primaryButton: 'Get In Touch',
+      primaryHref: '/contact?topic=enterprise',
       secondaryButton: 'Request Demo',
       primaryButtonStyle: 'outline',
       features: [
         'All features in Premium Plan, plus:',
         'Custom Data Integrations and Solutions',
         'Access to AdsOptima API on request',
-        'Okta SSO',
+        'Single sign-on (SAML SSO)',
         'Dedicated account manager',
         'Monthly training sessions and check-ins',
         'And much more!'
@@ -125,7 +130,7 @@ export default function PricingPlans({ billingCycle = 'monthly', adSpend = '25K'
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {plans.map((plan, index) => (
+          {plans.map((plan) => (
             <div
               key={plan.name}
               className={`relative rounded-2xl p-8 ${
@@ -179,18 +184,22 @@ export default function PricingPlans({ billingCycle = 'monthly', adSpend = '25K'
               </div>
 
               <div className="space-y-3">
-                <button
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                <Link
+                  href={plan.primaryHref}
+                  className={`block text-center w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.primaryButtonStyle === 'filled'
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5'
                       : 'border-2 border-purple-500 text-purple-600 hover:bg-purple-50 hover:border-purple-600'
                   }`}
                 >
                   {plan.primaryButton}
-                </button>
-                <button className="w-full py-3 px-6 rounded-lg font-semibold border-2 border-gray-300 text-gray-600 hover:border-purple-300 hover:text-purple-600 transition-all duration-300">
+                </Link>
+                <Link
+                  href="/contact?topic=demo"
+                  className="block text-center w-full py-3 px-6 rounded-lg font-semibold border-2 border-gray-300 text-gray-600 hover:border-purple-300 hover:text-purple-600 transition-all duration-300"
+                >
                   {plan.secondaryButton}
-                </button>
+                </Link>
               </div>
             </div>
           ))}

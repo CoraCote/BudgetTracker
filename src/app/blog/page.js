@@ -7,7 +7,7 @@ import ExpertInsights from '@/components/blog/ExpertInsights';
 import DataStudies from '@/components/blog/DataStudies';
 import VideoLibrary from '@/components/blog/VideoLibrary';
 import CaseStudies from '@/components/blog/CaseStudies';
-import FloatingChatIcon from '@/components/blog/FloatingChatIcon';
+import FloatingChatIcon from '@/components/FloatingChatIcon';
 
 export const metadata = {
   title: 'The AdsOptima Blog - PPC Insights, Tips & Industry Analysis',

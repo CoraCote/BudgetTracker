@@ -1,4 +1,4 @@
-'use client';
+import Link from 'next/link';
 
 export default function LabsFeatures() {
   const features = [
@@ -61,7 +61,7 @@ export default function LabsFeatures() {
   ];
 
   return (
-    <div className="py-16 bg-white">
+    <section id="labs-features" className="py-16 bg-white scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -123,7 +123,7 @@ export default function LabsFeatures() {
                             <div className="font-semibold mb-2">Campaign</div>
                             <div className="space-y-1">
                               <div className="flex items-center space-x-2">
-                                <input type="radio" className="w-3 h-3" />
+                                <span className="w-3 h-3 rounded-full border border-white/80" aria-hidden="true"></span>
                                 <span className="text-xs">Create New Campaign</span>
                               </div>
                               <div className="bg-white/20 rounded px-2 py-1 text-xs">
@@ -175,7 +175,7 @@ export default function LabsFeatures() {
                           <div className="bg-green-400 rounded px-2 py-1 text-xs text-center">
                             Search Impr. Share 0.14 +1.04%
                           </div>
-                          <div className="flex justify-between">
+                          <div className="flex flex-wrap justify-between gap-2">
                             <div className="bg-red-400 rounded px-2 py-1 text-xs">
                               Search Lost IS (Rank) ▲ 4.95 +62.82%
                             </div>
@@ -238,24 +238,29 @@ export default function LabsFeatures() {
                   </div>
                   
                   {/* Status Badge */}
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items-center gap-4">
                     <div className={`px-4 py-2 rounded-full text-sm font-semibold ${
-                      feature.status === 'Launch' 
-                        ? 'bg-green-400 text-gray-800' 
+                      feature.status === 'Launch'
+                        ? 'bg-green-400 text-gray-800'
                         : 'bg-gray-400 text-white'
                     }`}>
-                      {feature.status}
+                      {feature.status === 'Launch' ? 'Live in beta' : feature.status}
                     </div>
-                    <button className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ${
-                      feature.status === 'Launch'
-                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white'
-                        : 'bg-gray-300 text-gray-600 cursor-not-allowed'
-                    }`}>
-                      {feature.status === 'Launch' ? 'Launch' : 'Coming Soon'}
-                      <svg className="w-4 h-4 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </button>
+                    {feature.status === 'Launch' ? (
+                      <Link
+                        href="/signup"
+                        className="px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 bg-white text-purple-700 hover:bg-purple-50 shadow"
+                      >
+                        Try it
+                        <svg className="w-4 h-4 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    ) : (
+                      <span className="px-4 py-2 rounded-lg text-sm font-semibold bg-white/30 text-white cursor-default">
+                        Coming Soon
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>
@@ -270,6 +275,6 @@ export default function LabsFeatures() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

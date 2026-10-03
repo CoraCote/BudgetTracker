@@ -73,7 +73,7 @@ export default function LabsVideoCard({ video, featured = false }) {
   const charStyle = getCharacterStyle(character);
 
   return (
-    <div className={`group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 ${featured ? 'lg:col-span-1' : ''}`}>
+    <div className={`group transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 ${featured ? 'lg:col-span-1' : ''}`}>
       {/* Thumbnail */}
       <div className={`relative ${getBackgroundClass(video.backgroundPattern)} rounded-xl overflow-hidden mb-4 shadow-2xl group-hover:shadow-3xl transition-all duration-300`}>
         {/* Animated Background Pattern */}
@@ -163,10 +163,10 @@ export default function LabsVideoCard({ video, featured = false }) {
         <div className="absolute bottom-3 left-3 right-3 z-20">
           <h3 className="text-white font-bold text-sm leading-tight mb-1 drop-shadow-lg">
             {video.highlightText}
-            <span className="inline-block ml-1 group-hover:scale-125 transition-transform">
-              <div className="w-4 h-4 bg-white rounded-full flex items-center justify-center shadow-lg">
-                <div className="w-0 h-0 border-l-2 border-l-gray-900 border-t-1 border-t-transparent border-b-1 border-b-transparent ml-0.5"></div>
-              </div>
+            <span className="inline-block ml-1 align-middle group-hover:scale-125 transition-transform" aria-hidden="true">
+              <span className="w-4 h-4 bg-white rounded-full flex items-center justify-center shadow-lg">
+                <span className="block w-0 h-0 border-l-2 border-l-gray-900 border-t-1 border-t-transparent border-b-1 border-b-transparent ml-0.5"></span>
+              </span>
             </span>
           </h3>
           

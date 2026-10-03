@@ -1,34 +1,34 @@
 'use client';
 
+import { useState } from 'react';
 import VideoCard from './VideoCard';
 
 const episodes = [
   {
     id: 9,
-    title: "The Award-Winning PPC Campaign That Boosted ROI 27x",
+    title: "How Layered Automation Turned Around a Lead-Gen Account",
     date: "Aug 25, 2025",
-    description: "How Chris Ridley of Evoluted Built the Award-Winning PPC Campaign That...",
-    presenter: "Chris Ridley",
-    company: "Evoluted",
+    description: "How a performance agency combined bid strategies, scripts and rules to steady a struggling lead-gen account.",
+    presenter: "Northfield Digital",
+    company: "Paid search team",
     gradient: "teal-green",
     hasVideoCard: true,
-    videoCardTitle: "The Award-Winning PPC Campaign That Boosted ROI 27x",
+    videoCardTitle: "How Layered Automation Turned Around a Lead-Gen Account",
     videoCardSubtitle: "AUTOMATION LAYERING MASTERCLASS",
     duration: "52 min",
     views: "3.2K",
     isNew: true,
-    tags: ["ROI", "Awards", "Case Study"],
+    tags: ["ROI", "Lead Gen", "Case Study"],
     isLive: false,
-    highlightText: "27x",
-    presenterImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+    highlightText: "Layered Automation"
   },
   {
     id: 8,
     title: "Google Ads automations for small accounts",
     date: "Dec 9, 2024",
-    description: "10 Powerful Automations Beeby Clark+Meyler Uses Everyday to Manage...",
-    presenter: "Beeby Clark",
-    company: "Clark+Meyler",
+    description: "10 automations an agency team uses every day to manage small Google Ads accounts.",
+    presenter: "Tallgrass Media",
+    company: "Agency account team",
     gradient: "teal-green",
     hasVideoCard: true,
     videoCardTitle: "Google Ads automations for small accounts",
@@ -36,16 +36,15 @@ const episodes = [
     duration: "38 min",
     views: "2.8K",
     tags: ["Small Business", "Google Ads", "Automation"],
-    isLive: false,
-    presenterImage: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+    isLive: false
   },
   {
     id: 7,
     title: "7 PPC Automations That Save You From Burnout",
     date: "Jun 25, 2024",
     description: "Discover the essential automations that help PPC managers work smarter, not harder.",
-    presenter: "Sarah Johnson",
-    company: "PPC Experts",
+    presenter: "AdsOptima Customer Success",
+    company: "AdsOptima",
     gradient: "purple-pink",
     hasVideoCard: false,
     duration: "45 min",
@@ -57,8 +56,8 @@ const episodes = [
     title: "How to Build Trust in the World of PPC Automation",
     date: "May 2, 2024",
     description: "Learn how to maintain client confidence while implementing automated solutions.",
-    presenter: "Mike Chen",
-    company: "Automation Pro",
+    presenter: "AdsOptima Product Team",
+    company: "AdsOptima",
     gradient: "blue-purple",
     hasVideoCard: false,
     duration: "41 min",
@@ -67,13 +66,13 @@ const episodes = [
   },
   {
     id: 5,
-    title: "How Craig and Emilie Manage Multiple Clients At Lesser Costs",
+    title: "How Two Agency Teams Manage Multiple Clients at Lower Cost",
     date: "Jan 15, 2024",
     description: "How we manage multiple clients at a fraction of the cost",
-    presenter: "Craig Belcher",
-    company: "Efficiency Experts",
-    presenter2: "Emilie Eidson",
-    company2: "Efficiency Experts",
+    presenter: "Northfield Digital",
+    company: "Agency strategist",
+    presenter2: "Tallgrass Media",
+    company2: "Account director",
     gradient: "blue-purple",
     hasVideoCard: true,
     videoCardTitle: "How we manage multiple clients at a fraction of the cost",
@@ -85,22 +84,20 @@ const episodes = [
     isLive: false,
     highlightText: "at a fraction of",
     specialIcon: (
-      <svg className="w-5 h-5 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
+      <svg className="w-5 h-5 text-cyan-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
         <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" />
         <path d="M12 2a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0V6H9a1 1 0 110-2h1V3a1 1 0 011-1z" />
       </svg>
     ),
-    specialText: "eliminate wasted spend",
-    presenterImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    presenter2Image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+    specialText: "eliminate wasted spend"
   },
   {
     id: 4,
     title: "How to Win With Seasonality Bid Adjustments",
     date: "Dec 11, 2023",
     description: "Master seasonal bidding strategies that maximize ROI throughout the year.",
-    presenter: "Jeppe Houbak",
-    company: "WEB2MEDIA",
+    presenter: "Copperleaf Home",
+    company: "E-commerce marketing team",
     gradient: "indigo-blue",
     hasVideoCard: true,
     videoCardTitle: "How to win with Seasonality Bid Adjustments",
@@ -109,16 +106,15 @@ const episodes = [
     views: "3.7K",
     tags: ["Seasonality", "Bidding", "Strategy"],
     isLive: false,
-    highlightText: "Seasonality",
-    presenterImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+    highlightText: "Seasonality"
   },
   {
     id: 3,
     title: "Advanced Scripts for PPC Account Management",
     date: "Nov 8, 2023",
     description: "Learn how to create powerful Google Ads scripts for automated account management.",
-    presenter: "Alex Rodriguez",
-    company: "Script Masters",
+    presenter: "AdsOptima Product Team",
+    company: "AdsOptima",
     gradient: "orange-red",
     hasVideoCard: true,
     videoCardTitle: "Advanced Scripts for PPC Account Management",
@@ -130,18 +126,18 @@ const episodes = [
   },
   {
     id: 2,
-    title: "Facebook Ads Automation Best Practices",
+    title: "Meta Ads Automation Best Practices",
     date: "Oct 15, 2023",
-    description: "Master Facebook's automation tools and create winning campaigns with minimal manual work.",
-    presenter: "Lisa Wang",
-    company: "Social Media Pro",
+    description: "Master Meta's automation tools and create winning campaigns with minimal manual work.",
+    presenter: "Bluepine Travel",
+    company: "Paid social team",
     gradient: "purple-pink",
     hasVideoCard: true,
-    videoCardTitle: "Facebook Ads Automation Best Practices",
+    videoCardTitle: "Meta Ads Automation Best Practices",
     videoCardSubtitle: "AUTOMATION LAYERING MASTERCLASS",
     duration: "44 min",
     views: "3.5K",
-    tags: ["Facebook Ads", "Social Media", "Best Practices"],
+    tags: ["Meta Ads", "Social Media", "Best Practices"],
     isLive: false
   },
   {
@@ -149,8 +145,8 @@ const episodes = [
     title: "Introduction to PPC Automation Fundamentals",
     date: "Sep 20, 2023",
     description: "Get started with PPC automation - the essential concepts every marketer needs to know.",
-    presenter: "David Kim",
-    company: "Automation Academy",
+    presenter: "AdsOptima Customer Success",
+    company: "AdsOptima",
     gradient: "teal-green",
     hasVideoCard: true,
     videoCardTitle: "Introduction to PPC Automation Fundamentals",
@@ -162,7 +158,12 @@ const episodes = [
   }
 ];
 
+const INITIAL_COUNT = 6;
+
 export default function PreviousEpisodes() {
+  const [showAll, setShowAll] = useState(false);
+  const visibleEpisodes = showAll ? episodes : episodes.slice(0, INITIAL_COUNT);
+
   return (
     <div className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -172,17 +173,20 @@ export default function PreviousEpisodes() {
             Previous Episodes
           </h2>
           
-          <button className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg">
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
+          <a
+            href="#masterclass-signup"
+            className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg self-start"
+          >
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
             </svg>
-            Subscribe to our YouTube Channel
-          </button>
+            Get notified of new episodes
+          </a>
         </div>
 
         {/* Episodes Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-          {episodes.map((episode) => (
+          {visibleEpisodes.map((episode) => (
             <div key={episode.id} className="space-y-4">
               {episode.hasVideoCard ? (
                 <VideoCard
@@ -190,7 +194,7 @@ export default function PreviousEpisodes() {
                   subtitle={episode.videoCardSubtitle}
                   gradient={episode.gradient}
                   hasPlayButton={true}
-                  className="h-80"
+                  className="h-full"
                   presenter={episode.presenter}
                   company={episode.company}
                   isDualPresenter={episode.isDualPresenter}
@@ -201,14 +205,12 @@ export default function PreviousEpisodes() {
                   isNew={episode.isNew}
                   isLive={episode.isLive}
                   tags={episode.tags}
-                  presenterImage={episode.presenterImage}
-                  presenter2Image={episode.presenter2Image}
                   highlightText={episode.highlightText}
                   specialIcon={episode.specialIcon}
                   specialText={episode.specialText}
                 />
               ) : (
-                <div className="bg-white rounded-2xl shadow-lg p-8 h-80 flex flex-col justify-between border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                <div className="bg-white rounded-2xl shadow-lg p-8 min-h-[420px] flex flex-col justify-between border border-gray-100 hover:shadow-xl transition-all duration-300 group">
                   {/* Header with icon and status */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -232,8 +234,8 @@ export default function PreviousEpisodes() {
                     {/* Tags */}
                     {episode.tags && episode.tags.length > 0 && (
                       <div className="flex flex-wrap gap-2 mb-4">
-                        {episode.tags.slice(0, 3).map((tag, index) => (
-                          <span key={index} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">
+                        {episode.tags.slice(0, 3).map((tag) => (
+                          <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">
                             {tag}
                           </span>
                         ))}
@@ -243,7 +245,7 @@ export default function PreviousEpisodes() {
                     {/* Presenter info */}
                     <div className="flex items-center space-x-3 mb-4">
                       <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                        {episode.presenter.split(' ').map(n => n[0]).join('').toUpperCase()}
+                        {episode.presenter.split(' ').slice(0, 2).map(n => n[0]).join('').toUpperCase()}
                       </div>
                       <div>
                         <p className="text-gray-900 font-semibold text-sm">{episode.presenter}</p>
@@ -306,11 +308,18 @@ export default function PreviousEpisodes() {
         </div>
 
         {/* Load More Button */}
-        <div className="text-center mt-12">
-          <button className="px-8 py-4 bg-white border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold rounded-xl transition-all duration-200 transform hover:scale-105">
-            Load More Episodes
-          </button>
-        </div>
+        {episodes.length > INITIAL_COUNT && (
+          <div className="text-center mt-12">
+            <button
+              type="button"
+              onClick={() => setShowAll(!showAll)}
+              aria-expanded={showAll}
+              className="px-8 py-4 bg-white border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold rounded-xl transition-all duration-200 transform hover:scale-105"
+            >
+              {showAll ? 'Show Fewer Episodes' : `Load ${episodes.length - INITIAL_COUNT} More Episodes`}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

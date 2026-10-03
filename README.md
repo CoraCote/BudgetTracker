@@ -1,174 +1,104 @@
-# AdsOptima - AI-Powered Advertising Campaign Optimization
+# AdsOptima
 
-A modern SaaS application built with Next.js that helps optimize advertising campaigns using AI-powered insights.
+Marketing site and customer dashboard for **AdsOptima**, a PPC management product. It's built with Next.js 14 (App Router), React 18, Tailwind CSS v4 and PostgreSQL.
 
 ## Features
 
-- 🔐 **Authentication System**: Secure user registration and login with PostgreSQL
-- 🎯 **Dashboard**: User profile management and campaign overview
-- 🚀 **Modern UI**: Built with Tailwind CSS and responsive design
-- 🔒 **JWT Security**: Secure token-based authentication
-- 🗄️ **PostgreSQL**: Robust database backend for user management
+- **Marketing site:** home, 21 solution pages, pricing, blog, case studies, comparisons, webinars and labs. It works on phones, tablets and desktops.
+- **Accounts:** sign-up with automatic sign-in, sign-in, and sign-out. Passwords are hashed with bcrypt, and sessions are signed JWTs stored in an httpOnly cookie.
+- **Dashboard:** setup checklist, trial status, ad-account connection requests, profile editing and password changes.
+- **Contact and demo requests:** a validated form whose requests are stored in PostgreSQL.
+- **Protection:** route guarding in middleware, safe post-login redirects, rate limiting on sign-in, sign-up, password and contact endpoints, a honeypot field on the contact form, and case-insensitive unique emails.
 
-## Tech Stack
+## Requirements
 
-- **Frontend**: Next.js 14, React 18, Tailwind CSS
-- **Backend**: Next.js API Routes
-- **Database**: PostgreSQL
-- **Authentication**: JWT with bcrypt password hashing
-- **Styling**: Tailwind CSS with custom components
+- Node.js 18.18 or newer
+- PostgreSQL 12 or newer
 
-## Prerequisites
-
-- Node.js 18+ 
-- PostgreSQL 12+
-- npm or yarn
-
-## Setup Instructions
-
-### 1. Clone the Repository
+## Getting started
 
 ```bash
-git clone <repository-url>
-cd BudgetTracker
-```
+# 1. Install dependencies
+npm install
 
-### 2. Install Dependencies
+# 2. Configure the environment
+cp .env.example .env.local      # then edit DATABASE_URL and JWT_SECRET
 
-```bash
-npm run install:all
-```
-
-### 3. Database Setup
-
-1. **Install PostgreSQL** and create a database:
-   ```sql
-   CREATE DATABASE adsoptima;
-   ```
-
-2. **Configure Environment Variables**:
-   Copy `.env.local.example` to `.env.local` and update:
-   ```env
-   DATABASE_URL=postgresql://postgres:123@localhost:5432/adsoptima
-   JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
-   ```
-
-3. **Run Database Setup**:
-   ```bash
-   cd adsoptima
-   npm run setup:db
-   ```
-
-### 4. Start Development Server
-
-```bash
-npm run dev
-```
-
-The application will be available at `http://localhost:3000`
-
-## Project Structure
-
-```
-adsoptima/
-├── src/
-│   ├── app/                 # Next.js app directory
-│   │   ├── api/            # API routes
-│   │   │   ├── signin/     # Authentication endpoints
-│   │   │   ├── signup/
-│   │   │   ├── signout/
-│   │   │   └── user/       # User profile API
-│   │   ├── dashboard/      # Protected dashboard page
-│   │   ├── signin/         # Sign in page
-│   │   └── signup/         # Sign up page
-│   ├── components/         # Reusable components
-│   ├── lib/               # Utility libraries
-│   │   ├── db.js         # Database connection
-│   │   ├── auth.js       # Authentication utilities
-│   │   └── init-db.js    # Database initialization
-│   └── middleware.js      # Next.js middleware for auth
-├── scripts/               # Database setup scripts
-└── public/               # Static assets
-```
-
-## API Endpoints
-
-### Authentication
-- `POST /api/signup` - User registration
-- `POST /api/signin` - User login
-- `POST /api/signout` - User logout
-- `GET /api/user` - Get user profile (protected)
-
-### Request/Response Examples
-
-#### Sign Up
-```json
-POST /api/signup
-{
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "john@example.com",
-  "password": "securePass123"
-}
-```
-
-#### Sign In
-```json
-POST /api/signin
-{
-  "email": "john@example.com",
-  "password": "securePass123"
-}
-```
-
-## Environment Variables
-
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `DATABASE_URL` | PostgreSQL connection string | Required |
-| `JWT_SECRET` | Secret key for JWT tokens | Required |
-| `NODE_ENV` | Environment mode | `development` |
-
-## Development
-
-### Running the Application
-```bash
-# Development mode
-npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm run start
-```
-
-### Database Operations
-```bash
-# Setup database tables
+# 3. Create the database and its tables
+createdb adsoptima               # or: CREATE DATABASE adsoptima;
 npm run setup:db
+
+# 4. Start the dev server
+npm run dev                      # http://localhost:7000
 ```
 
-## Security Features
+You can run `npm run setup:db` as often as you like. It creates any missing tables and indexes and never drops data.
 
-- **Password Hashing**: bcrypt with salt rounds
-- **JWT Tokens**: Secure authentication tokens
-- **HTTP-Only Cookies**: Secure cookie storage
-- **Input Validation**: Server-side validation
-- **SQL Injection Protection**: Parameterized queries
+## Scripts
 
-## Contributing
+| Command            | Description                                  |
+| ------------------ | -------------------------------------------- |
+| `npm run dev`      | Start the development server on port 7000    |
+| `npm run build`    | Create a production build                    |
+| `npm run start`    | Serve the production build on port 7000      |
+| `npm run setup:db` | Create or upgrade the database schema        |
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+## Environment variables
+
+| Variable               | Required | Description                                                         |
+| ---------------------- | -------- | ------------------------------------------------------------------- |
+| `DATABASE_URL`         | Yes      | PostgreSQL connection string                                        |
+| `JWT_SECRET`           | Yes      | Session signing secret. At least 32 characters in production        |
+| `DATABASE_SSL`         | No       | `true` to connect over SSL (most hosted databases need this)        |
+| `DATABASE_POOL_MAX`    | No       | Maximum pooled connections (default `10`)                           |
+| `NEXT_PUBLIC_SITE_URL` | No       | Public site URL used in metadata (default `http://localhost:7000`)  |
+
+## API
+
+All endpoints accept and return JSON. Errors use the shape `{ "error": "message", "fields": { "field": "message" } }`. The `fields` part is included when individual inputs fail validation.
+
+| Method  | Path                 | Auth | Description                                                                     |
+| ------- | -------------------- | ---- | ------------------------------------------------------------------------------- |
+| `POST`  | `/api/signup`        |      | Create an account and sign in. Body: `email`, `password`, `firstName?`, `lastName?` |
+| `POST`  | `/api/signin`        |      | Sign in. Body: `email`, `password`                                              |
+| `POST`  | `/api/signout`       |      | Clear the session cookie                                                        |
+| `GET`   | `/api/session`       |      | `{ authenticated, user? }`, read from the token only (no database query)        |
+| `GET`   | `/api/user`          | ✓    | Current user's profile                                                          |
+| `PATCH` | `/api/user`          | ✓    | Update `firstName` and/or `lastName`                                            |
+| `POST`  | `/api/user/password` | ✓    | Change password. Body: `currentPassword`, `newPassword`                         |
+| `POST`  | `/api/contact`       |      | Submit a sales, demo, onboarding, support or partnership request                |
+| `GET`   | `/api/health`        |      | Health probe: `200 { status: "ok" }` or `503` when the database is down         |
+
+Authenticated endpoints read the `auth-token` cookie. Non-browser clients can send `Authorization: Bearer <token>` instead.
+
+Rate limits are kept in server memory, so each server instance counts separately. Behind several instances, move them to a shared store such as Redis (see `src/lib/rate-limit.js`).
+
+## Project structure
+
+```
+src/
+├── app/
+│   ├── api/             # Route handlers (auth, user, contact, health)
+│   ├── contact/         # Contact and demo request page
+│   ├── dashboard/       # Signed-in area (server-rendered)
+│   ├── signin/, signup/ # Auth pages
+│   ├── solutions/       # Product and solution pages
+│   └── ...              # Other marketing pages
+├── components/
+│   ├── auth/            # Auth layout and sign-in form
+│   ├── dashboard/       # Dashboard UI
+│   ├── forms/           # Shared form inputs, buttons and alerts
+│   └── ...              # Marketing sections
+├── lib/
+│   ├── db.js            # PostgreSQL pool and query helper
+│   ├── session.js       # Session token signing and verification (Edge-safe)
+│   ├── auth.js          # Password hashing and session cookie helpers
+│   ├── validation.js    # Validation shared by the browser and the server
+│   └── rate-limit.js    # In-memory rate limiter
+└── middleware.js        # Protects /dashboard and redirects signed-in users away from the auth pages
+scripts/setup-db.js      # Schema setup
+```
 
 ## License
 
-MIT License - see LICENSE file for details
-
-## Support
-
-For support and questions, please open an issue in the repository.
+Proprietary. All rights reserved.

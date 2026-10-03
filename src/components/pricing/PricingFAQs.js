@@ -8,7 +8,7 @@ export default function PricingFAQs({ billingCycle = 'monthly', adSpend = '25K' 
     {
       id: 1,
       question: 'Which ad platforms does AdsOptima support?',
-      answer: 'AdsOptima supports all major advertising platforms including Google Ads, Microsoft Advertising, Facebook Ads, Instagram Ads, LinkedIn Ads, and TikTok Ads. We provide comprehensive integration and optimization tools for each platform.'
+      answer: 'AdsOptima connects to Google Ads, Microsoft Advertising and Amazon Ads for optimization and automation, and brings in Meta Ads and Google Analytics 4 data for reporting and alerts. Optimization depth varies by platform; contact us if you need a specific integration.'
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ export default function PricingFAQs({ billingCycle = 'monthly', adSpend = '25K' 
     {
       id: 4,
       question: 'Which payment methods do you accept?',
-      answer: 'We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers for annual plans. All payments are processed securely through our payment partners.'
+      answer: 'We accept major credit and debit cards, and bank transfers for annual plans. All payments are processed securely through our payment provider.'
     },
     {
       id: 5,
@@ -62,9 +62,11 @@ export default function PricingFAQs({ billingCycle = 'monthly', adSpend = '25K' 
         <h2 className="text-4xl font-bold text-gray-900 mb-16">Pricing FAQs</h2>
         
         <div className="space-y-0">
-          {faqs.map((faq, index) => (
+          {faqs.map((faq) => (
             <div key={faq.id} className="border-b border-gray-200 last:border-b-0">
               <button
+                type="button"
+                aria-expanded={openFAQ === faq.id}
                 onClick={() => toggleFAQ(faq.id)}
                 className="w-full py-6 text-left flex items-center justify-between hover:text-purple-600 transition-colors group"
               >
@@ -86,7 +88,7 @@ export default function PricingFAQs({ billingCycle = 'monthly', adSpend = '25K' 
               </button>
               
               {openFAQ === faq.id && (
-                <div className="pb-6 pr-16">
+                <div className="pb-6 pr-4 sm:pr-16">
                   <p className="text-gray-700 leading-relaxed">
                     {faq.answer}
                   </p>

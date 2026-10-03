@@ -1,28 +1,10 @@
 import { NextResponse } from 'next/server';
+import { clearSessionCookie } from '@/lib/auth';
 
 export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
 
 export async function POST() {
-  try {
-    const response = NextResponse.json({
-      success: true,
-      message: 'Signed out successfully'
-    });
-
-    // Clear the auth cookie
-    response.cookies.set('auth-token', '', {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
-      maxAge: 0
-    });
-
-    return response;
-  } catch (error) {
-    console.error('Signout error:', error);
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    );
-  }
+  const response = NextResponse.json({ success: true, message: 'Signed out successfully' });
+  return clearSessionCookie(response);
 }

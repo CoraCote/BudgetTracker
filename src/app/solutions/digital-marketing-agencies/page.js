@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function DigitalMarketingAgenciesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50">
-      <section className="relative pt-24 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative pt-16 md:pt-20 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-24 h-24 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-lg animate-pulse" style={{ animationDelay: '2s' }}></div>
@@ -33,16 +33,16 @@ export default function DigitalMarketingAgenciesPage() {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Link 
                   href="/signup" 
-                  className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center"
+                  className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center inline-flex items-center justify-center"
                 >
                   Start Trial
                 </Link>
-                <button className="bg-white hover:bg-gray-50 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg border-2 border-gray-200 hover:border-purple-300 transition-all duration-300 shadow-sm hover:shadow-md">
+                <Link href="/contact?topic=demo" className="bg-white hover:bg-gray-50 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg border-2 border-gray-200 hover:border-purple-300 transition-all duration-300 shadow-sm hover:shadow-md inline-flex items-center justify-center">
                   Book A Demo
-                </button>
+                </Link>
               </div>
               
-              <div className="flex items-center space-x-8 text-sm text-gray-500">
+              <div className="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-gray-500">
                 <div className="flex items-center">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                   No credit card required
@@ -59,13 +59,12 @@ export default function DigitalMarketingAgenciesPage() {
             </div>
 
             <div className="relative">
-              <div className="rounded-2xl p-8 flex flex-col items-center">
+              <div className="rounded-2xl p-4 sm:p-8 flex flex-col items-center">
                 <div className="w-full flex justify-center mb-6">
                   <img 
                     src="/industry/agency-growth-illustration.webp" 
                     alt="Team collaborating on digital marketing analytics dashboards with Google integration" 
-                    className="w-[540px] h-auto object-contain"
-                    style={{ maxWidth : 540 }}
+                    className="w-full max-w-[540px] h-auto object-contain"
                   />
                 </div>
                 <div className="text-center">
@@ -103,13 +102,13 @@ export default function DigitalMarketingAgenciesPage() {
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 shadow-xl">
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-5 sm:p-8 shadow-xl">
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-700 mb-4 flex items-center">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
                     Key Performance Metrics
                   </h4>
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
                     <div className="bg-white rounded-lg p-4 text-center shadow-sm">
                       <div className="flex items-center justify-center mb-2">
                         <svg className="w-5 h-5 text-blue-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
@@ -117,7 +116,7 @@ export default function DigitalMarketingAgenciesPage() {
                         </svg>
                         <span className="text-xs text-gray-500">Clicks</span>
                       </div>
-                      <div className="text-2xl font-bold text-blue-600">361</div>
+                      <div className="text-xl sm:text-2xl font-bold text-blue-600">361</div>
                       <div className="text-xs text-red-500">▼ 34%</div>
                     </div>
                     
@@ -129,7 +128,7 @@ export default function DigitalMarketingAgenciesPage() {
                         </svg>
                         <span className="text-xs text-gray-500">Avg CPC</span>
                       </div>
-                      <div className="text-2xl font-bold text-green-600">$2.22</div>
+                      <div className="text-xl sm:text-2xl font-bold text-green-600">$2.22</div>
                       <div className="text-xs text-red-500">▼ 34%</div>
                     </div>
                     
@@ -140,7 +139,7 @@ export default function DigitalMarketingAgenciesPage() {
                         </svg>
                         <span className="text-xs text-gray-500">CTR</span>
                       </div>
-                      <div className="text-2xl font-bold text-purple-600">0.5%</div>
+                      <div className="text-xl sm:text-2xl font-bold text-purple-600">0.5%</div>
                       <div className="text-xs text-green-500">▲ 34%</div>
                     </div>
                   </div>
@@ -179,7 +178,7 @@ export default function DigitalMarketingAgenciesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <div className="bg-gradient-to-br from-purple-600 to-blue-700 p-8 text-white relative overflow-hidden">
-                <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADSOPTIMA</div>
+                <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">AdsOptima</div>
                 <div className="absolute inset-0 opacity-20">
                   <svg className="w-full h-full" viewBox="0 0 100 100" fill="none">
                     <path d="M20 20L80 20L80 80L20 80Z" stroke="currentColor" strokeWidth="0.5" opacity="0.3"/>
@@ -188,7 +187,8 @@ export default function DigitalMarketingAgenciesPage() {
                 </div>
                 <div className="relative z-10">
                   <div className="text-right mb-4">
-                    <div className="text-4xl font-bold">SEARCHLAB</div>
+                    <div className="text-3xl font-semibold tracking-tight pt-6">Tallgrass Media</div>
+                    <div className="text-sm opacity-90">Agency</div>
                     <div className="text-sm opacity-90">CASE STUDY</div>
                   </div>
                   <div className="flex justify-center">
@@ -198,22 +198,22 @@ export default function DigitalMarketingAgenciesPage() {
                   </div>
                 </div>
               </div>
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <div className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
                   Case study
                 </div>
                 <p className="text-lg text-gray-700 mb-6">
-                  SearchLab Digital increased conversions by 42% by switching to a scalable, feed-driven campaign structure.
+                  Tallgrass Media grew client conversions by 15% after switching to a scalable, feed-driven campaign structure.
                 </p>
-                <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
+                <Link href="/case-studies" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center justify-center">
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
             
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <div className="bg-gradient-to-br from-blue-500 to-cyan-600 p-8 text-white relative overflow-hidden">
-                <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADSOPTIMA</div>
+                <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">AdsOptima</div>
                 <div className="absolute inset-0 opacity-20">
                   <svg className="w-full h-full" viewBox="0 0 100 100" fill="none">
                     <circle cx="50" cy="50" r="30" stroke="currentColor" strokeWidth="0.5" opacity="0.3"/>
@@ -222,23 +222,22 @@ export default function DigitalMarketingAgenciesPage() {
                 </div>
                 <div className="relative z-10">
                   <div className="text-right mb-4">
-                    <div className="text-4xl font-bold">METRIK</div>
-                    <div className="text-lg">marketing</div>
-                    <div className="text-sm opacity-90">Marketing That Makes Sense</div>
+                    <div className="text-3xl font-semibold tracking-tight pt-6">Northfield Digital</div>
+                    <div className="text-sm opacity-90">Performance agency</div>
                     <div className="text-xs mt-2 font-medium">CASE STUDY</div>
                   </div>
                 </div>
               </div>
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <div className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
                   Case study
                 </div>
                 <p className="text-lg text-gray-700 mb-6">
-                  Metrik Marketing delights clients with AI summary-enriched reports.
+                  Northfield Digital delights clients with AI summary-enriched reports.
                 </p>
-                <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
+                <Link href="/case-studies" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center justify-center">
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -346,7 +345,7 @@ export default function DigitalMarketingAgenciesPage() {
             Ready to transform your agency's PPC management?
           </h2>
           <p className="text-xl mb-12 opacity-90 leading-relaxed">
-            Join thousands of digital marketing agencies who trust AdsOptima to deliver better results for their clients.
+            Join digital marketing agencies who trust AdsOptima to deliver better results for their clients.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -359,15 +358,15 @@ export default function DigitalMarketingAgenciesPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
-            <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center justify-center">
+            <Link href="/contact?topic=demo" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center justify-center">
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               Schedule Demo
-            </button>
+            </Link>
           </div>
           
-          <div className="flex items-center justify-center space-x-8 mt-12 text-sm opacity-80">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 mt-12 text-sm opacity-80">
             <div className="flex items-center">
               <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
               14-day free trial

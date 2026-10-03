@@ -1,30 +1,31 @@
 import { NextResponse } from 'next/server';
-import { verifyToken } from './lib/auth.js';
+import { SESSION_COOKIE, verifySessionToken } from './lib/session.js';
 
-export function middleware(request) {
-  // Get the pathname of the request
-  const path = request.nextUrl.pathname;
+const PROTECTED_PREFIXES = ['/dashboard'];
+const AUTH_PAGES = ['/signin', '/signup'];
 
-  // Define protected routes
-  const protectedRoutes = ['/dashboard', '/profile', '/settings'];
-  const isProtectedRoute = protectedRoutes.some(route => path.startsWith(route));
+function matches(path, prefixes) {
+  return prefixes.some((prefix) => path === prefix || path.startsWith(`${prefix}/`));
+}
 
-  // Define auth routes (signin, signup)
-  const authRoutes = ['/signin', '/signup'];
-  const isAuthRoute = authRoutes.some(route => path.startsWith(route));
+export async function middleware(request) {
+  const { pathname, search } = request.nextUrl;
+  const isProtected = matches(pathname, PROTECTED_PREFIXES);
+  const isAuthPage = matches(pathname, AUTH_PAGES);
 
-  // Check if user is authenticated
-  const token = request.cookies.get('auth-token')?.value;
-  const isAuthenticated = token && verifyToken(token);
+  const token = request.cookies.get(SESSION_COOKIE)?.value;
+  const session = token ? await verifySessionToken(token) : null;
 
-  // Redirect logic
-  if (isProtectedRoute && !isAuthenticated) {
-    // Redirect to signin if trying to access protected route without auth
-    return NextResponse.redirect(new URL('/signin', request.url));
+  if (isProtected && !session) {
+    const url = new URL('/signin', request.url);
+    url.searchParams.set('next', `${pathname}${search}`);
+    const response = NextResponse.redirect(url);
+    // Drop an expired or tampered cookie so the browser stops sending it.
+    if (token) response.cookies.delete(SESSION_COOKIE);
+    return response;
   }
 
-  if (isAuthRoute && isAuthenticated) {
-    // Redirect to dashboard if trying to access auth routes while authenticated
+  if (isAuthPage && session) {
     return NextResponse.redirect(new URL('/dashboard', request.url));
   }
 
@@ -32,14 +33,5 @@ export function middleware(request) {
 }
 
 export const config = {
-  matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
-  ],
+  matcher: ['/dashboard/:path*', '/signin', '/signup'],
 };

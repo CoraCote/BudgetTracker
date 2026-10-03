@@ -1,18 +1,15 @@
 import Link from 'next/link';
-import Navigation from '../../../components/Navigation';
 
 export default function MonitoringSolutions() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 overflow-hidden">
-      <Navigation />
-      
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+    <div className="relative min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-pink-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-2xl animate-pulse delay-500"></div>
       </div>
       
-      <section className="pt-40 pb-16 px-4 sm:px-6 lg:px-8 relative">
+      <section className="pt-16 md:pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 relative z-10">
@@ -153,7 +150,7 @@ export default function MonitoringSolutions() {
               </svg>
               Advanced Monitoring
             </div>
-            <h2 className="text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               PPC Monitoring Capabilities for{' '}
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Google & Microsoft Ads
@@ -205,11 +202,11 @@ export default function MonitoringSolutions() {
               </div>
             </div>
             
-            <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 p-8 relative overflow-hidden">
+            <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 p-6 sm:p-8 relative overflow-hidden">
               <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full opacity-50"></div>
               <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-tr from-purple-100 to-pink-100 rounded-full opacity-50"></div>
               
-              <div className="grid grid-cols-2 gap-8 relative z-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 relative z-10">
                 <div className="space-y-6">
                   <h4 className="text-xl font-bold text-gray-900 flex items-center">
                     <svg className="w-6 h-6 text-purple-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -246,7 +243,7 @@ export default function MonitoringSolutions() {
                   </div>
                   
                   <div className="bg-gradient-to-br from-red-50 to-pink-50 border border-red-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300">
-                    <div className="flex items-center justify-between mb-3">
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                       <span className="text-sm font-semibold text-gray-900">AdsOptima (123-456-7890)</span>
                       <span className="text-xs text-red-600 bg-red-100 px-3 py-1 rounded-full font-medium animate-pulse">+ 148% Off Target</span>
                     </div>
@@ -264,7 +261,7 @@ export default function MonitoringSolutions() {
                     </div>
                     
                     <div className="mt-4 text-right">
-                      <button className="text-xs text-purple-600 hover:text-purple-700 font-medium hover:underline transition-all duration-300">Edit Alert</button>
+                      <span className="text-xs text-purple-600 font-medium">Edit Alert</span>
                     </div>
                   </div>
                 </div>
@@ -278,7 +275,7 @@ export default function MonitoringSolutions() {
         <div className="absolute inset-0 bg-gradient-to-br from-purple-50/30 to-pink-50/30"></div>
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Paid media teams use AdsOptima to put{' '}
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 PPC monitoring on autopilot
@@ -295,10 +292,10 @@ export default function MonitoringSolutions() {
                 Success Case Study
               </div>
               <h3 className="text-3xl font-bold text-gray-900">
-                See how Morefire took advantage of Alerts and scheduled PPC audit reports to catch issues early
+                See how Tallgrass Media uses Alerts and scheduled PPC audit reports to catch issues early
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Discover how Morefire transformed their PPC monitoring with AdsOptima's intelligent alerts and comprehensive dashboard solutions, achieving faster issue resolution and improved client onboarding.
+                Discover how Tallgrass Media streamlined PPC monitoring across its client roster with AdsOptima alerts and dashboards, resolving issues faster and onboarding new clients with less effort.
               </p>
               
               <div className="space-y-4">
@@ -308,7 +305,7 @@ export default function MonitoringSolutions() {
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">50% faster issue detection</span>
+                  <span className="text-gray-700">Issues spotted within hours, not days</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center">
@@ -329,7 +326,7 @@ export default function MonitoringSolutions() {
               </div>
               
               <Link 
-                href="/case-studies/morefire"
+                href="/case-studies"
                 className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 <span>Learn More</span>
@@ -346,18 +343,18 @@ export default function MonitoringSolutions() {
                 
                 <div className="text-center text-white relative z-10">
                   <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-3xl font-bold text-white">M</span>
+                    <span className="text-3xl font-bold text-white">TM</span>
                   </div>
-                  <h3 className="text-3xl font-bold mb-3">morefire</h3>
+                  <h3 className="text-3xl font-semibold tracking-tight mb-3">Tallgrass Media</h3>
                   <p className="text-purple-100 font-medium">CASE STUDY</p>
                   <div className="mt-6 space-y-2">
                     <div className="flex justify-between text-sm">
-                      <span>Performance</span>
-                      <span className="font-bold">+45%</span>
+                      <span>Time to detect issues</span>
+                      <span className="font-bold">-35%</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span>Efficiency</span>
-                      <span className="font-bold">+60%</span>
+                      <span>Accounts monitored</span>
+                      <span className="font-bold">60+</span>
                     </div>
                   </div>
                 </div>
@@ -459,20 +456,20 @@ export default function MonitoringSolutions() {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to put your PPC monitoring on{' '}
             <span className="bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">
               autopilot?
             </span>
           </h2>
           <p className="text-xl text-purple-100 mb-10 max-w-2xl mx-auto">
-            Join thousands of paid media teams who trust AdsOptima to keep their campaigns running smoothly and efficiently
+            Join paid media teams who trust AdsOptima to keep their campaigns running smoothly and efficiently
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link 
               href="/signup"
-              className="group inline-flex items-center justify-center px-10 py-5 bg-white text-purple-600 hover:bg-gray-50 font-bold rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 hover:scale-105"
+              className="group inline-flex items-center justify-center px-10 py-5 bg-white text-purple-600 hover:bg-gray-50 font-bold rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105"
             >
               <span className="text-lg">Start Free Trial</span>
               <svg className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -490,18 +487,18 @@ export default function MonitoringSolutions() {
             </Link>
           </div>
           
-          <div className="mt-12 grid grid-cols-3 gap-8 text-center">
+          <div className="mt-12 grid grid-cols-3 gap-4 sm:gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-white mb-2">10K+</div>
-              <div className="text-purple-100">Active Users</div>
+              <div className="text-3xl font-bold text-white mb-2">24/7</div>
+              <div className="text-purple-100">Monitoring</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>
               <div className="text-purple-100">Uptime</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white mb-2">24/7</div>
-              <div className="text-purple-100">Support</div>
+              <div className="text-3xl font-bold text-white mb-2">3</div>
+              <div className="text-purple-100">Alert Channels</div>
             </div>
           </div>
         </div>

@@ -1,9 +1,8 @@
-import Navigation from '@/components/Navigation';
 import Link from 'next/link';
 
 function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 overflow-hidden">
+    <section className="relative min-h-[calc(100vh-4rem)] bg-gradient-to-br from-purple-50 via-white to-pink-50 overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-purple-200/40 to-pink-200/40 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-blue-200/30 to-purple-200/30 rounded-full blur-lg animate-pulse" style={{ animationDelay: '2s' }}></div>
@@ -11,7 +10,7 @@ function HeroSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-4rem)] py-20">
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
@@ -26,7 +25,7 @@ function HeroSection() {
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                Shift your focus to high-level strategy while Adsoptima's budget 
+                Shift your focus to high-level strategy while AdsOptima's budget 
                 and bid tools safeguard your money. Easily optimize smart 
                 bidding campaigns, maintaining full control of your spending 
                 decisions.
@@ -43,7 +42,7 @@ function HeroSection() {
               </Link>
               
               <Link 
-                href="/demo"
+                href="/contact?topic=demo"
                 className="border-2 border-gray-300 hover:border-teal-300 text-gray-700 hover:text-teal-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-teal-50 inline-flex items-center justify-center"
               >
                 Book A Demo
@@ -52,7 +51,7 @@ function HeroSection() {
           </div>
 
           <div className="relative">
-            <div className="bg-white rounded-3xl shadow-2xl p-8 transform rotate-1 hover:rotate-0 transition-transform duration-500">
+            <div className="bg-white rounded-3xl shadow-2xl p-8 transform lg:rotate-1 lg:hover:rotate-0 transition-transform duration-500">
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
                   <h3 className="text-lg font-semibold text-gray-900">Budget Performance</h3>
@@ -153,7 +152,7 @@ function BudgetCapabilitiesSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Real-time Budget Monitoring</h4>
-                  <p className="text-gray-600">Track spending across Google Ads, Microsoft Ads, and Facebook Ads</p>
+                  <p className="text-gray-600">Track spending across Google Ads, Microsoft Ads, and Meta Ads</p>
                 </div>
               </div>
 
@@ -268,7 +267,7 @@ function CaseStudySection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            PPC teams use Adsoptima to manage bidding<br />
+            PPC teams use AdsOptima to manage bidding<br className="hidden md:block" />{' '}
             and budget tracking
           </h2>
         </div>
@@ -280,12 +279,11 @@ function CaseStudySection() {
             </div>
             
             <h3 className="text-2xl font-bold text-gray-900">
-              Levitate Foundry drives 30% PMax ROAS growth with 500 
-              hours saved.
+              Copperleaf Home lifts PMax ROAS by 18% while saving 10+ hours of budget checks a month.
             </h3>
             
             <Link 
-              href="/case-studies/levitate-foundry"
+              href="/case-studies"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center"
             >
               Learn More
@@ -293,9 +291,9 @@ function CaseStudySection() {
           </div>
 
           <div className="relative">
-            <div className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-3xl p-8 text-white shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
+            <div className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-3xl p-8 text-white shadow-2xl transform lg:rotate-1 lg:hover:rotate-0 transition-transform duration-500">
               <div className="flex items-center justify-between mb-6">
-                <div className="text-white font-bold text-xl">ADSOPTIMA</div>
+                <div className="text-white font-bold text-xl">AdsOptima</div>
                 <div className="flex items-center space-x-2">
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -308,12 +306,12 @@ function CaseStudySection() {
                 <div className="flex items-center space-x-4">
                   <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
                     <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                      <span className="text-purple-600 font-bold text-lg">L</span>
+                      <span className="text-purple-600 font-bold text-lg">CH</span>
                     </div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold">Levitate</div>
-                    <div className="text-lg opacity-90">FOUNDRY</div>
+                    <div className="text-2xl font-semibold tracking-tight">Copperleaf Home</div>
+                    <div className="text-sm opacity-90">Home &amp; sleep retail</div>
                     <div className="text-sm opacity-75">CASE STUDY</div>
                   </div>
                 </div>
@@ -321,12 +319,12 @@ function CaseStudySection() {
                 <div className="bg-white/10 rounded-xl p-4">
                   <div className="grid grid-cols-2 gap-4 text-center mb-4">
                     <div>
-                      <div className="text-2xl font-bold">+30%</div>
+                      <div className="text-2xl font-bold">+18%</div>
                       <div className="text-sm opacity-75">ROAS Growth</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold">500</div>
-                      <div className="text-sm opacity-75">Hours Saved</div>
+                      <div className="text-2xl font-bold">10+ hrs</div>
+                      <div className="text-sm opacity-75">Saved Monthly</div>
                     </div>
                   </div>
                   
@@ -353,8 +351,7 @@ function CaseStudySection() {
 
 export default function BudgetManagementPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation />
+    <div className="min-h-screen bg-white">
       <HeroSection />
       <BudgetCapabilitiesSection />
       <CaseStudySection />

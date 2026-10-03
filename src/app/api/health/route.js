@@ -1,42 +1,22 @@
 import { NextResponse } from 'next/server';
-import { checkDatabaseConnection, getPoolStats } from '../../../lib/db.js';
+import { pingDatabase } from '@/lib/db';
 
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+
+/**
+ * GET /api/health: liveness/readiness probe for load balancers and uptime
+ * monitors. Deliberately reveals nothing about versions or configuration.
+ */
 export async function GET() {
-  try {
-    // Check database connection
-    const dbStatus = await checkDatabaseConnection();
-    
-    // Get pool statistics
-    const poolStats = getPoolStats();
-    
-    // Get environment info
-    const envInfo = {
-      nodeEnv: process.env.NODE_ENV || 'development',
-      databaseUrl: process.env.DATABASE_URL ? 'configured' : 'not configured',
-      jwtSecret: process.env.JWT_SECRET ? 'configured' : 'not configured'
-    };
-    
-    const healthStatus = {
+  const databaseUp = await pingDatabase();
+
+  return NextResponse.json(
+    {
+      status: databaseUp ? 'ok' : 'degraded',
+      database: databaseUp ? 'up' : 'down',
       timestamp: new Date().toISOString(),
-      status: dbStatus.status === 'connected' ? 'healthy' : 'unhealthy',
-      database: dbStatus,
-      pool: poolStats,
-      environment: envInfo,
-      uptime: process.uptime()
-    };
-    
-    const statusCode = dbStatus.status === 'connected' ? 200 : 503;
-    
-    return NextResponse.json(healthStatus, { status: statusCode });
-    
-  } catch (error) {
-    console.error('Health check error:', error);
-    
-    return NextResponse.json({
-      timestamp: new Date().toISOString(),
-      status: 'error',
-      error: error.message,
-      uptime: process.uptime()
-    }, { status: 500 });
-  }
+    },
+    { status: databaseUp ? 200 : 503, headers: { 'Cache-Control': 'no-store' } }
+  );
 }

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function RuleEngineHero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+    <section className="relative min-h-[calc(100vh-4rem)] py-20 flex items-center justify-center overflow-hidden bg-white">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-purple-200/30 to-pink-200/30 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute top-32 right-32 w-80 h-80 bg-gradient-to-br from-pink-200/40 to-purple-200/40 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
@@ -53,21 +53,24 @@ export default function RuleEngineHero() {
           </div>
 
           <div className="mt-16 pt-8 border-t border-gray-200">
-            <p className="text-sm text-gray-500 mb-6">Trusted by performance marketing teams worldwide</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-              <div className="text-gray-400 font-semibold">No changes without your approval, ever</div>
-              <div className="text-gray-400 font-semibold">Full data encryption and GDPR compliance</div>
-              <div className="text-gray-400 font-semibold">No ad platform access to account data</div>
+            <p className="text-sm text-gray-500 mb-6">Built with control and security in mind</p>
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-8">
+              <div className="flex items-center text-sm text-gray-500 font-semibold">
+                <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2" aria-hidden="true"></span>
+                No changes without your approval, ever
+              </div>
+              <div className="flex items-center text-sm text-gray-500 font-semibold">
+                <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2" aria-hidden="true"></span>
+                Encrypted data and GDPR-ready processing
+              </div>
+              <div className="flex items-center text-sm text-gray-500 font-semibold">
+                <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2" aria-hidden="true"></span>
+                Full audit log of every automated change
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <button className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center z-50">
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-      </button>
     </section>
   );
 }

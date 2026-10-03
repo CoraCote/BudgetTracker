@@ -17,24 +17,9 @@ export default function CaseStudiesHero() {
             , increase efficiency, and scale their businesses with AdsOptima
           </h1>
           
-          <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto">
-            Real success stories from agencies, freelancers, and marketing teams who've transformed their PPC operations
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            Success stories from agencies, e-commerce brands, and marketing teams who&apos;ve streamlined their PPC operations
           </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <div className="flex items-center space-x-2">
-              <span className="text-sm font-medium text-gray-700">Filter By:</span>
-              <select className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                <option>Select Category</option>
-                <option>All Case Studies</option>
-                <option>Agency</option>
-                <option>E-commerce</option>
-                <option>Lead Generation</option>
-                <option>Freelancer</option>
-                <option>Enterprise</option>
-              </select>
-            </div>
-          </div>
         </div>
       </div>
     </section>
