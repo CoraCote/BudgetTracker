@@ -1,5 +1,45 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Compare AdsOptima | Find Your Best-Fit PPC Platform',
+  description: 'See how AdsOptima compares with other approaches to PPC management and find the setup that fits your team.',
+};
+
+const comparisonCategories = [
+  { name: 'Spreadsheets & scripts', icon: '📄', summary: 'Replace fragile scripts and manual exports with rules, alerts and reports that run on their own.' },
+  { name: 'Native ad platform tools', icon: '🧭', summary: 'Keep platform automation, but add guardrails and visibility across every account in one place.' },
+  { name: 'Bid management suites', icon: '🎚️', summary: 'Get bid and budget automation plus audits, reporting and creative tools without enterprise overhead.' },
+  { name: 'Reporting-only tools', icon: '📊', summary: 'Go beyond dashboards: act on what the data shows with optimizations you can review and apply.' },
+  { name: 'Single-channel optimizers', icon: '🎯', summary: 'Manage Google Ads, Microsoft Advertising and more with the same workflows and rules.' },
+  { name: 'SEO-first marketing suites', icon: '🔎', summary: 'Purpose-built for paid media, with PPC-specific audits, alerts and automation.' },
+  { name: 'Enterprise ad suites', icon: '🏢', summary: 'Comparable depth for search and shopping, with faster onboarding and transparent pricing.' },
+  { name: 'Agency in-house tooling', icon: '🛠️', summary: 'Stop maintaining internal tools and give every strategist the same reliable toolkit.' },
+];
+
+const compareCaseStudies = [
+  {
+    company: 'Summit Ridge Auto',
+    gradient: 'from-teal-600 to-blue-700',
+    tags: ['AUTOMOTIVE', 'LEAD-GEN'],
+    headline: 'Summit Ridge Auto lowers CPCs across its dealership accounts',
+    summary: 'A multi-location dealer group pairs AdsOptima rules with its own campaign structure.',
+  },
+  {
+    company: 'Tallgrass Media',
+    gradient: 'from-purple-600 to-pink-600',
+    tags: ['AGENCY', 'BLENDED (ECOM & LEAD-GEN)'],
+    headline: 'Tallgrass Media saves hundreds of hours a year on reporting',
+    summary: 'A full-service agency standardizes client reporting and account checks with AdsOptima.',
+  },
+  {
+    company: 'Northfield Digital',
+    gradient: 'from-indigo-600 to-purple-600',
+    tags: ['PERFORMANCE AGENCY', 'BLENDED (ECOM & LEAD-GEN)'],
+    headline: 'Northfield Digital frees up strategist time every week',
+    summary: 'A performance agency automates routine account maintenance so its team can focus on strategy.',
+  },
+];
+
 export default function ComparePage() {
   return (
     <div className="min-h-screen bg-white">
@@ -36,7 +76,7 @@ export default function ComparePage() {
               </Link>
               
               <Link 
-                href="/demo" 
+                href="/contact?topic=demo" 
                 className="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group"
               >
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -126,7 +166,7 @@ export default function ComparePage() {
             {/* Feature Card 3 */}
             <div className="bg-white rounded-xl p-8 shadow-lg relative overflow-hidden">
               <div className="absolute top-4 right-4 text-6xl font-bold text-gray-100">3</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-6">A Leader in AI for Marketers:</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-6">AI Built for Marketers:</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mr-3">
@@ -171,36 +211,24 @@ export default function ComparePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              All Comparisons
+              How AdsOptima Compares
             </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Most teams come to AdsOptima from one of these setups. Here&apos;s what typically changes when they switch.
+            </p>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {/* Comparison Cards */}
-            {[
-              { name: "Acquisio", logo: "🔵" },
-              { name: "Adalysis", logo: "🔵" },
-              { name: "Adzooma", logo: "🚀" },
-              { name: "Marin", logo: "🏔️" },
-              { name: "NinjaCat", logo: "🐱" },
-              { name: "Opteo", logo: "⭕" },
-              { name: "Adpulse (PPC Samurai)", logo: "🟢" },
-              { name: "SEMRush", logo: "🦊" },
-              { name: "Skai", logo: "⚫" },
-              { name: "Supermetrics", logo: "🔴" },
-              { name: "TrueClicks", logo: "📈" }
-            ].map((competitor, index) => (
-              <Link 
-                key={index}
-                href={`/compare/${competitor.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')}`}
-                className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {comparisonCategories.map((category) => (
+              <div
+                key={category.name}
+                className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
               >
-                <div className="text-center">
-                  <div className="text-4xl mb-4">{competitor.logo}</div>
-                  <div className="text-sm text-gray-500 mb-2">AdsOptima vs</div>
-                  <div className="font-bold text-gray-900">{competitor.name}</div>
-                </div>
-              </Link>
+                <div className="text-4xl mb-4" aria-hidden="true">{category.icon}</div>
+                <div className="text-sm text-gray-500 mb-1">AdsOptima vs</div>
+                <h3 className="font-bold text-gray-900 mb-2">{category.name}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{category.summary}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -214,7 +242,7 @@ export default function ComparePage() {
               Why PPC Pros Love AdsOptima
             </h2>
           </div>
-          
+
           {/* Benefits Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="bg-gradient-to-br from-green-100 to-green-200 rounded-xl p-8 relative">
@@ -224,7 +252,7 @@ export default function ComparePage() {
               <h3 className="text-xl font-bold text-gray-900 mb-4 mt-4">Efficient Automation Capabilities</h3>
               <p className="text-gray-700">Streamline your PPC management with powerful automation tools that save time and improve performance.</p>
             </div>
-            
+
             <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl p-8 relative">
               <div className="absolute top-4 left-4 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-sm">2</span>
@@ -232,77 +260,43 @@ export default function ComparePage() {
               <h3 className="text-xl font-bold text-gray-900 mb-4 mt-4">Customer Support & Onboarding</h3>
               <p className="text-gray-700">Get expert support and comprehensive onboarding to maximize your success with AdsOptima.</p>
             </div>
-            
+
             <div className="bg-gradient-to-br from-green-100 to-green-200 rounded-xl p-8 relative">
               <div className="absolute top-4 left-4 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-sm">3</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 mt-4">Excellent Account Management & Return on Investment</h3>
-              <p className="text-gray-700">Achieve superior ROI with our advanced account management features and optimization tools.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 mt-4">Hands-On Account Management & Clear ROI</h3>
+              <p className="text-gray-700">See exactly what changed and why, with account management features and optimization tools built for measurable results.</p>
             </div>
           </div>
 
-          {/* Case Studies Carousel */}
+          {/* Case Studies */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Dealer Jazz Case Study */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="bg-gradient-to-br from-teal-600 to-teal-700 p-6 text-white relative">
-                <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADSOPTIMA</div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold mb-2">DEALER JAZZ</div>
-                  <div className="text-white/80 mb-4">CASE STUDY</div>
-                  <div className="w-16 h-1 bg-white/30 mx-auto"></div>
+            {compareCaseStudies.map((study) => (
+              <Link
+                key={study.company}
+                href="/case-studies"
+                className="block bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
+              >
+                <div className={`bg-gradient-to-br ${study.gradient} p-6 text-white relative`}>
+                  <div className="absolute top-4 right-4 text-white/80 text-xs font-medium">ADSOPTIMA</div>
+                  <div className="text-center pt-4">
+                    <div className="text-2xl font-bold mb-2 uppercase">{study.company}</div>
+                    <div className="text-white/80 mb-4">CASE STUDY</div>
+                    <div className="w-16 h-1 bg-white/30 mx-auto"></div>
+                  </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">BRAND</span>
-                  <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">LEAD-GEN</span>
+                <div className="p-6">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {study.tags.map((tag) => (
+                      <span key={tag} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">{tag}</span>
+                    ))}
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">{study.headline}</h3>
+                  <p className="text-gray-600 text-sm">{study.summary}</p>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">DealerJazz uses AdsOptima to lower CPCs by 30%</h3>
-                <p className="text-gray-600 text-sm">Dealership marketing platform pairs AdsOptima with proprietary setup</p>
-              </div>
-            </div>
-
-            {/* B&S Media Case Study */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="bg-gradient-to-br from-teal-600 to-teal-700 p-6 text-white relative">
-                <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADSOPTIMA</div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold mb-2">B&S Media</div>
-                  <div className="text-white/80 mb-4">CASE STUDY</div>
-                  <div className="w-16 h-1 bg-white/30 mx-auto"></div>
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">AGENCY</span>
-                  <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">BLENDED (ECOM & LEAD-GEN)</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">B&S Media saves 2500+ hours with AdsOptima</h3>
-                <p className="text-gray-600 text-sm">Full-service agency selects AdsOptima to deliver the best results for clients</p>
-              </div>
-            </div>
-
-            {/* Matthieu Tran-Van Case Study */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="bg-gradient-to-br from-gray-400 to-gray-500 p-6 text-white relative">
-                <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADSOPTIMA</div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold mb-2">MATTHIEU TRAN-VAN</div>
-                  <div className="text-white/80 mb-4">CASE STUDY</div>
-                  <div className="w-16 h-1 bg-white/30 mx-auto"></div>
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">FREELANCER</span>
-                  <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">BLENDED (ECOM & LEAD-GEN)</span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Matthieu Tran-Van sees 10x productivity boost & 28%...</h3>
-                <p className="text-gray-600 text-sm">Google Ads Expert saves 20 account management hours weekly, cuts CPCs, and boosts revenue through automated...</p>
-              </div>
-            </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -355,7 +349,7 @@ export default function ComparePage() {
                   </Link>
                   
                   <Link 
-                    href="/demo" 
+                    href="/contact?topic=demo" 
                     className="bg-green-700 hover:bg-green-800 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
                   >
                     Book A Demo
@@ -364,9 +358,9 @@ export default function ComparePage() {
               </div>
               
               <div className="relative">
-                <div className="bg-gradient-to-br from-cyan-600 to-blue-700 rounded-2xl p-8 text-white relative overflow-hidden">
+                <div className="bg-gradient-to-br from-cyan-600 to-blue-700 rounded-2xl p-8 text-white relative overflow-hidden min-h-[22rem] flex items-center justify-center">
                   <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADSOPTIMA</div>
-                  <div className="text-center">
+                  <div className="text-center relative z-10">
                     <div className="w-16 h-16 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
                       <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
@@ -376,7 +370,7 @@ export default function ComparePage() {
                     <p className="text-white/80">Uncover insights and deliver growth for your brands</p>
                   </div>
                   
-                  <div className="absolute top-8 left-8 bg-white/10 rounded-lg p-3 backdrop-blur-sm">
+                  <div className="hidden sm:block absolute top-6 left-6 bg-white/10 rounded-lg p-3 backdrop-blur-sm">
                     <div className="text-xs font-medium mb-2">PENDING TASKS</div>
                     <div className="space-y-1">
                       <div className="flex items-center">
@@ -394,7 +388,7 @@ export default function ComparePage() {
                     </div>
                   </div>
                   
-                  <div className="absolute bottom-8 right-8 bg-white/10 rounded-lg p-3 backdrop-blur-sm">
+                  <div className="hidden sm:block absolute bottom-6 right-6 bg-white/10 rounded-lg p-3 backdrop-blur-sm">
                     <div className="text-xs font-medium mb-2">KEY METRICS</div>
                     <div className="space-y-1">
                       <div className="flex items-center">
@@ -435,7 +429,7 @@ export default function ComparePage() {
               Start Free Trial
             </Link>
             <Link 
-              href="/demo" 
+              href="/contact?topic=demo" 
               className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
             >
               Schedule Demo

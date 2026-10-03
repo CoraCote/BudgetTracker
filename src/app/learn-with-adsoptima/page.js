@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import VideoCard from '../../components/VideoCard';
 import PromotionalBanner from '../../components/PromotionalBanner';
 
@@ -8,14 +9,12 @@ export default function LearnWithAdsOptima() {
   const [currentPage, setCurrentPage] = useState(1);
   const videosPerPage = 4;
 
-  // Sample video data - you can replace with real data
   const videos = [
     {
       id: 1,
       title: "How to Optimize Shopping & PMAX Performance Like a Wizard 🧙‍♀️",
       episode: "Learn With AdsOptima 24",
       date: "Sep 1, 2025",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "teal",
       character: "woman",
       highlightText: "OPTIMIZE SHOPPING & PMAX PERFORMANCE",
@@ -28,7 +27,6 @@ export default function LearnWithAdsOptima() {
       title: "Smarter Portfolio Budgeting With AdsOptima (No Math Anxiety!) 🧮",
       episode: "Learn With AdsOptima 23", 
       date: "Jul 23, 2025",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "purple",
       character: "robot",
       highlightText: "SMARTER PORTFOLIO BUDGETING",
@@ -41,7 +39,6 @@ export default function LearnWithAdsOptima() {
       title: "Fix PPC Issues Like a Pro (Even When You Feel Like a Noob) 🔧",
       episode: "Learn With AdsOptima 20",
       date: "Jun 10, 2025", 
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "blue",
       character: "man",
       highlightText: "FIX PPC ISSUES LIKE A PRO",
@@ -54,7 +51,6 @@ export default function LearnWithAdsOptima() {
       title: "Optimize Budget Pacing for Better ROI (Money Talks!) 💰",
       episode: "Learn With AdsOptima 19",
       date: "Apr 3, 2025",
-      thumbnail: "/api/placeholder/400/225", 
       backgroundPattern: "green",
       character: "ninja",
       highlightText: "OPTIMIZE BUDGET PACING FOR BETTER ROI",
@@ -67,7 +63,6 @@ export default function LearnWithAdsOptima() {
       title: "Improve Location Targeting Through Geo Heatmaps 🌍",
       episode: "Learn With AdsOptima 18",
       date: "Mar 15, 2025",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "red", 
       character: "woman",
       highlightText: "IMPROVE LOCATION TARGETING THROUGH GEO HEATMAPS",
@@ -80,7 +75,6 @@ export default function LearnWithAdsOptima() {
       title: "Building DSA Campaigns With Campaign Automator 🤖",
       episode: "Learn With AdsOptima 17",
       date: "Feb 28, 2025",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "dark",
       character: "robot",
       highlightText: "BUILDING DSA CAMPAIGNS WITH CAMPAIGN AUTOMATOR",
@@ -93,7 +87,6 @@ export default function LearnWithAdsOptima() {
       title: "Advanced Keyword Research Strategies (Detective Mode ON!) 🔍",
       episode: "Learn With AdsOptima 16",
       date: "Feb 10, 2025",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "teal",
       character: "man",
       highlightText: "ADVANCED KEYWORD RESEARCH STRATEGIES",
@@ -106,7 +99,6 @@ export default function LearnWithAdsOptima() {
       title: "Mastering Google Ads Automation Rules (Set It & Forget It!) ⚙️",
       episode: "Learn With AdsOptima 15",
       date: "Jan 25, 2025",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "purple",
       character: "ninja",
       highlightText: "MASTERING GOOGLE ADS AUTOMATION RULES",
@@ -119,7 +111,6 @@ export default function LearnWithAdsOptima() {
       title: "Facebook Ads Creative Testing Best Practices (Art Meets Science!) 🎨",
       episode: "Learn With AdsOptima 14",
       date: "Jan 8, 2025",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "blue",
       character: "woman",
       highlightText: "FACEBOOK ADS CREATIVE TESTING BEST PRACTICES",
@@ -132,7 +123,6 @@ export default function LearnWithAdsOptima() {
       title: "LinkedIn Ads for B2B Lead Generation (Professional Networking!) 💼",
       episode: "Learn With AdsOptima 13",
       date: "Dec 20, 2024",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "green",
       character: "man",
       highlightText: "LINKEDIN ADS FOR B2B LEAD GENERATION",
@@ -145,7 +135,6 @@ export default function LearnWithAdsOptima() {
       title: "TikTok Advertising Campaign Optimization (Viral Vibes!) 🎵",
       episode: "Learn With AdsOptima 12",
       date: "Dec 5, 2024",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "red",
       character: "robot",
       highlightText: "TIKTOK ADVERTISING CAMPAIGN OPTIMIZATION",
@@ -158,7 +147,6 @@ export default function LearnWithAdsOptima() {
       title: "YouTube Ads Video Strategy & Production (Lights, Camera, Action!) 🎬",
       episode: "Learn With AdsOptima 11",
       date: "Nov 18, 2024",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "dark",
       character: "ninja",
       highlightText: "YOUTUBE ADS VIDEO STRATEGY & PRODUCTION",
@@ -171,7 +159,6 @@ export default function LearnWithAdsOptima() {
       title: "Amazon PPC Campaign Management (E-commerce Mastery!) 🛒",
       episode: "Learn With AdsOptima 10",
       date: "Nov 2, 2024",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "teal",
       character: "woman",
       highlightText: "AMAZON PPC CAMPAIGN MANAGEMENT",
@@ -184,7 +171,6 @@ export default function LearnWithAdsOptima() {
       title: "Microsoft Ads vs Google Ads Strategy (Battle of the Giants!) ⚔️",
       episode: "Learn With AdsOptima 9",
       date: "Oct 15, 2024",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "purple",
       character: "man",
       highlightText: "MICROSOFT ADS VS GOOGLE ADS STRATEGY",
@@ -197,7 +183,6 @@ export default function LearnWithAdsOptima() {
       title: "Conversion Tracking & Attribution Models (Follow the Money!) 💸",
       episode: "Learn With AdsOptima 8",
       date: "Sep 28, 2024",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "blue",
       character: "robot",
       highlightText: "CONVERSION TRACKING & ATTRIBUTION MODELS",
@@ -210,7 +195,6 @@ export default function LearnWithAdsOptima() {
       title: "A/B Testing Your Ad Copy & Landing Pages (Split Personality!) 🧪",
       episode: "Learn With AdsOptima 7",
       date: "Sep 10, 2024",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "green",
       character: "ninja",
       highlightText: "A/B TESTING YOUR AD COPY & LANDING PAGES",
@@ -223,7 +207,6 @@ export default function LearnWithAdsOptima() {
       title: "Retargeting Campaign Setup & Optimization (Stalker Mode!) 👀",
       episode: "Learn With AdsOptima 6",
       date: "Aug 25, 2024",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "red",
       character: "woman",
       highlightText: "RETARGETING CAMPAIGN SETUP & OPTIMIZATION",
@@ -236,7 +219,6 @@ export default function LearnWithAdsOptima() {
       title: "Local Business PPC Strategies (Think Global, Act Local!) 🏪",
       episode: "Learn With AdsOptima 5",
       date: "Aug 8, 2024",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "dark",
       character: "man",
       highlightText: "LOCAL BUSINESS PPC STRATEGIES",
@@ -249,7 +231,6 @@ export default function LearnWithAdsOptima() {
       title: "E-commerce Shopping Campaign Optimization (Shop Till You Drop!) 🛍️",
       episode: "Learn With AdsOptima 4",
       date: "Jul 22, 2024",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "teal", 
       character: "robot",
       highlightText: "E-COMMERCE SHOPPING CAMPAIGN OPTIMIZATION",
@@ -262,7 +243,6 @@ export default function LearnWithAdsOptima() {
       title: "Mobile-First PPC Campaign Design (Thumb-Friendly!) 📱",
       episode: "Learn With AdsOptima 3",
       date: "Jul 5, 2024",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "purple",
       character: "ninja",
       highlightText: "MOBILE-FIRST PPC CAMPAIGN DESIGN",
@@ -275,7 +255,6 @@ export default function LearnWithAdsOptima() {
       title: "Advanced Audience Targeting Strategies (Know Your Crowd!) 🎯",
       episode: "Learn With AdsOptima 2",
       date: "Jun 18, 2024",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "blue",
       character: "woman",
       highlightText: "ADVANCED AUDIENCE TARGETING STRATEGIES",
@@ -288,7 +267,6 @@ export default function LearnWithAdsOptima() {
       title: "PPC Analytics & Reporting Like a Data Scientist 📊",
       episode: "Learn With AdsOptima 1",
       date: "Jun 1, 2024",
-      thumbnail: "/api/placeholder/400/225",
       backgroundPattern: "green",
       character: "man",
       highlightText: "PPC ANALYTICS & REPORTING LIKE A DATA SCIENTIST",
@@ -333,17 +311,15 @@ export default function LearnWithAdsOptima() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4 sm:mb-0">
               All learning
             </h2>
-            <a 
-              href="https://youtube.com/@adsoptima" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-blue-100 text-gray-900 rounded-lg hover:bg-blue-200 transition-colors"
+            <Link
+              href="/ppctownhall"
+              className="inline-flex items-center self-start px-6 py-3 bg-purple-100 text-purple-900 rounded-lg hover:bg-purple-200 transition-colors"
             >
-              <span className="mr-2">Subscribe to our YouTube Channel</span>
-              <svg className="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              <span className="mr-2">Watch PPC Town Hall episodes</span>
+              <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </a>
+            </Link>
           </div>
 
           {/* Video Grid */}
@@ -354,7 +330,7 @@ export default function LearnWithAdsOptima() {
           </div>
 
           {/* Pagination */}
-          <div className="flex justify-center items-center space-x-4">
+          <nav className="flex flex-wrap justify-center items-center gap-2 sm:gap-4" aria-label="Video pages">
             <button
               onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
               disabled={currentPage === 1}
@@ -363,11 +339,12 @@ export default function LearnWithAdsOptima() {
               Previous
             </button>
             
-            <div className="flex space-x-2">
+            <div className="flex flex-wrap justify-center gap-2">
               {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                 <button
                   key={page}
                   onClick={() => setCurrentPage(page)}
+                  aria-current={page === currentPage ? 'page' : undefined}
                   className={`px-3 py-1 rounded ${
                     page === currentPage 
                       ? 'bg-gray-900 text-white' 
@@ -386,7 +363,7 @@ export default function LearnWithAdsOptima() {
             >
               Next
             </button>
-          </div>
+          </nav>
         </div>
       </section>
 

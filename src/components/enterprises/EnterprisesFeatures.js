@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function EnterprisesFeatures() {
   const features = [
     {
@@ -17,7 +19,7 @@ export default function EnterprisesFeatures() {
         </svg>
       ),
       title: "Enterprise-grade security & compliance",
-      description: "Bank-level security with SOC 2 Type II compliance, enterprise SSO, advanced role-based permissions, and dedicated infrastructure for your team's peace of mind.",
+      description: "SOC 2-ready security controls, enterprise SSO, advanced role-based permissions, and encrypted data storage for your team's peace of mind.",
       gradient: "from-green-500 to-emerald-500"
     },
     {
@@ -82,7 +84,7 @@ export default function EnterprisesFeatures() {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="group relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-purple-300 transition-all duration-300 hover:shadow-xl"
+              className="group relative isolate bg-white rounded-2xl p-6 sm:p-8 border border-gray-200 hover:border-purple-300 transition-all duration-300 hover:shadow-xl"
             >
               <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${feature.gradient} flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 {feature.icon}
@@ -100,7 +102,7 @@ export default function EnterprisesFeatures() {
           ))}
         </div>
 
-        <div className="mt-20 bg-gradient-to-r from-gray-50 to-purple-50 rounded-3xl p-12">
+        <div className="mt-20 bg-gradient-to-r from-gray-50 to-purple-50 rounded-3xl p-6 sm:p-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">
@@ -110,24 +112,24 @@ export default function EnterprisesFeatures() {
                 Seamlessly integrate with your existing marketing stack and data sources for a unified view of your PPC performance.
               </p>
               
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   { name: 'Google Spreadsheet', color: 'bg-green-100 text-green-700' },
-                  { name: 'HubSpot', color: 'bg-orange-100 text-orange-700' },
-                  { name: 'Zoho', color: 'bg-blue-100 text-blue-700' },
-                  { name: 'Salesforce', color: 'bg-indigo-100 text-indigo-700' },
-                  { name: 'Shopify', color: 'bg-emerald-100 text-emerald-700' },
+                  { name: 'CRM customer lists', color: 'bg-orange-100 text-orange-700' },
+                  { name: 'Offline conversions', color: 'bg-blue-100 text-blue-700' },
+                  { name: 'Data warehouse exports', color: 'bg-indigo-100 text-indigo-700' },
+                  { name: 'E-commerce store data', color: 'bg-emerald-100 text-emerald-700' },
                   { name: 'Other Integrations', color: 'bg-gray-100 text-gray-700' }
                 ].map((integration, index) => (
                   <div key={index} className={`flex items-center px-4 py-3 rounded-lg ${integration.color} font-medium`}>
-                    <span className="w-2 h-2 bg-current rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-current rounded-full mr-3 flex-shrink-0"></span>
                     {integration.name}
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg">
               <h4 className="text-xl font-bold text-gray-900 mb-6">Create A New Strategy</h4>
               <p className="text-gray-600 mb-6">
                 You can create your own strategy with the scope "Custom Data Source". You can take multiple actions within this strategy by creating your own rules, conditions and actions.
@@ -146,9 +148,9 @@ export default function EnterprisesFeatures() {
                 </ul>
               </div>
 
-              <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
+              <Link href="/signup" className="block w-full text-center bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
                 Create Strategy
-              </button>
+              </Link>
             </div>
           </div>
         </div>

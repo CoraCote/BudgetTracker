@@ -44,7 +44,7 @@ export default function MarketingTeamsPage() {
                 </Link>
                 
                 <Link 
-                  href="/demo" 
+                  href="/contact?topic=demo" 
                   className="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,8 +56,8 @@ export default function MarketingTeamsPage() {
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 text-white relative overflow-hidden">
-                <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADSOPTIMA</div>
+              <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 text-white relative overflow-hidden min-h-[320px] sm:min-h-[420px] flex items-center justify-center">
+                <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">AdsOptima</div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -68,7 +68,7 @@ export default function MarketingTeamsPage() {
                   <p className="text-white/80">Uncover insights and deliver growth for your brands</p>
                 </div>
                 
-                <div className="absolute top-8 left-8 bg-white/10 rounded-lg p-3 backdrop-blur-sm">
+                <div className="hidden sm:block absolute top-8 left-8 bg-white/10 rounded-lg p-3 backdrop-blur-sm">
                   <div className="text-xs font-medium mb-2">PENDING TASKS</div>
                   <div className="space-y-1">
                     <div className="flex items-center">
@@ -86,7 +86,7 @@ export default function MarketingTeamsPage() {
                   </div>
                 </div>
                 
-                <div className="absolute bottom-8 right-8 bg-white/10 rounded-lg p-3 backdrop-blur-sm">
+                <div className="hidden sm:block absolute bottom-8 right-8 bg-white/10 rounded-lg p-3 backdrop-blur-sm">
                   <div className="text-xs font-medium mb-2">KEY METRICS</div>
                   <div className="space-y-1">
                     <div className="flex items-center">
@@ -161,7 +161,7 @@ export default function MarketingTeamsPage() {
             
             <div className="bg-white rounded-xl shadow-lg p-6">
               <div className="overflow-x-auto">
-                <table className="w-full">
+                <table className="w-full min-w-[720px]">
                   <thead>
                     <tr className="bg-green-50">
                       <th className="px-4 py-3 text-left text-sm font-semibold text-gray-900">Account</th>
@@ -178,7 +178,7 @@ export default function MarketingTeamsPage() {
                       <td className="px-4 py-3">
                         <div className="flex items-center">
                           <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center mr-2">
-                            <span className="text-xs font-medium text-blue-600">BF</span>
+                            <span className="text-xs font-medium text-blue-600">AA</span>
                           </div>
                           <span className="text-sm text-gray-900">All Accounts</span>
                         </div>
@@ -191,7 +191,7 @@ export default function MarketingTeamsPage() {
                           <span className="text-sm text-gray-900">Anomaly - Impressions</span>
                         </div>
                       </td>
-                      <td className="px-4 py-3 text-sm text-gray-900">All Google, Microsoft, Facebook accounts</td>
+                      <td className="px-4 py-3 text-sm text-gray-900">All Google, Microsoft, Meta accounts</td>
                       <td className="px-4 py-3 text-sm text-gray-900">Automatic</td>
                       <td className="px-4 py-3 text-sm text-gray-900">-</td>
                       <td className="px-4 py-3 text-sm text-gray-900">Account owner + Others</td>
@@ -201,7 +201,7 @@ export default function MarketingTeamsPage() {
                       <td className="px-4 py-3">
                         <div className="flex items-center">
                           <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center mr-2">
-                            <span className="text-xs font-medium text-blue-600">BF</span>
+                            <span className="text-xs font-medium text-blue-600">AA</span>
                           </div>
                           <span className="text-sm text-gray-900">All Accounts (123456789)</span>
                         </div>
@@ -217,19 +217,19 @@ export default function MarketingTeamsPage() {
                       <td className="px-4 py-3 text-sm text-gray-900">Accounts</td>
                       <td className="px-4 py-3 text-sm text-gray-900">$0.47</td>
                       <td className="px-4 py-3 text-sm text-gray-900">10%</td>
-                      <td className="px-4 py-3 text-sm text-gray-900">User Name</td>
+                      <td className="px-4 py-3 text-sm text-gray-900">PPC Manager</td>
                       <td className="px-4 py-3">
-                        <div className="flex space-x-2">
-                          <button className="text-gray-400 hover:text-gray-600">
+                        <div className="flex space-x-2 text-gray-400" aria-hidden="true">
+                          <span>
                             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                               <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L13 4.172l2.828 2.828-1.621 1.621a2 2 0 01-2.828 0z" />
                             </svg>
-                          </button>
-                          <button className="text-gray-400 hover:text-gray-600">
+                          </span>
+                          <span>
                             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                               <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
                             </svg>
-                          </button>
+                          </span>
                         </div>
                       </td>
                     </tr>
@@ -249,18 +249,18 @@ export default function MarketingTeamsPage() {
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-6">
                 Case study
               </div>
               
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                BBQGuys saves 4-6 hours weekly and gains over $450k in revenue since 2021, managing Shopping and PMax campaigns.
+                Harborline Outfitters saves 4-6 hours a week managing Shopping and PMax campaigns, freeing time for testing and seasonal planning.
               </h3>
               
               <Link 
-                href="/case-studies/bbqguys" 
+                href="/case-studies" 
                 className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group"
               >
                 Learn More
@@ -271,31 +271,31 @@ export default function MarketingTeamsPage() {
             </div>
             
             <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 text-white relative overflow-hidden">
-              <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADSOPTIMA</div>
+              <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">AdsOptima</div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-2">BBQGUYS</div>
+                <div className="text-3xl font-semibold tracking-tight mb-2 pt-4">Harborline Outfitters</div>
                 <div className="text-white/80 mb-4">CASE STUDY</div>
                 <div className="w-24 h-1 bg-white/30 mx-auto mb-4"></div>
                 <div className="text-sm text-white/80">
-                  Revenue growth: $450k+<br/>
-                  Time saved: 4-6 hours/week
+                  Time saved: 4-6 hours/week<br />
+                  Shopping &amp; PMax in one workflow
                 </div>
               </div>
             </div>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-16">
             <div>
               <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-6">
                 Case study
               </div>
               
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Bruce Automotive Group doubled its CTR and cut ad spend by 40% using flexible campaign templates and inventory syncing.
+                Summit Ridge Auto lifted CTR by 22% and stopped spending on sold vehicles using flexible campaign templates and inventory syncing.
               </h3>
               
               <Link 
-                href="/case-studies/bruce-automotive" 
+                href="/case-studies" 
                 className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group"
               >
                 Learn More
@@ -306,10 +306,10 @@ export default function MarketingTeamsPage() {
             </div>
             
             <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 text-white relative overflow-hidden">
-              <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">ADSOPTIMA</div>
+              <div className="absolute top-4 right-4 text-white/80 text-sm font-medium">AdsOptima</div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-2">bruce</div>
-                <div className="text-white/80 mb-4">auto glass</div>
+                <div className="text-3xl font-semibold tracking-tight mb-2 pt-4">Summit Ridge Auto</div>
+                <div className="text-white/80 mb-4">Automotive dealer group</div>
                 <div className="text-sm text-white/80 mb-4">CASE STUDY</div>
                 <div className="w-24 h-1 bg-white/30 mx-auto"></div>
               </div>
@@ -324,18 +324,18 @@ export default function MarketingTeamsPage() {
             Ready to transform your PPC strategy?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Join thousands of marketing teams who trust AdsOptima to deliver better results.
+            Join marketing teams who trust AdsOptima to deliver better results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/signup" 
-              className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="inline-flex items-center justify-center bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Start Free Trial
             </Link>
             <Link 
-              href="/demo" 
-              className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+              href="/contact?topic=demo" 
+              className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
             >
               Schedule Demo
             </Link>

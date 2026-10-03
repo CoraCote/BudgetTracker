@@ -1,18 +1,20 @@
-'use client';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+
+const featureColors = {
+  green: { bg: 'bg-green-100', text: 'text-green-600' },
+  blue: { bg: 'bg-blue-100', text: 'text-blue-600' },
+  purple: { bg: 'bg-purple-100', text: 'text-purple-600' },
+  pink: { bg: 'bg-pink-100', text: 'text-pink-600' },
+  orange: { bg: 'bg-orange-100', text: 'text-orange-600' },
+  indigo: { bg: 'bg-indigo-100', text: 'text-indigo-600' },
+};
 
 export default function AutomationPage() {
-  const router = useRouter();
-
-  const handleStartTrial = () => {
-    router.push('/signup');
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
       
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-8xl m-12">
+      <section className="pt-16 md:pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-800">
@@ -33,27 +35,27 @@ export default function AutomationPage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <button 
-                  onClick={handleStartTrial}
+                <Link
+                  href="/signup"
                   className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   Start Trial
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
-                </button>
+                </Link>
                 
-                <button className="inline-flex items-center justify-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <Link href="/contact?topic=demo" className="inline-flex items-center justify-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                   Book A Demo
-                </button>
+                </Link>
               </div>
             </div>
             
             <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
+              <div className="bg-white rounded-2xl shadow-2xl p-5 sm:p-8 border border-gray-100">
                 <div className="flex items-center justify-between mb-6">
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900">Automation Schedules</h3>
@@ -68,51 +70,49 @@ export default function AutomationPage() {
                 
                 <div className="flex flex-wrap gap-3 mb-6">
                   {['All Platforms', 'All Accounts', 'All Automation Types', 'All Users', 'All Frequencies', 'Enabled'].map((filter, index) => (
-                    <button key={index} className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors flex items-center">
+                    <span key={index} className="px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-100 text-gray-700 text-sm rounded-lg flex items-center">
                       {filter}
                       <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
-                    </button>
+                    </span>
                   ))}
                 </div>
                 
                 <div className="space-y-3">
                   {[
-                    { account: 'Account Name (123-456-7890)', type: 'Shopping Campaign Refresher', schedule: 'Weekly Tue Between 9:00-12:00 GMT', status: 'Complete', owner: 'example@website.net' },
-                    { account: 'Account Name (123-456-7890)', type: 'Rule Engine', schedule: 'Daily Between 9:00-12:00 GMT', status: 'Complete', owner: 'example@website.net' }
+                    { account: 'Account Name (123-456-7890)', type: 'Shopping Campaign Refresher', schedule: 'Weekly Tue Between 9:00-12:00 GMT', status: 'Complete', owner: 'ppc-team@example.com' },
+                    { account: 'Account Name (123-456-7890)', type: 'Rule Engine', schedule: 'Daily Between 9:00-12:00 GMT', status: 'Complete', owner: 'ppc-team@example.com' }
                   ].map((row, index) => (
-                    <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                      <div className="flex items-center space-x-4">
-                        <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
-                          <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
+                    <div key={index} className="p-4 bg-gray-50 rounded-lg space-y-3">
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex items-center space-x-3 min-w-0">
+                          <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                          <div className="min-w-0">
+                            <p className="font-medium text-gray-900 truncate">{row.account}</p>
+                            <p className="text-sm text-gray-600">{row.type}</p>
+                          </div>
                         </div>
-                        <div>
-                          <p className="font-medium text-gray-900">{row.account}</p>
-                          <p className="text-sm text-gray-600">{row.type}</p>
-                        </div>
-                      </div>
-                      <div className="text-sm text-gray-600">{row.schedule}</div>
-                      <div className="text-sm">
-                        <span className="text-green-600 font-medium">{row.status}</span>
-                      </div>
-                      <div className="text-sm text-gray-600">{row.owner}</div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-12 h-6 bg-green-500 rounded-full relative">
-                          <div className="w-4 h-4 bg-white rounded-full absolute right-1 top-1"></div>
-                        </div>
-                        <button className="p-1 hover:bg-gray-200 rounded">
-                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div className="flex items-center space-x-2 flex-shrink-0" aria-hidden="true">
+                          <div className="w-10 h-5 bg-green-500 rounded-full relative">
+                            <div className="w-3.5 h-3.5 bg-white rounded-full absolute right-0.5 top-0.5"></div>
+                          </div>
+                          <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                           </svg>
-                        </button>
-                        <button className="p-1 hover:bg-gray-200 rounded">
-                          <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                           </svg>
-                        </button>
+                        </div>
+                      </div>
+                      <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-600 sm:pl-11">
+                        <span>{row.schedule}</span>
+                        <span className="text-green-600 font-medium">{row.status}</span>
+                        <span>{row.owner}</span>
                       </div>
                     </div>
                   ))}
@@ -129,7 +129,7 @@ export default function AutomationPage() {
             PPC Automation Capabilities for Google & Microsoft Ads
           </h2>
           
-          <div className="bg-gray-100 rounded-3xl p-12">
+          <div className="bg-gray-100 rounded-3xl p-6 sm:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold text-gray-900">
@@ -145,7 +145,7 @@ export default function AutomationPage() {
               <div className="lg:col-span-2 space-y-8">
                 <div>
                   <h4 className="text-xl font-bold text-gray-900 mb-6">Create dynamic campaigns</h4>
-                  <div className="flex items-center space-x-8 mb-6">
+                  <div className="flex flex-wrap items-center gap-6 mb-6">
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center relative">
                         <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
@@ -153,7 +153,7 @@ export default function AutomationPage() {
                         </svg>
                         <div className="absolute -top-1 -right-1 w-4 h-4 bg-orange-500 rounded-full flex items-center justify-center">
                           <svg className="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978a1.532 1.532 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.532 1.532 0 012.287.947c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+                            <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
                           </svg>
                         </div>
                       </div>
@@ -167,7 +167,7 @@ export default function AutomationPage() {
                         </svg>
                         <div className="absolute -top-1 -right-1 w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
                           <svg className="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978a1.532 1.532 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.532 1.532 0 012.287.947c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+                            <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
                           </svg>
                         </div>
                       </div>
@@ -187,19 +187,19 @@ export default function AutomationPage() {
                     </div>
                   </div>
                   
-                  <div className="flex flex-col space-y-3">
-                    <button className="inline-flex items-center justify-center px-6 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg border border-blue-300 hover:bg-blue-200 transition-colors">
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <span className="inline-flex items-center justify-center px-6 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg border border-blue-300">
                       <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                       </svg>
                       Create Your Own Template
-                    </button>
-                    <button className="inline-flex items-center justify-center px-6 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg border border-blue-300 hover:bg-blue-200 transition-colors">
+                    </span>
+                    <span className="inline-flex items-center justify-center px-6 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg border border-blue-300">
                       <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
                       </svg>
                       Copy From Other Account
-                    </button>
+                    </span>
                   </div>
                 </div>
                 
@@ -260,12 +260,12 @@ export default function AutomationPage() {
                 Case study
               </div>
               <p className="text-xl text-gray-700 leading-relaxed">
-                See how Google Ads consultant Matthieu Tran-Van uses our automation capabilities to get rid of 
+                See how the lean in-house team at Bluepine Travel uses our automation capabilities to get rid of
                 account management fatigue and prevent burnout.
               </p>
-              <button className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <Link href="/case-studies" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Learn More
-              </button>
+              </Link>
             </div>
             
             <div className="relative">
@@ -273,8 +273,8 @@ export default function AutomationPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 opacity-50"></div>
                 <div className="relative z-10">
                   <div className="flex justify-between items-start mb-8">
-                    <div className="text-6xl font-bold text-blue-600 leading-none">CASE<br />STUDY</div>
-                    <div className="text-purple-600 font-bold text-lg">ADSOPTIMA</div>
+                    <div className="text-4xl sm:text-6xl font-bold text-purple-600 leading-none">CASE<br />STUDY</div>
+                    <div className="text-purple-600 font-bold text-lg">AdsOptima</div>
                   </div>
                   
                   <div className="flex justify-center mb-8">
@@ -291,7 +291,7 @@ export default function AutomationPage() {
                   </div>
                   
                   <div className="text-center">
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">MATTHIEU TRAN-VAN</h4>
+                    <h4 className="text-xl font-semibold tracking-tight text-gray-900 mb-2">Bluepine Travel</h4>
                     <p className="text-gray-700 font-semibold">CASE STUDY</p>
                   </div>
                 </div>
@@ -347,10 +347,10 @@ export default function AutomationPage() {
               }
             ].map((feature, index) => (
               <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className={`w-16 h-16 bg-${feature.color}-100 rounded-2xl flex items-center justify-center mb-6`}>
-                  <svg className={`w-8 h-8 text-${feature.color}-600`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className={`w-16 h-16 ${featureColors[feature.color].bg} rounded-2xl flex items-center justify-center mb-6`}>
+                  <svg className={`w-8 h-8 ${featureColors[feature.color].text}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     {feature.icon === 'shield' && (
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944A11.955 11.955 0 01.382 15.976a11.955 11.955 0 01-.764-3.576 12 12 0 016.824-8.976" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     )}
                     {feature.icon === 'clock' && (
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -365,7 +365,10 @@ export default function AutomationPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     )}
                     {feature.icon === 'eye' && (
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                      </>
                     )}
                   </svg>
                 </div>
@@ -383,22 +386,22 @@ export default function AutomationPage() {
             Ready to Automate Your PPC Success?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Join thousands of PPC professionals who trust AdsOptima to automate their campaigns 
+            Join PPC professionals who trust AdsOptima to automate their campaigns 
             while maintaining full control and maximizing results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              onClick={handleStartTrial}
+            <Link
+              href="/signup"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Start Free Trial
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </button>
-            <button className="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-semibold rounded-lg border-2 border-white hover:bg-white hover:text-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            </Link>
+            <Link href="/contact?topic=demo" className="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-semibold rounded-lg border-2 border-white hover:bg-white hover:text-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
               Schedule Demo
-            </button>
+            </Link>
           </div>
         </div>
       </section>

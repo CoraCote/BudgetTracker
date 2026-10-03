@@ -22,8 +22,8 @@ export default function ChannelDistributionSection() {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
-            <div className="flex items-center justify-between mb-8">
+          <div className="bg-white rounded-2xl shadow-xl p-5 sm:p-8 border border-gray-100 min-w-0">
+            <div className="flex flex-wrap items-center justify-between gap-3 mb-8">
               <div className="flex items-center space-x-3">
                 <h4 className="text-xl font-semibold text-gray-900">PMax Channel Distribution</h4>
                 <div className="w-5 h-5 bg-gray-200 rounded-full flex items-center justify-center">
@@ -40,7 +40,7 @@ export default function ChannelDistributionSection() {
               </div>
             </div>
 
-            <div className="grid grid-cols-4 gap-6 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-8">
               <div className="text-center">
                 <div className="relative w-20 h-20 mx-auto mb-3">
                   <svg className="w-20 h-20 transform -rotate-90" viewBox="0 0 36 36">
@@ -151,17 +151,17 @@ export default function ChannelDistributionSection() {
             </div>
 
             <div className="text-center">
-              <a href="#" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors">
+              <span className="inline-flex items-center text-blue-600 font-medium">
                 View full table
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </span>
             </div>
 
             <div className="mt-8 border-t border-gray-200 pt-8">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center space-x-4">
+              <div className="flex items-start justify-between gap-3 mb-6">
+                <div className="flex flex-wrap items-center gap-2">
                   <div className="flex items-center space-x-2 bg-gray-100 rounded-lg px-3 py-2">
                     <span className="text-sm font-medium text-gray-700">Cost</span>
                     <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -181,15 +181,15 @@ export default function ChannelDistributionSection() {
                     </svg>
                   </div>
                 </div>
-                <button className="p-2 text-gray-500 hover:text-gray-700 transition-colors">
+                <span className="p-2 text-gray-500" aria-hidden="true">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
-                </button>
+                </span>
               </div>
 
               <div className="overflow-x-auto">
-                <table className="w-full">
+                <table className="w-full min-w-[560px] text-sm">
                   <thead>
                     <tr className="border-b border-gray-200">
                       <th className="text-left py-3 px-4 font-semibold text-gray-900 bg-blue-50">PMax Campaign Name</th>

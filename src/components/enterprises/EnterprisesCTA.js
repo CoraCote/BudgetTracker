@@ -21,7 +21,7 @@ export default function EnterprisesCTA() {
             </h2>
             
             <p className="text-xl lg:text-2xl text-purple-100 mb-12 leading-relaxed">
-              Join hundreds of enterprise teams already using AdsOptima to scale their PPC campaigns 
+              Join enterprise teams already using AdsOptima to scale their PPC campaigns 
               with confidence, security, and unmatched automation.
             </p>
 
@@ -53,7 +53,7 @@ export default function EnterprisesCTA() {
                 {
                   icon: "🛡️",
                   title: "Enterprise Security",
-                  description: "SOC 2 Type II compliant with bank-level security and advanced role-based permissions"
+                  description: "SOC 2-ready security controls, encryption in transit and at rest, and advanced role-based permissions"
                 },
                 {
                   icon: "📊",
@@ -66,8 +66,8 @@ export default function EnterprisesCTA() {
                   description: "API access and seamless integration with your existing tech stack"
                 }
               ].map((benefit, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-300/30">
-                  <div className="text-4xl mb-4">{benefit.icon}</div>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-purple-300/30">
+                  <div className="text-4xl mb-4" aria-hidden="true">{benefit.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
                   <p className="text-purple-100 leading-relaxed">{benefit.description}</p>
                 </div>

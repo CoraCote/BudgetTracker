@@ -1,45 +1,33 @@
-'use client';
-
-import { useState } from 'react';
-
-const categories = [
-  { id: 'expert-insights', name: 'Expert Insights', active: true },
-  { id: 'data-studies', name: 'Data Studies', active: false },
-  { id: 'customer-success', name: 'Customer success stories', active: false },
-  { id: 'tips-strategies', name: 'Tips & Strategies', active: false },
-  { id: 'in-depth-guides', name: 'In-depth guides', active: false }
+const sections = [
+  { id: 'expert-insights', name: 'Expert Insights' },
+  { id: 'data-studies', name: 'Data Studies' },
+  { id: 'video-library', name: 'Videos' },
+  { id: 'customer-stories', name: 'Customer success stories' },
 ];
 
+/**
+ * In-page navigation for the blog. Each item jumps to the matching section below.
+ */
 export default function ContentNavigation() {
-  const [activeCategory, setActiveCategory] = useState('expert-insights');
-
   return (
-    <div className="bg-white py-8 px-4 sm:px-6 lg:px-8">
+    <nav className="bg-white py-8 px-4 sm:px-6 lg:px-8 border-b border-gray-100" aria-label="Blog sections">
       <div className="max-w-7xl mx-auto">
-        {/* Navigation Bar */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 text-lg font-medium transition-colors duration-200 ${
-                activeCategory === category.id
-                  ? 'text-gray-900 border-b-2 border-teal-600'
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              {category.name}
-            </button>
+        <p className="text-center text-sm font-semibold uppercase tracking-widest text-gray-500 mb-4">
+          Browse by topic
+        </p>
+        <ul className="flex flex-wrap justify-center gap-2 sm:gap-4">
+          {sections.map((section) => (
+            <li key={section.id}>
+              <a
+                href={`#${section.id}`}
+                className="inline-block px-5 py-2.5 text-base sm:text-lg font-medium text-gray-600 rounded-full border border-transparent hover:text-purple-700 hover:border-purple-200 hover:bg-purple-50 transition-colors duration-200"
+              >
+                {section.name}
+              </a>
+            </li>
           ))}
-        </div>
-
-        {/* Active Category Heading */}
-        <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            {categories.find(cat => cat.id === activeCategory)?.name}
-          </h2>
-        </div>
+        </ul>
       </div>
-    </div>
+    </nav>
   );
 }

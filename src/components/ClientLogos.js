@@ -1,12 +1,13 @@
-import Image from 'next/image';
+import { FICTIONAL_BRANDS } from './fictionalBrands';
 
 /**
- * Client Logos component with enhanced bubble effects and animations
- * Features client logos with subtle floating elements
+ * Client wordmark strip.
+ * Renders text-based wordmarks for (fictional) customers instead of
+ * third-party logo images.
  */
 export default function ClientLogos() {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden" aria-label="Teams using AdsOptima">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-10 left-10 w-16 h-16 bg-gradient-to-br from-purple-200/20 to-pink-200/20 rounded-full blur-lg animate-pulse"></div>
         <div className="absolute bottom-10 right-10 w-12 h-12 bg-gradient-to-br from-blue-200/20 to-purple-200/20 rounded-full blur-md animate-pulse" style={{ animationDelay: '2s' }}></div>
@@ -14,62 +15,27 @@ export default function ClientLogos() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-16 opacity-60">
-          <div className="hover:opacity-100 transition-opacity duration-300 group">
-            <Image
-              src="/industry/peakace.svg"
-              alt="PEAK ACE"
-              width={120}
-              height={40}
-              className="group-hover:scale-110 transition-transform duration-300"
-            />
-          </div>
-          <div className="hover:opacity-100 transition-opacity duration-300 group">
-            <Image
-              src="/industry/madwire.png"
-              alt="madwire"
-              width={120}
-              height={40}
-              className="group-hover:scale-110 transition-transform duration-300"
-            />
-          </div>
-          <div className="hover:opacity-100 transition-opacity duration-300 group">
-            <Image
-              src="/industry/bbqguys.svg"
-              alt="BBQGUYS"
-              width={120}
-              height={40}
-              className="group-hover:scale-110 transition-transform duration-300"
-            />
-          </div>
-          <div className="hover:opacity-100 transition-opacity duration-300 group">
-            <Image
-              src="/industry/emma-sleep.svg"
-              alt="Emma."
-              width={120}
-              height={40}
-              className="group-hover:scale-110 transition-transform duration-300"
-            />
-          </div>
-          <div className="hover:opacity-100 transition-opacity duration-300 group">
-            <Image
-              src="/industry/medstar-health.svg"
-              alt="MedStar Health"
-              width={120}
-              height={40}
-              className="group-hover:scale-110 transition-transform duration-300"
-            />
-          </div>
-          <div className="hover:opacity-100 transition-opacity duration-300 group">
-            <Image
-              src="/industry/secureticketpurchase.png"
-              alt="SECURE TICKET PURCHASE"
-              width={120}
-              height={40}
-              className="group-hover:scale-110 transition-transform duration-300"
-            />
-          </div>
-        </div>
+        <p className="text-center text-sm font-medium uppercase tracking-widest text-gray-500 mb-8">
+          Trusted by in-house teams and agencies
+        </p>
+        <ul className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 lg:gap-x-14">
+          {FICTIONAL_BRANDS.slice(0, 6).map((brand) => (
+            <li
+              key={brand.name}
+              className="group flex items-center gap-2 text-gray-500 opacity-70 hover:opacity-100 transition-opacity duration-300"
+            >
+              <span
+                className={`flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br ${brand.accent} text-[10px] font-bold text-white group-hover:scale-110 transition-transform duration-300`}
+                aria-hidden="true"
+              >
+                {brand.initials}
+              </span>
+              <span className={`${brand.wordmarkClass} text-gray-600 group-hover:text-gray-800 transition-colors whitespace-nowrap`}>
+                {brand.name}
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

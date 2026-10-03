@@ -1,4 +1,4 @@
-'use client';
+import Link from 'next/link';
 
 export default function PromotionalBanner() {
   return (
@@ -39,19 +39,19 @@ export default function PromotionalBanner() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 lg:ml-8">
-              <button className="px-8 py-4 bg-teal-500 text-white font-semibold rounded-lg hover:bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 transition-colors flex items-center justify-center">
+              <Link href="/signup" className="px-8 py-4 bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-semibold rounded-lg transition-colors flex items-center justify-center">
                 Start Trial
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </button>
+              </Link>
               
-              <button className="px-8 py-4 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition-colors flex items-center justify-center">
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <Link href="/contact?topic=demo" className="px-8 py-4 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition-colors flex items-center justify-center">
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
                 Book A Demo
-              </button>
+              </Link>
             </div>
           </div>
         </div>

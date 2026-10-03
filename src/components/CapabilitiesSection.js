@@ -37,9 +37,9 @@ export default function CapabilitiesSection() {
           </div>
 
           <div className="relative">
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100 relative z-10">
+            <div className="bg-white rounded-2xl shadow-xl p-5 sm:p-8 border border-gray-100 relative z-10">
               <div className="mb-6">
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                   <div className="flex items-center space-x-3">
                     <h4 className="text-lg font-semibold text-gray-900">PMax Channel Distribution</h4>
                     <div className="w-5 h-5 bg-gray-200 rounded-full flex items-center justify-center">
@@ -56,7 +56,7 @@ export default function CapabilitiesSection() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-4 gap-4 mb-4">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
                   <div className="text-center">
                     <div className="relative w-16 h-16 mx-auto mb-2">
                       <svg className="w-16 h-16 transform -rotate-90" viewBox="0 0 36 36">
@@ -167,15 +167,15 @@ export default function CapabilitiesSection() {
                 </div>
 
                 <div className="text-center">
-                  <a href="#" className="text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors">
+                  <span className="text-blue-600 text-sm font-medium">
                     View full table →
-                  </a>
+                  </span>
                 </div>
               </div>
 
               <div className="border-t border-gray-200 pt-6">
                 <div className="flex items-start space-x-3">
-                  <input type="radio" className="mt-1" />
+                  <span className="mt-1 w-4 h-4 rounded-full border-2 border-purple-500 flex-shrink-0" aria-hidden="true"></span>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Identify Expensive Listing Groups</h4>
                     <p className="text-sm text-gray-600">
@@ -188,14 +188,14 @@ export default function CapabilitiesSection() {
               </div>
             </div>
 
-            <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-xl p-6 border border-gray-100 w-80 animate-float-slow">
+            <div className="hidden md:block absolute -top-4 -right-4 bg-white rounded-xl shadow-xl p-6 border border-gray-100 w-80 animate-float-slow">
               <div className="flex items-center justify-between mb-4">
                 <h4 className="font-semibold text-gray-900">Create Or Select Audience Signal</h4>
-                <button className="text-gray-400 hover:text-gray-600">
+                <span className="text-gray-400" aria-hidden="true">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                </button>
+                </span>
               </div>
               <p className="text-sm text-gray-600 mb-4">
                 Performance Max Utilizes An Audience Signal To Increase The Speed Of Reaching The Correct Target Audience Across Google Inventory.
@@ -205,7 +205,10 @@ export default function CapabilitiesSection() {
                   <label className="block text-sm font-medium text-gray-700 mb-2">Existing Audience Signals</label>
                   <input 
                     type="text" 
-                    placeholder="Q Search" 
+                    placeholder="Search audience signals"
+                    aria-label="Search audience signals"
+                    readOnly
+                    tabIndex={-1}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>

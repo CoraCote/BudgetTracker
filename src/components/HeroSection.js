@@ -78,7 +78,7 @@ export default function HeroSection() {
           </Link>
           
           <Link 
-            href="#demo" 
+            href="/contact?topic=demo"
             className="border-2 border-purple-500 text-purple-600 hover:bg-purple-50 px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-300 relative overflow-hidden group"
           >
             <span className="relative z-10">Book A Demo</span>

@@ -1,11 +1,11 @@
 const expertInsights = [
   {
     id: 1,
-    title: "Amazon's Exit from Google Ads Triggered a Traffic Surge — But ROI Didn't Follow: an AdsOptima Study",
+    title: "When a Major Retailer Left Google Shopping, Traffic Rose, But ROI Didn't Follow: an AdsOptima Study",
     category: "EXPERT SERIES",
     subcategory: "DATA STUDIES",
     date: "Aug 15, 2025",
-    description: "On July 23, 2025, Amazon abruptly pulled all its ads from Google shopping.",
+    description: "When a large marketplace pulled its Shopping ads, competing advertisers saw more clicks. We looked at whether that turned into profit.",
     icon: "📊"
   },
   {
@@ -19,7 +19,7 @@ const expertInsights = [
   },
   {
     id: 3,
-    title: "How to Run a Seasonality Analysis of Your PPC Data Using ChatGPT",
+    title: "How to Run a Seasonality Analysis of Your PPC Data Using an AI Assistant",
     category: "EXPERT SERIES",
     subcategory: "GUIDE",
     date: "Jun 13, 2025",
@@ -30,7 +30,7 @@ const expertInsights = [
 
 export default function ExpertInsights() {
   return (
-    <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <section id="expert-insights" className="bg-white py-16 px-4 sm:px-6 lg:px-8 scroll-mt-24">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -41,9 +41,9 @@ export default function ExpertInsights() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {expertInsights.map((insight) => (
-            <div key={insight.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <article key={insight.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               {/* Teal Header Section */}
               <div className="bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 relative p-8 h-64 flex flex-col justify-between">
                 {/* Grid pattern overlay */}
@@ -87,19 +87,11 @@ export default function ExpertInsights() {
                   {insight.description}
                 </p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
-        <div className="text-right">
-          <a href="#" className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium">
-            Read more from Expert series
-            <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
       </div>
-    </div>
+    </section>
   );
 }

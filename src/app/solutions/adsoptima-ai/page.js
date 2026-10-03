@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { ArrowRight, Calendar, Brain, Sparkles, Zap, Star, TrendingUp, Shield, Users, Rocket, ChevronRight, Play, CheckCircle, ArrowUpRight, BarChart3 } from '../../../components/ui/icons/IconComponents';
 
 export const metadata = {
-  title: 'AI For Paid Media - ADSOPTIMA Sidekick | AdsOptima',
-  description: 'Amplify and complement your human marketing team with AI. Get AI-generated insights, ad copy, and performance narratives with ADSOPTIMA Sidekick.',
+  title: 'AI For Paid Media - AdsOptima Sidekick | AdsOptima',
+  description: 'Amplify and complement your human marketing team with AI. Get AI-generated insights, ad copy, and performance narratives with AdsOptima Sidekick.',
 };
 
-export default function ADSOPTIMAAIPage() {
+export default function AdsOptimaAIPage() {
   return (
     <div className="min-h-screen bg-white">
       <section className="relative overflow-hidden bg-gradient-to-br from-white via-purple-50/30 to-pink-50/30 py-20 lg:py-32">
@@ -38,7 +38,7 @@ export default function ADSOPTIMAAIPage() {
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600">
                     human marketing team
                   </span>
-                  <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                  <span aria-hidden="true" className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-30"></span>
                 </span>
                 <br />
                 <span className="text-gray-900">with AI</span>
@@ -46,7 +46,7 @@ export default function ADSOPTIMAAIPage() {
               
               <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
                 AI is most valuable when it's built right into the tools and workflows you already use. 
-                In ADSOPTIMA, it's there to surface account insights, craft RSA suggestions, build 
+                In AdsOptima, it's there to surface account insights, craft RSA suggestions, build 
                 machine-learning budget forecasts, and more — right where you work.
               </p>
               
@@ -63,7 +63,7 @@ export default function ADSOPTIMAAIPage() {
                   </span>
                 </Link>
                 <Link 
-                  href="/demo" 
+                  href="/contact?topic=demo" 
                   className="group inline-flex items-center justify-center px-8 py-4 bg-white border-2 border-purple-200 text-purple-600 hover:bg-purple-50 hover:border-purple-300 font-semibold rounded-2xl transition-all duration-300 hover:scale-105"
                 >
                   <Calendar className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
@@ -72,26 +72,20 @@ export default function ADSOPTIMAAIPage() {
                 </Link>
               </div>
 
-              <div className="flex items-center space-x-8 pt-4">
+              <div className="flex flex-wrap items-center gap-x-8 gap-y-3 pt-4">
                 <div className="flex items-center space-x-2">
-                  <div className="flex -space-x-2">
-                    {[1,2,3,4].map((i) => (
-                      <div key={i} className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">
-                        {i}
-                      </div>
-                    ))}
-                  </div>
-                  <span className="text-gray-600 text-sm">10,000+ marketers</span>
+                  <CheckCircle className="w-5 h-5 text-purple-500" />
+                  <span className="text-gray-600 text-sm">Every change needs your approval</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                  <span className="text-gray-600 text-sm">4.9/5 rating</span>
+                  <Shield className="w-5 h-5 text-purple-500" />
+                  <span className="text-gray-600 text-sm">GDPR-ready data handling</span>
                 </div>
               </div>
             </div>
 
             <div className="relative">
-              <div className="relative bg-white rounded-3xl shadow-2xl border border-gray-200 p-8 max-w-lg mx-auto overflow-hidden">
+              <div className="relative bg-white rounded-3xl shadow-2xl border border-gray-200 p-5 sm:p-8 max-w-lg mx-auto overflow-hidden">
                 
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-6">
@@ -103,7 +97,7 @@ export default function ADSOPTIMAAIPage() {
                         <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white animate-pulse"></div>
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900">ADSOPTIMA Sidekick</h3>
+                        <h3 className="text-xl font-bold text-gray-900">AdsOptima Sidekick</h3>
                         <div className="flex items-center space-x-2">
                           <span className="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full border border-purple-200">
                             AI Assistant
@@ -122,7 +116,7 @@ export default function ADSOPTIMAAIPage() {
                   </div>
                   
                   <p className="text-gray-600 mb-8 text-sm leading-relaxed">
-                    Get help from ADSOPTIMA sidekick to know more about PPC account performance, 
+                    Get help from AdsOptima sidekick to know more about PPC account performance, 
                     optimization suggestions and more.
                   </p>
                   
@@ -134,7 +128,7 @@ export default function ADSOPTIMAAIPage() {
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center space-x-2 mb-2">
-                            <p className="text-gray-900 font-semibold">ADSOPTIMA Sidekick</p>
+                            <p className="text-gray-900 font-semibold">AdsOptima Sidekick</p>
                             <div className="flex space-x-1">
                               <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce"></div>
                               <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce animation-delay-200"></div>
@@ -142,7 +136,7 @@ export default function ADSOPTIMAAIPage() {
                             </div>
                           </div>
                           <p className="text-gray-700 leading-relaxed">
-                            Hi Development! 👋 I am ADSOPTIMA Sidekick - your AI based PPC Assistant. 
+                            Hi there! 👋 I am AdsOptima Sidekick - your AI based PPC Assistant. 
                             I can help you find some interesting insights about your account. 
                             I am still learning about PPC and this world and my creators have put me in Beta. 
                             What can I help you with?
@@ -166,10 +160,10 @@ export default function ADSOPTIMAAIPage() {
                       ].map((question, index) => (
                         <div 
                           key={index}
-                          className={`group relative p-4 rounded-xl cursor-pointer transition-all duration-300 hover:scale-105 ${
+                          className={`group relative p-4 rounded-xl transition-all duration-300 ${
                             index === 6 
-                              ? 'bg-gradient-to-r from-purple-500/30 to-pink-500/30 border border-purple-400/50' 
-                              : 'bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20'
+                              ? 'bg-gradient-to-r from-purple-100 to-pink-100 border border-purple-200' 
+                              : 'bg-gray-50 hover:bg-purple-50 border border-gray-100 hover:border-purple-200'
                           }`}
                         >
                           <div className="flex items-center space-x-3">
@@ -190,12 +184,13 @@ export default function ADSOPTIMAAIPage() {
                     <div className="flex items-center space-x-3 bg-gray-50 rounded-2xl p-4 border border-gray-200 hover:border-purple-300 transition-all duration-300">
                       <input 
                         type="text" 
-                        placeholder="Ask custom questions..." 
-                        className="flex-1 bg-transparent text-gray-900 placeholder-gray-500 text-sm outline-none"
+                        placeholder="Ask custom questions..."
+                        aria-label="Ask Sidekick a question"
+                        className="flex-1 min-w-0 bg-transparent text-gray-900 placeholder-gray-500 text-sm outline-none"
                       />
-                      <button className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white rounded-xl flex items-center justify-center shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-110">
+                      <span aria-hidden="true" className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
                         <ArrowRight className="w-4 h-4" />
-                      </button>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -233,7 +228,7 @@ export default function ADSOPTIMAAIPage() {
                   Sidekick makes sense of countless insights and opportunities
                 </h3>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  The AI assistant built into ADSOPTIMA eliminates the need to dig through endless screens. 
+                  The AI assistant built into AdsOptima eliminates the need to dig through endless screens. 
                   Just ask what you need, from recent wins to performance trends, and get actionable answers 
                   you can use to impress your clients.
                 </p>
@@ -258,12 +253,12 @@ export default function ADSOPTIMAAIPage() {
             </div>
 
             <div className="relative">
-              <div className="relative bg-gradient-to-br from-white to-purple-50/30 rounded-3xl shadow-2xl border border-purple-100/50 p-8 overflow-hidden">
+              <div className="relative bg-gradient-to-br from-white to-purple-50/30 rounded-3xl shadow-2xl border border-purple-100/50 p-5 sm:p-8 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-pink-500/5 to-blue-500/5 rounded-3xl"></div>
                 <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-purple-400/10 to-pink-400/10 rounded-full blur-2xl"></div>
                 
                 <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-8">
+                  <div className="flex flex-wrap items-center justify-between gap-3 mb-8">
                     <div className="flex items-center space-x-3">
                       <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg">
                         <Brain className="w-6 h-6 text-white" />
@@ -287,7 +282,7 @@ export default function ADSOPTIMAAIPage() {
                   </div>
                   
                   <p className="text-gray-600 mb-8 text-sm leading-relaxed">
-                    Experience how ADSOPTIMA Sidekick analyzes your PPC account and provides actionable insights.
+                    Experience how AdsOptima Sidekick analyzes your PPC account and provides actionable insights.
                   </p>
 
                   <div className="mb-6">
@@ -313,7 +308,7 @@ export default function ADSOPTIMAAIPage() {
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center space-x-2 mb-4">
-                            <span className="font-semibold text-gray-900">ADSOPTIMA Sidekick</span>
+                            <span className="font-semibold text-gray-900">AdsOptima Sidekick</span>
                             <div className="flex space-x-1">
                               <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce"></div>
                               <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce animation-delay-200"></div>
@@ -335,14 +330,14 @@ export default function ADSOPTIMAAIPage() {
                                 },
                                 {
                                   title: "Negative Keyword Management", 
-                                  desc: "Use ADSOPTIMA tool for 'Non Converting Queries (Shopping)' to add negative keywords for queries with high cost, low CTR, and zero conversions.",
+                                  desc: "Use AdsOptima tool for 'Non Converting Queries (Shopping)' to add negative keywords for queries with high cost, low CTR, and zero conversions.",
                                   tool: "Negative Keyword Tool",
                                   color: "from-blue-500 to-cyan-500",
                                   icon: Shield
                                 },
                                 {
                                   title: "Monitor Keywords With Cost Increase",
-                                  desc: "Monitor keywords with significant cost increases using ADSOPTIMA's tool to manage bids and budgets.",
+                                  desc: "Monitor keywords with significant cost increases using AdsOptima's tool to manage bids and budgets.",
                                   tool: "Cost Increase Keyword Monitoring Tool",
                                   color: "from-green-500 to-emerald-500",
                                   icon: Zap
@@ -356,10 +351,10 @@ export default function ADSOPTIMAAIPage() {
                                     <div className="flex-1">
                                       <h4 className="font-semibold text-gray-900 mb-2">{item.title}</h4>
                                       <p className="text-gray-600 text-sm mb-3">{item.desc}</p>
-                                      <a href="#" className="inline-flex items-center text-sm text-blue-600 hover:text-blue-700 font-medium group-hover:translate-x-1 transition-transform duration-300">
+                                      <span className="inline-flex items-center text-sm text-blue-600 font-medium">
                                         {item.tool}
                                         <ArrowUpRight className="w-3 h-3 ml-1" />
-                                      </a>
+                                      </span>
                                     </div>
                                   </div>
                                 </div>
@@ -371,20 +366,21 @@ export default function ADSOPTIMAAIPage() {
                     </div>
                   </div>
 
-                  <div className="flex items-center space-x-3">
-                    <div className="flex-1 relative">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <div className="flex-1 min-w-[160px] relative">
                       <input 
                         type="text" 
                         placeholder="Ask a question..." 
+                        aria-label="Ask a question"
                         className="w-full bg-white/80 backdrop-blur-sm rounded-2xl px-6 py-4 text-sm outline-none border border-gray-200 hover:border-purple-300 focus:border-purple-400 transition-colors duration-300"
                       />
                     </div>
-                    <button className="px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white rounded-2xl text-sm font-medium transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/25">
+                    <span className="px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-2xl text-sm font-medium shadow-lg">
                       Send
-                    </button>
-                    <button className="px-4 py-4 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-2xl text-sm font-medium transition-colors duration-300">
+                    </span>
+                    <span className="px-4 py-4 bg-gray-100 text-gray-600 rounded-2xl text-sm font-medium">
                       Clear
-                    </button>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -414,8 +410,8 @@ export default function ADSOPTIMAAIPage() {
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               We understand the importance of protecting your sensitive marketing data. 
-              That's why we've built security into every layer of our platform with 
-              enterprise-grade encryption and compliance standards.
+              That's why we've built security into every layer of our platform with
+              strong encryption and careful access controls.
             </p>
           </div>
 
@@ -429,8 +425,8 @@ export default function ADSOPTIMAAIPage() {
                 bgColor: "from-green-500/20 to-emerald-500/20"
               },
               {
-                title: "Full data encryption and GDPR compliance",
-                description: "Your data is encrypted in transit and at rest, with full GDPR compliance.",
+                title: "Encrypted data and GDPR-ready processing",
+                description: "Your data is encrypted in transit and at rest, and processed in line with GDPR requirements.",
                 icon: Shield,
                 color: "from-blue-500 to-cyan-500",
                 bgColor: "from-blue-500/20 to-cyan-500/20"
@@ -460,19 +456,19 @@ export default function ADSOPTIMAAIPage() {
           </div>
 
           <div className="mt-16 text-center">
-            <p className="text-gray-400 mb-8">Trusted by leading organizations worldwide</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+            <p className="text-gray-400 mb-8">Security practices built into every layer</p>
+            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-gray-300">
               <div className="px-6 py-3 bg-white/10 rounded-xl border border-white/20">
-                <span className="text-sm font-medium">SOC 2 Type II</span>
+                <span className="text-sm font-medium">SOC 2-ready controls</span>
               </div>
               <div className="px-6 py-3 bg-white/10 rounded-xl border border-white/20">
-                <span className="text-sm font-medium">GDPR Compliant</span>
+                <span className="text-sm font-medium">GDPR-ready</span>
               </div>
               <div className="px-6 py-3 bg-white/10 rounded-xl border border-white/20">
-                <span className="text-sm font-medium">ISO 27001</span>
+                <span className="text-sm font-medium">24/7 monitoring</span>
               </div>
               <div className="px-6 py-3 bg-white/10 rounded-xl border border-white/20">
-                <span className="text-sm font-medium">256-bit SSL</span>
+                <span className="text-sm font-medium">99.9% uptime target</span>
               </div>
             </div>
           </div>
@@ -483,77 +479,58 @@ export default function ADSOPTIMAAIPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Paid media teams love ADSOPTIMA's AI support, which makes PPC management even faster
+              Paid media teams love AdsOptima&apos;s AI support, which makes PPC management even faster
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <div className="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
-                Case study
-              </div>
-              <p className="text-xl text-gray-700">
-                BBQGuys uses ADSOPTIMA's AI-powered capabilities to grow performance and stay ahead of the curve.
-              </p>
-              <Link 
-                href="/case-studies/bbqguys" 
-                className="inline-flex items-center px-6 py-3 bg-purple-600 text-white hover:bg-purple-700 font-semibold rounded-lg transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
-
-            <div className="bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 rounded-2xl p-8 relative overflow-hidden">
-              <div className="absolute top-4 right-4 text-white text-sm opacity-80">ADSOPTIMA®</div>
-              <div className="flex items-center justify-center h-full">
-                <div className="text-center text-white">
-                  <div className="flex items-center justify-center mb-4">
-                    <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mr-3">
-                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
-                      </svg>
-                    </div>
-                    <div className="text-2xl font-bold">BBQGUYS®</div>
+          <div className="space-y-16">
+            {[
+              {
+                company: 'Harborline Outfitters',
+                initials: 'HO',
+                sector: 'Outdoor e-commerce',
+                text: 'Harborline Outfitters uses AdsOptima’s AI-powered capabilities to spot opportunities sooner and keep Shopping performance moving in the right direction.',
+                gradient: 'from-purple-600 via-purple-500 to-pink-500',
+              },
+              {
+                company: 'Northfield Digital',
+                initials: 'ND',
+                sector: 'Performance agency',
+                text: 'Northfield Digital delights clients with AI summary-enriched reports that explain what changed and why.',
+                gradient: 'from-indigo-600 via-purple-600 to-purple-500',
+              },
+            ].map((study) => (
+              <div key={study.company} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="space-y-6">
+                  <div className="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                    Case study
                   </div>
-                  <div className="text-lg opacity-90">CASE STUDY</div>
+                  <p className="text-xl text-gray-700">
+                    {study.text}
+                  </p>
+                  <Link
+                    href="/case-studies"
+                    className="inline-flex items-center px-6 py-3 bg-purple-600 text-white hover:bg-purple-700 font-semibold rounded-lg transition-colors"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+
+                <div className={`bg-gradient-to-r ${study.gradient} rounded-2xl p-8 relative overflow-hidden min-h-[220px] flex items-center justify-center`}>
+                  <div className="absolute top-4 right-4 text-white text-sm opacity-80">AdsOptima</div>
+                  <div className="text-center text-white">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
+                      <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center font-bold" aria-hidden="true">
+                        {study.initials}
+                      </div>
+                      <div className="text-2xl font-semibold tracking-tight">{study.company}</div>
+                    </div>
+                    <div className="text-sm opacity-80 mb-1">{study.sector}</div>
+                    <div className="text-lg opacity-90">CASE STUDY</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16">
-            <div className="space-y-6">
-              <div className="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
-                Case study
-              </div>
-              <p className="text-xl text-gray-700">
-                Metrik Marketing delights clients with AI summary-enriched reports.
-              </p>
-              <Link 
-                href="/case-studies/metrik-marketing" 
-                className="inline-flex items-center px-6 py-3 bg-purple-600 text-white hover:bg-purple-700 font-semibold rounded-lg transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
-
-            <div className="bg-blue-600 rounded-2xl p-8 flex items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-700"></div>
-              <div className="relative z-10 text-center text-white">
-                <div className="text-2xl font-bold mb-2">CASE STUDY</div>
-                <div className="text-sm opacity-80">Vertical Text</div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 border border-gray-200 text-center">
-              <div className="flex items-center justify-center mb-4">
-                <div className="text-3xl font-bold text-gray-900 mr-2">METR</div>
-                <div className="text-3xl font-bold text-green-600">1K</div>
-              </div>
-              <div className="text-lg text-green-600 font-medium mb-2">marketing</div>
-              <div className="text-sm text-blue-600 mb-4">Marketing That Makes Sense</div>
-              <div className="text-xl font-bold text-gray-900">CASE STUDY</div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -586,14 +563,14 @@ export default function ADSOPTIMAAIPage() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-200 via-pink-200 to-purple-200 animate-gradient-x">
                   PPC Management
                 </span>
-                <div className="absolute -inset-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <span aria-hidden="true" className="absolute -inset-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg blur opacity-30"></span>
               </span>
               <br />
               <span className="text-white">with AI?</span>
             </h2>
 
             <p className="text-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of marketers who are already using ADSOPTIMA Sidekick to 
+              Join paid media teams already using AdsOptima Sidekick to
               amplify their results and save hours every week. Start your free trial today 
               and experience the future of PPC management.
             </p>
@@ -612,29 +589,23 @@ export default function ADSOPTIMAAIPage() {
               </Link>
               
               <Link 
-                href="/demo" 
+                href="/contact?topic=demo" 
                 className="group inline-flex items-center justify-center px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 font-bold rounded-2xl transition-all duration-300 hover:scale-105 text-lg"
               >
-                <Play className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform duration-300" />
-                Watch Demo
+                <Calendar className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform duration-300" />
+                Book A Demo
                 <ChevronRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
             </div>
 
-            <div className="flex flex-wrap justify-center items-center gap-8 text-gray-300">
+            <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-gray-300">
               <div className="flex items-center space-x-2">
-                <div className="flex -space-x-2">
-                  {[1,2,3,4,5].map((i) => (
-                    <div key={i} className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">
-                      {i}
-                    </div>
-                  ))}
-                </div>
-                <span className="text-sm">10,000+ active users</span>
+                <CheckCircle className="w-5 h-5 text-green-400" />
+                <span className="text-sm">No credit card required</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                <span className="text-sm">4.9/5 average rating</span>
+                <CheckCircle className="w-5 h-5 text-green-400" />
+                <span className="text-sm">Cancel anytime</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />

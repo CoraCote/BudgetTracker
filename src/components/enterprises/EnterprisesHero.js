@@ -77,29 +77,29 @@ export default function EnterprisesHero() {
                 </svg>
                 Real-time Performance Insights
               </h3>
-              <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center">
                 <div className="bg-white rounded-lg p-3 shadow-sm">
-                  <div className="text-2xl font-bold text-purple-600">$2.4M</div>
-                  <div className="text-xs text-gray-600">Revenue Generated</div>
+                  <div className="text-xl sm:text-2xl font-bold text-purple-600">+12%</div>
+                  <div className="text-xs text-gray-600">ROAS (example account)</div>
                 </div>
                 <div className="bg-white rounded-lg p-3 shadow-sm">
-                  <div className="text-2xl font-bold text-green-600">+47%</div>
-                  <div className="text-xs text-gray-600">ROI Increase</div>
+                  <div className="text-xl sm:text-2xl font-bold text-green-600">6 hrs</div>
+                  <div className="text-xs text-gray-600">Saved per week</div>
                 </div>
                 <div className="bg-white rounded-lg p-3 shadow-sm">
-                  <div className="text-2xl font-bold text-blue-600">89%</div>
-                  <div className="text-xs text-gray-600">Time Saved</div>
+                  <div className="text-xl sm:text-2xl font-bold text-blue-600">40+</div>
+                  <div className="text-xs text-gray-600">Accounts monitored</div>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="relative">
-            <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden transform rotate-2 hover:rotate-0 transition-all duration-500 group">
+            <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden transform lg:rotate-2 lg:hover:rotate-0 transition-all duration-500 group">
               <div className="bg-gradient-to-r from-gray-50 to-purple-50 px-6 py-4 border-b border-gray-200">
-                <div className="flex items-center justify-between">
+                <div className="flex flex-wrap items-center justify-between gap-2">
                   <h3 className="text-lg font-semibold text-gray-900">PPC Vertical Benchmarks</h3>
-                  <div className="flex space-x-2">
+                  <div className="flex flex-wrap gap-2">
                     <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm group-hover:bg-purple-200 transition-colors duration-300">Month Over Month</span>
                     <span className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm group-hover:bg-gray-200 transition-colors duration-300">Vs. Accounts In My Vertical</span>
                   </div>
@@ -107,7 +107,7 @@ export default function EnterprisesHero() {
               </div>
               
               <div className="p-6 space-y-6">
-                <div className="grid grid-cols-5 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
                   {[
                     { label: 'Avg CPC', you: '▼20%', others: '▼10%', color: 'text-red-600', trend: 'improving' },
                     { label: 'CPA', you: '▼13%', others: '▼15%', color: 'text-red-600', trend: 'improving' },
@@ -115,7 +115,7 @@ export default function EnterprisesHero() {
                     { label: 'Conv Rate', you: '▲32%', others: '▼11%', color: 'text-green-600', trend: 'excellent' },
                     { label: 'ROAS', you: '▲13%', others: '▼12%', color: 'text-green-600', trend: 'excellent' }
                   ].map((metric, index) => (
-                    <div key={index} className="text-center group cursor-pointer">
+                    <div key={index} className="text-center group">
                       <div className="text-xs text-gray-500 mb-1">{metric.label}</div>
                       <div className="text-sm font-semibold">
                         <span className={`${metric.color} group-hover:scale-110 transition-transform duration-300 inline-block`}>

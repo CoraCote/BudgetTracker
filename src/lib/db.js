@@ -1,106 +1,85 @@
 import { Pool } from 'pg';
 
-let pool;
+/**
+ * Shared PostgreSQL pool.
+ *
+ * In development Next.js re-evaluates modules on every hot reload, which would
+ * leak a new pool (and up to `max` connections) each time. Caching the pool on
+ * `globalThis` keeps exactly one per server process.
+ */
+function createPool() {
+  if (!process.env.DATABASE_URL) {
+    throw new DatabaseUnavailableError('DATABASE_URL is not configured');
+  }
 
-try {
-  pool = new Pool({
+  const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
-    ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
-    // Connection pool settings
-    max: 20, // Maximum number of clients in the pool
-    idleTimeoutMillis: 30000, // Close idle clients after 30 seconds
-    connectionTimeoutMillis: 2000, // Return an error after 2 seconds if connection could not be established
+    ssl: process.env.DATABASE_SSL === 'true' ? { rejectUnauthorized: false } : false,
+    max: Number(process.env.DATABASE_POOL_MAX) || 10,
+    idleTimeoutMillis: 30_000,
+    connectionTimeoutMillis: 5_000,
   });
-} catch (error) {
-  console.warn('Database connection not available:', error.message);
-  // Create a mock pool for when DB is not available
-  pool = {
-    query: async () => {
-      throw new Error('Database not available');
-    },
-    connect: async () => {
-      throw new Error('Database not available');
-    },
-    end: async () => {},
-    totalCount: 0,
-    idleCount: 0,
-    waitingCount: 0,
-    on: () => {}
-  };
+
+  pool.on('error', (err) => {
+    console.error('[db] Unexpected error on idle client:', err.message);
+  });
+
+  return pool;
 }
 
-// Monitor connection events
-pool.on('connect', (client) => {
-  console.log('🟢 New client connected to PostgreSQL');
-});
-
-pool.on('acquire', (client) => {
-  console.log('🔵 Client acquired from pool');
-});
-
-pool.on('error', (err, client) => {
-  console.error('🔴 Unexpected error on idle client', err);
-});
-
-pool.on('remove', (client) => {
-  console.log('🟡 Client removed from pool');
-});
-
-// Function to check database connection status
-export async function checkDatabaseConnection() {
-  try {
-    const client = await pool.connect();
-    const result = await client.query('SELECT NOW() as current_time, version() as db_version');
-    client.release();
-    
-    console.log('✅ Database connection successful');
-    console.log('📊 Connection Info:', {
-      currentTime: result.rows[0].current_time,
-      version: result.rows[0].db_version.split(' ')[0], // Extract version number
-      poolSize: pool.totalCount,
-      idleCount: pool.idleCount,
-      waitingCount: pool.waitingCount
-    });
-    
-    return {
-      status: 'connected',
-      timestamp: result.rows[0].current_time,
-      version: result.rows[0].db_version,
-      poolStats: {
-        total: pool.totalCount,
-        idle: pool.idleCount,
-        waiting: pool.waitingCount
-      }
-    };
-  } catch (error) {
-    console.error('❌ Database connection failed:', error.message);
-    return {
-      status: 'error',
-      error: error.message,
-      timestamp: new Date().toISOString()
-    };
+export class DatabaseUnavailableError extends Error {
+  constructor(message = 'Database unavailable') {
+    super(message);
+    this.name = 'DatabaseUnavailableError';
   }
 }
 
-// Function to get pool statistics
-export function getPoolStats() {
-  return {
-    totalCount: pool.totalCount,
-    idleCount: pool.idleCount,
-    waitingCount: pool.waitingCount
-  };
+export function getPool() {
+  if (!globalThis.__adsoptimaPool) {
+    globalThis.__adsoptimaPool = createPool();
+  }
+  return globalThis.__adsoptimaPool;
 }
 
-// Function to close the pool (useful for graceful shutdown)
-export async function closePool() {
-  console.log('🔄 Closing database pool...');
-  await pool.end();
-  console.log('✅ Database pool closed');
+/** Postgres error codes that mean "the database can't be reached right now". */
+const CONNECTION_ERROR_CODES = new Set([
+  'ECONNREFUSED',
+  'ENOTFOUND',
+  'ETIMEDOUT',
+  'ECONNRESET',
+  '57P01', // admin_shutdown
+  '57P03', // cannot_connect_now
+  '3D000', // invalid_catalog_name (database does not exist)
+  '28P01', // invalid_password
+]);
+
+export async function query(text, params) {
+  let pool;
+  try {
+    pool = getPool();
+  } catch (error) {
+    throw error instanceof DatabaseUnavailableError ? error : new DatabaseUnavailableError(error.message);
+  }
+
+  try {
+    return await pool.query(text, params);
+  } catch (error) {
+    if (CONNECTION_ERROR_CODES.has(error.code) || /timeout|connect/i.test(error.message)) {
+      throw new DatabaseUnavailableError(error.message);
+    }
+    throw error;
+  }
 }
 
-// Test connection on module load (development only)
-if (process.env.NODE_ENV !== 'production') {
-  checkDatabaseConnection().catch(console.error);
-}
+/** Unique-constraint violation code, used to detect duplicate sign-ups. */
+export const UNIQUE_VIOLATION = '23505';
 
-export default pool;
+/** Lightweight connectivity probe for the health endpoint. */
+export async function pingDatabase() {
+  try {
+    await query('SELECT 1');
+    return true;
+  } catch {
+    return false;
+  }
+}

@@ -10,15 +10,9 @@ export default function UpdateAdsHero() {
               </svg>
             </div>
             <div>
-              <h1 className="text-4xl font-bold">What's new on AdsOptima</h1>
+              <h1 className="text-3xl sm:text-4xl font-bold">What's new on AdsOptima</h1>
               <p className="text-purple-100 text-lg mt-2">PPC Management and Optimization Platform</p>
             </div>
-          </div>
-          <div className="hidden md:flex items-center space-x-2">
-            <span className="text-purple-100">EN</span>
-            <svg className="w-4 h-4 text-purple-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
           </div>
         </div>
       </div>

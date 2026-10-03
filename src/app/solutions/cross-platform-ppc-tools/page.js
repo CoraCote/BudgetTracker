@@ -1,8 +1,8 @@
-import Navigation from '@/components/Navigation';
+import Link from 'next/link';
 
 function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 overflow-hidden">
+    <section className="relative min-h-[calc(100vh-4rem)] bg-gradient-to-br from-purple-50 via-white to-pink-50 overflow-hidden">
      
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-purple-200/40 to-pink-200/40 rounded-full blur-xl animate-pulse"></div>
@@ -11,7 +11,7 @@ function HeroSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-4rem)] py-20">
          
           <div className="space-y-8">
             <div className="space-y-6">
@@ -25,27 +25,27 @@ function HeroSection() {
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                Manage your Google, Microsoft, Facebook and Amazon ad campaigns in one place. 
+                Manage your Google, Microsoft, Meta and Amazon ad campaigns in one place. 
                 Combine insights from multiple ad platforms in one report to send to your clients, 
                 optimize and distribute budgets across platforms, and more.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 relative overflow-hidden group">
+              <Link href="/signup" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 relative overflow-hidden group inline-flex items-center justify-center">
                 <span className="relative z-10">Start Trial</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </button>
+              </Link>
               
-              <button className="border-2 border-gray-300 hover:border-purple-300 text-gray-700 hover:text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-purple-50">
+              <Link href="/contact?topic=demo" className="border-2 border-gray-300 hover:border-purple-300 text-gray-700 hover:text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-purple-50 inline-flex items-center justify-center">
                 Book A Demo
-              </button>
+              </Link>
             </div>
           </div>
 
          
           <div className="relative">
-            <div className="bg-white rounded-3xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+            <div className="bg-white rounded-3xl shadow-2xl p-8 transform lg:rotate-3 lg:hover:rotate-0 transition-transform duration-500">
               <div className="space-y-6">
                
                 <div className="flex justify-center space-x-6">
@@ -180,7 +180,7 @@ function CapabilitiesSection() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-600">Last 30 Days</span>
-                    <button className="text-purple-600 text-sm font-medium">Download</button>
+                    <span className="text-purple-600 text-sm font-medium">Download</span>
                   </div>
                   
                   <div className="flex flex-wrap gap-2">
@@ -246,7 +246,7 @@ function CaseStudiesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            When it comes to cross-platform campaigns,<br />
+            When it comes to cross-platform campaigns,<br className="hidden md:block" />{' '}
             paid media teams rely on AdsOptima
           </h2>
         </div>
@@ -259,20 +259,20 @@ function CaseStudiesSection() {
               </div>
               
               <h3 className="text-2xl font-bold text-gray-900">
-                See how Metrik Marketing easily manages ads and budgets across multiple platforms using AdsOptima.
+                See how Northfield Digital manages ads and budgets across Google, Microsoft and Meta from one AdsOptima workspace.
               </h3>
               
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <Link href="/case-studies" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center">
                 Learn More
-              </button>
+              </Link>
             </div>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-3xl p-8 text-white shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+              <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-3xl p-8 text-white shadow-2xl transform lg:rotate-2 lg:hover:rotate-0 transition-transform duration-500">
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-white font-bold text-xl">CASE STUDY</div>
                   <div className="flex items-center space-x-2">
-                    <div className="text-white font-bold">ADSOPTIMA</div>
+                    <div className="text-white font-bold">AdsOptima</div>
                   </div>
                 </div>
                 
@@ -280,13 +280,12 @@ function CaseStudiesSection() {
                   <div className="flex items-center space-x-4">
                     <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
                       <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                        <span className="text-purple-600 font-bold text-lg">M</span>
+                        <span className="text-purple-600 font-bold text-lg">ND</span>
                       </div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold">METR1K</div>
-                      <div className="text-lg opacity-90">marketing</div>
-                      <div className="text-sm opacity-75">Marketing That Makes Sense</div>
+                      <div className="text-2xl font-semibold tracking-tight">Northfield Digital</div>
+                      <div className="text-sm opacity-75">Performance agency</div>
                     </div>
                   </div>
                   
@@ -294,12 +293,12 @@ function CaseStudiesSection() {
                     <div className="text-sm opacity-90 mb-2">CASE STUDY</div>
                     <div className="grid grid-cols-2 gap-4">
                       <div className="text-center">
-                        <div className="text-2xl font-bold">+150%</div>
-                        <div className="text-sm opacity-75">ROI Increase</div>
+                        <div className="text-2xl font-bold">3</div>
+                        <div className="text-sm opacity-75">Platforms, One Report</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-2xl font-bold">-40%</div>
-                        <div className="text-sm opacity-75">Time Saved</div>
+                        <div className="text-2xl font-bold">-25%</div>
+                        <div className="text-sm opacity-75">Reporting Time</div>
                       </div>
                     </div>
                   </div>
@@ -315,20 +314,20 @@ function CaseStudiesSection() {
               </div>
               
               <h3 className="text-2xl font-bold text-gray-900">
-                See how BBQGuys takes advantage of AdsOptima's unmatched support for Microsoft Ads in addition to Google.
+                See how Harborline Outfitters grows Microsoft Ads alongside Google without doubling their workload.
               </h3>
               
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <Link href="/case-studies" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center justify-center">
                 Learn More
-              </button>
+              </Link>
             </div>
 
             <div className="lg:order-1 relative">
-              <div className="bg-gradient-to-br from-teal-600 to-teal-700 rounded-3xl p-8 text-white shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+              <div className="bg-gradient-to-br from-teal-600 to-teal-700 rounded-3xl p-8 text-white shadow-2xl transform lg:-rotate-2 lg:hover:rotate-0 transition-transform duration-500">
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-white font-bold text-xl">CASE STUDY</div>
                   <div className="flex items-center space-x-2">
-                    <div className="text-white font-bold">ADSOPTIMA</div>
+                    <div className="text-white font-bold">AdsOptima</div>
                   </div>
                 </div>
                 
@@ -342,7 +341,8 @@ function CaseStudiesSection() {
                       </div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold">BBQGUYS</div>
+                      <div className="text-2xl font-semibold tracking-tight">Harborline Outfitters</div>
+                      <div className="text-sm opacity-90">Outdoor e-commerce</div>
                       <div className="text-sm opacity-75">CASE STUDY</div>
                     </div>
                   </div>
@@ -358,11 +358,11 @@ function CaseStudiesSection() {
                     
                     <div className="grid grid-cols-2 gap-4 text-center">
                       <div>
-                        <div className="text-2xl font-bold">+200%</div>
-                        <div className="text-sm opacity-75">Conversion Rate</div>
+                        <div className="text-2xl font-bold">+14%</div>
+                        <div className="text-sm opacity-75">Microsoft Ads Conversions</div>
                       </div>
                       <div>
-                        <div className="text-2xl font-bold">-35%</div>
+                        <div className="text-2xl font-bold">-8%</div>
                         <div className="text-sm opacity-75">Cost Per Click</div>
                       </div>
                     </div>
@@ -380,7 +380,6 @@ function CaseStudiesSection() {
 export default function CrossPlatformPPCToolsPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
       <HeroSection />
       <CapabilitiesSection />
       <CaseStudiesSection />

@@ -40,14 +40,14 @@ export default function PPCAuditsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/signup" 
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Start Trial
-                <span className="ml-2">→→</span>
+                <span className="ml-2" aria-hidden="true">→</span>
               </Link>
               <Link 
                 href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-white border-2 border-purple-600 text-purple-600 hover:bg-purple-50 font-semibold rounded-lg transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white border-2 border-purple-600 text-purple-600 hover:bg-purple-50 font-semibold rounded-lg transition-all duration-300"
               >
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -86,13 +86,13 @@ export default function PPCAuditsPage() {
             </div>
             
             <div className="space-y-6">
-              <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
-                <div className="flex items-center justify-between mb-6">
+              <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-gray-100">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-6">
                   <div className="flex items-center space-x-3">
                     <FileText className="w-6 h-6 text-blue-600" />
                     <h3 className="text-xl font-bold text-gray-900">PPC Audit Score</h3>
                   </div>
-                  <Link href="/audits" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
+                  <Link href="/signup" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
                     View All Audits
                   </Link>
                 </div>
@@ -107,7 +107,7 @@ export default function PPCAuditsPage() {
                   </div>
                 </div>
                 
-                <Link href="/reports" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium mb-6">
+                <Link href="/signup" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium mb-6">
                   View Report
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -160,13 +160,13 @@ export default function PPCAuditsPage() {
                 </div>
               </div>
               
-              <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
-                <div className="flex items-center justify-between mb-6">
+              <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-gray-100">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-6">
                   <div className="flex items-center space-x-3">
                     <FileText className="w-6 h-6 text-blue-600" />
                     <h3 className="text-xl font-bold text-gray-900">Feed Audit Score</h3>
                   </div>
-                  <Link href="/feed-audits" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
+                  <Link href="/signup" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
                     View All Feed Audits
                   </Link>
                 </div>
@@ -177,7 +177,7 @@ export default function PPCAuditsPage() {
                   </div>
                 </div>
                 
-                <Link href="/feed-reports" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium mb-6">
+                <Link href="/signup" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium mb-6">
                   View Report
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -229,12 +229,12 @@ export default function PPCAuditsPage() {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gray-50 rounded-3xl p-12 relative overflow-hidden">
+          <div className="bg-gray-50 rounded-3xl p-6 sm:p-12 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-32 h-1 bg-green-400"></div>
             
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                   Spot issues early with PPC account structure audits
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
@@ -242,23 +242,23 @@ export default function PPCAuditsPage() {
                 </p>
               </div>
               
-              <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
-                <div className="bg-blue-50 rounded-t-xl p-6 -m-8 mb-6">
+              <div className="bg-white rounded-2xl shadow-xl p-5 sm:p-8 border border-gray-100">
+                <div className="bg-blue-50 rounded-t-xl p-5 sm:p-6 -mx-5 -mt-5 sm:-mx-8 sm:-mt-8 mb-6">
                   <h3 className="text-xl font-bold text-blue-900 mb-2">PPC Account Audit</h3>
                   <p className="text-blue-700 text-sm">Find and resolve potential account issues</p>
-                  <div className="flex items-center space-x-3 mt-4">
-                    <button className="flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                  <div className="flex flex-wrap items-center gap-2 mt-4" aria-hidden="true">
+                    <span className="flex items-center px-3 py-2 bg-blue-500 text-white text-sm rounded-lg">
                       <Mail className="w-4 h-4 mr-2" />
                       Send Email
-                    </button>
-                    <button className="flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                    </span>
+                    <span className="flex items-center px-3 py-2 bg-blue-500 text-white text-sm rounded-lg">
                       <Save className="w-4 h-4 mr-2" />
                       Save PDF
-                    </button>
-                    <button className="flex items-center px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition-colors">
+                    </span>
+                    <span className="flex items-center px-3 py-2 bg-blue-700 text-white text-sm rounded-lg">
                       <Download className="w-4 h-4 mr-2" />
                       Download
-                    </button>
+                    </span>
                   </div>
                 </div>
                 
@@ -290,10 +290,10 @@ export default function PPCAuditsPage() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-4">Audit Details</h4>
                     <div className="space-y-4">
-                      <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
+                      <div className="flex items-center justify-between gap-3 p-3 bg-blue-50 rounded-lg">
                         <span className="text-sm text-gray-700">89% Conversions are from exact match queries</span>
                         <div className="flex items-center space-x-2">
-                          <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                          <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                             <span className="text-xs font-medium text-blue-600">-</span>
                           </div>
                           <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -302,28 +302,28 @@ export default function PPCAuditsPage() {
                         </div>
                       </div>
                       
-                      <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                      <div className="flex items-center justify-between gap-3 p-3 bg-green-50 rounded-lg">
                         <span className="text-sm text-gray-700">100% keywords have Quality Score greater than 7</span>
                         <div className="flex items-center space-x-2">
-                          <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                          <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                             <span className="text-xs font-medium text-green-600">100</span>
                           </div>
                         </div>
                       </div>
                       
-                      <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
+                      <div className="flex items-center justify-between gap-3 p-3 bg-green-50 rounded-lg">
                         <span className="text-sm text-gray-700">95% keywords have an above average Ad Relevance Score</span>
                         <div className="flex items-center space-x-2">
-                          <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                          <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                             <span className="text-xs font-medium text-green-600">97</span>
                           </div>
                         </div>
                       </div>
                       
-                      <div className="flex items-center justify-between p-3 bg-yellow-50 rounded-lg">
+                      <div className="flex items-center justify-between gap-3 p-3 bg-yellow-50 rounded-lg">
                         <span className="text-sm text-gray-700">52% keywords have an average Landing Page Score</span>
                         <div className="flex items-center space-x-2">
-                          <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center">
+                          <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
                             <span className="text-xs font-medium text-yellow-600">95</span>
                           </div>
                         </div>
@@ -351,10 +351,10 @@ export default function PPCAuditsPage() {
                 Case study
               </div>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                See how Morefire relies on scheduled PPC Account Audit reports to catch issues early and maintain their high account management standards.
+                See how Tallgrass Media relies on scheduled PPC Account Audit reports to catch issues early and keep account management standards high.
               </p>
               <Link 
-                href="/case-studies/morefire" 
+                href="/case-studies" 
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Learn More
@@ -362,7 +362,7 @@ export default function PPCAuditsPage() {
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-br from-orange-400 to-yellow-500 rounded-3xl p-8 shadow-2xl relative overflow-hidden">
+              <div className="bg-gradient-to-br from-purple-600 to-pink-500 rounded-3xl p-8 shadow-2xl relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10">
                   <div className="absolute inset-0" style={{
                     backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)',
@@ -387,20 +387,16 @@ export default function PPCAuditsPage() {
                 </div>
                 
                 <div className="absolute top-4 right-4 text-white/60 text-xs font-medium">
-                  ADSOPTIMA
+                  AdsOptima
                 </div>
                 
-                <div className="relative z-10 flex items-center space-x-4">
-                  <div className="w-16 h-16 bg-red-500 rounded-lg flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
+                <div className="relative z-10 flex items-center space-x-4 py-6">
+                  <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0" aria-hidden="true">
+                    <span className="text-xl font-bold text-white">TM</span>
                   </div>
                   <div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-2">morefire</h3>
-                    <div className="text-center">
-                      <span className="text-white text-sm font-medium uppercase tracking-wide">Case Study</span>
-                    </div>
+                    <h3 className="text-3xl font-semibold tracking-tight text-white mb-1">Tallgrass Media</h3>
+                    <span className="text-white/90 text-sm font-medium uppercase tracking-wide">Case Study</span>
                   </div>
                 </div>
               </div>
@@ -420,14 +416,14 @@ export default function PPCAuditsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/signup" 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Start Free Trial
-              <span className="ml-2">→→</span>
+              <span className="ml-2" aria-hidden="true">→</span>
             </Link>
             <Link 
               href="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-white border-2 border-purple-600 text-purple-600 hover:bg-purple-50 font-semibold rounded-lg transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white border-2 border-purple-600 text-purple-600 hover:bg-purple-50 font-semibold rounded-lg transition-all duration-300"
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />

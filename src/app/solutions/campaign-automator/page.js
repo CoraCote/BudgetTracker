@@ -8,7 +8,7 @@ export default function CampaignAutomatorPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50">
-      <section className="relative pt-20 pb-16 overflow-hidden">
+      <section className="relative pt-16 md:pt-20 pb-16 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
           <div className="absolute top-40 right-10 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
@@ -22,7 +22,7 @@ export default function CampaignAutomatorPage() {
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
                 </svg>
-                For Marketing Teams
+                Campaign Automator
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
@@ -46,17 +46,17 @@ export default function CampaignAutomatorPage() {
                   </svg>
                 </Link>
                 
-                <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-purple-200 text-purple-700 font-semibold rounded-xl hover:bg-purple-50 transition-all duration-300">
+                <Link href="/contact?topic=demo" className="inline-flex items-center justify-center px-8 py-4 border-2 border-purple-200 text-purple-700 font-semibold rounded-xl hover:bg-purple-50 transition-all duration-300">
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
                   Book A Demo
-                </button>
+                </Link>
               </div>
             </div>
 
             <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl p-6 transform rotate-1 hover:rotate-0 transition-transform duration-500">
+              <div className="bg-white rounded-2xl shadow-2xl p-6 transform lg:rotate-1 lg:hover:rotate-0 transition-transform duration-500">
                 <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl p-6 text-white mb-4">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-semibold">Campaign Performance</h3>
@@ -121,7 +121,7 @@ export default function CampaignAutomatorPage() {
               </p>
             </div>
 
-            <div className="bg-gray-50 rounded-2xl p-8">
+            <div className="bg-gray-50 rounded-2xl p-4 sm:p-8">
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <h4 className="text-lg font-semibold text-gray-900 mb-4">Add Source Data Feed</h4>
                 <p className="text-sm text-gray-600 mb-6">Add your source data feed by selecting the type</p>
@@ -134,10 +134,12 @@ export default function CampaignAutomatorPage() {
                       { id: 'merchant-feed', name: 'Local Merchant Feed', icon: '🏪' },
                       { id: 'csv-url', name: 'Csv File from Link', icon: '🔗' },
                       { id: 'xml-files', name: 'Xml Files', icon: '📄' },
-                      { id: 'zulu-files', name: 'Zulu Files', icon: '📁' }
+                      { id: 'ftp-files', name: 'FTP / SFTP Files', icon: '📁' }
                     ].map((source) => (
                       <button
                         key={source.id}
+                        type="button"
+                        aria-pressed={selectedDataSource === source.id}
                         onClick={() => setSelectedDataSource(source.id)}
                         className={`p-4 rounded-lg border-2 transition-all duration-200 ${
                           selectedDataSource === source.id
@@ -157,12 +159,13 @@ export default function CampaignAutomatorPage() {
                   <div className="flex">
                     <input
                       type="url"
-                      placeholder="https://www.adsoptima.com"
-                      className="flex-1 px-4 py-2 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      placeholder="https://example.com/feed.csv"
+                      aria-label="Source URL"
+                      className="flex-1 min-w-0 px-4 py-2 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     />
-                    <button className="px-6 py-2 bg-purple-600 text-white rounded-r-lg hover:bg-purple-700 transition-colors">
+                    <span className="px-6 py-2 bg-purple-600 text-white rounded-r-lg flex items-center">
                       Fetch
-                    </button>
+                    </span>
                   </div>
                 </div>
                 
@@ -178,28 +181,28 @@ export default function CampaignAutomatorPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               PPC teams across industry verticals use{' '}
-              <span className="gradient-text-purple-pink">Adsoptima</span>{' '}
+              <span className="gradient-text-purple-pink">AdsOptima</span>{' '}
               to automate campaigns from inventory data
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <div className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-6">
                   Case study
                 </div>
                 
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                  Bruce Automotive Group doubled its CTR and cut ad spend by 40% using flexible campaign templates and inventory syncing.
+                  Summit Ridge Auto lifted CTR by 22% and stopped spending on sold vehicles using flexible campaign templates and inventory syncing.
                 </p>
                 
-                <button className="inline-flex items-center px-6 py-3 bg-pink-600 text-white font-semibold rounded-lg hover:bg-pink-700 transition-colors">
+                <Link href="/case-studies" className="inline-flex items-center px-6 py-3 bg-pink-600 text-white font-semibold rounded-lg hover:bg-pink-700 transition-colors">
                   Learn More
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </button>
+                </Link>
               </div>
               
               <div className="bg-gradient-to-br from-purple-600 to-purple-800 p-8 text-white relative overflow-hidden">
@@ -211,12 +214,12 @@ export default function CampaignAutomatorPage() {
                 
                 <div className="relative z-10">
                   <div className="text-right mb-4">
-                    <div className="text-sm opacity-90">ADSOPTIMA</div>
+                    <div className="text-sm opacity-90">AdsOptima</div>
                   </div>
                   
-                  <div className="flex items-center space-x-4">
-                    <div className="text-2xl font-bold">bruce</div>
-                    <div className="text-sm opacity-90">auto glass</div>
+                  <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+                    <div className="text-2xl font-semibold tracking-tight">Summit Ridge Auto</div>
+                    <div className="text-sm opacity-90">Automotive dealer group</div>
                   </div>
                   
                   <div className="mt-4 text-sm opacity-90">CASE STUDY</div>
@@ -237,21 +240,21 @@ export default function CampaignAutomatorPage() {
             </div>
 
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <div className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-6">
                   Case study
                 </div>
                 
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                  SearchLab Digital increased conversions by 42% by switching to a scalable, feed-driven campaign structure.
+                  Bluepine Travel grew conversions by 15% after switching to a scalable, feed-driven campaign structure.
                 </p>
                 
-                <button className="inline-flex items-center px-6 py-3 bg-pink-600 text-white font-semibold rounded-lg hover:bg-pink-700 transition-colors">
+                <Link href="/case-studies" className="inline-flex items-center px-6 py-3 bg-pink-600 text-white font-semibold rounded-lg hover:bg-pink-700 transition-colors">
                   Learn More
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </button>
+                </Link>
               </div>
               
               <div className="bg-gradient-to-br from-purple-600 to-purple-800 p-8 text-white relative overflow-hidden">
@@ -263,11 +266,12 @@ export default function CampaignAutomatorPage() {
                 
                 <div className="relative z-10">
                   <div className="text-right mb-4">
-                    <div className="text-sm opacity-90">ADSOPTIMA</div>
+                    <div className="text-sm opacity-90">AdsOptima</div>
                   </div>
                   
-                  <div className="flex items-center space-x-4">
-                    <div className="text-2xl font-bold">SEARCHLAB</div>
+                  <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+                    <div className="text-2xl font-semibold tracking-tight">Bluepine Travel</div>
+                    <div className="text-sm opacity-90">Travel</div>
                   </div>
                   
                   <div className="mt-4 text-sm opacity-90">CASE STUDY</div>
@@ -312,12 +316,12 @@ export default function CampaignAutomatorPage() {
               </svg>
             </Link>
             
-            <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300">
+            <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300">
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
               </svg>
               Contact Sales
-            </button>
+            </Link>
           </div>
         </div>
       </section>

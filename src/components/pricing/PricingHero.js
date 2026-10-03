@@ -70,10 +70,13 @@ export default function PricingHero({ onBillingChange, onAdSpendChange }) {
           </p>
 
           {/* Billing Cycle Selection */}
-          <div className="flex justify-center items-center space-x-6 mb-12">
+          <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-6 mb-12" role="radiogroup" aria-label="Billing cycle">
             {billingOptions.map((option) => (
               <div key={option.id} className="flex items-center space-x-2">
                 <button
+                  type="button"
+                  role="radio"
+                  aria-checked={billingCycle === option.id}
                   onClick={() => handleBillingChange(option.id)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 focus:outline-none ${
                     billingCycle === option.id
@@ -105,12 +108,15 @@ export default function PricingHero({ onBillingChange, onAdSpendChange }) {
               What's your monthly ad spend?
             </h3>
             <div className="relative max-w-4xl mx-auto">
-              <div className="flex justify-between items-center mb-4">
+              <div className="flex flex-wrap justify-center sm:flex-nowrap sm:justify-between items-center gap-2 mb-4" role="radiogroup" aria-label="Monthly ad spend">
                 {adSpendOptions.map((spend) => (
                   <button
                     key={spend}
+                    type="button"
+                    role="radio"
+                    aria-checked={adSpend === spend}
                     onClick={() => handleAdSpendChange(spend)}
-                    className={`w-12 h-12 rounded-full flex items-center justify-center text-sm font-medium transition-all duration-300 focus:outline-none ${
+                    className={`w-14 h-14 sm:w-12 sm:h-12 rounded-full flex-shrink-0 flex items-center justify-center text-sm font-medium transition-all duration-300 focus:outline-none ${
                       adSpend === spend
                         ? 'bg-pink-500 text-white shadow-lg scale-110'
                         : 'bg-white/20 text-white hover:bg-white/30'
@@ -120,7 +126,7 @@ export default function PricingHero({ onBillingChange, onAdSpendChange }) {
                   </button>
                 ))}
               </div>
-              <div className="w-full bg-white/20 h-1 rounded-full">
+              <div className="hidden sm:block w-full bg-white/20 h-1 rounded-full">
                 <div 
                   className="bg-pink-500 h-1 rounded-full transition-all duration-300"
                   style={{ 

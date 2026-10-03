@@ -44,7 +44,7 @@ export default function VideoCard({
 
   // Generate realistic avatar initials
   const getInitials = (name) => {
-    return name.split(' ').map(n => n[0]).join('').toUpperCase();
+    return name.split(' ').filter(Boolean).slice(0, 2).map(n => n[0]).join('').toUpperCase();
   };
 
   // Generate avatar background color based on name
@@ -65,7 +65,7 @@ export default function VideoCard({
 
   return (
     <div 
-      className={`relative rounded-3xl shadow-2xl overflow-hidden group cursor-pointer transition-all duration-500 transform hover:scale-[1.02] hover:shadow-3xl ${className}`}
+      className={`relative rounded-3xl shadow-2xl overflow-hidden group ${isClickable ? 'cursor-pointer' : ''} transition-all duration-500 transform hover:scale-[1.02] hover:shadow-3xl ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={handleClick}
@@ -87,7 +87,7 @@ export default function VideoCard({
       {/* Enhanced abstract shapes overlay */}
       <div className="absolute inset-0">
         {/* Top left shape */}
-        <div className="absolute top-6 left-6 w-20 h-20 bg-white/15 rounded-full animate-float-slow blur-sm animate-glow-pulse-soft"></div>
+        <div className="absolute top-6 left-6 w-20 h-20 pointer-events-none bg-white/15 rounded-full animate-float-slow blur-sm animate-glow-pulse-soft"></div>
         
         {/* Top right shape */}
         <div className="absolute top-8 right-8 w-16 h-16 bg-white/10 rounded-full animate-float-medium blur-sm"></div>
@@ -107,13 +107,13 @@ export default function VideoCard({
       </div>
 
       {/* Content */}
-      <div className="relative z-10 p-8 h-full flex min-h-[420px]">
+      <div className="relative z-10 p-6 sm:p-8 h-full flex min-h-[420px]">
         {/* Left side - Content */}
-        <div className="flex-1 flex flex-col justify-between pr-6">
+        <div className="flex-1 min-w-0 flex flex-col justify-between sm:pr-6">
           {/* Top section with header */}
           <div className="space-y-6">
             {subtitle && (
-              <div className="flex items-center justify-between">
+              <div className="flex flex-wrap items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-white/25 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/30">
                     <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -140,7 +140,7 @@ export default function VideoCard({
             )}
             
             {/* Main title with highlighting */}
-            <h2 className="text-3xl lg:text-4xl font-bold text-white leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight">
               {highlightText ? (
                 <span>
                   {title.split(highlightText)[0]}
@@ -237,7 +237,7 @@ export default function VideoCard({
         </div>
 
         {/* Right side - Presenter Images */}
-        <div className="w-32 flex flex-col justify-center space-y-4">
+        <div className="hidden sm:flex w-32 flex-shrink-0 flex-col justify-center space-y-4" aria-hidden="true">
           {isDualPresenter ? (
             <>
               {/* First presenter */}

@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import VideoThumbnail from './VideoThumbnail';
+import InitialsAvatar from './InitialsAvatar';
 
 export default function CreativeVideoCard({ 
   video, 
@@ -11,12 +11,10 @@ export default function CreativeVideoCard({
     id,
     title,
     description,
-    thumbnail,
     duration,
     views,
     likes,
     author,
-    authorAvatar,
     creativityTitle,
     category,
     tags = [],
@@ -28,27 +26,7 @@ export default function CreativeVideoCard({
   return (
     <div className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group ${className}`}>
       {/* Video Thumbnail */}
-      <div className="relative aspect-video bg-gray-100 overflow-hidden">
-        <Image
-          src={thumbnail}
-          alt={title}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-        
-        {/* Play Button Overlay */}
-        <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-            <svg className="w-6 h-6 text-gray-800 ml-1" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z"/>
-            </svg>
-          </div>
-        </div>
-
-        {/* Duration Badge */}
-        <div className="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 rounded">
-          {duration}
-        </div>
+      <VideoThumbnail title={title} seed={`${id}-${title}`} duration={duration}>
 
         {/* Live Badge */}
         {isLive && (
@@ -64,27 +42,20 @@ export default function CreativeVideoCard({
             ⭐ PREMIUM
           </div>
         )}
-      </div>
+      </VideoThumbnail>
 
       {/* Video Content */}
       <div className="p-4">
         {/* Author Info with Avatar */}
         {showAvatar && author && (
           <div className="flex items-center mb-3">
-            <div className="relative w-8 h-8 rounded-full overflow-hidden mr-3">
-              <Image
-                src={authorAvatar || '/default-avatar.png'}
-                alt={author.name}
-                fill
-                className="object-cover"
-              />
-            </div>
+            <InitialsAvatar name={author.name} size="small" className="mr-3" />
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium text-gray-900 truncate">{author.name}</p>
               <p className="text-xs text-gray-500">{publishedAt}</p>
             </div>
             {author.verified && (
-              <svg className="w-4 h-4 text-blue-500 ml-1" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-4 h-4 text-blue-500 ml-1" fill="currentColor" viewBox="0 0 20 20" aria-label="Verified" role="img">
                 <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
             )}
@@ -120,8 +91,8 @@ export default function CreativeVideoCard({
               {category}
             </span>
           )}
-          {tags.slice(0, 2).map((tag, index) => (
-            <span key={index} className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">
+          {tags.slice(0, 2).map((tag) => (
+            <span key={tag} className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">
               #{tag}
             </span>
           ))}
@@ -145,15 +116,9 @@ export default function CreativeVideoCard({
             </div>
           </div>
           
-          <Link 
-            href={`/videos/${id}`}
-            className="text-purple-600 hover:text-purple-700 font-medium flex items-center group-hover:underline"
-          >
-            Watch Now
-            <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+          <span className={`text-xs font-semibold px-2 py-1 rounded-full ${isPremium ? 'bg-yellow-50 text-yellow-700' : 'bg-purple-50 text-purple-700'}`}>
+            {isPremium ? 'Premium' : 'Free'}
+          </span>
         </div>
       </div>
     </div>

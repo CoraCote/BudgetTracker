@@ -1,82 +1,75 @@
 import { NextResponse } from 'next/server';
-import pool from '../../../lib/db.js';
-import { hashPassword } from '../../../lib/auth.js';
+import { query, UNIQUE_VIOLATION } from '@/lib/db';
+import { hashPassword, serializeUser, setSessionCookie } from '@/lib/auth';
+import { getClientIp, handleRouteError, jsonError, readJsonBody } from '@/lib/api';
+import { rateLimit } from '@/lib/rate-limit';
+import {
+  cleanName,
+  compactErrors,
+  normalizeEmail,
+  validateEmail,
+  validateName,
+  validatePassword,
+} from '@/lib/validation';
 
 export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+
+const DUPLICATE_MESSAGE = 'An account with this email already exists. Try signing in instead.';
 
 export async function POST(request) {
+  const limit = rateLimit(`signup:${getClientIp(request)}`, { limit: 10, windowMs: 60 * 60 * 1000 });
+  if (!limit.allowed) {
+    return jsonError(429, 'Too many sign-up attempts. Please try again later.', {
+      retryAfter: limit.retryAfter,
+    });
+  }
+
+  const body = await readJsonBody(request);
+  if (!body) return jsonError(400, 'Invalid request body');
+
+  const email = normalizeEmail(body.email);
+  const password = body.password;
+  const firstName = cleanName(body.firstName);
+  const lastName = cleanName(body.lastName);
+
+  const fields = compactErrors({
+    firstName: validateName(firstName, 'First name'),
+    lastName: validateName(lastName, 'Last name'),
+    email: validateEmail(email),
+    password: validatePassword(password),
+  });
+  if (Object.keys(fields).length > 0) {
+    return jsonError(400, Object.values(fields)[0], { fields });
+  }
+
   try {
-    const { email, password, firstName, lastName } = await request.json();
+    const passwordHash = await hashPassword(password);
 
-    if (!email || !password) {
-      return NextResponse.json(
-        { error: 'Email and password are required' },
-        { status: 400 }
-      );
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: 'Please enter a valid email address' },
-        { status: 400 }
-      );
-    }
-
-    if (password.length < 8) {
-      return NextResponse.json(
-        { error: 'Password must be at least 8 characters long' },
-        { status: 400 }
-      );
-    }
-
-    if (!/[a-zA-Z]/.test(password) || !/\d/.test(password)) {
-      return NextResponse.json(
-        { error: 'Password must contain at least one letter and one number' },
-        { status: 400 }
-      );
-    }
-
-    // Check if user already exists
-    const existingUser = await pool.query(
-      'SELECT id FROM users WHERE email = $1',
-      [email]
-    );
-    
-    if (existingUser.rows.length > 0) {
-      return NextResponse.json(
-        { error: 'User with this email already exists' },
-        { status: 409 }
-      );
-    }
-
-    // Hash password and create user
-    const hashedPassword = hashPassword(password);
-    
-    const result = await pool.query(
-      'INSERT INTO users (email, password_hash, first_name, last_name) VALUES ($1, $2, $3, $4) RETURNING id, email, first_name, last_name, created_at',
-      [email, hashedPassword, firstName || null, lastName || null]
+    // Case-insensitive duplicate check and insert in one statement. The explicit
+    // casts stop Postgres inferring conflicting types for the reused $1.
+    const result = await query(
+      `INSERT INTO users (email, password_hash, first_name, last_name)
+       SELECT $1::text, $2::text, $3::text, $4::text
+       WHERE NOT EXISTS (SELECT 1 FROM users WHERE LOWER(email) = $1::text)
+       RETURNING id, email, first_name, last_name, created_at`,
+      [email, passwordHash, firstName || null, lastName || null]
     );
 
-    const newUser = result.rows[0];
+    if (result.rowCount === 0) {
+      return jsonError(409, DUPLICATE_MESSAGE, { fields: { email: DUPLICATE_MESSAGE } });
+    }
 
-    return NextResponse.json({
-      success: true,
-      message: 'Account created successfully!',
-      user: {
-        id: newUser.id,
-        email: newUser.email,
-        firstName: newUser.first_name,
-        lastName: newUser.last_name,
-        createdAt: newUser.created_at
-      }
-    }, { status: 201 });
-
+    const user = serializeUser(result.rows[0]);
+    const response = NextResponse.json(
+      { success: true, message: 'Account created successfully', user },
+      { status: 201 }
+    );
+    return setSessionCookie(response, user);
   } catch (error) {
-    console.error('Signup error:', error);
-    return NextResponse.json(
-      { error: 'Internal server error. Please try again later.' },
-      { status: 500 }
-    );
+    if (error.code === UNIQUE_VIOLATION) {
+      return jsonError(409, DUPLICATE_MESSAGE, { fields: { email: DUPLICATE_MESSAGE } });
+    }
+    return handleRouteError(error, 'signup');
   }
 }

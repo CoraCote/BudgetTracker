@@ -1,4 +1,10 @@
+import Link from 'next/link';
 import CreativeVideoCard from '@/components/CreativeVideoCard';
+
+export const metadata = {
+  title: 'Creative Video Library | AdsOptima',
+  description: 'PPC strategy, ad creative and automation walkthroughs from the AdsOptima team.',
+};
 
 export default function CreativeVideosPage() {
   const sampleVideos = [
@@ -6,15 +12,13 @@ export default function CreativeVideosPage() {
       id: 1,
       title: "Advanced PPC Automation Strategies That Actually Work",
       description: "Learn how to implement sophisticated automation rules that save time and boost performance across all your campaigns.",
-      thumbnail: "/api/placeholder/400/225",
       duration: "12:34",
       views: "15.2K",
       likes: "892",
       author: {
-        name: "Sarah Chen",
+        name: "AdsOptima Product Team",
         verified: true
       },
-      authorAvatar: "/api/placeholder/32/32",
       creativityTitle: "AI-Powered Optimization",
       category: "PPC Automation",
       tags: ["automation", "ppc", "ai", "optimization"],
@@ -26,15 +30,13 @@ export default function CreativeVideosPage() {
       id: 2,
       title: "Creative Ad Copy That Converts: A Complete Guide",
       description: "Discover the psychology behind high-converting ad copy and how to write compelling messages that drive action.",
-      thumbnail: "/api/placeholder/400/225",
       duration: "18:45",
       views: "28.7K",
       likes: "1.2K",
       author: {
-        name: "Mike Rodriguez",
+        name: "AdsOptima Creative Team",
         verified: true
       },
-      authorAvatar: "/api/placeholder/32/32",
       creativityTitle: "Creative Excellence",
       category: "Ad Copywriting",
       tags: ["copywriting", "conversion", "psychology", "ads"],
@@ -44,37 +46,33 @@ export default function CreativeVideosPage() {
     },
     {
       id: 3,
-      title: "Live Q&A: PPC Budget Optimization Best Practices",
-      description: "Join our live session where we answer your burning questions about budget allocation and optimization strategies.",
-      thumbnail: "/api/placeholder/400/225",
+      title: "Q&A Replay: PPC Budget Optimization Best Practices",
+      description: "A recording of our live session answering common questions about budget allocation and optimization strategies.",
       duration: "45:12",
       views: "3.1K",
       likes: "156",
       author: {
-        name: "AdsOptima Team",
+        name: "AdsOptima Customer Success",
         verified: true
       },
-      authorAvatar: "/api/placeholder/32/32",
       creativityTitle: "Live Learning",
       category: "Live Session",
       tags: ["live", "q&a", "budget", "optimization"],
-      publishedAt: "Live now",
-      isLive: true,
+      publishedAt: "Recorded live session",
+      isLive: false,
       isPremium: false
     },
     {
       id: 4,
       title: "Data-Driven Insights: Understanding Your Audience",
       description: "Deep dive into audience analysis and how to use data to create more targeted and effective campaigns.",
-      thumbnail: "/api/placeholder/400/225",
       duration: "22:18",
       views: "9.4K",
       likes: "445",
       author: {
-        name: "Dr. Emily Watson",
+        name: "AdsOptima Research Team",
         verified: true
       },
-      authorAvatar: "/api/placeholder/32/32",
       creativityTitle: "Data Science",
       category: "Analytics",
       tags: ["data", "audience", "analytics", "targeting"],
@@ -86,15 +84,13 @@ export default function CreativeVideosPage() {
       id: 5,
       title: "Creative Testing: A/B Testing Your Way to Success",
       description: "Master the art of creative testing and learn how to systematically improve your ad performance through experimentation.",
-      thumbnail: "/api/placeholder/400/225",
       duration: "16:33",
       views: "12.8K",
       likes: "678",
       author: {
-        name: "Alex Thompson",
-        verified: false
+        name: "AdsOptima Customer Success",
+        verified: true
       },
-      authorAvatar: "/api/placeholder/32/32",
       creativityTitle: "Testing Mastery",
       category: "Testing",
       tags: ["testing", "ab-testing", "creative", "experimentation"],
@@ -106,15 +102,13 @@ export default function CreativeVideosPage() {
       id: 6,
       title: "ROI Optimization: Getting More Bang for Your Buck",
       description: "Advanced strategies for maximizing return on investment across all your PPC campaigns and channels.",
-      thumbnail: "/api/placeholder/400/225",
       duration: "25:07",
       views: "19.3K",
       likes: "1.1K",
       author: {
-        name: "Jennifer Liu",
+        name: "AdsOptima Research Team",
         verified: true
       },
-      authorAvatar: "/api/placeholder/32/32",
       creativityTitle: "ROI Mastery",
       category: "ROI Optimization",
       tags: ["roi", "optimization", "profit", "efficiency"],
@@ -151,7 +145,7 @@ export default function CreativeVideosPage() {
                 <span className="font-semibold">⭐ Premium Content</span>
               </div>
               <div className="bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white">
-                <span className="font-semibold">🔴 Live Sessions</span>
+                <span className="font-semibold">🔴 Live Session Replays</span>
               </div>
             </div>
           </div>
@@ -166,7 +160,7 @@ export default function CreativeVideosPage() {
               Featured Creative Content
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Learn from industry experts and discover creative approaches to PPC management that drive real results.
+              Learn from the AdsOptima team and discover creative approaches to PPC management that drive real results.
             </p>
           </div>
           
@@ -194,18 +188,18 @@ export default function CreativeVideosPage() {
             Join thousands of marketers who are already using these creative strategies to achieve better results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/signup" 
+            <Link
+              href="/signup"
               className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Start Free Trial
-            </a>
-            <a 
-              href="/demo" 
+            </Link>
+            <Link
+              href="/contact?topic=demo"
               className="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
             >
               Schedule Demo
-            </a>
+            </Link>
           </div>
         </div>
       </section>

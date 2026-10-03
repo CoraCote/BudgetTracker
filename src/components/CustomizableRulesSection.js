@@ -61,8 +61,8 @@ export default function CustomizableRulesSection() {
           </div>
 
           <div className="relative">
-            <div className="bg-gray-100 rounded-2xl p-6 shadow-2xl">
-              <div className="flex items-center justify-between mb-6">
+            <div className="bg-gray-100 rounded-2xl p-4 sm:p-6 shadow-2xl">
+              <div className="flex items-center justify-between gap-3 mb-6">
                 <h4 className="text-lg font-semibold text-gray-900">Ad copies with a decline in CTR</h4>
                 <div className="flex items-center space-x-2">
                   <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center">
@@ -83,6 +83,8 @@ export default function CustomizableRulesSection() {
                 </div>
               </div>
 
+              <div className="overflow-x-auto -mx-2 px-2">
+              <div className="min-w-[640px]">
               <div className="grid grid-cols-8 gap-4 text-xs font-semibold text-gray-600 mb-3">
                 <div>Campaign</div>
                 <div>Ad Group</div>
@@ -96,7 +98,7 @@ export default function CustomizableRulesSection() {
 
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-3 mb-3">
                 <div className="grid grid-cols-8 gap-4 text-sm">
-                  <div className="text-blue-600 font-medium">Adsoptima Express</div>
+                  <div className="text-blue-600 font-medium">AdsOptima Express</div>
                   <div className="text-gray-700">Audits</div>
                   <div className="text-gray-700">Performance Max</div>
                   <div className="text-gray-700">Expanded Dynamic</div>
@@ -105,6 +107,8 @@ export default function CustomizableRulesSection() {
                   <div className="text-green-600 font-medium">Enabled</div>
                   <div className="text-gray-700">7.14</div>
                 </div>
+              </div>
+              </div>
               </div>
 
               <div className="bg-white border border-gray-200 rounded-lg p-4 mt-4">
@@ -117,13 +121,13 @@ export default function CustomizableRulesSection() {
                   <div className="flex-1">
                     <h5 className="font-semibold text-gray-900 text-sm mb-1">Identify recommendations Auto-applied by Google</h5>
                     <p className="text-xs text-gray-600 mb-3">Get a report of recommendations auto applied by Google in last 14 days.</p>
-                    <div className="flex space-x-2">
-                      <button className="px-3 py-1 bg-white border border-gray-300 text-gray-700 text-xs rounded hover:bg-gray-50 transition-colors">
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-white border border-gray-300 text-gray-700 text-xs rounded">
                         View/Edit Strategy
-                      </button>
-                      <button className="px-3 py-1 bg-blue-600 text-white text-xs rounded hover:bg-blue-700 transition-colors">
+                      </span>
+                      <span className="px-3 py-1 bg-blue-600 text-white text-xs rounded">
                         View Suggestions
-                      </button>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -131,10 +135,11 @@ export default function CustomizableRulesSection() {
 
               <div className="mt-6">
                 <h5 className="font-semibold text-gray-900 mb-3">Analyze Product Trends</h5>
-                <div className="space-y-2">
+                <div className="overflow-x-auto -mx-2 px-2">
+                <div className="space-y-2 min-w-[420px]">
                   <div className="bg-green-50 border border-green-200 rounded p-2">
                     <div className="grid grid-cols-6 gap-4 text-xs">
-                      <div className="font-medium">9999999</div>
+                      <div className="font-medium">SKU-10482</div>
                       <div>Campaign Automator</div>
                       <div>Trending Products</div>
                       <div>840</div>
@@ -144,7 +149,7 @@ export default function CustomizableRulesSection() {
                   </div>
                   <div className="bg-white border border-gray-200 rounded p-2">
                     <div className="grid grid-cols-6 gap-4 text-xs">
-                      <div className="font-medium">5555555</div>
+                      <div className="font-medium">SKU-20917</div>
                       <div>Performance Max</div>
                       <div>Declining Products</div>
                       <div>3540</div>
@@ -154,7 +159,7 @@ export default function CustomizableRulesSection() {
                   </div>
                   <div className="bg-green-50 border border-green-200 rounded p-2">
                     <div className="grid grid-cols-6 gap-4 text-xs">
-                      <div className="font-medium">6666666</div>
+                      <div className="font-medium">SKU-31556</div>
                       <div>PPC Workflows</div>
                       <div>Trending Products</div>
                       <div>900</div>
@@ -162,6 +167,7 @@ export default function CustomizableRulesSection() {
                       <div>3</div>
                     </div>
                   </div>
+                </div>
                 </div>
               </div>
             </div>

@@ -19,7 +19,7 @@ export default function FreelancersCTA() {
           </h2>
 
           <p className="text-xl lg:text-2xl text-purple-100 max-w-3xl mx-auto leading-relaxed">
-            Join thousands of successful PPC freelancers who have transformed their business with AdsOptima's powerful automation platform.
+            Join PPC freelancers who use AdsOptima's automation platform to run leaner, more profitable consultancies.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -29,7 +29,7 @@ export default function FreelancersCTA() {
                   <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Save 40% Time</h3>
+              <h3 className="text-lg font-semibold text-white mb-2">Save Hours Every Week</h3>
               <p className="text-purple-100 text-sm">Automate routine tasks and focus on strategy</p>
             </div>
 
@@ -78,8 +78,8 @@ export default function FreelancersCTA() {
           </div>
 
           <div className="pt-8 border-t border-white/20">
-            <p className="text-purple-100 text-sm mb-4">Trusted by 2,500+ PPC freelancers worldwide</p>
-            <div className="flex justify-center items-center space-x-6 opacity-80">
+            <p className="text-purple-100 text-sm mb-4">Built for independent PPC consultants</p>
+            <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 opacity-90">
               <div className="text-white text-sm font-medium">✓ No credit card required</div>
               <div className="text-white text-sm font-medium">✓ 14-day free trial</div>
               <div className="text-white text-sm font-medium">✓ Cancel anytime</div>

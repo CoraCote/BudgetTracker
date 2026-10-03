@@ -62,7 +62,7 @@ export default function FreelancersHero() {
           </div>
 
           <div className="relative">
-            <div className="relative bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl p-8 lg:p-12 shadow-2xl">
+            <div className="relative bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl">
               <div className="relative z-10 flex justify-center mb-8">
                 <div className="relative">
                   <div className="w-32 h-32 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg">
@@ -77,8 +77,8 @@ export default function FreelancersHero() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                <div className="bg-white rounded-xl p-4 shadow-md flex items-center justify-center">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-6">
+                <div className="bg-white rounded-xl p-3 sm:p-4 shadow-md flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-8 h-8 bg-blue-500 rounded-full mx-auto mb-2 flex items-center justify-center">
                       <span className="text-white text-xs font-bold">G</span>
@@ -87,7 +87,7 @@ export default function FreelancersHero() {
                   </div>
                 </div>
                 
-                <div className="bg-white rounded-xl p-4 shadow-md flex items-center justify-center">
+                <div className="bg-white rounded-xl p-3 sm:p-4 shadow-md flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-8 h-8 bg-orange-500 rounded-full mx-auto mb-2 flex items-center justify-center">
                       <span className="text-white text-xs font-bold">M</span>
@@ -96,7 +96,7 @@ export default function FreelancersHero() {
                   </div>
                 </div>
                 
-                <div className="bg-white rounded-xl p-4 shadow-md flex items-center justify-center">
+                <div className="bg-white rounded-xl p-3 sm:p-4 shadow-md flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-8 h-8 bg-blue-600 rounded-full mx-auto mb-2 flex items-center justify-center">
                       <span className="text-white text-xs font-bold">∞</span>

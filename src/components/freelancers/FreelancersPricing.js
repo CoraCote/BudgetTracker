@@ -44,7 +44,7 @@ export default function FreelancersPricing() {
         </div>
 
         <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 p-8 lg:p-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 p-6 sm:p-8 lg:p-12">
             <div className="space-y-8">
               <h3 className="text-2xl lg:text-3xl font-bold text-gray-900">
                 No penalties for keeping clients happy and successful.
@@ -55,7 +55,7 @@ export default function FreelancersPricing() {
               
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                  <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -63,7 +63,7 @@ export default function FreelancersPricing() {
                   <span className="text-gray-700 font-medium">Flexible pricing that grows with you</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                  <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -71,7 +71,7 @@ export default function FreelancersPricing() {
                   <span className="text-gray-700 font-medium">No hidden fees or surprise charges</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                  <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -85,37 +85,50 @@ export default function FreelancersPricing() {
               <h4 className="text-xl font-semibold text-gray-900">What's Your Monthly Ad Spend?</h4>
               
               <div className="space-y-4">
-                <div className="relative">
-                  <div className="flex justify-between items-center mb-4">
-                    {pricingTiers.map((tier, index) => (
-                      <div key={index} className="text-center">
-                        <div className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                          index === selectedTier 
-                            ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125' 
-                            : 'bg-purple-200'
-                        }`}></div>
-                        <div className="text-xs text-gray-600 mt-1">{tier.spend}</div>
-                        {tier.label && (
-                          <div className="text-xs font-medium text-purple-600 mt-1">{tier.label}</div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="relative h-2 bg-purple-100 rounded-full">
-                    <div 
-                      className="absolute h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-300"
-                      style={{ width: `${((selectedTier + 1) / pricingTiers.length) * 100}%` }}
-                    ></div>
-                  </div>
-                  
+                <div className="text-center sm:hidden">
+                  <span className="text-sm text-gray-600">Selected: </span>
+                  <span className="text-sm font-semibold text-purple-700">
+                    {pricingTiers[selectedTier].spend}
+                    {pricingTiers[selectedTier].label !== pricingTiers[selectedTier].spend && ` - ${pricingTiers[selectedTier].label}`}
+                  </span>
+                </div>
+
+                <div className="flex justify-between items-start">
+                  {pricingTiers.map((tier, index) => (
+                    <button
+                      key={index}
+                      type="button"
+                      onClick={() => setSelectedTier(index)}
+                      aria-label={`Select ${tier.spend} monthly ad spend`}
+                      aria-pressed={index === selectedTier}
+                      className="flex flex-col items-center text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 rounded"
+                    >
+                      <span className={`block w-3 h-3 rounded-full transition-all duration-300 ${
+                        index === selectedTier
+                          ? 'bg-gradient-to-r from-purple-500 to-pink-500 scale-125'
+                          : 'bg-purple-200'
+                      }`}></span>
+                      <span className="hidden sm:block text-xs text-gray-600 mt-1">{tier.spend}</span>
+                      {tier.label && (
+                        <span className="hidden sm:block text-xs font-medium text-purple-600 mt-1">{tier.label}</span>
+                      )}
+                    </button>
+                  ))}
+                </div>
+
+                <div className="relative h-2 bg-purple-100 rounded-full">
+                  <div
+                    className="absolute h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-300"
+                    style={{ width: `${(selectedTier / (pricingTiers.length - 1)) * 100}%` }}
+                  ></div>
                   <input
                     type="range"
                     min="0"
                     max={pricingTiers.length - 1}
                     value={selectedTier}
-                    onChange={(e) => setSelectedTier(parseInt(e.target.value))}
-                    className="absolute inset-0 w-full h-2 opacity-0 cursor-pointer"
+                    onChange={(e) => setSelectedTier(parseInt(e.target.value, 10))}
+                    aria-label="Monthly ad spend"
+                    className="absolute inset-x-0 -top-2 w-full h-6 opacity-0 cursor-pointer"
                   />
                 </div>
               </div>
@@ -152,7 +165,7 @@ export default function FreelancersPricing() {
               <div className="space-y-3">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <div className="w-5 h-5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                    <div className="w-5 h-5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
                       <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>

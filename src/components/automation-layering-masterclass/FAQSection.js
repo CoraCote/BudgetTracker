@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 const faqs = [
   {
@@ -78,6 +79,8 @@ export default function FAQSection() {
             {faqs.map((faq, index) => (
               <div key={faq.id} className="border-b border-gray-100 last:border-b-0">
                 <button
+                  type="button"
+                  aria-expanded={openItems.includes(faq.id)}
                   onClick={() => toggleItem(faq.id)}
                   className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
                 >
@@ -115,12 +118,12 @@ export default function FAQSection() {
             Still have questions? We're here to help!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg">
+            <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg">
               Contact Support
-            </button>
-            <button className="px-8 py-4 bg-white border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold rounded-xl transition-all duration-200 transform hover:scale-105">
-              Join Our Community
-            </button>
+            </Link>
+            <Link href="/ppctownhall" className="px-8 py-4 bg-white border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold rounded-xl transition-all duration-200 transform hover:scale-105">
+              Watch PPC Town Hall
+            </Link>
           </div>
         </div>
       </div>

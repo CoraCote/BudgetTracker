@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function AutomationSection() {
   const features = [
     {
@@ -99,12 +101,12 @@ export default function AutomationSection() {
               Start with our pre-built strategies or create your own custom rules to fit your unique needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <Link href="/signup" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Use Pre-built Strategy
-              </button>
-              <button className="px-6 py-3 bg-white border-2 border-purple-200 hover:border-purple-300 text-purple-700 hover:text-purple-800 font-semibold rounded-lg transition-all duration-300">
+              </Link>
+              <Link href="/signup" className="px-6 py-3 bg-white border-2 border-purple-200 hover:border-purple-300 text-purple-700 hover:text-purple-800 font-semibold rounded-lg transition-all duration-300">
                 Create a Strategy
-              </button>
+              </Link>
             </div>
           </div>
         </div>

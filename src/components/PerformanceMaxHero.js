@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function PerformanceMaxHero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
+    <section className="relative min-h-[calc(100vh-4rem)] py-20 flex items-center justify-center bg-white overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-pink-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -15,7 +15,7 @@ export default function PerformanceMaxHero() {
           <span className="text-purple-700 font-medium text-sm">PPC Optimization Engine</span>
         </div>
 
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-20 leading-tight animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight animate-fade-in" style={{ animationDelay: '0.2s' }}>
           Meet your co-pilot for{' '}
           <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-purple-600 bg-clip-text text-transparent">
             Performance Max
@@ -23,7 +23,7 @@ export default function PerformanceMaxHero() {
           success.
         </h1>
 
-        <p className="text-xl md:text-2xl text-gray-600 mb-30 max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.4s' }}>
           AdsOptima simplifies PMax campaign management and ensures your money goes where you want it to go by giving you more visibility and control over performance.
         </p>
 

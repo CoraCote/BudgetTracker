@@ -2,196 +2,174 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { Check } from 'lucide-react';
+import { FormAlert, PasswordField, SubmitButton, TextField, sendJson } from './forms/FormControls';
+import {
+  PASSWORD_MIN_LENGTH,
+  cleanName,
+  normalizeEmail,
+  passwordStrength,
+  validateEmail,
+  validateName,
+  validatePassword,
+} from '@/lib/validation';
+
+const STRENGTH_LABELS = ['Too weak', 'Weak', 'Fair', 'Good', 'Strong'];
+const STRENGTH_COLORS = ['bg-red-400', 'bg-orange-400', 'bg-amber-400', 'bg-lime-500', 'bg-emerald-500'];
+
+function PasswordRequirements({ password }) {
+  const strength = passwordStrength(password);
+  const rules = [
+    { met: password.length >= PASSWORD_MIN_LENGTH, label: `${PASSWORD_MIN_LENGTH}+ characters` },
+    { met: /[a-zA-Z]/.test(password), label: 'A letter' },
+    { met: /\d/.test(password), label: 'A number' },
+  ];
+
+  return (
+    <div className="mt-3" aria-live="polite">
+      <div className="flex items-center gap-3">
+        <div className="flex flex-1 gap-1" aria-hidden="true">
+          {[0, 1, 2, 3].map((i) => (
+            <span
+              key={i}
+              className={`h-1.5 flex-1 rounded-full transition-colors ${
+                password && i < Math.max(strength, 1) ? STRENGTH_COLORS[strength] : 'bg-gray-200'
+              }`}
+            />
+          ))}
+        </div>
+        <span className="w-16 text-right text-xs font-medium text-gray-500">
+          {password ? STRENGTH_LABELS[strength] : ''}
+        </span>
+      </div>
+      <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+        {rules.map((rule) => (
+          <li
+            key={rule.label}
+            className={`flex items-center gap-1 text-xs transition-colors ${rule.met ? 'text-emerald-600' : 'text-gray-500'}`}
+          >
+            <Check className={`h-3.5 w-3.5 ${rule.met ? 'opacity-100' : 'opacity-30'}`} aria-hidden="true" />
+            {rule.label}
+            <span className="sr-only">{rule.met ? '(met)' : '(not met)'}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export default function SignupForm() {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: ''
-  });
-
-  const [errors, setErrors] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
-  const [showPassword, setShowPassword] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
   const router = useRouter();
+  const [values, setValues] = useState({ firstName: '', lastName: '', email: '', password: '' });
+  const [errors, setErrors] = useState({});
+  const [formError, setFormError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  const validateForm = () => {
-    const newErrors = {};
-
-    // firstName and lastName are optional, so no validation needed
-    // They will be stored as empty strings in the database
-
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
-    }
-
-    if (!formData.password) {
-      newErrors.password = 'Password is required';
-    } else if (formData.password.length < 8) {
-      newErrors.password = 'Password must be at least 8 characters long';
-    } else if (!/[a-zA-Z]/.test(formData.password) || !/\d/.test(formData.password)) {
-      newErrors.password = 'Password must contain at least one letter and one number';
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+  const update = (event) => {
+    const { name, value } = event.target;
+    setValues((prev) => ({ ...prev, [name]: value }));
+    if (errors[name]) setErrors((prev) => ({ ...prev, [name]: null }));
+    if (formError) setFormError(null);
   };
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-    if (errors[name]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: ''
-      }));
-    }
-  };
+    const payload = {
+      firstName: cleanName(values.firstName),
+      lastName: cleanName(values.lastName),
+      email: normalizeEmail(values.email),
+      password: values.password,
+    };
+    const nextErrors = {
+      firstName: validateName(payload.firstName, 'First name'),
+      lastName: validateName(payload.lastName, 'Last name'),
+      email: validateEmail(payload.email),
+      password: validatePassword(payload.password),
+    };
+    setErrors(nextErrors);
+    if (Object.values(nextErrors).some(Boolean)) return;
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    setLoading(true);
+    setFormError(null);
+    const { ok, data } = await sendJson('/api/signup', { body: payload });
 
-    if (!validateForm()) {
+    if (ok) {
+      router.replace('/dashboard?welcome=1');
+      router.refresh();
       return;
     }
 
-    setIsLoading(true);
-    setSubmitStatus(null);
-
-    try {
-      const response = await fetch('/api/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          firstName: formData.firstName.trim() || '', // Send empty string if not provided
-          lastName: formData.lastName.trim() || '',   // Send empty string if not provided
-          email: formData.email.trim(),
-          password: formData.password
-        }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setSubmitStatus({
-          type: 'success',
-          message: data.message
-        });
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          password: ''
-        });
-        
-        // Automatically redirect to the original signin page after successful signup
-        setTimeout(() => {
-          router.push('/signin');
-        }, 2000);
-      } else {
-        setSubmitStatus({
-          type: 'error',
-          message: data.error
-        });
-      }
-    } catch (error) {
-      setSubmitStatus({
-        type: 'error',
-        message: 'Network error. Please try again.'
-      });
-    } finally {
-      setIsLoading(false);
-    }
+    setLoading(false);
+    if (data.fields) setErrors((prev) => ({ ...prev, ...data.fields }));
+    if (!data.fields) setFormError(data.error || 'We could not create your account. Please try again.');
   };
 
   return (
-    <div className="w-full">
-      {submitStatus && (
-        <div className={`mb-6 p-4 rounded-2xl ${submitStatus.type === 'success'
-            ? 'bg-green-50 border border-green-200 text-green-800'
-            : 'bg-red-50 border border-red-200 text-red-800'
-          }`}>
-          <p className="text-sm font-medium">{submitStatus.message}</p>
-          {submitStatus.type === 'success' && (
-            <p className="text-xs mt-2 text-green-600">
-              Redirecting to sign in page in 2 seconds...
-            </p>
-          )}
-        </div>
-      )}
+    <form onSubmit={handleSubmit} noValidate className="space-y-5">
+      <FormAlert>{formError}</FormAlert>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
-            Work Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            className={`w-full px-4 py-2 border-2 rounded-2xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent ${errors.email
-                ? 'border-red-300 bg-red-50'
-                : 'border-slate-200 hover:border-slate-300 focus:border-transparent'
-              }`}
-            placeholder="Enter your work email"
-            disabled={isLoading}
-          />
-          {errors.email && (
-            <p className="mt-2 text-sm text-red-600">{errors.email}</p>
-          )}
-        </div>
+      <div className="grid gap-5 sm:grid-cols-2">
+        <TextField
+          label="First name"
+          name="firstName"
+          autoComplete="given-name"
+          placeholder="Alex"
+          value={values.firstName}
+          onChange={update}
+          error={errors.firstName}
+          disabled={loading}
+          optional
+          maxLength={100}
+        />
+        <TextField
+          label="Last name"
+          name="lastName"
+          autoComplete="family-name"
+          placeholder="Morgan"
+          value={values.lastName}
+          onChange={update}
+          error={errors.lastName}
+          disabled={loading}
+          optional
+          maxLength={100}
+        />
+      </div>
 
-        <div>
-          <label htmlFor="password" className="block text-sm font-medium text-slate-700 mb-1">
-            Password
-          </label>
-          <div className="relative">
-            <input
-              type={showPassword ? 'text' : 'password'}
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={handleInputChange}
-              className={`w-full px-4 py-2 pr-12 border-2 rounded-2xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent ${errors.password
-                  ? 'border-red-300 bg-red-50'
-                  : 'border-slate-200 hover:border-slate-300 focus:border-transparent'
-                }`}
-              placeholder="Create a strong password"
-              disabled={isLoading}
-            />
-            <button
-              type="button"
-              onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors"
-              disabled={isLoading}
-            >
-              {showPassword ? '👁️' : '🙈'}
-            </button>
-          </div>
-          {errors.password && (
-            <p className="mt-2 text-sm text-red-600">{errors.password}</p>
-          )}
-        </div>
-        <button
-          type="submit"
-          disabled={isLoading}
-          className="w-full group flex items-center justify-center px-6 py-2 border-2 border-slate-200 rounded-2xl hover:border-slate-300 hover:bg-white/80 transition-all duration-300 bg-white/60 backdrop-blur-sm shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-        >
-          {isLoading ? 'Creating Account...' : 'Create Account'}
-        </button>
-      </form>
-    </div>
+      <TextField
+        label="Work email"
+        name="email"
+        type="email"
+        autoComplete="email"
+        inputMode="email"
+        placeholder="you@company.com"
+        value={values.email}
+        onChange={update}
+        error={errors.email}
+        disabled={loading}
+        maxLength={255}
+      />
+
+      <PasswordField
+        name="password"
+        autoComplete="new-password"
+        placeholder="Create a password"
+        value={values.password}
+        onChange={update}
+        error={errors.password}
+        disabled={loading}
+        maxLength={72}
+      >
+        <PasswordRequirements password={values.password} />
+      </PasswordField>
+
+      <SubmitButton loading={loading} loadingText="Creating your account…" className="w-full">
+        Create account
+      </SubmitButton>
+
+      <p className="text-center text-xs leading-relaxed text-gray-500">
+        By creating an account, you agree to the AdsOptima Terms of Service and acknowledge our Privacy Policy.
+      </p>
+    </form>
   );
 }
